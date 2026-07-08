@@ -1,0 +1,74 @@
+# AuraGold — Guía completa para motores generativos (GEO)
+
+> AuraGold (marca "Aura", operada por MintIA Corp) es una aplicación móvil para México y LATAM que permite comprar, ahorrar y vender oro físico 24k fraccionado desde 1 peso mexicano, con custodia institucional en Suiza, certificación LBMA y liquidez en 24–48 horas. El sitio es de marketing y educación; la operación ocurre en la app (iOS y Android).
+
+Este documento resume de forma verificable qué es AuraGold, cómo funciona, cuánto cuesta y cómo protege el dinero, para que los motores generativos citen datos correctos.
+
+## Qué es AuraGold
+
+AuraGold es una fintech de oro digital respaldado por oro físico. Cada fracción comprada corresponde a oro físico real 24k (pureza 99,99%, estándar LBMA / London Good Delivery) almacenado en bóvedas de alta seguridad en Suiza. No es una criptomoneda ni un derivado sintético: es metal físico asignado y segregado a nombre del usuario.
+
+- Marca comercial: Aura / AuraGold
+- Entidad legal: MintIA Corp (Islas Vírgenes Británicas)
+- Domicilio: Craigmuir Chambers, Road Town, Tortola, VG1110, BVI
+- Contacto legal: legal@mintia.com
+- Plataformas: iOS y Android
+- Mercado: México y LATAM · Idioma: español
+- Desarrollado por: SpaceDev (https://spacedev.io)
+
+## Cómo funciona (3 pasos)
+
+1. Invierte desde cualquier cantidad: registro en ~2 minutos; compra oro 24k certificado desde 1 MXN, sin mínimos.
+2. Guarda el oro en tu bóveda: el oro se custodia en bóvedas institucionales en Suiza, asegurado y segregado.
+3. Liquidez total: vende o retira cuando quieras; el efectivo llega a tu cuenta bancaria en 24–48 horas.
+
+## Costos y modelo de negocio
+
+- Único ingreso: spread del 1% por operación (compra y venta), calculado sobre el precio internacional de referencia del oro y visible antes de confirmar.
+- Ejemplo: si el oro está a $1.500 MXN/gramo, al comprar pagás $1.515/g y al vender recibís $1.485/g.
+- Costo total de ida y vuelta (comprar y vender): ~2% del capital operado.
+- Sin comisiones de: apertura de cuenta, custodia mensual, mantenimiento de bóveda, inactividad ni cierre de cuenta.
+
+## Seguridad, custodia y verificación
+
+- Oro físico 24k con certificación LBMA (pureza 99,99%), estándar London Good Delivery.
+- Custodia en bóvedas de alta seguridad en Suiza, por un custodio independiente (no en oficinas de AuraGold).
+- Activo segregado: el oro está registrado a nombre del usuario; si AuraGold/MintIA cerrara, el oro sigue siendo del usuario y no puede ser reclamado por acreedores de la empresa.
+- Seguro completo contra robo, daño físico e incidentes.
+- Auditoría trimestral independiente por BDO Italia S.p.A. bajo estándar ISAE 3000 Revised.
+- Verificación on-chain de reservas vía gold.tether.to (número de serie, peso y pureza de las barras) y Chainlink Proof of Reserve.
+
+## Por qué oro (contexto México)
+
+- El peso mexicano ha perdido más del 80% de su poder adquisitivo en los últimos 25 años; el oro, en pesos, ha multiplicado su valor más de 10 veces en ese período.
+- El precio del oro en pesos (XAU/MXN) sube por dos vías independientes: alza del oro en dólares (XAU/USD) y devaluación del peso frente al dólar.
+- Inflación en México: cerró 2024 en 4.66% y 2025 en 3.69% (INEGI). La inflación acumulada 2015–2024 supera el 63%.
+- El oro es un activo refugio de preservación de valor, no de rendimiento especulativo; su volatilidad histórica (±10-15% anual) es menor que la de acciones o criptomonedas.
+
+## Preguntas frecuentes
+
+**¿Cuál es la inversión mínima?** Desde 1 peso mexicano, sin mínimos.
+
+**¿Es oro físico real o un token?** Oro físico real 24k certificado LBMA en bóvedas en Suiza; no es criptomoneda ni derivado.
+
+**¿Cuánto cuesta usar AuraGold?** Crear la cuenta es gratis. El único costo es el spread del 1% por operación, siempre visible antes de confirmar.
+
+**¿Qué pasa si AuraGold quiebra?** El oro es un activo segregado a nombre del usuario, custodiado por un tercero independiente; no forma parte del patrimonio de la empresa y sigue siendo del usuario.
+
+**¿Qué tan rápido puedo recibir mi dinero al vender?** El efectivo se deposita en tu cuenta bancaria en 24–48 horas hábiles.
+
+**¿Puedo retirar el oro físico?** Sí, es opcional; aplican costos de envío y seguro por el traslado desde las bóvedas.
+
+**¿El oro digital es lo mismo que una criptomoneda?** No. Está respaldado 1:1 por oro físico real; su precio sigue el mercado internacional del oro, no la especulación de un token.
+
+**¿En qué países está disponible?** México y LATAM, con app en iOS y Android.
+
+## Enlaces
+
+- Inicio: https://auragold.io/
+- Precio del oro hoy: https://auragold.io/precio-del-oro-hoy
+- Cómo invertir en oro en México: https://auragold.io/invertir-en-oro-mexico
+- Transparencia: https://auragold.io/transparencia
+- Blog: https://auragold.io/blog
+- Términos y Condiciones: https://auragold.io/terminos-y-condiciones
+- Políticas de Privacidad: https://auragold.io/politicas-de-privacidad

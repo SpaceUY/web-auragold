@@ -1,0 +1,406 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import SectionHeading from "../components/ui/SectionHeading.astro";
+import FAQ from "../components/ui/FAQ.astro";
+import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+
+const stats = [
+  { value: "$1.00", label: "Inversión mínima" },
+  { value: "0%", label: "Comisión de custodia" },
+  { value: "LBMA", label: "Oro certificado" },
+  { value: "100%", label: "Oro físico real" },
+];
+
+const benefits = [
+  {
+    title: "5.000 años de historia",
+    description:
+      "El oro ha sido reserva de valor en todas las civilizaciones. Ninguna divisa ha durado tanto tiempo sin perder relevancia como el oro.",
+  },
+  {
+    title: "Protección contra la inflación",
+    description:
+      "Cuando el peso pierde poder adquisitivo, el oro tiende a apreciarse en términos locales. Es el escudo natural contra la inflación persistente en México.",
+  },
+  {
+    title: "Independiente del sistema bancario",
+    description:
+      "El oro no depende de ningún banco ni gobierno. Su valor no lo fija una institución financiera que pueda quebrar o tomar decisiones que te perjudiquen.",
+  },
+  {
+    title: "Liquidez cuando la necesitas",
+    description:
+      "El mercado del oro es uno de los más líquidos del mundo. Puedes convertir tu oro en dinero cuando lo necesites, de forma rápida y transparente.",
+  },
+  {
+    title: "Diversificación sin volatilidad cripto",
+    description:
+      "A diferencia de las criptomonedas, el oro no cae un 50% en días. Es un activo estable que complementa cualquier estrategia de ahorro o inversión.",
+  },
+  {
+    title: "Tangible y verificable",
+    description:
+      "El oro existe. No es un número en una pantalla. Es un metal físico, auditable y con precio transparente en mercados globales las 24 horas del día.",
+  },
+];
+
+const comparisonRows = [
+  {
+    option: "Aura Gold – Oro físico",
+    note: "Custodia certificada LBMA",
+    inflation: "Históricamente sí",
+    risk: "Bajo",
+    access: "Desde $1 MXN",
+    highlight: true,
+  },
+  {
+    option: "Cuenta de ahorro bancaria",
+    note: "BBVA, Banorte, HSBC…",
+    inflation: "No (rendimiento < inflación)",
+    risk: "Muy bajo",
+    access: "Fácil",
+  },
+  {
+    option: "Criptomonedas (BTC, ETH…)",
+    note: "Intercambios digitales",
+    inflation: "Posible, muy volátil",
+    risk: "Alto",
+    access: "Media",
+  },
+  {
+    option: "Oro físico tradicional",
+    note: "Joyería, casas de cambio",
+    inflation: "Sí",
+    risk: "Bajo",
+    access: "Barrera alta (mínimo alto)",
+  },
+  {
+    option: "Efectivo en casa",
+    note: "Colchón bancario",
+    inflation: "Pierde valor garantizado",
+    risk: "Moderado",
+    access: "Sin fricción",
+  },
+];
+
+const steps = [
+  {
+    number: "1",
+    title: "Descarga la app Aura Gold",
+    description:
+      "Disponible en iOS y Android. El proceso de registro es guiado y sin documentación compleja. En menos de 5 minutos tienes tu cuenta activa.",
+    tag: "Gratis · Sin comisión de apertura",
+  },
+  {
+    number: "2",
+    title: "Deposita el importe que quieras",
+    description:
+      "Desde $1 peso mexicano. Puedes ingresar dinero con transferencia SPEI directamente desde tu banco. Sin mínimo. Sin sorpresas.",
+    tag: "SPEI · Seguro · Instantáneo",
+  },
+  {
+    number: "3",
+    title: "Compra tu fracción de oro",
+    description:
+      "Selecciona el importe en pesos y confirma. Verás exactamente cuántos gramos de oro estás comprando y a qué precio, antes de confirmar. Sin letra pequeña.",
+    tag: "Precio transparente · Spread visible",
+  },
+  {
+    number: "4",
+    title: "Tu oro está protegido. Ya.",
+    description:
+      "El oro queda custodiado en bóvedas institucionales a tu nombre, segregado del capital de Aura Gold. Puedes venderlo, acumularlo o —cuando quieras— solicitar el retiro físico en lingotes.",
+    tag: "Bóveda certificada · Activo segregado",
+  },
+];
+
+const securityCards = [
+  {
+    title: "Oro físico real",
+    description:
+      "El oro que compras existe físicamente. No es un contrato ni una promesa. Es metal acreditado con estándar LBMA.",
+  },
+  {
+    title: "Bóvedas institucionales",
+    description:
+      "Tu oro se custodia en bóvedas privadas e institucionales con los más altos estándares de seguridad física y legal.",
+  },
+  {
+    title: "Activo segregado",
+    description:
+      "Tu oro está separado del capital de Aura Gold. Si algo nos pasara, tu oro sigue siendo tuyo y recuperable.",
+  },
+  {
+    title: "Precio transparente",
+    description:
+      "Mostramos el spread antes de cada operación. Sin comisiones ocultas, sin sorpresas. Sabes cuánto cuesta.",
+  },
+];
+
+const faqItems = [
+  {
+    question: "¿Es realmente oro físico o es algo digital como una cripto?",
+    answer:
+      "Es oro físico 100%. No es una criptomoneda ni un contrato financiero derivado. Cuando compras con Aura Gold, compras una fracción de oro real que está depositado en una bóveda institucional. Puedes solicitar el retiro físico en lingotes cuando alcances el umbral mínimo.",
+  },
+  {
+    question: "¿Cuánto dinero necesito para empezar a invertir en oro en México?",
+    answer:
+      "Desde $1 peso mexicano. No hay mínimo de inversión. Puedes comenzar con la cantidad que te resulte cómoda para probar el proceso, y aumentar gradualmente según tu confianza y capacidad de ahorro.",
+  },
+  {
+    question: "¿Puedo sacar mi dinero cuando quiera?",
+    answer:
+      "Sí. La liquidez es inmediata. Puedes vender tu oro en cualquier momento y recibir el equivalente en pesos en tu cuenta. También puedes optar por el retiro físico en lingotes si cumples el umbral mínimo de peso en oro.",
+  },
+  {
+    question: "¿El oro en Aura Gold tiene comisiones de custodia?",
+    answer:
+      "No hay comisiones de custodia. El modelo de ingresos de Aura Gold se basa en un spread transparente entre el precio de compra y el de venta del oro, que siempre verás antes de confirmar cualquier operación.",
+  },
+  {
+    question: "¿Qué pasa con mi oro si Aura Gold cierra o quiebra?",
+    answer:
+      "Tu oro es un activo segregado, lo que significa que está separado del balance de Aura Gold. No forma parte de nuestros activos corporativos. En caso de que Aura Gold cerrara, el oro que compraste sigue siendo tuyo y puede transferirse o recuperarse independientemente.",
+  },
+  {
+    question: "¿Invertir en oro tiene sentido si solo tengo poco dinero para ahorrar?",
+    answer:
+      "Especialmente entonces. Si el dinero que ahorras está en pesos, pierde poder adquisitivo con la inflación. Convertirlo en oro, aunque sea en pequeñas fracciones, protege ese valor. Además, la app permite el ahorro recurrente automático para que el hábito sea simple.",
+  },
+];
+---
+
+<BaseLayout
+  title="Comprar Oro en México - Invertir en Oro de Forma Segura"
+  description="Cómo invertir en oro en México de forma segura con AuraGold. Descubre las mejores opciones para comprar oro, proteger tu patrimonio y resguardar tus ahorros frente a la inflación."
+>
+  <FAQJsonLD items={faqItems} />
+
+  <Header />
+
+  <main class="bg-ag-dark font-body text-white">
+    <!-- Hero -->
+    <section class="mx-auto max-w-[1200px] px-6 py-20 text-center lg:px-10">
+      <span class="rounded-full border border-white/20 px-4 py-1 font-body text-xs text-white/70">
+        Oro físico real · México
+      </span>
+      <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold lg:text-6xl">
+        Cómo invertir en <span class="text-ag-gold">Oro</span> en México desde $1 peso.
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-white/60">
+        La guía completa para comprar oro físico y proteger tu dinero de la inflación. Con Aura Gold compras oro
+        físico fraccionado desde el móvil, con custodia certificada y sin comisiones de custodia.
+      </p>
+      <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+        <a
+          href="#"
+          class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
+        >
+          Descargar Aura para iOS
+        </a>
+        <a
+          href="#"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
+        >
+          Descargar Aura para Android
+        </a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
+        {
+          stats.map((stat) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p class="font-display text-3xl text-ag-gold">{stat.value}</p>
+              <p class="mt-1 text-sm text-white/50">{stat.label}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Qué significa invertir en oro -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading eyebrow="Guía básica" title="¿Qué significa invertir en Oro?" align="left" />
+      <div class="mt-8 grid gap-10 lg:grid-cols-2">
+        <div class="space-y-4 text-white/60">
+          <p>
+            Invertir en oro significa convertir una parte de tu dinero en un activo físico que históricamente ha
+            mantenido —e incrementado— su valor frente a la inflación y la devaluación de las monedas.
+          </p>
+          <p>
+            No es especulación. Es protección. El oro no genera intereses ni dividendos, pero tampoco pierde su
+            valor cuando el peso se devalúa o cuando los bancos atraviesan crisis.
+          </p>
+          <p>
+            Con Aura Gold, cuando compras oro, ese oro físico existe en una bóveda a tu nombre. Puedes venderlo
+            cuando quieras o, si lo prefieres, retirarlo en lingotes físicos.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <p class="font-display text-white">Oro físico fraccionado</p>
+            <p class="mt-2 text-sm text-white/60">Compras una fracción de oro real. Custodiado. A tu nombre.</p>
+            <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+              <span class="rounded-lg bg-white/5 px-2 py-2 text-center text-white/60">Desde $1 MXN · Sin mínimo</span>
+              <span class="rounded-lg bg-white/5 px-2 py-2 text-center text-white/60">Oro físico</span>
+              <span class="rounded-lg bg-white/5 px-2 py-2 text-center text-white/60">Segregado</span>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-ag-gold/30 bg-ag-gold/5 p-6">
+            <p class="font-mono text-xs uppercase tracking-widest text-ag-gold">Dato clave</p>
+            <p class="mt-2 text-sm text-white/70">
+              El peso mexicano ha perdido más del 80% de su poder adquisitivo en los últimos 25 años. El oro, en el
+              mismo período, ha multiplicado su valor más de 10 veces en pesos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="El activo refugio por excelencia"
+        title="Por qué invertir en oro y no en otras alternativas"
+        description="El dinero en tu cuenta bancaria pierde valor cada año. Invertir en oro, históricamente, lo conserva. Estas son las razones concretas por las que tiene sentido comprar oro en México hoy."
+      />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          benefits.map((benefit) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 class="font-display text-lg text-white">{benefit.title}</h3>
+              <p class="mt-2 text-sm text-white/60">{benefit.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="Comparativa honesta"
+        title="Invertir en oro vs otras opciones de ahorro en México"
+        description="Antes de decidir dónde poner tu dinero, compara. Oro físico frente a bancos, criptomonedas y efectivo."
+      />
+      <div class="mt-10 overflow-x-auto">
+        <table class="w-full min-w-[720px] border-collapse text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10 text-white/50">
+              <th class="py-4 pr-4 font-normal">Alternativa</th>
+              <th class="py-4 pr-4 font-normal">Protege vs inflación</th>
+              <th class="py-4 pr-4 font-normal">Riesgo</th>
+              <th class="py-4 pr-4 font-normal">Accesibilidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              comparisonRows.map((row) => (
+                <tr class={`border-b border-white/10 ${row.highlight ? "bg-white/5" : ""}`}>
+                  <td class="py-4 pr-4">
+                    <span class={`font-medium ${row.highlight ? "text-ag-gold" : "text-white"}`}>{row.option}</span>
+                    <span class="block text-xs text-white/40">{row.note}</span>
+                  </td>
+                  <td class="py-4 pr-4 text-white/70">{row.inflation}</td>
+                  <td class="py-4 pr-4 text-white/70">{row.risk}</td>
+                  <td class="py-4 pr-4 text-white/70">{row.access}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="Proceso completo"
+        title="Cómo comprar oro en México paso a paso desde la App"
+        description="Invertir en oro ya no requiere ir a una joyería ni tener grandes capitales. En minutos tu dinero ya está convertido en oro físico real."
+      />
+      <div class="mt-12 grid gap-6 lg:grid-cols-2">
+        {
+          steps.map((step) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-ag-gold font-display text-lg text-ag-dark">
+                {step.number}
+              </span>
+              <h3 class="mt-4 font-display text-xl text-white">{step.title}</h3>
+              <p class="mt-2 text-sm text-white/60">{step.description}</p>
+              <p class="mt-4 font-mono text-xs uppercase tracking-widest text-ag-gold">{step.tag}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Security -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="Seguridad y transparencia"
+        title="Es seguro invertir en oro con Aura Gold"
+        description="Invertir en oro exige pruebas, no solo promesas. Estas son las garantías reales detrás de cada compra."
+      />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          securityCards.map((card) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 class="font-display text-lg text-white">{card.title}</h3>
+              <p class="mt-2 text-sm text-white/60">{card.description}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="mx-auto mt-8 max-w-2xl text-center text-sm text-white/50">
+        <strong class="text-white">¿Qué pasa si Aura Gold cierra?</strong> Al ser un activo segregado, tu oro
+        permanece bajo tu titularidad y puede transferirse o recuperarse. Tu protección no depende de nuestra
+        continuidad.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="FAQs"
+        title="Preguntas Frecuentes"
+        description="Sin rodeos y sin jerga financiera. Todo lo que necesitas saber antes de empezar a proteger tu dinero."
+      />
+      <div class="mt-12">
+        <FAQ items={faqItems} />
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <div class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
+        <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
+          Compra oro en México desde $1 hoy, al precio del mercado
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-white/60">
+          Oro físico fraccionado al precio más cercano al spot XAU/MXN. Sin mínimos, sin comisiones de custodia.
+          Descarga la app y empieza en minutos.
+        </p>
+        <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
+          >
+            Proteger mi dinero y abrir una bóveda
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
+          >
+            Quiero ver una demo rápida
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

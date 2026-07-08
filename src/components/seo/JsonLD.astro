@@ -1,0 +1,72 @@
+---
+const graph = [
+  {
+    "@type": "Organization",
+    "@id": "https://auragold.io/#organization",
+    name: "AuraGold",
+    alternateName: "Aura",
+    url: "https://auragold.io/",
+    legalName: "MintIA Corp",
+    email: "legal@mintia.com",
+    description:
+      "Plataforma para comprar oro físico 24k desde una app móvil, con custodia internacional, liquidez y acceso desde cualquier cantidad.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Craigmuir Chambers, Road Town, Tortola, VG1110",
+      addressCountry: "VG",
+    },
+  },
+  {
+    "@type": "WebSite",
+    "@id": "https://auragold.io/#website",
+    url: "https://auragold.io/",
+    name: "AuraGold",
+    publisher: { "@id": "https://auragold.io/#organization" },
+    inLanguage: "es",
+  },
+  {
+    "@type": "WebPage",
+    "@id": "https://auragold.io/#webpage",
+    url: "https://auragold.io/",
+    name: "AuraGold | Compra e invierte en oro desde nuestra App",
+    isPartOf: { "@id": "https://auragold.io/#website" },
+    about: { "@id": "https://auragold.io/#app" },
+    description:
+      "Compra e invierte en oro físico 24k desde cualquier cantidad, con custodia internacional, liquidez y acceso desde la app.",
+    inLanguage: "es",
+  },
+  {
+    "@type": "SoftwareApplication",
+    "@id": "https://auragold.io/#app",
+    name: "AuraGold",
+    alternateName: "Aura",
+    url: "https://auragold.io/",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "iOS, Android",
+    availableLanguage: "es",
+    publisher: { "@id": "https://auragold.io/#organization" },
+    description:
+      "Aplicación móvil para comprar, guardar y vender oro físico 24k desde cualquier cantidad, con custodia institucional internacional y opción de retiro físico.",
+    featureList: [
+      "Compra de oro desde 1 MXN",
+      "Oro físico 24k",
+      "Referencia LBMA",
+      "Custodia internacional en Suiza",
+      "Liquidez para vender y retirar fondos",
+      "Retiro físico opcional",
+      "Ahorro programado",
+      "Organización del ahorro por objetivos",
+    ],
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "MXN",
+      description: "Sin costos de apertura",
+    },
+  },
+];
+
+const json = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+---
+
+<script type="application/ld+json" is:inline set:html={json} />

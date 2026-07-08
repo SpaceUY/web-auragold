@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  pubDate: Date;
+  authorName: string;
+  categoryLabel: string;
+  categorySlug: string;
+}
+
+const { title, description, slug, pubDate, authorName, categoryLabel, categorySlug } = Astro.props;
+const url = new URL(`/blog/${slug}`, Astro.site).toString();
+
+const json = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: new URL("/", Astro.site).toString() },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: categoryLabel,
+          item: new URL(`/blog?categoria=${categorySlug}`, Astro.site).toString(),
+        },
+        { "@type": "ListItem", position: 3, name: title, item: url },
+      ],
+    },
+    {
+      "@type": "BlogPosting",
+      headline: title,
+      description,
+      url,
+      datePublished: pubDate.toISOString(),
+      dateModified: pubDate.toISOString(),
+      author: { "@type": "Person", name: authorName },
+      publisher: { "@type": "Organization", name: "AuraGold" },
+    },
+  ],
+});
+---
+
+<script type="application/ld+json" is:inline set:html={json} />

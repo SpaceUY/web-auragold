@@ -1,0 +1,114 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import PersonJsonLD from "../../components/seo/PersonJsonLD.astro";
+import { authors } from "../../data/authors";
+
+export async function getStaticPaths() {
+  return Object.values(authors).map((author) => ({
+    params: { slug: author.slug },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+
+const titles: Record<string, string> = {
+  "federico-sendra": "Federico Sendra escribe sobre Oro Digital e inversión en Aura",
+  "juan-manuel-sobral": "Juan Manuel Sobral escribe sobre Oro Digital e inversión en Aura",
+};
+
+const allPosts = await getCollection("blog");
+const posts = allPosts
+  .filter((post) => post.data.author === author.slug)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });
+
+const socialLabel = (url: string) => {
+  if (url.includes("linkedin")) return "LinkedIn";
+  if (url.includes("x.com") || url.includes("twitter")) return "X";
+  if (url.includes("forbes")) return "Forbes";
+  return "Web";
+};
+---
+
+<BaseLayout title={titles[author.slug] ?? author.name} description={author.description} ogImage={author.image}>
+  <PersonJsonLD author={author} />
+
+  <Header />
+
+  <main class="bg-ag-dark font-body text-white">
+    <section class="mx-auto max-w-3xl px-6 py-16 text-center lg:px-10">
+      <nav class="mb-10 flex items-center justify-center gap-2 text-sm text-white/40">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <span>&gt;</span>
+        <span>Autor</span>
+        <span>&gt;</span>
+        <span class="text-white/70">{author.name}</span>
+      </nav>
+
+      <img
+        src={author.image}
+        alt={author.name}
+        width="140"
+        height="140"
+        class="mx-auto h-36 w-36 rounded-2xl object-cover"
+      />
+      <h1 class="mt-8 font-display text-4xl font-semibold text-white">{author.name}</h1>
+      <p class="mx-auto mt-4 max-w-lg text-white/60">{author.description}</p>
+
+      <div class="mt-6 flex items-center justify-center gap-3">
+        {
+          author.sameAs.map((url) => (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-lg bg-white/10 px-3 py-2 text-xs text-white/70 hover:bg-white/20"
+            >
+              {socialLabel(url)}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-[1200px] px-6 pb-20 lg:px-10">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          posts.map((post) => (
+            <a
+              href={`/blog/${post.id}`}
+              class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:bg-white/10"
+            >
+              <div class="relative aspect-[16/9] overflow-hidden">
+                <img
+                  src={post.data.heroImage}
+                  alt={post.data.title}
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <span class="absolute left-4 top-4 rounded-md bg-ag-dark/80 px-3 py-1 font-mono text-xs uppercase tracking-widest text-ag-gold">
+                  {post.data.category}
+                </span>
+              </div>
+              <div class="flex flex-1 flex-col p-6">
+                <h2 class="font-display text-lg text-white">{post.data.title}</h2>
+                <p class="mt-2 line-clamp-3 text-sm text-white/60">{post.data.description}</p>
+                <p class="mt-4 text-xs text-white/40">{formatDate(post.data.pubDate)}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

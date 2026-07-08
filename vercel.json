@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/categorias/:slug*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/autores",
+      "destination": "/blog",
+      "permanent": true
+    }
+  ]
+}

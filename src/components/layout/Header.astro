@@ -1,0 +1,75 @@
+---
+const navLinks = [
+  { label: "Cómo funciona", href: "/#como-funciona" },
+  { label: "Beneficios", href: "/#beneficios" },
+  { label: "Por qué Aura", href: "/#por-que-aura" },
+  { label: "Precio del oro", href: "/precio-del-oro-hoy" },
+  { label: "Oro en México", href: "/invertir-en-oro-mexico" },
+  { label: "Aprende", href: "/blog" },
+];
+---
+
+<header class="sticky top-0 z-50 bg-ag-dark/95 backdrop-blur border-b border-white/10">
+  <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4 lg:px-10">
+    <a href="/" class="font-display text-2xl font-semibold text-white">aura</a>
+
+    <nav class="hidden lg:flex items-center gap-8 font-body text-sm text-white/80">
+      {
+        navLinks.map((link) => (
+          <a href={link.href} class="hover:text-white transition-colors">
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <a
+      href="#descargar"
+      class="hidden lg:inline-flex items-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark hover:opacity-90 transition-opacity"
+    >
+      Descargar
+    </a>
+
+    <button
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      data-mobile-menu-toggle
+      class="lg:hidden text-white"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <nav
+    data-mobile-menu
+    class="hidden lg:hidden flex-col gap-4 border-t border-white/10 bg-ag-dark px-6 py-6 font-body text-sm text-white/80"
+  >
+    {
+      navLinks.map((link) => (
+        <a href={link.href} class="py-1 hover:text-white transition-colors">
+          {link.label}
+        </a>
+      ))
+    }
+    <a
+      href="#descargar"
+      class="mt-2 inline-flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark"
+    >
+      Descargar
+    </a>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector("[data-mobile-menu-toggle]");
+  const menu = document.querySelector("[data-mobile-menu]");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = menu?.classList.toggle("flex");
+    menu?.classList.toggle("hidden");
+    toggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+  });
+</script>

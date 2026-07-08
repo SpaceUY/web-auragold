@@ -1,0 +1,37 @@
+# AuraGold
+
+> AuraGold (marca "Aura", operada por MintIA Corp) es una app móvil de México y LATAM para comprar, ahorrar y vender oro físico 24k fraccionado desde 1 peso mexicano (MXN), con custodia institucional en Suiza, certificación LBMA (pureza 99,99%) y liquidez para vender y recibir el efectivo en 24–48 horas.
+
+## Datos clave verificables
+
+- Inversión mínima: 1 MXN (sin mínimos, sin montos fijos).
+- Oro físico 24k con certificación LBMA (London Bullion Market Association), pureza 99,99%.
+- Custodia: bóvedas institucionales de alta seguridad en Suiza; oro asegurado y segregado legalmente a nombre del usuario.
+- Modelo de ingresos: spread único del 1% por operación (compra y venta), visible antes de confirmar. Sin comisiones de apertura, custodia mensual, mantenimiento, inactividad ni cierre de cuenta.
+- Liquidez: venta desde la app y depósito en cuenta bancaria en 24–48 horas hábiles.
+- Retiro físico opcional de lingotes (aplican costos de envío y seguro).
+- Auditoría: verificación trimestral independiente por BDO Italia S.p.A. bajo estándar ISAE 3000; verificación on-chain vía gold.tether.to y Chainlink Proof of Reserve.
+- Plataformas: iOS y Android. Idioma: español. Mercado principal: México.
+- Entidad legal: MintIA Corp, Craigmuir Chambers, Road Town, Tortola, VG1110, Islas Vírgenes Británicas. Contacto legal: legal@mintia.com.
+
+## Páginas principales
+
+- [Inicio](https://auragold.io/): qué es AuraGold, cómo funciona (invertir, guardar en bóveda, liquidez), beneficios y preguntas frecuentes.
+- [Precio del oro hoy en México](https://auragold.io/precio-del-oro-hoy): cotización XAU/MXN en tiempo real, evolución histórica en pesos y factores que mueven el precio.
+- [Cómo invertir en oro en México](https://auragold.io/invertir-en-oro-mexico): guía para comprar oro físico desde 1 peso, comparativa con bancos, cripto y efectivo, y proceso paso a paso.
+- [Transparencia](https://auragold.io/transparencia): cómo gana dinero AuraGold, dónde se custodia el oro, auditorías y qué pasa en el peor escenario.
+
+## Blog (educación financiera sobre oro e inflación)
+
+- [Errores comunes al invertir en oro](https://auragold.io/blog/errores-al-invertir-en-oro): los 7 errores más frecuentes y cómo evitarlos.
+- [Alternativas al dinero en efectivo](https://auragold.io/blog/alternativas-al-dinero-en-efectivo): opciones para proteger ahorros en 2026 en México.
+- [Por qué el oro protege frente a la inflación](https://auragold.io/blog/por-que-el-oro-protege-la-inflacion): ejemplos reales y datos de México.
+- [Inflación histórica en México](https://auragold.io/blog/evolucion-inflacion-mexico): evolución del IPC 1985–2024 y pérdida de poder adquisitivo del peso.
+- [Cómo invertir en oro paso a paso](https://auragold.io/blog/invertir-en-oro-paso-a-paso): guía práctica para 2026.
+- [Oro físico vs cuentas bancarias](https://auragold.io/blog/oro-fisico-vs-cuentas-bancarias): dónde proteger mejor tu dinero.
+- [Por qué el oro es un refugio de valor](https://auragold.io/blog/por-que-oro-refugio-valor-guia): guía completa.
+
+## Autores
+
+- [Federico Sendra](https://auragold.io/autores/federico-sendra): Fundador y CEO de SpaceDev.
+- [Juan Manuel Sobral](https://auragold.io/autores/juan-manuel-sobral): Fundador y CTO de SpaceDev.
