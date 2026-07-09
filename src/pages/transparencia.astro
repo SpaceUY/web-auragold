@@ -73,7 +73,7 @@ const commitments = [
 
   <Header />
 
-  <main class="bg-ag-dark font-body text-white">
+  <main class="bg-ag-black font-body text-white">
     <section class="mx-auto max-w-3xl px-6 py-16 lg:px-10">
       <nav class="mb-8 flex items-center gap-2 text-sm text-white/40">
         <a href="/" class="hover:text-white">Inicio</a>
@@ -231,8 +231,8 @@ const commitments = [
       </p>
       <div class="mt-6 grid gap-4 sm:grid-cols-2">
         {
-          commitments.map((c) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          commitments.map((c, i) => (
+            <div data-animate data-delay={i * 70} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <p class="font-display text-white">✅ {c.title}</p>
               <p class="mt-2 text-sm text-white/60">{c.text}</p>
             </div>

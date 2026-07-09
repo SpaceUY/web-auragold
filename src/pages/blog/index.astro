@@ -17,7 +17,7 @@ const formatDate = (date: Date) =>
 >
   <Header />
 
-  <main class="bg-ag-dark font-body text-white">
+  <main class="bg-ag-black font-body text-white">
     <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
       <h1 class="font-display text-4xl font-semibold lg:text-5xl">Blog</h1>
       <p class="mt-4 max-w-2xl text-white/60">
@@ -27,11 +27,13 @@ const formatDate = (date: Date) =>
 
       <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {
-          posts.map((post) => {
+          posts.map((post, index) => {
             const author = authors[post.data.author];
             return (
               <a
                 href={`/blog/${post.id}`}
+                data-animate
+                data-delay={index * 70}
                 class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:bg-white/10"
               >
                 <div class="relative aspect-[16/9] overflow-hidden">
@@ -43,7 +45,7 @@ const formatDate = (date: Date) =>
                     loading="lazy"
                     class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <span class="absolute left-4 top-4 rounded-md bg-ag-dark/80 px-3 py-1 font-mono text-xs uppercase tracking-widest text-ag-gold">
+                  <span class="absolute left-4 top-4 rounded-md bg-ag-black/80 px-3 py-1 font-mono text-xs uppercase tracking-widest text-ag-gold">
                     {post.data.category}
                   </span>
                 </div>

@@ -189,44 +189,67 @@ const faqItems = [
 
   <Header />
 
-  <main class="bg-ag-dark font-body text-white">
-    <!-- Hero -->
-    <section class="mx-auto grid max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10 lg:py-32">
-      <div class="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-        <span class="rounded-full border border-white/20 px-4 py-1 font-body text-xs text-white/70">
-          Version 1.0.1 ya disponible
-        </span>
-        <h1 class="font-display text-5xl font-semibold lg:text-6xl">
-          Compra <span class="text-ag-gold">oro</span> desde $1 peso.
-        </h1>
-        <p class="max-w-xl text-lg text-white/60">
-          ¿Tienes $100, $500 o $1,000? Empieza a proteger tu dinero de la inflación con oro 24k certificado desde
-          $1 MXN. Sin mínimos, sin broncas.
-        </p>
-        <div id="descargar" class="flex flex-col gap-4 sm:flex-row">
-          <a
-            href="#"
-            class="inline-flex items-center justify-center gap-2 rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
+  <main class="bg-ag-black font-body text-white">
+    <!-- Hero — staggered blur-in reveal (fade + rise 48px + blur), ease-out expo -->
+    <section class="bg-gradient-to-b from-ag-black to-ag-navy">
+      <div class="mx-auto grid max-w-[1200px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10 lg:py-32">
+        <div class="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+          <span
+            class="hero-rise rounded-full border border-white/20 px-4 py-1 font-body text-xs text-white/70"
+            style="animation-delay: 0.1s"
           >
-            Descargar Aura para iOS
-          </a>
-          <a
-            href="#"
-            class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
+            Version 1.0.1 ya disponible
+          </span>
+          <h1 class="font-display text-5xl font-semibold lg:text-6xl">
+            <span class="hero-rise block" style="animation-delay: 0.2s">
+              Compra <span class="text-ag-gold">oro</span>
+            </span>
+            <span class="hero-rise block" style="animation-delay: 0.65s">
+              desde <span class="text-ag-gold">$1 peso.</span>
+            </span>
+          </h1>
+          <p class="hero-rise max-w-xl text-lg text-white/60" style="animation-delay: 1s">
+            ¿Tienes $100, $500 o $1,000? Empieza a proteger tu dinero de la inflación con oro 24k certificado
+            desde $1 MXN. Sin mínimos, sin broncas.
+          </p>
+          <div id="descargar" class="hero-rise flex flex-col gap-4 sm:flex-row" style="animation-delay: 1.2s">
+            <a
+              href="#"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
+            >
+              Descargar Aura para iOS
+            </a>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
+            >
+              Descargar Aura para Android
+            </a>
+          </div>
+          <p
+            class="hero-rise font-mono text-xs uppercase tracking-widest text-white/40"
+            style="animation-delay: 1.35s"
           >
-            Descargar Aura para Android
-          </a>
+            Disponible para iOS y Android.
+          </p>
         </div>
-        <p class="font-mono text-xs uppercase tracking-widest text-white/40">Disponible para iOS y Android.</p>
-      </div>
 
-      <img
-        src="/images/hero-app-mockup.png"
-        alt="Dashboard de la app AuraGold mostrando el total en bóveda y precio del oro en vivo"
-        width="1152"
-        height="463"
-        class="w-full rounded-2xl"
-      />
+        <div class="hero-rise hidden w-full sm:block" style="animation-delay: 0.5s">
+          <!-- El bundle se renderiza a tamaño de diseño fijo (1200x800) y se escala para entrar en la columna, sin scroll interno -->
+          <div data-boveda-wrap class="relative w-full overflow-hidden">
+            <iframe
+              data-boveda-frame
+              src="/embeds/hero-boveda.html"
+              title="Animación de la bóveda de AuraGold: total en bóveda, precio del oro y compra/venta"
+              loading="eager"
+              scrolling="no"
+              width="1200"
+              height="800"
+              class="absolute left-0 top-0 origin-top-left border-0 bg-transparent"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Problem statement -->
@@ -242,8 +265,14 @@ const faqItems = [
 
       <div class="mt-10 grid gap-6 sm:grid-cols-2">
         {
-          painPoints.map((point) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 font-body text-white/80">{point}</div>
+          painPoints.map((point, i) => (
+            <div
+              data-animate
+              data-delay={i * 80}
+              class="rounded-2xl border border-white/10 bg-white/5 p-6 font-body text-white/80"
+            >
+              {point}
+            </div>
           ))
         }
       </div>
@@ -263,8 +292,8 @@ const faqItems = [
 
       <div class="mt-12 grid gap-8 lg:grid-cols-3">
         {
-          steps.map((step) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+          steps.map((step, i) => (
+            <div data-animate data-delay={i * 100} class="rounded-2xl border border-white/10 bg-white/5 p-8">
               <span class="flex h-10 w-10 items-center justify-center rounded-full bg-ag-gold font-display text-lg text-ag-dark">
                 {step.number}
               </span>
@@ -288,8 +317,8 @@ const faqItems = [
 
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {
-          benefits.map((benefit) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          benefits.map((benefit, i) => (
+            <div data-animate data-delay={i * 80} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <p class="font-mono text-xs uppercase tracking-widest text-ag-gold">{benefit.title}</p>
               <h3 class="mt-2 font-display text-lg text-white">{benefit.tagline}</h3>
               <p class="mt-2 text-sm text-white/60">{benefit.description}</p>
@@ -308,8 +337,8 @@ const faqItems = [
 
       <div class="mt-12 grid gap-6 sm:grid-cols-2">
         {
-          securityCards.map((card) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          securityCards.map((card, i) => (
+            <div data-animate data-delay={i * 80} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 class="font-display text-lg text-white">{card.title}</h3>
               <p class="mt-2 text-sm text-white/60">{card.description}</p>
             </div>
@@ -375,7 +404,7 @@ const faqItems = [
 
     <!-- Final CTA -->
     <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
-      <div class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
+      <div data-animate class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
         <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
           La inflación no espera. Protege tu dinero con oro desde hoy.
         </h2>
@@ -406,4 +435,36 @@ const faqItems = [
   </main>
 
   <Footer />
+
+  <script>
+    // Mide el contenido real del iframe de la Bóveda (mismo origen) y lo escala
+    // para que entre exacto en su columna, sin scroll interno ni recorte.
+    const wrap = document.querySelector<HTMLElement>("[data-boveda-wrap]");
+    const frame = document.querySelector<HTMLIFrameElement>("[data-boveda-frame]");
+
+    if (wrap && frame) {
+      const fit = () => {
+        const doc = frame.contentDocument;
+        const body = doc?.body;
+        if (!body) return;
+        const cw = body.scrollWidth || 1170;
+        const ch = body.scrollHeight;
+        if (!ch) return; // aún no montó el contenido React
+        const scale = wrap.clientWidth / cw;
+        frame.style.width = `${cw}px`;
+        frame.style.height = `${ch}px`;
+        frame.style.transform = `scale(${scale})`;
+        wrap.style.height = `${ch * scale}px`;
+      };
+
+      // El bundle monta React de forma asíncrona: reintenta durante ~4s.
+      let ticks = 0;
+      const poll = setInterval(() => {
+        fit();
+        if (++ticks > 40) clearInterval(poll);
+      }, 100);
+      frame.addEventListener("load", fit);
+      window.addEventListener("resize", fit);
+    }
+  </script>
 </BaseLayout>
