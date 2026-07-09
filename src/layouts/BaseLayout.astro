@@ -87,5 +87,31 @@ const ogImageUrl = new URL(ogImage, Astro.site);
         style="display:none;visibility:hidden"></iframe>
     </noscript>
     <slot />
+
+    <script>
+      // Scroll reveal global: revela elementos con [data-animate] al entrar en viewport.
+      // Respeta prefers-reduced-motion (si está activo, no oculta nada y muestra todo directo).
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const animated = document.querySelectorAll("[data-animate]");
+
+      if (prefersReduced || !("IntersectionObserver" in window)) {
+        animated.forEach((el) => el.classList.add("is-visible"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const el = entry.target as HTMLElement;
+              const delay = el.dataset.delay;
+              if (delay) el.style.transitionDelay = `${delay}ms`;
+              el.classList.add("is-visible");
+              observer.unobserve(el);
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+        );
+        animated.forEach((el) => observer.observe(el));
+      }
+    </script>
   </body>
 </html>

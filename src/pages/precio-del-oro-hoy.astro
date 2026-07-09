@@ -118,7 +118,7 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
 
   <Header />
 
-  <main class="bg-ag-dark font-body text-white">
+  <main class="bg-ag-black font-body text-white">
     <!-- Hero + widget -->
     <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
       <div class="text-center">
@@ -135,42 +135,166 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
       </div>
 
       <!-- Widget -->
-      <div class="mx-auto mt-12 max-w-lg rounded-2xl border border-white/10 bg-white/5 p-6" data-gold-widget>
+      <div
+        class="mx-auto mt-12 max-w-lg rounded-2xl border border-white/10 bg-white/5 p-6"
+        data-gold-widget
+      >
         <div class="flex items-center justify-between text-xs text-white/40">
           <span class="font-mono uppercase tracking-widest">Precio del oro • Onza troy</span>
           <span class="flex items-center gap-2 rounded-full bg-ag-green/10 px-2 py-1 text-ag-green">
             <span class="h-2 w-2 rounded-full bg-ag-green"></span> En vivo
           </span>
         </div>
-        <p class="mt-1 font-mono text-xs text-white/40">XAUT / MXN</p>
 
-        <div class="mt-6">
-          <p class="font-mono text-4xl font-semibold text-white" data-gold-price>$ {fmt(snapshot.mxnPerOz)}</p>
-          <p class="mt-1 font-mono text-sm text-ag-red" data-gold-change>
-            ↓ {snapshot.changeAbs} ({snapshot.changePct}%) <span class="text-white/40">vs. cierre anterior</span>
+        <div class="mt-2 flex items-center justify-between">
+          <p class="font-mono text-xs text-white/40" data-field="pair">XAUT / MXN</p>
+          <div class="flex overflow-hidden rounded-full border border-white/10 text-xs">
+            <button
+              type="button"
+              data-cur-btn="mxn"
+              class="bg-ag-gold px-3 py-1 font-medium text-ag-dark transition-colors"
+            >
+              MXN
+            </button>
+            <button
+              type="button"
+              data-cur-btn="usd"
+              class="px-3 py-1 font-medium text-white/60 transition-colors hover:text-white"
+            >
+              USD
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <p class="font-mono text-4xl font-semibold text-white" data-field="price">
+            $ {fmt(snapshot.mxnPerOz)}
+          </p>
+          <p class="mt-1 font-mono text-sm text-ag-red" data-field="change">
+            ↓ {fmt(Math.abs(snapshot.changeAbs))} ({snapshot.changePct}%)
+            <span class="text-white/40">vs. cierre anterior</span>
           </p>
         </div>
 
         <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
           <div class="rounded-lg bg-white/5 p-3">
             <p class="text-xs text-white/40">Por gramo</p>
-            <p class="font-mono text-white">MXN {fmt(snapshot.mxnPerGram)}</p>
+            <p class="font-mono text-white" data-field="gram">MXN {fmt(snapshot.mxnPerGram)}</p>
           </div>
           <div class="rounded-lg bg-white/5 p-3">
             <p class="text-xs text-white/40">Apertura</p>
-            <p class="font-mono text-white">MXN {fmt(snapshot.open)}</p>
+            <p class="font-mono text-white" data-field="open">MXN {fmt(snapshot.open)}</p>
           </div>
           <div class="rounded-lg bg-white/5 p-3">
             <p class="text-xs text-white/40">Máximo 24h</p>
-            <p class="font-mono text-white">MXN {fmt(snapshot.high24)}</p>
+            <p class="font-mono text-white" data-field="high">MXN {fmt(snapshot.high24)}</p>
           </div>
           <div class="rounded-lg bg-white/5 p-3">
             <p class="text-xs text-white/40">Mínimo 24h</p>
-            <p class="font-mono text-white">MXN {fmt(snapshot.low24)}</p>
+            <p class="font-mono text-white" data-field="low">MXN {fmt(snapshot.low24)}</p>
           </div>
         </div>
+
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-widest text-white/30" data-field="updated"></p>
       </div>
     </section>
+
+    <script>
+      // Precio del oro en vivo desde CoinGecko (tether-gold / XAUT ≈ 1 onza troy).
+      // Progressive enhancement: si falla el fetch, quedan los valores del snapshot SSR.
+      const GRAMS_PER_OZ = 31.1034768;
+      const widget = document.querySelector("[data-gold-widget]");
+
+      if (widget) {
+        const field = (name: string) => widget.querySelector(`[data-field="${name}"]`);
+        const fmt = (n: number) =>
+          n.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+        let data: Record<string, { price: number; change: number; changePct: number; high: number; low: number }> | null =
+          null;
+        let currency: "mxn" | "usd" = "mxn";
+
+        const render = () => {
+          if (!data) return;
+          const d = data[currency];
+          const code = currency.toUpperCase();
+          const open = d.price - d.change;
+          const up = d.change >= 0;
+
+          const pairEl = field("pair");
+          if (pairEl) pairEl.textContent = `XAUT / ${code}`;
+
+          const priceEl = field("price");
+          if (priceEl) priceEl.textContent = `$ ${fmt(d.price)}`;
+
+          const changeEl = field("change");
+          if (changeEl) {
+            changeEl.classList.toggle("text-ag-green", up);
+            changeEl.classList.toggle("text-ag-red", !up);
+            changeEl.innerHTML = `${up ? "↑" : "↓"} ${fmt(Math.abs(d.change))} (${d.changePct.toFixed(2)}%) <span class="text-white/40">vs. cierre anterior</span>`;
+          }
+
+          const set = (name: string, value: number) => {
+            const el = field(name);
+            if (el) el.textContent = `${code} ${fmt(value)}`;
+          };
+          set("gram", d.price / GRAMS_PER_OZ);
+          set("open", open);
+          set("high", d.high);
+          set("low", d.low);
+
+          const updatedEl = field("updated");
+          if (updatedEl) {
+            const now = new Date().toLocaleTimeString("es-MX", { hour: "2-digit", minute: "2-digit" });
+            updatedEl.textContent = `Últ. actualización ${now}`;
+          }
+        };
+
+        const setCurrency = (cur: "mxn" | "usd") => {
+          currency = cur;
+          widget.querySelectorAll("[data-cur-btn]").forEach((btn) => {
+            const active = btn.getAttribute("data-cur-btn") === cur;
+            btn.classList.toggle("bg-ag-gold", active);
+            btn.classList.toggle("text-ag-dark", active);
+            btn.classList.toggle("text-white/60", !active);
+          });
+          render();
+        };
+
+        widget.querySelectorAll("[data-cur-btn]").forEach((btn) => {
+          btn.addEventListener("click", () =>
+            setCurrency(btn.getAttribute("data-cur-btn") as "mxn" | "usd"),
+          );
+        });
+
+        fetch(
+          "https://api.coingecko.com/api/v3/coins/tether-gold?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false",
+        )
+          .then((r) => r.json())
+          .then((json) => {
+            const m = json.market_data;
+            if (!m) return;
+            data = {
+              mxn: {
+                price: m.current_price.mxn,
+                change: m.price_change_24h_in_currency?.mxn ?? 0,
+                changePct: m.price_change_percentage_24h_in_currency?.mxn ?? m.price_change_percentage_24h ?? 0,
+                high: m.high_24h.mxn,
+                low: m.low_24h.mxn,
+              },
+              usd: {
+                price: m.current_price.usd,
+                change: m.price_change_24h_in_currency?.usd ?? 0,
+                changePct: m.price_change_percentage_24h_in_currency?.usd ?? m.price_change_percentage_24h ?? 0,
+                high: m.high_24h.usd,
+                low: m.low_24h.usd,
+              },
+            };
+            render();
+          })
+          .catch((err) => console.error("CoinGecko fetch failed:", err));
+      }
+    </script>
 
     <!-- Histórico -->
     <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
@@ -182,8 +306,8 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
 
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {
-          performance.map((p) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          performance.map((p, i) => (
+            <div data-animate data-delay={i * 70} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <p class="font-display text-3xl text-ag-gold">{p.value}</p>
               <p class="mt-1 text-sm text-white">{p.label}</p>
               <p class="mt-2 text-xs text-white/50">{p.note}</p>
@@ -262,8 +386,8 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
       />
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {
-          factors.map((factor) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          factors.map((factor, i) => (
+            <div data-animate data-delay={i * 70} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <span class="flex h-9 w-9 items-center justify-center rounded-full bg-ag-gold font-display text-ag-dark">
                 {factor.number}
               </span>
@@ -289,7 +413,7 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
 
     <!-- Final CTA -->
     <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
-      <div class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
+      <div data-animate class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
         <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
           Compra oro en México desde $1 hoy, al precio del mercado
         </h2>

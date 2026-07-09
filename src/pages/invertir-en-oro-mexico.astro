@@ -181,7 +181,7 @@ const faqItems = [
 
   <Header />
 
-  <main class="bg-ag-dark font-body text-white">
+  <main class="bg-ag-black font-body text-white">
     <!-- Hero -->
     <section class="mx-auto max-w-[1200px] px-6 py-20 text-center lg:px-10">
       <span class="rounded-full border border-white/20 px-4 py-1 font-body text-xs text-white/70">
@@ -211,8 +211,8 @@ const faqItems = [
 
       <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
         {
-          stats.map((stat) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          stats.map((stat, i) => (
+            <div data-animate data-delay={i * 70} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <p class="font-display text-3xl text-ag-gold">{stat.value}</p>
               <p class="mt-1 text-sm text-white/50">{stat.label}</p>
             </div>
@@ -269,8 +269,8 @@ const faqItems = [
       />
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {
-          benefits.map((benefit) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          benefits.map((benefit, i) => (
+            <div data-animate data-delay={i * 70} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 class="font-display text-lg text-white">{benefit.title}</h3>
               <p class="mt-2 text-sm text-white/60">{benefit.description}</p>
             </div>
@@ -324,8 +324,8 @@ const faqItems = [
       />
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
         {
-          steps.map((step) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+          steps.map((step, i) => (
+            <div data-animate data-delay={i * 90} class="rounded-2xl border border-white/10 bg-white/5 p-8">
               <span class="flex h-10 w-10 items-center justify-center rounded-full bg-ag-gold font-display text-lg text-ag-dark">
                 {step.number}
               </span>
@@ -347,8 +347,8 @@ const faqItems = [
       />
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {
-          securityCards.map((card) => (
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          securityCards.map((card, i) => (
+            <div data-animate data-delay={i * 70} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 class="font-display text-lg text-white">{card.title}</h3>
               <p class="mt-2 text-sm text-white/60">{card.description}</p>
             </div>
@@ -376,7 +376,7 @@ const faqItems = [
 
     <!-- Final CTA -->
     <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
-      <div class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
+      <div data-animate class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
         <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
           Compra oro en México desde $1 hoy, al precio del mercado
         </h2>

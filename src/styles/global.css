@@ -11,6 +11,7 @@
   --font-mono: "Fragment Mono", monospace;
 
   /* Paleta extraída del CSS embebido de auragold.io */
+  --color-ag-black: #090909;
   --color-ag-gold: #f2b334;
   --color-ag-blue: #0099ff;
   --color-ag-dark: #171717;
@@ -27,5 +28,57 @@
 @layer base {
   a {
     color: inherit;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Scroll reveal — entrada suave de secciones al hacer scroll.
+   Replica la entrada whileInView de Framer del sitio original.
+   El JS global (BaseLayout) agrega .is-visible al entrar en viewport.
+   Se desactiva si el usuario pidió reducir movimiento.
+   ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+    will-change: opacity, transform;
+  }
+
+  [data-animate].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   Hero — staggered blur-in reveal (on-load).
+   Cada línea combina fade + rise (48px) + blur (10px→0),
+   con delays escalonados y ease-out expo cubic-bezier(0.16,1,0.3,1).
+   ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(48px);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  .hero-rise {
+    opacity: 0;
+    animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 }
