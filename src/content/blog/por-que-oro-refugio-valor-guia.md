@@ -11,11 +11,11 @@ El oro lleva más de 5.000 años siendo el activo al que los seres humanos recur
 
 ## Qué es un activo refugio financiero
 
-Un activo refugio de valor es cualquier bien o instrumento que mantiene —o incrementa— su valor cuando los mercados caen, la inflación sube o la incertidumbre económica se dispara.
+Un activo refugio de valor es cualquier bien o instrumento que mantiene -o incrementa- su valor cuando los mercados caen, la inflación sube o la incertidumbre económica se dispara.
 
 No es un activo que siempre sube. Es un activo que no pierde su utilidad cuando todo lo demás falla.
 
-La distinción importa. Un activo de crecimiento —acciones, criptomonedas, bienes raíces— puede multiplicarse en tiempos de prosperidad, pero también colapsar en tiempos de crisis. Un refugio de valor no necesita crecer agresivamente: solo necesita preservar valor en contextos adversos.
+La distinción importa. Un activo de crecimiento -acciones, criptomonedas, bienes raíces- puede multiplicarse en tiempos de prosperidad, pero también colapsar en tiempos de crisis. Un refugio de valor no necesita crecer agresivamente: solo necesita preservar valor en contextos adversos.
 
 ### Características que definen a un verdadero refugio de valor
 
@@ -29,7 +29,7 @@ No todos los activos que se presentan como "refugio" lo son en la práctica. Un 
 
 ### Por qué no todos los activos son verdaderos refugios
 
-El dólar estadounidense se considera un refugio en términos relativos —es la divisa de reserva dominante—, pero su poder adquisitivo se ha erosionado de forma sostenida durante el último siglo.
+El dólar estadounidense se considera un refugio en términos relativos -es la divisa de reserva dominante-, pero su poder adquisitivo se ha erosionado de forma sostenida durante el último siglo.
 
 Los bonos del tesoro de EE.UU. son relativamente estables, pero su valor real depende de la inflación y del emisor.
 
@@ -59,7 +59,7 @@ No por simbolismo, sino por propiedades físicas concretas: es durable, divisibl
 
 Durante siglos, el oro ha conservado una capacidad de compra relativamente estable frente a bienes reales, algo que pocas formas de dinero han conseguido sostener en el tiempo.
 
-> "El oro es dinero. Todo lo demás es crédito." — J.P. Morgan, 1912
+> "El oro es dinero. Todo lo demás es crédito." - J.P. Morgan, 1912
 
 ### El patrón oro y la estabilidad monetaria
 
@@ -119,7 +119,7 @@ En México, el oro añade una capa de protección adicional: no solo frente a la
 
 No toda exposición al oro ofrece el mismo nivel de protección.
 
-**Qué es el oro papel:** el llamado "oro papel" incluye instrumentos financieros vinculados al precio del oro — ETFs, futuros, certificados, acciones mineras. Estos productos replican o siguen el precio del metal, pero no siempre implican propiedad directa sobre oro físico.
+**Qué es el oro papel:** el llamado "oro papel" incluye instrumentos financieros vinculados al precio del oro - ETFs, futuros, certificados, acciones mineras. Estos productos replican o siguen el precio del metal, pero no siempre implican propiedad directa sobre oro físico.
 
 **Qué diferencia al oro físico:** el oro físico introduce una diferencia clave: reduce la dependencia de intermediarios financieros. Eso no significa ausencia total de riesgo, pero sí una estructura distinta a la de un activo puramente financiero. En contextos de estrés sistémico, esa diferencia puede ser relevante.
 

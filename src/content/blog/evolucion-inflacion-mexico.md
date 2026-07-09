@@ -65,7 +65,7 @@ Para el ahorrador mexicano común, eso lo convierte en una alternativa que merec
 
 **¿Cuánto ha sido la inflación en México en los últimos 5 años?**
 
-Entre 2020 y 2024, México atravesó uno de sus ciclos inflacionarios más significativos de las últimas dos décadas. La inflación pasó del 3.4% en 2020 —año marcado por la caída de demanda por la pandemia— hasta el 7.9% en 2022, el punto máximo desde el año 2000. Desde entonces ha retrocedido progresivamente: 5.5% en 2023 y 4.7% en 2024. La inflación acumulada en estos cinco años supera el 30%, según los datos del Banco Mundial.
+Entre 2020 y 2024, México atravesó uno de sus ciclos inflacionarios más significativos de las últimas dos décadas. La inflación pasó del 3.4% en 2020 -año marcado por la caída de demanda por la pandemia- hasta el 7.9% en 2022, el punto máximo desde el año 2000. Desde entonces ha retrocedido progresivamente: 5.5% en 2023 y 4.7% en 2024. La inflación acumulada en estos cinco años supera el 30%, según los datos del Banco Mundial.
 
 **¿Cuál ha sido la inflación en México en los últimos 10 años?**
 
@@ -89,6 +89,6 @@ Compra oro físico real desde cualquier cantidad, directo desde tu celular. Sin 
 
 ## Fuentes
 
-1. Banco Mundial. *Inflación, precios al consumidor (% anual) — México*. Indicadores del Desarrollo Mundial, código FP.CPI.TOTL.ZG. Última actualización: febrero 2026. data.worldbank.org
+1. Banco Mundial. *Inflación, precios al consumidor (% anual) - México*. Indicadores del Desarrollo Mundial, código FP.CPI.TOTL.ZG. Última actualización: febrero 2026. data.worldbank.org
 2. INEGI. *Índice Nacional de Precios al Consumidor (INPC)*. Instituto Nacional de Estadística y Geografía, publicación quincenal. inegi.org.mx
 3. Banco de México. *Series históricas del INPC y política monetaria*. Portal de Información Económica. banxico.org.mx

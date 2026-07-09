@@ -30,7 +30,7 @@ Cuando invertís en oro físico real, no estás comprando un papel, un derivado 
 **Tres formas tradicionales de comprar oro físico:**
 
 - Casas de cambio físicas: requieren desplazamiento, horarios limitados y compras mínimas de varios gramos (desde $8,000 MXN).
-- Bancos institucionales: lingotes de oro con barreras altas — inversión mínima de $50,000-$100,000 MXN, comisiones de custodia y procesos burocráticos extensos.
+- Bancos institucionales: lingotes de oro con barreras altas - inversión mínima de $50,000-$100,000 MXN, comisiones de custodia y procesos burocráticos extensos.
 - Compra directa de lingotes: implica asumir custodia personal (riesgo de robo), verificar autenticidad y enfrentar problemas de liquidez al vender.
 
 **La alternativa moderna: oro fraccionado digital.** Permite comprar fracciones mínimas de oro físico (desde $1 peso mexicano) manteniendo todos los beneficios del activo real: tu inversión representa oro físico tangible custodiado en bóvedas certificadas, y podés comprarlo, venderlo y monitorearlo desde tu celular en segundos.
@@ -90,7 +90,7 @@ Consejo práctico: no inviertas todo de golpe. Hacé una primera compra pequeña
 
 **Frecuencia recomendada:** primeras semanas cada 2-3 días; después del primer mes, semanalmente o cada 15 días; largo plazo, recordatorios mensuales.
 
-**Volatilidad normal del oro:** diaria ±0.5-2%, mensual ±3-5%, anual histórica 10-15% — significativamente menor que acciones (25-40% anual) o criptomonedas (80-200% anual).
+**Volatilidad normal del oro:** diaria ±0.5-2%, mensual ±3-5%, anual histórica 10-15% - significativamente menor que acciones (25-40% anual) o criptomonedas (80-200% anual).
 
 **Cuándo considerar vender:** necesitás liquidez urgente real, alcanzaste tu objetivo de ahorro, o hay rebalanceo de cartera.
 
@@ -108,11 +108,11 @@ Destiná un porcentaje fijo de tus ingresos mensuales a oro, tratándolo como un
 
 ## Errores comunes al invertir en oro (y cómo evitarlos)
 
-1. **Esperar el "momento perfecto" para comprar** — el precio fluctúa constantemente; empezá con poco y aumentá gradualmente.
-2. **Tratar el oro como inversión especulativa** — el oro protege, no multiplica agresivamente; ajustá expectativas a un horizonte mínimo de 1-3 años.
-3. **Invertir dinero que necesitás en corto plazo** — mantené tu fondo de emergencia en efectivo líquido (3-6 meses de gastos), invertí en oro solo el excedente.
-4. **No diversificar entre activos** — el oro debe ser una parte (5-20%) de una estrategia más amplia.
-5. **Dejarse llevar por el pánico en caídas temporales** — recordá que el oro tiene volatilidad natural y su propósito es protección a largo plazo.
+1. **Esperar el "momento perfecto" para comprar** - el precio fluctúa constantemente; empezá con poco y aumentá gradualmente.
+2. **Tratar el oro como inversión especulativa** - el oro protege, no multiplica agresivamente; ajustá expectativas a un horizonte mínimo de 1-3 años.
+3. **Invertir dinero que necesitás en corto plazo** - mantené tu fondo de emergencia en efectivo líquido (3-6 meses de gastos), invertí en oro solo el excedente.
+4. **No diversificar entre activos** - el oro debe ser una parte (5-20%) de una estrategia más amplia.
+5. **Dejarse llevar por el pánico en caídas temporales** - recordá que el oro tiene volatilidad natural y su propósito es protección a largo plazo.
 
 ## Da el primer paso: comienza a proteger tu dinero hoy
 
@@ -158,4 +158,4 @@ La recomendación clásica es 5-15% de tu patrimonio líquido, hasta 20-25% si s
 
 **¿Puedo sacar mi dinero rápidamente si necesito liquidez?**
 
-En plataformas modernas de oro fraccionado, sí — podés vender tu oro instantáneamente desde la app y recibir pesos mexicanos en minutos/horas.
+En plataformas modernas de oro fraccionado, sí - podés vender tu oro instantáneamente desde la app y recibir pesos mexicanos en minutos/horas.

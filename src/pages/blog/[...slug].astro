@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 const author = authors[post.data.author];
 
 const formatDate = (date: Date) =>
@@ -27,6 +27,47 @@ const categorySlugs: Record<string, string> = {
   Mercado: "mercado",
   Seguridad: "seguridad",
 };
+
+// Índice "On This Page" - solo H2
+const toc = headings.filter((h) => h.depth === 2);
+
+// Posts para el sidebar (destacados) y el bloque de relacionados
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const otherPosts = allPosts.filter((p) => p.id !== post.id);
+const featured = otherPosts.slice(0, 2);
+const sameCategory = otherPosts.filter((p) => p.data.category === post.data.category);
+const related = (sameCategory.length ? sameCategory : otherPosts).slice(0, 2);
+
+// Explora temas (categorías)
+const topics = [
+  {
+    name: "Educación",
+    slug: "educacion",
+    image: "/images/blog/por-que-el-oro-protege-la-inflacion.png",
+    description:
+      "Aprende los fundamentos del oro, cómo protege tu dinero frente a la inflación y comparativas con otros activos como acciones o efectivo.",
+  },
+  {
+    name: "Guías",
+    slug: "guias",
+    image: "/images/blog/invertir-en-oro-paso-a-paso.png",
+    description: "Tutoriales paso a paso para invertir en México, diferencias entre oro físico y digital, y consejos para ahorrar.",
+  },
+  {
+    name: "Seguridad",
+    slug: "seguridad",
+    image: "/images/blog/errores-al-invertir-en-oro.png",
+    description: "Todo sobre la custodia segura, certificaciones internacionales LBMA y cómo evitar errores comunes al comprar.",
+  },
+  {
+    name: "Mercado",
+    slug: "mercado",
+    image: "/images/blog/evolucion-inflacion-mexico.png",
+    description: "Análisis actual del precio del oro y por qué sigue siendo el principal refugio de valor en tiempos de crisis.",
+  },
+];
 ---
 
 <BaseLayout
@@ -50,38 +91,202 @@ const categorySlugs: Record<string, string> = {
   <Header />
 
   <main class="bg-ag-black font-body text-white">
-    <article class="mx-auto max-w-3xl px-6 py-16 lg:px-10">
-      <nav class="mb-6 flex items-center gap-2 text-sm text-white/40">
+    <div class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <nav class="mb-8 flex items-center gap-2 text-sm text-white/40">
         <a href="/" class="hover:text-white">Inicio</a>
         <span>&gt;</span>
-        <span>{post.data.category}</span>
+        <a href="/blog" class="hover:text-white">{post.data.category}</a>
         <span>&gt;</span>
         <span class="text-white/70">{post.data.title}</span>
       </nav>
 
-      <h1 class="font-display text-3xl font-semibold text-white lg:text-4xl">{post.data.title}</h1>
-      <p class="mt-4 text-white/60">{post.data.description}</p>
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <!-- Contenido principal -->
+        <article class="min-w-0">
+          <span class="rounded-md bg-ag-slate/60 px-3 py-1 font-mono text-xs uppercase tracking-widest text-ag-gold">
+            {post.data.category}
+          </span>
+          <h1 class="mt-4 font-display text-3xl font-medium text-white lg:text-4xl">{post.data.title}</h1>
+          <p class="mt-4 text-lg text-white/60">{post.data.description}</p>
 
-      <div class="mt-6 flex items-center gap-3 border-b border-white/10 pb-6">
-        {author && <img src={author.image} alt={author.name} width="40" height="40" class="h-10 w-10 rounded-full object-cover" />}
-        <div class="text-sm">
-          <p class="text-white">{author?.name}</p>
-          <p class="text-white/40">{formatDate(post.data.pubDate)}</p>
-        </div>
+          <div class="mt-6 flex items-center gap-3">
+            {author && <img src={author.image} alt={author.name} width="44" height="44" class="h-11 w-11 rounded-full object-cover" />}
+            <div class="text-sm">
+              <p class="text-white">{author?.name}</p>
+              <p class="text-white/40">{formatDate(post.data.pubDate)}</p>
+            </div>
+          </div>
+
+          <img
+            src={post.data.heroImage}
+            alt={post.data.title}
+            width="768"
+            height="432"
+            class="mt-8 aspect-[16/9] w-full rounded-2xl object-cover"
+          />
+
+          <!-- Índice "On This Page" (visible en mobile; en desktop está en el sidebar) -->
+          {
+            toc.length > 0 && (
+              <nav class="mt-8 rounded-2xl border border-white/10 bg-ag-slate/40 p-6 lg:hidden">
+                <p class="font-display text-sm font-medium text-white">En esta página</p>
+                <ul class="mt-3 space-y-2 border-l border-white/10 pl-4 text-sm">
+                  {toc.map((h) => (
+                    <li>
+                      <a href={`#${h.slug}`} class="text-white/60 hover:text-ag-gold">
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )
+          }
+
+          <div class="prose prose-invert mt-10 max-w-none prose-headings:font-display prose-headings:font-medium prose-headings:text-white prose-h2:scroll-mt-28 prose-p:text-white/70 prose-li:text-white/70 prose-strong:text-white prose-a:text-ag-gold prose-table:text-sm prose-th:text-white prose-td:text-white/70">
+            <Content />
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="space-y-8 lg:sticky lg:top-24 lg:self-start">
+          <!-- Índice "On This Page" (desktop) -->
+          {
+            toc.length > 0 && (
+              <nav class="hidden rounded-2xl border border-white/10 bg-ag-slate/40 p-6 lg:block">
+                <p class="font-display text-sm font-medium text-white">En esta página</p>
+                <ul class="mt-3 space-y-2 border-l border-white/10 pl-4 text-sm">
+                  {toc.map((h) => (
+                    <li>
+                      <a href={`#${h.slug}`} class="block text-white/60 transition-colors hover:text-ag-gold">
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )
+          }
+
+          <!-- SOBRE aura -->
+          <div class="rounded-2xl border border-white/10 bg-ag-slate/40 p-6">
+            <p class="font-mono text-xs uppercase tracking-widest text-white/40">Sobre</p>
+            <p class="mt-3 font-display text-3xl font-medium text-white">aura</p>
+            <p class="mt-4 text-sm text-white/60">
+              Es la forma más clara y segura de tener oro. Invierte en tu futuro sin complicaciones, desde tu
+              celular, sin mínimos y sin límites.
+            </p>
+            <p class="mt-4 text-sm text-white/60">
+              Un camino de ahorro hecho a tu medida. Aura te da el control para proteger y organizar tu dinero con
+              la solidez del oro.
+            </p>
+            <a
+              href="/#descargar"
+              class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark hover:opacity-90"
+            >
+              Descargar Aura
+            </a>
+          </div>
+
+          <!-- Artículos destacados -->
+          <div>
+            <p class="font-mono text-xs uppercase tracking-widest text-white/40">Artículos destacados</p>
+            <div class="mt-4 space-y-4">
+              {
+                featured.map((p) => {
+                  const a = authors[p.data.author];
+                  return (
+                    <a
+                      href={`/blog/${p.id}`}
+                      class="group block overflow-hidden rounded-2xl border border-white/10 bg-ag-slate/40 transition-colors hover:bg-ag-slate/60"
+                    >
+                      <div class="relative aspect-[16/9] overflow-hidden">
+                        <img
+                          src={p.data.heroImage}
+                          alt={p.data.title}
+                          loading="lazy"
+                          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <span class="absolute left-3 top-3 rounded-md bg-ag-black/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-ag-gold">
+                          {p.data.category}
+                        </span>
+                      </div>
+                      <div class="p-4">
+                        <p class="text-xs text-white/40">
+                          {formatDate(p.data.pubDate)} / {a?.name}
+                        </p>
+                        <h3 class="mt-1 font-display text-sm text-white group-hover:text-ag-gold">{p.data.title}</h3>
+                      </div>
+                    </a>
+                  );
+                })
+              }
+            </div>
+          </div>
+
+          <!-- Explora temas -->
+          <div class="rounded-2xl border border-white/10 bg-ag-slate/40 p-6">
+            <p class="font-mono text-xs uppercase tracking-widest text-white/40">Explora temas</p>
+            <div class="mt-4 space-y-4">
+              {
+                topics.map((t) => (
+                  <a href="/blog" class="group flex items-center gap-3">
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      loading="lazy"
+                      class="h-12 w-12 shrink-0 rounded-lg object-cover"
+                    />
+                    <div class="min-w-0">
+                      <p class="font-display text-sm text-white group-hover:text-ag-gold">{t.name}</p>
+                      <p class="line-clamp-2 text-xs text-white/40">{t.description}</p>
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </aside>
       </div>
 
-      <img
-        src={post.data.heroImage}
-        alt={post.data.title}
-        width="768"
-        height="432"
-        class="mt-8 aspect-[16/9] w-full rounded-2xl object-cover"
-      />
-
-      <div class="prose prose-invert mt-10 max-w-none prose-headings:font-display prose-headings:text-white prose-p:text-white/70 prose-li:text-white/70 prose-strong:text-white prose-a:text-ag-gold prose-table:text-sm prose-th:text-white prose-td:text-white/70">
-        <Content />
-      </div>
-    </article>
+      <!-- También puede interesarte -->
+      {
+        related.length > 0 && (
+          <section class="mt-16 border-t border-white/10 pt-12">
+            <h2 class="font-display text-2xl font-medium text-white">También puede interesarte</h2>
+            <div class="mt-8 grid gap-8 sm:grid-cols-2">
+              {related.map((p) => {
+                const a = authors[p.data.author];
+                return (
+                  <a
+                    href={`/blog/${p.id}`}
+                    class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ag-slate/40 transition-colors hover:bg-ag-slate/60"
+                  >
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                      <img
+                        src={p.data.heroImage}
+                        alt={p.data.title}
+                        loading="lazy"
+                        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <span class="absolute left-4 top-4 rounded-md bg-ag-black/80 px-3 py-1 font-mono text-xs uppercase tracking-widest text-ag-gold">
+                        {p.data.category}
+                      </span>
+                    </div>
+                    <div class="p-6">
+                      <p class="text-xs text-white/40">
+                        {formatDate(p.data.pubDate)} / {a?.name}
+                      </p>
+                      <h3 class="mt-2 font-display text-lg text-white group-hover:text-ag-gold">{p.data.title}</h3>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        )
+      }
+    </div>
   </main>
 
   <Footer />

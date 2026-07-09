@@ -61,7 +61,7 @@ Más allá de la inflación, concentrar todo tu ahorro en el sistema bancario im
 
 **2. Restricciones de acceso en crisis.** Aunque no es el escenario base en México, la historia financiera internacional demuestra que en crisis severas pueden existir restricciones temporales de acceso al dinero. Ha ocurrido en distintos países bajo distintas formas: Argentina (2001), Chipre (2013), Grecia (2015). El riesgo no es que ocurra siempre. El riesgo es asumir que nunca puede ocurrir.
 
-**3. Pérdida de valor por inflación.** Este es el riesgo más común y más constante. No necesitás una crisis bancaria para perder dinero en el banco. Basta con dejarlo quieto durante años mientras los precios suben más rápido que tu rendimiento. Es la forma más silenciosa —y más frecuente— de perder poder adquisitivo.
+**3. Pérdida de valor por inflación.** Este es el riesgo más común y más constante. No necesitás una crisis bancaria para perder dinero en el banco. Basta con dejarlo quieto durante años mientras los precios suben más rápido que tu rendimiento. Es la forma más silenciosa -y más frecuente- de perder poder adquisitivo.
 
 **4. Tasas reales negativas.** Cuando tu cuenta paga menos que la inflación, estás obteniendo una tasa real negativa. Eso significa que tu dinero crece en números, pero retrocede en valor.
 

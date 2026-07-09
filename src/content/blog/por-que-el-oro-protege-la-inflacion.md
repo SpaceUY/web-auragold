@@ -17,7 +17,7 @@ Esta guía te explica con ejemplos reales y números concretos por qué el oro s
 
 La inflación no es un concepto abstracto de economistas. Es la razón por la que los $100 pesos de hace 5 años no compran lo mismo hoy.
 
-**Ejemplo práctico en México:** en 2020 un kilo de tortillas costaba $12-15 pesos; en 2025 el mismo kilo cuesta $20-25 pesos — un incremento de más del 60% en 5 años.
+**Ejemplo práctico en México:** en 2020 un kilo de tortillas costaba $12-15 pesos; en 2025 el mismo kilo cuesta $20-25 pesos - un incremento de más del 60% en 5 años.
 
 Si guardaste $1,000 pesos bajo el colchón en 2020, hoy esos mismos $1,000 pesos compran un 38% menos de productos. No perdiste dinero físicamente, pero perdiste poder adquisitivo real.
 
@@ -56,11 +56,11 @@ En ese mismo período, el oro subió de $1,900 USD/onza a $2,650 USD/onza (39% d
 
 ## Ejemplos reales de protección con oro en México
 
-**Caso 1 — Ahorro para educación universitaria (5 años):** sin oro, $200,000 guardados en 2020 no alcanzan para una colegiatura que subió de $180,000 a $285,000 en 2025 (faltan $85,000). Con oro, esos $200,000 convertidos en 2020 valen $350,000 en 2025 — cubren la colegiatura y sobran $65,000.
+**Caso 1 - Ahorro para educación universitaria (5 años):** sin oro, $200,000 guardados en 2020 no alcanzan para una colegiatura que subió de $180,000 a $285,000 en 2025 (faltan $85,000). Con oro, esos $200,000 convertidos en 2020 valen $350,000 en 2025 - cubren la colegiatura y sobran $65,000.
 
-**Caso 2 — Fondo de emergencia (3 años):** sin oro, $80,000 en banco con 3% de interés anual pierden $4,800 de poder adquisitivo real frente a una inflación de 5% anual, quedando en $75,200. Con oro, esos $80,000 convertidos en 2022 valen aproximadamente $95,000 en 2025 — ganancia de $15,000 extra.
+**Caso 2 - Fondo de emergencia (3 años):** sin oro, $80,000 en banco con 3% de interés anual pierden $4,800 de poder adquisitivo real frente a una inflación de 5% anual, quedando en $75,200. Con oro, esos $80,000 convertidos en 2022 valen aproximadamente $95,000 en 2025 - ganancia de $15,000 extra.
 
-**Caso 3 — Ahorro mensual pequeño (efecto acumulativo):** ahorrando $2,000 pesos mensuales en alcancía durante 3 años, el total nominal de $72,000 tiene un poder adquisitivo real de $61,200 (pérdida invisible de $10,800). Con oro fraccionado digital, esos mismos $2,000 mensuales acumulan un equivalente a $85,000-$90,000 pesos — ganancia de protección de $13,000-$18,000 frente al efectivo.
+**Caso 3 - Ahorro mensual pequeño (efecto acumulativo):** ahorrando $2,000 pesos mensuales en alcancía durante 3 años, el total nominal de $72,000 tiene un poder adquisitivo real de $61,200 (pérdida invisible de $10,800). Con oro fraccionado digital, esos mismos $2,000 mensuales acumulan un equivalente a $85,000-$90,000 pesos - ganancia de protección de $13,000-$18,000 frente al efectivo.
 
 ## Oro físico vs oro digital: cuál protege mejor contra inflación
 
@@ -74,7 +74,7 @@ Ambos tipos de oro te protegen de la inflación porque representan el mismo acti
 
 El oro no genera dividendos o intereses, no duplica tu dinero en 6 meses, y no es una apuesta especulativa. Lo que hace es preservar poder adquisitivo a largo plazo, manteniendo valor intrínseco independiente de la inflación.
 
-**Ejemplo comparativo (1990-2025):** una persona que guardó $10,000 pesos en efectivo tiene hoy un poder adquisitivo real equivalente a $380 pesos de 1990 (pérdida del 96.2%). Otra que convirtió esos $10,000 pesos a 6.8 onzas de oro (a $250 USD/onza) tiene hoy oro que vale $369,000 pesos (a $2,650 USD/onza) — mantiene el mismo poder adquisitivo real que tenía en 1990.
+**Ejemplo comparativo (1990-2025):** una persona que guardó $10,000 pesos en efectivo tiene hoy un poder adquisitivo real equivalente a $380 pesos de 1990 (pérdida del 96.2%). Otra que convirtió esos $10,000 pesos a 6.8 onzas de oro (a $250 USD/onza) tiene hoy oro que vale $369,000 pesos (a $2,650 USD/onza) - mantiene el mismo poder adquisitivo real que tenía en 1990.
 
 ## Cuánto oro necesitas para protegerte de la inflación
 
@@ -120,7 +120,7 @@ Sí, el oro fluctúa (±10-15% anual típicamente). Pero a diferencia del efecti
 
 **¿Es mejor oro o dólares para proteger de inflación en México?**
 
-Ambos protegen contra devaluación del peso. El oro protege adicionalmente contra inflación global — doble protección.
+Ambos protegen contra devaluación del peso. El oro protege adicionalmente contra inflación global - doble protección.
 
 **¿Desde cuánto puedo empezar a protegerme con oro?**
 
