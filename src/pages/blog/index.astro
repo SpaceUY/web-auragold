@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import { authors } from "../../data/authors";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });
+---
+
+<BaseLayout
+  title="Blog Aura Gold - Contenidos sobre inversión en oro"
+  description="Educación financiera | Insights del Mercado | Descubre cómo el oro y los activos reales pueden ser el escudo que tus ahorros necesitan."
+>
+  <Header />
+
+  <main class="bg-ag-dark font-body text-white">
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <h1 class="font-display text-4xl font-semibold lg:text-5xl">Blog</h1>
+      <p class="mt-4 max-w-2xl text-white/60">
+        Educación financiera | Insights del Mercado | Descubre cómo el oro y los activos reales pueden ser el
+        escudo que tus ahorros necesitan.
+      </p>
+
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          posts.map((post) => {
+            const author = authors[post.data.author];
+            return (
+              <a
+                href={`/blog/${post.id}`}
+                class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:bg-white/10"
+              >
+                <div class="relative aspect-[16/9] overflow-hidden">
+                  <img
+                    src={post.data.heroImage}
+                    alt={post.data.title}
+                    width="640"
+                    height="360"
+                    loading="lazy"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <span class="absolute left-4 top-4 rounded-md bg-ag-dark/80 px-3 py-1 font-mono text-xs uppercase tracking-widest text-ag-gold">
+                    {post.data.category}
+                  </span>
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <h2 class="font-display text-lg text-white">{post.data.title}</h2>
+                  <p class="mt-2 line-clamp-3 text-sm text-white/60">{post.data.description}</p>
+                  <div class="mt-4 flex items-center gap-2 text-xs text-white/40">
+                    <span>{formatDate(post.data.pubDate)}</span>
+                    <span>/</span>
+                    <span>Por {author?.name}</span>
+                  </div>
+                </div>
+              </a>
+            );
+          })
+        }
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

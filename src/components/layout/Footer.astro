@@ -1,0 +1,41 @@
+---
+const footerLinks = [
+  { label: "Inicio", href: "/" },
+  { label: "Blog", href: "/blog" },
+  { label: "Quiénes somos", href: "/#por-que-aura" },
+  { label: "Términos", href: "/terminos-y-condiciones" },
+  { label: "Privacidad", href: "/politicas-de-privacidad" },
+  { label: "Transparencia", href: "/transparencia" },
+];
+---
+
+<footer class="bg-ag-dark border-t border-white/10">
+  <div class="mx-auto max-w-[1440px] px-6 py-14 lg:px-10">
+    <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+      <div class="max-w-sm">
+        <a href="/" class="font-display text-2xl font-semibold text-white">aura</a>
+        <p class="mt-4 font-body text-sm text-white/60">
+          La forma más simple y segura de proteger tu dinero con oro físico real desde el móvil. México y
+          LATAM.
+        </p>
+      </div>
+
+      <nav class="flex flex-wrap gap-x-8 gap-y-3 font-body text-sm text-white/70">
+        {
+          footerLinks.map((link) => (
+            <a href={link.href} class="hover:text-white transition-colors">
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+
+    <div class="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 font-body text-xs text-white/40 lg:flex-row lg:items-center lg:justify-between">
+      <p>&copy; {new Date().getFullYear()} AuraGold — MintIA Corp. Todos los derechos reservados.</p>
+      <p>
+        Developed by <a href="https://spacedev.io" class="text-white/70 hover:text-white">SpaceDev</a>
+      </p>
+    </div>
+  </div>
+</footer>

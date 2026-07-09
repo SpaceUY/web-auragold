@@ -1,0 +1,88 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import BlogPostingJsonLD from "../../components/seo/BlogPostingJsonLD.astro";
+import { authors } from "../../data/authors";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const author = authors[post.data.author];
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });
+
+const categorySlugs: Record<string, string> = {
+  Educación: "educacion",
+  Guías: "guias",
+  Mercado: "mercado",
+  Seguridad: "seguridad",
+};
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  ogImage={post.data.heroImage}
+  ogType="article"
+  publishedTime={post.data.pubDate.toISOString()}
+  author={author?.name ?? post.data.author}
+>
+  <BlogPostingJsonLD
+    title={post.data.title}
+    description={post.data.description}
+    slug={post.id}
+    pubDate={post.data.pubDate}
+    authorName={author?.name ?? post.data.author}
+    categoryLabel={post.data.category}
+    categorySlug={categorySlugs[post.data.category] ?? ""}
+  />
+
+  <Header />
+
+  <main class="bg-ag-dark font-body text-white">
+    <article class="mx-auto max-w-3xl px-6 py-16 lg:px-10">
+      <nav class="mb-6 flex items-center gap-2 text-sm text-white/40">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <span>&gt;</span>
+        <span>{post.data.category}</span>
+        <span>&gt;</span>
+        <span class="text-white/70">{post.data.title}</span>
+      </nav>
+
+      <h1 class="font-display text-3xl font-semibold text-white lg:text-4xl">{post.data.title}</h1>
+      <p class="mt-4 text-white/60">{post.data.description}</p>
+
+      <div class="mt-6 flex items-center gap-3 border-b border-white/10 pb-6">
+        {author && <img src={author.image} alt={author.name} width="40" height="40" class="h-10 w-10 rounded-full object-cover" />}
+        <div class="text-sm">
+          <p class="text-white">{author?.name}</p>
+          <p class="text-white/40">{formatDate(post.data.pubDate)}</p>
+        </div>
+      </div>
+
+      <img
+        src={post.data.heroImage}
+        alt={post.data.title}
+        width="768"
+        height="432"
+        class="mt-8 aspect-[16/9] w-full rounded-2xl object-cover"
+      />
+
+      <div class="prose prose-invert mt-10 max-w-none prose-headings:font-display prose-headings:text-white prose-p:text-white/70 prose-li:text-white/70 prose-strong:text-white prose-a:text-ag-gold prose-table:text-sm prose-th:text-white prose-td:text-white/70">
+        <Content />
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>

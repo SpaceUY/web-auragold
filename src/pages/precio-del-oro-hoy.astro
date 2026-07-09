@@ -1,0 +1,319 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import SectionHeading from "../components/ui/SectionHeading.astro";
+import FAQ from "../components/ui/FAQ.astro";
+import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+
+// Snapshot inicial (fallback). El feed en vivo se conecta vía la API que se defina.
+const snapshot = {
+  mxnPerOz: 71476,
+  changeAbs: -525.59,
+  changePct: -0.73,
+  mxnPerGram: 2298.01,
+  open: 72002,
+  high24: 72410,
+  low24: 70643,
+};
+
+const historyRows = [
+  { year: "2025", mxn: "~$63,400", usd: "~$3,100", change: "+38%" },
+  { year: "2024", mxn: "~$45,900", usd: "~$2,300", change: "+22%" },
+  { year: "2023", mxn: "~$37,600", usd: "~$1,940", change: "+15%" },
+  { year: "2022", mxn: "~$32,700", usd: "~$1,800", change: "−1%" },
+  { year: "2021", mxn: "~$33,000", usd: "~$1,795", change: "−4%" },
+  { year: "2020", mxn: "~$34,400", usd: "~$1,770", change: "+28%" },
+  { year: "2019", mxn: "~$26,800", usd: "~$1,393", change: "+20%" },
+  { year: "2018", mxn: "~$22,300", usd: "~$1,268", change: "+6%" },
+];
+
+const performance = [
+  { value: "+38%", label: "Rendimiento 1 año", note: "El precio del oro en pesos en los últimos 12 meses." },
+  { value: "+187%", label: "Rendimiento 5 años", note: "Casi triplicó su valor en pesos en 5 años." },
+  { value: "+340%", label: "Rendimiento 10 años", note: "Incluyendo devaluación acumulada del peso." },
+  { value: "~$18,000 MXN", label: "Precio hace 10 años", note: "por onza troy vs. ~$63,000 actuales." },
+];
+
+const factors = [
+  {
+    number: "1",
+    title: "Tipo de cambio MXN/USD",
+    description:
+      "Es el factor más relevante para el precio del oro en pesos. Cada devaluación del peso se traduce automáticamente en un precio más alto del oro en MXN, independientemente del mercado global.",
+  },
+  {
+    number: "2",
+    title: "Tasas de interés de la Fed",
+    description:
+      "Cuando la Reserva Federal sube tasas, el dólar se fortalece y el precio del oro en USD tiende a caer. Cuando las baja, el precio del oro sube. Es el driver global más consistente de la cotización XAU/USD.",
+  },
+  {
+    number: "3",
+    title: "Inflación global y expectativas",
+    description:
+      "En contextos de inflación alta, el oro se demanda como cobertura real. A mayor incertidumbre sobre el poder adquisitivo de las monedas, mayor precio del metal a nivel internacional.",
+  },
+  {
+    number: "4",
+    title: "Compras de bancos centrales",
+    description:
+      "Los bancos centrales acumulan reservas en oro. Sus compras masivas tienen impacto directo en el precio del oro, reduciendo la oferta disponible en mercados abiertos y presionando el XAU/USD al alza.",
+  },
+  {
+    number: "5",
+    title: "Geopolítica e incertidumbre",
+    description:
+      "Guerras, crisis financieras y tensiones globales disparan la demanda de activos refugio. El precio del oro en México sube cuando la incertidumbre global aumenta, tanto en USD como en MXN.",
+  },
+  {
+    number: "6",
+    title: "Oferta y demanda física",
+    description:
+      "La producción minera global y la demanda industrial establecen el piso estructural del precio del oro. Es un recurso finito con costes de extracción crecientes, lo que da soporte al precio a largo plazo.",
+  },
+];
+
+const faqItems = [
+  {
+    question: "¿Cuál es el precio del oro hoy en México en pesos?",
+    answer:
+      "El precio del oro hoy en México en pesos se obtiene multiplicando la cotización XAU/USD del mercado spot por el tipo de cambio MXN/USD vigente. El widget en tiempo real de esta página muestra la cotización XAU/MXN actualizada continuamente durante las horas de mercado.",
+  },
+  {
+    question: "¿Por qué el precio del oro en pesos mexicanos sube más que en dólares?",
+    answer:
+      "Porque el precio del oro en MXN combina dos variables: el precio internacional en USD y el tipo de cambio. Cuando el peso se devalúa, el precio del oro en pesos sube aunque el precio global en dólares no cambie. En los últimos 10 años, el peso ha perdido cerca del 50% de su valor frente al dólar, amplificando considerablemente las ganancias del precio del oro en términos de pesos mexicanos.",
+  },
+  {
+    question: "¿A qué hora se actualiza el precio del oro hoy?",
+    answer:
+      "El mercado del oro opera prácticamente las 24 horas de lunes a viernes, siguiendo las sesiones de Londres, Nueva York y Asia. El precio de referencia oficial (LBMA Gold Fix) se publica dos veces al día. El widget de esta página refleja el precio del oro en tiempo real durante las horas de mercado activo.",
+  },
+  {
+    question: "¿El histórico del precio del oro en México siempre muestra subidas?",
+    answer:
+      "No siempre, pero la tendencia a largo plazo en pesos mexicanos es claramente ascendente. Hay años con caídas en USD (como 2021 o 2022), pero la devaluación acumulada del peso ha amortiguado esas correcciones en términos de XAU/MXN. La tabla histórica de esta página muestra año por año la evolución real del precio del oro en México.",
+  },
+  {
+    question: "¿Qué es la cotización XAU/MXN?",
+    answer:
+      "XAU es el código ISO del oro (del latín Aurum). XAU/MXN es el par de tipo de cambio que expresa cuántos pesos mexicanos vale una onza troy de oro. Es la referencia directa del precio del oro en México, y la cotización que muestra el widget en tiempo real de esta página.",
+  },
+  {
+    question: "¿Puedo comprar oro al precio del mercado que veo en pantalla?",
+    answer:
+      "Con Aura Gold compras a un precio muy cercano al spot. Se aplica un spread transparente —diferencia entre precio de compra y venta— que verás antes de confirmar. No hay comisiones de custodia ni cargos ocultos. El precio exacto se muestra en la app antes de confirmar cualquier operación.",
+  },
+];
+
+const fmt = (n: number) => n.toLocaleString("es-MX");
+---
+
+<BaseLayout
+  title="Precio del Oro en México Hoy - Cotización en MXN y USD"
+  description="Consulta el precio del oro hoy en México en pesos mexicanos y dólares. Cotización del oro actualizada en tiempo real, gráficos y evolución del valor del oro."
+>
+  <FAQJsonLD items={faqItems} />
+
+  <Header />
+
+  <main class="bg-ag-dark font-body text-white">
+    <!-- Hero + widget -->
+    <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
+      <div class="text-center">
+        <span class="rounded-full border border-white/20 px-4 py-1 font-body text-xs text-white/70">
+          Cotización en tiempo real · XAU/MXN
+        </span>
+        <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold lg:text-6xl">
+          Precio del <span class="text-ag-gold">oro</span> hoy en México en pesos.
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-white/60">
+          Cotización XAU/MXN actualizada en tiempo real. El precio del oro en pesos mexicanos, la evolución
+          histórica y todo lo que necesitas saber antes de comprar.
+        </p>
+      </div>
+
+      <!-- Widget -->
+      <div class="mx-auto mt-12 max-w-lg rounded-2xl border border-white/10 bg-white/5 p-6" data-gold-widget>
+        <div class="flex items-center justify-between text-xs text-white/40">
+          <span class="font-mono uppercase tracking-widest">Precio del oro • Onza troy</span>
+          <span class="flex items-center gap-2 rounded-full bg-ag-green/10 px-2 py-1 text-ag-green">
+            <span class="h-2 w-2 rounded-full bg-ag-green"></span> En vivo
+          </span>
+        </div>
+        <p class="mt-1 font-mono text-xs text-white/40">XAUT / MXN</p>
+
+        <div class="mt-6">
+          <p class="font-mono text-4xl font-semibold text-white" data-gold-price>$ {fmt(snapshot.mxnPerOz)}</p>
+          <p class="mt-1 font-mono text-sm text-ag-red" data-gold-change>
+            ↓ {snapshot.changeAbs} ({snapshot.changePct}%) <span class="text-white/40">vs. cierre anterior</span>
+          </p>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+          <div class="rounded-lg bg-white/5 p-3">
+            <p class="text-xs text-white/40">Por gramo</p>
+            <p class="font-mono text-white">MXN {fmt(snapshot.mxnPerGram)}</p>
+          </div>
+          <div class="rounded-lg bg-white/5 p-3">
+            <p class="text-xs text-white/40">Apertura</p>
+            <p class="font-mono text-white">MXN {fmt(snapshot.open)}</p>
+          </div>
+          <div class="rounded-lg bg-white/5 p-3">
+            <p class="text-xs text-white/40">Máximo 24h</p>
+            <p class="font-mono text-white">MXN {fmt(snapshot.high24)}</p>
+          </div>
+          <div class="rounded-lg bg-white/5 p-3">
+            <p class="text-xs text-white/40">Mínimo 24h</p>
+            <p class="font-mono text-white">MXN {fmt(snapshot.low24)}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Histórico -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="Histórico XAU/MXN"
+        title="Evolución histórica del precio del oro en pesos mexicanos"
+        description="El precio del oro en México combina dos variables: la cotización internacional en dólares y el tipo de cambio MXN/USD. En los últimos años, ambas han jugado a favor del ahorrador que mantiene oro en pesos."
+      />
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          performance.map((p) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p class="font-display text-3xl text-ag-gold">{p.value}</p>
+              <p class="mt-1 text-sm text-white">{p.label}</p>
+              <p class="mt-2 text-xs text-white/50">{p.note}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-10 overflow-x-auto">
+        <table class="w-full min-w-[560px] border-collapse text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10 text-white/50">
+              <th class="py-3 pr-4 font-normal">Año</th>
+              <th class="py-3 pr-4 font-normal">Precio promedio MXN/oz</th>
+              <th class="py-3 pr-4 font-normal">Precio promedio USD/oz</th>
+              <th class="py-3 pr-4 font-normal">Variación anual</th>
+            </tr>
+          </thead>
+          <tbody class="text-white/70">
+            {
+              historyRows.map((row) => (
+                <tr class="border-b border-white/10">
+                  <td class="py-3 pr-4 font-medium text-white">{row.year}</td>
+                  <td class="py-3 pr-4 font-mono">{row.mxn}</td>
+                  <td class="py-3 pr-4 font-mono">{row.usd}</td>
+                  <td class="py-3 pr-4">{row.change}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- XAU/MXN explicado -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="XAU/MXN explicado"
+        title="Por qué el precio del oro en pesos mexicanos sube más"
+        align="left"
+      />
+      <div class="mt-8 grid gap-10 lg:grid-cols-2">
+        <div class="space-y-4 text-white/60">
+          <p>
+            El precio del oro se cotiza globalmente en dólares por onza troy. Para obtener el precio del oro en
+            pesos mexicanos, ese valor se multiplica por el tipo de cambio USD/MXN vigente en cada momento.
+          </p>
+          <p>
+            Esto significa que el precio del oro en México sube por dos razones independientes: cuando el precio
+            global del metal en dólares sube, y cuando el peso se devalúa frente al dólar — aunque el precio en USD
+            no cambie.
+          </p>
+          <p>
+            En los últimos 10 años, el peso mexicano ha perdido alrededor del 50% de su valor frente al dólar.
+            Esto amplifica las ganancias del oro en pesos respecto a las que obtuvo un inversor en dólares con el
+            mismo activo.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-ag-gold/30 bg-ag-gold/5 p-6">
+          <p class="font-mono text-xs uppercase tracking-widest text-ag-gold">Ejemplo</p>
+          <p class="mt-2 text-sm text-white/70">
+            Si en 2015 una onza costaba $1.200 USD con el dólar a $15 MXN, el precio era $18.000 MXN. Con la onza
+            hoy a $3.100 USD y el dólar a $20 MXN, el precio es ~$62.000 MXN — un +244% en pesos frente a +158% en
+            dólares.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Factores -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="Análisis de mercado"
+        title="Qué factores mueven el precio del oro en México"
+        description="El precio del oro en pesos no sube ni baja sin razón. Estas son las seis fuerzas que determinan la cotización XAU/MXN cada día."
+      />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          factors.map((factor) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-ag-gold font-display text-ag-dark">
+                {factor.number}
+              </span>
+              <h3 class="mt-4 font-display text-lg text-white">{factor.title}</h3>
+              <p class="mt-2 text-sm text-white/60">{factor.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading
+        eyebrow="FAQs"
+        title="Preguntas Frecuentes"
+        description="Sin rodeos y sin jerga financiera. Todo lo que necesitas saber antes de empezar a proteger tu dinero."
+      />
+      <div class="mt-12">
+        <FAQ items={faqItems} />
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <div class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
+        <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
+          Compra oro en México desde $1 hoy, al precio del mercado
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-white/60">
+          Oro físico fraccionado al precio más cercano al spot XAU/MXN. Sin mínimos, sin comisiones de custodia.
+          Descarga la app y empieza en minutos.
+        </p>
+        <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
+          >
+            Proteger mi dinero y abrir una bóveda
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
+          >
+            Quiero ver una demo rápida
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

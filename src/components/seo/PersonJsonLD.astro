@@ -1,0 +1,33 @@
+---
+import type { Author } from "../../data/authors";
+
+interface Props {
+  author: Author;
+}
+
+const { author } = Astro.props;
+const url = new URL(`/autores/${author.slug}`, Astro.site).toString();
+
+const json = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${url}#person`,
+  name: author.name,
+  url,
+  mainEntityOfPage: url,
+  description: author.description,
+  image: {
+    "@type": "ImageObject",
+    url: new URL(author.image, Astro.site).toString(),
+  },
+  jobTitle: author.jobTitle,
+  worksFor: {
+    "@type": "Organization",
+    name: "SpaceDev",
+    url: "https://spacedev.io",
+  },
+  sameAs: author.sameAs,
+});
+---
+
+<script type="application/ld+json" is:inline set:html={json} />

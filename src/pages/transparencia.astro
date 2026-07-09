@@ -1,0 +1,250 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import FAQ from "../components/ui/FAQ.astro";
+import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+
+const faqItems = [
+  {
+    question: "¿Qué pasa si Aura Gold quiebra?",
+    answer:
+      "Tu oro no forma parte del patrimonio de Aura Gold. Si la empresa desapareciera, tu oro seguiría siendo tuyo. El oro que compras está registrado como activo segregado bajo tu titularidad, custodiado en Suiza por un custodio independiente. Legalmente, este oro no puede ser reclamado por los acreedores de Aura Gold en caso de insolvencia, porque nunca fue de Aura Gold, sino tuyo. En un escenario de cierre de Aura Gold, el custodio retiene la custodia del oro físico con independencia del estado de Aura Gold.",
+  },
+  {
+    question: "¿Es realmente oro físico o es un token digital?",
+    answer:
+      "Es oro físico real. Cada fracción que compras corresponde a una cantidad proporcional de oro 24k con certificación LBMA almacenado en bóvedas en Suiza. No es un derivado, no es un contrato financiero sintético, no es una criptomoneda. Es metal. La diferencia con comprar una barra de oro en una joyería es que no tienes que guardarlo tú, puedes comprar fracciones desde $1 MXN, puedes venderlo en segundos desde tu celular, y si en algún momento lo quieres en físico, puedes pedirlo.",
+  },
+  {
+    question: "¿Y si el oro que dicen que tengo no existe realmente?",
+    answer:
+      "Entendemos que esta duda es legítima. El oro está en manos de un custodio independiente en Suiza, no de Aura Gold. Un auditor externo independiente (BDO Italia S.p.A., miembro de la red global BDO) verifica trimestralmente que el oro físico en bóvedas corresponde al total vendido a usuarios, bajo el estándar internacional ISAE 3000. Esto incluye pruebas físicas sobre una muestra de las barras por un tercero cualificado. Todo el oro cumple los estándares London Good Delivery de la LBMA. Además, podés verificar en cualquier momento las barras específicas vinculadas a tu oro (número de serie, peso y pureza) desde gold.tether.to. Los informes de auditoría completos se publican trimestralmente en la misma página.",
+  },
+  {
+    question: "¿Puedo sacar mi dinero cuando quiera?",
+    answer:
+      "Sí. No hay plazos de permanencia ni penalizaciones. Cuando decides vender: pulsas 'vender' en la app, confirmas el precio visible antes de ejecutar, y el dinero se deposita en tu cuenta bancaria en 24 a 48 horas hábiles.",
+  },
+  {
+    question: "¿Cuánto pierdo si entro y salgo en una semana?",
+    answer:
+      "Si compras y vendes en un periodo corto, el costo que asumes es el spread de entrada más el spread de salida. Con un spread de 1.00% en cada dirección, el costo total de ida y vuelta es aproximadamente 2.00% del capital operado, independientemente de lo que haga el precio del oro. Aura Gold está diseñado para el ahorrador de mediano-largo plazo. Si buscas operar frecuentemente, el spread acumulado es un factor importante a considerar.",
+  },
+  {
+    question: "¿El oro digital es lo mismo que una criptomoneda?",
+    answer:
+      "No. El oro en Aura Gold tiene respaldo físico (oro 24k en bóvedas), volatilidad histórica baja-media, un historial de miles de años como activo, alta regulación (LBMA, custodia institucional) y garantía de valor en un activo físico real. Las criptomonedas, en su mayoría, no tienen respaldo físico, tienen alta volatilidad, existen desde 2009, tienen regulación variable y su valor depende solo de la demanda del mercado.",
+  },
+  {
+    question: "¿Qué pasa con mi oro si fallezco?",
+    answer:
+      "Tu cuenta en Aura Gold forma parte de tu patrimonio. En caso de fallecimiento, tus herederos pueden contactar a Aura Gold con la documentación sucesoria correspondiente.",
+  },
+  {
+    question: "¿Pueden cambiar el spread sin avisarme?",
+    answer:
+      "El spread puede variar según condiciones del mercado y costos operativos. Lo que garantizamos es que siempre verás el spread vigente antes de confirmar cualquier operación, y que nunca se aplica un spread distinto al que aceptaste en el momento de la transacción.",
+  },
+];
+
+const commitments = [
+  {
+    title: "Precio antes de confirmar",
+    text: "Siempre verás el spread completo antes de ejecutar cualquier compra o venta. Sin sorpresas post-transacción.",
+  },
+  { title: "Auditorías publicadas", text: "Los informes de auditoría del oro en custodia serán públicos." },
+  {
+    title: "Comunicación en momentos de volatilidad",
+    text: "En eventos de mercado significativos comunicaremos contexto a nuestros usuarios sin alarmismo ni especulación.",
+  },
+  {
+    title: "Registro de cambios",
+    text: "Cuando algo relevante cambie (custodio, aseguradora, estructura, fees), actualizaremos esta página y notificaremos a los usuarios.",
+  },
+];
+---
+
+<BaseLayout
+  title="Documentos de Transparencia - AuraGold, app para invertir en Oro"
+  description="Cómo funciona el modelo de AuraGold: quién custodia tu oro, cómo ganamos dinero con el spread transparente y qué pasaría en el peor escenario. Sin letra chiquita."
+>
+  <FAQJsonLD items={faqItems} />
+
+  <Header />
+
+  <main class="bg-ag-dark font-body text-white">
+    <section class="mx-auto max-w-3xl px-6 py-16 lg:px-10">
+      <nav class="mb-8 flex items-center gap-2 text-sm text-white/40">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <span>&gt;</span>
+        <span class="text-white/70">Página de Transparencia</span>
+      </nav>
+
+      <h1 class="font-display text-4xl font-semibold text-white lg:text-5xl">Página de Transparencia</h1>
+      <p class="mt-4 text-lg text-ag-gold">Porque tu confianza no se pide, se gana con hechos.</p>
+      <p class="mt-6 text-white/60">
+        En Aura Gold creemos que la transparencia no es un extra, es parte del producto. Esta página existe para
+        que sepas exactamente cómo funciona nuestro modelo, quién custodia tu oro, cómo ganamos dinero y qué
+        pasaría en el peor escenario posible.
+      </p>
+      <p class="mt-4 font-display text-white">Sin letra chiquita. Sin rodeos.</p>
+    </section>
+
+    <!-- 1. Spread -->
+    <section class="mx-auto max-w-3xl px-6 py-10 lg:px-10">
+      <h2 class="font-display text-2xl font-semibold text-white">
+        1. El spread en tiempo real: el precio que pagas y el que recibes
+      </h2>
+      <p class="mt-4 text-white/60">
+        <strong class="text-white">¿Qué es el spread?</strong> Cuando compras oro en Aura Gold, el precio que
+        pagas es ligeramente superior al precio internacional de mercado. Cuando vendes, recibes un precio
+        ligeramente inferior. Esa diferencia se llama spread y es la única forma en que Aura Gold genera ingresos.
+      </p>
+      <p class="mt-4 text-white/60">
+        No hay comisiones ocultas. No hay costos de custodia mensuales. Solo el spread, visible antes de confirmar
+        cualquier operación.
+      </p>
+      <p class="mt-4 text-white/60">
+        <strong class="text-white">Spread actual.</strong> Aura Gold aplica una comisión del 1% por operación,
+        tanto en compras como en ventas. Este porcentaje se calcula sobre el precio internacional de referencia del
+        oro al momento de confirmar tu operación. Por ejemplo: si el precio del oro es de $1.500 MXN por gramo, al
+        comprar pagarías $1.515 MXN/g y al vender recibirías $1.485 MXN/g. Siempre verás el precio final exacto
+        antes de confirmar.
+      </p>
+      <p class="mt-4 text-white/60">El spread cubre los costos operativos reales de la plataforma:</p>
+      <ul class="mt-3 list-disc space-y-1 pl-6 text-white/60">
+        <li>Custodia profesional del oro físico en bóvedas en Suiza</li>
+        <li>Seguro completo sobre el metal almacenado</li>
+        <li>Infraestructura tecnológica de la app y plataforma</li>
+        <li>Cumplimiento regulatorio y auditorías externas</li>
+        <li>Costos de transacción con proveedores de oro certificados LBMA</li>
+      </ul>
+    </section>
+
+    <!-- 2. Cómo gana dinero -->
+    <section class="mx-auto max-w-3xl px-6 py-10 lg:px-10">
+      <h2 class="font-display text-2xl font-semibold text-white">2. ¿Cómo gana dinero Aura Gold?</h2>
+      <p class="mt-4 text-white/60">
+        Esta es la pregunta que más nos importa que te hagas, y nos alegra que la hagas. Nuestro único ingreso
+        operativo es el spread entre el precio de compra y el precio de venta del oro. No cobramos:
+      </p>
+      <ul class="mt-3 space-y-1 text-white/60">
+        <li>❌ Comisiones de apertura de cuenta</li>
+        <li>❌ Costos mensuales de custodia</li>
+        <li>❌ Comisiones por mantenimiento de bóveda</li>
+        <li>❌ Penalizaciones por inactividad</li>
+        <li>❌ Cargos por cierre de cuenta</li>
+      </ul>
+      <p class="mt-4 text-white/60">
+        Elegimos el modelo de spread porque alinea nuestros intereses con los tuyos: cuanto más valor mueves, más
+        crece la plataforma. No tenemos incentivo en cobrarte cuotas si no estás operando, ni en esconder costos
+        que descubras meses después.
+      </p>
+
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full min-w-[560px] border-collapse text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10 text-white/50">
+              <th class="py-3 pr-4 font-normal">Alternativa</th>
+              <th class="py-3 pr-4 font-normal">Costo principal</th>
+              <th class="py-3 pr-4 font-normal">Transparencia</th>
+            </tr>
+          </thead>
+          <tbody class="text-white/70">
+            <tr class="border-b border-white/10 bg-white/5">
+              <td class="py-3 pr-4 font-medium text-ag-gold">Aura Gold</td>
+              <td class="py-3 pr-4">Comisión del 1.0% visible antes de confirmar</td>
+              <td class="py-3 pr-4">Alta</td>
+            </tr>
+            <tr class="border-b border-white/10">
+              <td class="py-3 pr-4">Casa de empeño / joyería</td>
+              <td class="py-3 pr-4">Margen del 20-40% sin disclosure</td>
+              <td class="py-3 pr-4">Baja</td>
+            </tr>
+            <tr class="border-b border-white/10">
+              <td class="py-3 pr-4">ETFs de oro (mercado EUA)</td>
+              <td class="py-3 pr-4">Comisión anual 0.25-0.40% + spread bróker</td>
+              <td class="py-3 pr-4">Media</td>
+            </tr>
+            <tr class="border-b border-white/10">
+              <td class="py-3 pr-4">Compra física tradicional</td>
+              <td class="py-3 pr-4">Premium del 5-15% sobre precio spot</td>
+              <td class="py-3 pr-4">Baja</td>
+            </tr>
+            <tr class="border-b border-white/10">
+              <td class="py-3 pr-4">Banco (cuenta de ahorro)</td>
+              <td class="py-3 pr-4">Tasa real negativa frente a inflación</td>
+              <td class="py-3 pr-4">N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. Tu oro -->
+    <section class="mx-auto max-w-3xl px-6 py-10 lg:px-10">
+      <h2 class="font-display text-2xl font-semibold text-white">
+        3. Tu oro: dónde está, quién lo custodia y qué garantías tienes
+      </h2>
+      <p class="mt-4 text-white/60">
+        <strong class="text-white">¿Dónde está físicamente el oro?</strong> Tu oro físico está almacenado en
+        bóvedas de alta seguridad en Suiza. El oro cumple los estándares London Good Delivery de la LBMA y tiene
+        una pureza de 99,99% (24 kilates). Cada fracción que compras está vinculada a una barra específica con
+        número de serie, peso y pureza verificables.
+      </p>
+      <p class="mt-4 text-white/60">
+        <strong class="text-white">¿Qué significa 'activo segregado'?</strong> Tu oro no está mezclado con el
+        patrimonio de Aura Gold. Cada fracción que compras queda registrada a tu nombre en el sistema del custodio.
+        Esto tiene consecuencias legales importantes: si Aura Gold cerrara, tu oro seguiría siendo tuyo.
+      </p>
+      <p class="mt-4 text-white/60">
+        <strong class="text-white">¿Está asegurado?</strong> Sí. El oro físico almacenado en las bóvedas cuenta
+        con seguro completo contra robo, daño físico e incidentes. La existencia del seguro es verificada
+        trimestralmente por el auditor externo independiente (BDO Italia) como parte de su proceso de
+        atestiguación.
+      </p>
+      <p class="mt-4 text-white/60">
+        <strong class="text-white">¿Cómo puedo verificar que mi oro existe?</strong> Realizamos auditorías
+        trimestrales con BDO Italia S.p.A., una firma de auditoría internacional independiente, bajo el estándar
+        ISAE 3000 Revised. Los informes se publican en gold.tether.to/reports. Además, podés verificar en cualquier
+        momento las barras específicas que respaldan tu oro ingresando tu dirección de wallet en gold.tether.to. La
+        verificación on-chain de reservas también está disponible a través de Chainlink Proof of Reserve.
+      </p>
+    </section>
+
+    <!-- 4. FAQ -->
+    <section class="mx-auto max-w-3xl px-6 py-10 lg:px-10">
+      <h2 class="font-display text-2xl font-semibold text-white">
+        4. FAQ profundo: las preguntas que nadie quiere responder, pero nosotros sí
+      </h2>
+      <div class="mt-8">
+        <FAQ items={faqItems} />
+      </div>
+    </section>
+
+    <!-- 5. Compromisos -->
+    <section class="mx-auto max-w-3xl px-6 py-10 lg:px-10">
+      <h2 class="font-display text-2xl font-semibold text-white">5. Compromisos públicos de Aura Gold</h2>
+      <p class="mt-4 text-white/60">
+        Estos son los compromisos que asumimos con nuestros usuarios de forma pública y verificable:
+      </p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        {
+          commitments.map((c) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p class="font-display text-white">✅ {c.title}</p>
+              <p class="mt-2 text-sm text-white/60">{c.text}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 text-sm text-white/60">
+        <p class="font-display text-white">Historial de cambios de esta página</p>
+        <p class="mt-2">Fecha: 29/04 | Cambio realizado: Publicación de la página de transparencia.</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
