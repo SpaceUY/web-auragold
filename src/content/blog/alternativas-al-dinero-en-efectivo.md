@@ -107,13 +107,13 @@ Los dólares protegen contra devaluación del peso (-12.4% últimos 5 años) per
 
 ## Cómo elegir la mejor alternativa según tu perfil
 
-**Perfil 1 — Ahorro de emergencia (liquidez inmediata):** 80% cuenta bancaria líquida + 20% oro fraccionado digital. Evitar bienes raíces, acciones volátiles, criptomonedas.
+**Perfil 1 - Ahorro de emergencia (liquidez inmediata):** 80% cuenta bancaria líquida + 20% oro fraccionado digital. Evitar bienes raíces, acciones volátiles, criptomonedas.
 
-**Perfil 2 — Ahorro de mediano plazo (1-3 años, ej. enganche de casa):** 40% pagarés/CETES + 40% oro + 20% dólares. Evitar acciones individuales, bienes raíces.
+**Perfil 2 - Ahorro de mediano plazo (1-3 años, ej. enganche de casa):** 40% pagarés/CETES + 40% oro + 20% dólares. Evitar acciones individuales, bienes raíces.
 
-**Perfil 3 — Protección patrimonial seria (5+ años):** 35% oro y activos refugio + 35% acciones/ETFs diversificados + 20% bienes raíces (si hay capital) + 10% efectivo. Evitar más del 20% en efectivo puro.
+**Perfil 3 - Protección patrimonial seria (5+ años):** 35% oro y activos refugio + 35% acciones/ETFs diversificados + 20% bienes raíces (si hay capital) + 10% efectivo. Evitar más del 20% en efectivo puro.
 
-**Perfil 4 — Pequeño ahorrador ($5,000-$30,000):** 50% oro fraccionado + 30% CETES/pagarés + 20% efectivo de emergencia. Evitar bienes raíces y acciones individuales.
+**Perfil 4 - Pequeño ahorrador ($5,000-$30,000):** 50% oro fraccionado + 30% CETES/pagarés + 20% efectivo de emergencia. Evitar bienes raíces y acciones individuales.
 
 **Regla de oro universal:** nunca mantengas más del 15-20% de tus ahorros totales como efectivo sin protección.
 

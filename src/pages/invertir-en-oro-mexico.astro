@@ -111,7 +111,7 @@ const steps = [
     number: "4",
     title: "Tu oro está protegido. Ya.",
     description:
-      "El oro queda custodiado en bóvedas institucionales a tu nombre, segregado del capital de Aura Gold. Puedes venderlo, acumularlo o —cuando quieras— solicitar el retiro físico en lingotes.",
+      "El oro queda custodiado en bóvedas institucionales a tu nombre, segregado del capital de Aura Gold. Puedes venderlo, acumularlo o -cuando quieras- solicitar el retiro físico en lingotes.",
     tag: "Bóveda certificada · Activo segregado",
   },
 ];
@@ -196,17 +196,19 @@ const faqItems = [
       </p>
       <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
         <a
-          href="#"
+          href="https://play.google.com/store/apps/details?id=com.space.aura"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
-        >
-          Descargar Aura para iOS
-        </a>
-        <a
-          href="#"
-          class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
         >
           Descargar Aura para Android
         </a>
+        <span
+          aria-disabled="true"
+          class="inline-flex cursor-not-allowed items-center justify-center rounded-full border border-white/10 px-6 py-3 font-medium text-white/40"
+        >
+          Próximamente en iOS
+        </span>
       </div>
 
       <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -228,7 +230,7 @@ const faqItems = [
         <div class="space-y-4 text-white/60">
           <p>
             Invertir en oro significa convertir una parte de tu dinero en un activo físico que históricamente ha
-            mantenido —e incrementado— su valor frente a la inflación y la devaluación de las monedas.
+            mantenido -e incrementado- su valor frente a la inflación y la devaluación de las monedas.
           </p>
           <p>
             No es especulación. Es protección. El oro no genera intereses ni dividendos, pero tampoco pierde su

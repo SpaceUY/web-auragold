@@ -7,18 +7,31 @@ import FAQ from "../components/ui/FAQ.astro";
 import JsonLD from "../components/seo/JsonLD.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 
+// icon: paths SVG (estilo Lucide) que replican los íconos rojos del original
 const painPoints = [
-  "¿Te preocupa que tus ahorros pierdan poder de compra cada mes?",
-  "¿Sientes desconfianza de meter tu dinero en cosas que no entiendes?",
-  "¿Buscas seguridad total pero necesitas poder usar tu dinero cuando quieras?",
-  "¿Crees que necesitas miles de pesos para empezar a proteger tu ahorro con oro?",
+  {
+    icon: '<path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/>',
+    text: "¿Te preocupa que tus ahorros pierdan poder de compra cada mes?",
+  },
+  {
+    icon: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/>',
+    text: "¿Sientes desconfianza de meter tu dinero en cosas que no entiendes?",
+  },
+  {
+    icon: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+    text: "¿Buscas seguridad total pero necesitas poder usar tu dinero cuando quieras?",
+  },
+  {
+    icon: '<line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+    text: "¿Crees que necesitas miles de pesos para empezar a proteger tu ahorro con oro?",
+  },
 ];
 
 const steps = [
   {
     number: "1",
     icon: "/images/icons/step-1-money-bag.png",
-    iconAlt: "Bolsa de dinero dorada — invierte desde cualquier cantidad",
+    iconAlt: "Bolsa de dinero dorada - invierte desde cualquier cantidad",
     title: "Invierte desde cualquier cantidad",
     description: "Regístrate en 2 minutos. Empieza con MX$100, MX$50, o la cantidad que tú decidas.",
     detail: "Sin mínimos: Compra oro 24k certificado (con respaldo LBMA) desde 1 MXN. Tú controlas cuánto y cuándo.",
@@ -26,7 +39,7 @@ const steps = [
   {
     number: "2",
     icon: "/images/icons/step-2-vault.png",
-    iconAlt: "Bóveda de seguridad dorada — tu oro custodiado en Suiza",
+    iconAlt: "Bóveda de seguridad dorada - tu oro custodiado en Suiza",
     title: "Guarda el oro en tu Bóveda",
     description: "Tu oro se guarda de forma segura en bóvedas institucionales en Suiza.",
     detail: "Doble protección: Tienes el valor de un activo físico, sin preocuparte por el almacenamiento o la seguridad.",
@@ -34,7 +47,7 @@ const steps = [
   {
     number: "3",
     icon: "/images/icons/step-3-bars.png",
-    iconAlt: "Lingotes de oro apilados — liquidez total para vender o retirar",
+    iconAlt: "Lingotes de oro apilados - liquidez total para vender o retirar",
     title: "Disponibilidad de liquidez total",
     description: "Vende tu oro o retíralo cuando lo necesites, directo a tu cuenta.",
     detail: "Flexibilidad absoluta: Tu dinero nunca está congelado. Vende de volada y recibe el efectivo en 24-48 horas.",
@@ -84,35 +97,41 @@ const comparisonMark = (ok: boolean | null) => (ok === true ? "✅" : ok === fal
 
 const benefits = [
   {
+    icon: '<path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>',
     title: "Bóvedas de Propósito",
     tagline: "Organiza tus metas",
     description:
       "Separa tu oro por proyectos (emergencias, enganche, viajes). Sabrás exactamente qué tienes guardado para cada objetivo.",
   },
   {
+    icon: '<path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/>',
     title: "Desde 1 MX$",
     tagline: "Sin mínimos, sin límites",
     description:
       "Compra o vende desde cualquier cantidad. MX$50, MX$200, MX$1,000... lo que tú decidas. Tu dinero crece a tu ritmo, sin presión ni montos mínimos.",
   },
   {
+    icon: '<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>',
     title: "Liquidez Garantizada",
     tagline: "Vende de inmediato",
     description:
       "Convierte tu oro en efectivo en 2 clics. El dinero se deposita en tu cuenta bancaria en 24-48 horas, sin trámites complejos.",
   },
   {
+    icon: '<rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>',
     title: "Respaldo Físico Real",
     tagline: "Doble tranquilidad",
     description:
       "Cada gramo digital que compras está respaldado por oro físico 24k guardado en bóvedas aseguradas en Suiza. Puedes pedir tu oro en físico cuando quieras.",
   },
   {
+    icon: '<path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/>',
     title: "Ahorro Programado",
     tagline: "Automatiza tu meta",
     description: 'Programa compras recurrentes (como un "domiciliado" de ahorro) y acumula oro poco a poco, sin tener que pensarlo.',
   },
   {
+    icon: '<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/>',
     title: "Oro Certificado LBMA",
     tagline: "Máxima pureza",
     description: "Cada gramo es oro 24k con certificación LBMA, el estándar global más alto de calidad y autenticidad.",
@@ -121,20 +140,24 @@ const benefits = [
 
 const securityCards = [
   {
+    icon: '<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/>',
     title: "Oro Certificado",
     description:
       "Cada gramo que compras es oro 24k (máxima pureza) y cuenta con la certificación de la LBMA, el estándar global más alto de calidad y autenticidad.",
   },
   {
+    icon: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
     title: "Seguridad Institucional",
     description:
       "Tu oro físico se guarda en bóvedas de alta seguridad en Suiza y está completamente asegurado. Usamos tecnología de grado institucional para garantizar la propiedad absoluta de tu inversión.",
   },
   {
+    icon: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>',
     title: "Transparencia Total",
     description: "Conoce el precio real de compra y venta en tiempo real. Cero letras chiquitas, cero sorpresas.",
   },
   {
+    icon: '<line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
     title: "Puedes Pedirlo en Físico",
     description:
       "Si tu plan cambia, puedes solicitar el envío de tu oro físico a tu domicilio (se aplican costos de envío y seguro).",
@@ -190,7 +213,7 @@ const faqItems = [
   <Header />
 
   <main class="bg-ag-black font-body text-white">
-    <!-- Hero — staggered blur-in reveal (fade + rise 48px + blur), ease-out expo -->
+    <!-- Hero - staggered blur-in reveal (fade + rise 48px + blur), ease-out expo -->
     <section class="bg-gradient-to-b from-ag-black to-ag-navy">
       <div class="mx-auto grid max-w-[1200px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10 lg:py-32">
         <div class="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
@@ -214,24 +237,20 @@ const faqItems = [
           </p>
           <div id="descargar" class="hero-rise flex flex-col gap-4 sm:flex-row" style="animation-delay: 1.2s">
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=com.space.aura"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-2 rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
-            >
-              Descargar Aura para iOS
-            </a>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
             >
               Descargar Aura para Android
             </a>
+            <span
+              aria-disabled="true"
+              class="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-3 font-medium text-white/40"
+            >
+              Próximamente en iOS
+            </span>
           </div>
-          <p
-            class="hero-rise font-mono text-xs uppercase tracking-widest text-white/40"
-            style="animation-delay: 1.35s"
-          >
-            Disponible para iOS y Android.
-          </p>
         </div>
 
         <div class="hero-rise hidden w-full sm:block" style="animation-delay: 0.5s">
@@ -259,19 +278,27 @@ const faqItems = [
         title="¿Tu dinero en el banco está perdiendo valor por la inflación?"
         description="La verdad es simple: si tu dinero está solo en una cuenta de banco o bajo el colchón, cada día vale un poco menos. La inflación trabaja contra ti, sin que te des cuenta."
       />
-      <p class="mt-6 text-center font-body text-white/60">
+      <p class="mt-10 text-center font-display text-[22px] font-medium text-ag-gold">
         Es hora de ser precavido sin caer en inversiones de riesgo.
       </p>
 
       <div class="mt-10 grid gap-6 sm:grid-cols-2">
         {
           painPoints.map((point, i) => (
-            <div
-              data-animate
-              data-delay={i * 80}
-              class="rounded-2xl border border-white/10 bg-white/5 p-6 font-body text-white/80"
-            >
-              {point}
+            <div data-animate data-delay={i * 80} class="rounded-2xl bg-ag-slate/65 px-[30px] py-5">
+              <div class="flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-white/5 text-ag-red">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-[18px] w-[18px]"
+                  set:html={point.icon}
+                />
+              </div>
+              <p class="mt-5 font-body text-[16px] leading-snug text-ag-gray">{point.text}</p>
             </div>
           ))
         }
@@ -318,10 +345,22 @@ const faqItems = [
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {
           benefits.map((benefit, i) => (
-            <div data-animate data-delay={i * 80} class="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p class="font-mono text-xs uppercase tracking-widest text-ag-gold">{benefit.title}</p>
-              <h3 class="mt-2 font-display text-lg text-white">{benefit.tagline}</h3>
-              <p class="mt-2 text-sm text-white/60">{benefit.description}</p>
+            <div data-animate data-delay={i * 80} class="rounded-2xl bg-ag-slate/65 p-6">
+              <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-ag-gold">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                  set:html={benefit.icon}
+                />
+              </div>
+              <h3 class="mt-5 font-display text-xl text-white">{benefit.title}</h3>
+              <p class="mt-1 text-base font-medium text-ag-gold">{benefit.tagline}</p>
+              <p class="mt-3 text-sm text-ag-gray/80">{benefit.description}</p>
             </div>
           ))
         }
@@ -338,9 +377,21 @@ const faqItems = [
       <div class="mt-12 grid gap-6 sm:grid-cols-2">
         {
           securityCards.map((card, i) => (
-            <div data-animate data-delay={i * 80} class="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <h3 class="font-display text-lg text-white">{card.title}</h3>
-              <p class="mt-2 text-sm text-white/60">{card.description}</p>
+            <div data-animate data-delay={i * 80} class="rounded-2xl bg-ag-slate/65 p-6">
+              <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-ag-green">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                  set:html={card.icon}
+                />
+              </div>
+              <h3 class="mt-5 font-display text-xl text-white">{card.title}</h3>
+              <p class="mt-3 text-sm text-ag-gray/80">{card.description}</p>
             </div>
           ))
         }
@@ -358,18 +409,20 @@ const faqItems = [
         <table class="w-full min-w-[720px] border-collapse text-left text-sm">
           <thead>
             <tr class="border-b border-white/10 text-white/50">
-              <th class="py-4 pr-4 font-body font-normal">Opción</th>
+              <th class="py-4 pl-6 pr-4 font-body font-normal">Opción</th>
               <th class="py-4 pr-4 font-body font-normal">Objetivo principal</th>
               <th class="py-4 pr-4 font-body font-normal">¿Protege de la Inflación?</th>
               <th class="py-4 pr-4 font-body font-normal">¿Qué tan Líquido es?</th>
-              <th class="py-4 pr-4 font-body font-normal">¿Qué tan complejo es?</th>
+              <th class="py-4 pr-6 font-body font-normal">¿Qué tan complejo es?</th>
             </tr>
           </thead>
           <tbody>
             {
               comparisonRows.map((row) => (
                 <tr class={`border-b border-white/10 ${row.highlight ? "bg-white/5" : ""}`}>
-                  <td class={`py-4 pr-4 font-medium ${row.highlight ? "text-ag-gold" : "text-white"}`}>
+                  <td
+                    class={`py-4 pl-6 pr-4 font-medium ${row.highlight ? "rounded-l-xl text-ag-gold" : "text-white"}`}
+                  >
                     {row.option}
                   </td>
                   <td class="py-4 pr-4 text-white/70">{row.goal}</td>
@@ -379,7 +432,7 @@ const faqItems = [
                   <td class="py-4 pr-4 text-white/70">
                     {comparisonMark(row.liquidity.ok)} {row.liquidity.text}
                   </td>
-                  <td class="py-4 pr-4 text-white/70">
+                  <td class={`py-4 pr-6 text-white/70 ${row.highlight ? "rounded-r-xl" : ""}`}>
                     {comparisonMark(row.complexity.ok)} {row.complexity.text}
                   </td>
                 </tr>

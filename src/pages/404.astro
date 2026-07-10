@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+---
+
+<BaseLayout title="Página no encontrada - AuraGold" description="La página que buscás no existe o se movió." noindex={true}>
+  <Header />
+
+  <main class="bg-ag-black font-body text-white">
+    <section
+      class="mx-auto flex min-h-[60vh] max-w-[1200px] flex-col items-center justify-center px-6 py-24 text-center lg:px-10"
+    >
+      <p class="font-display text-6xl font-medium text-ag-gold lg:text-7xl">404</p>
+      <h1 class="mt-4 font-display text-3xl font-medium text-white lg:text-4xl">Esta página no existe</h1>
+      <p class="mt-4 max-w-md text-white/60">
+        La página que buscás se movió o nunca existió. Volvé al inicio o explorá el blog para aprender sobre oro.
+      </p>
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="/"
+          class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
+        >
+          Volver al inicio
+        </a>
+        <a
+          href="/blog"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
+        >
+          Ir al blog
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -280,11 +280,11 @@ Sin plan de salida, tomas decisiones emocionales en momentos de presión. Vendes
 
 **Escenarios comunes sin plan:**
 
-*Escenario 1: Emergencia médica* — Necesitas $80,000 urgentes. Tienes oro pero está en lingotes físicos difíciles de vender rápido. Terminas vendiendo a prestamista local con descuento del 15%. Pierdes $12,000 por no tener liquidez adecuada.
+*Escenario 1: Emergencia médica* - Necesitas $80,000 urgentes. Tienes oro pero está en lingotes físicos difíciles de vender rápido. Terminas vendiendo a prestamista local con descuento del 15%. Pierdes $12,000 por no tener liquidez adecuada.
 
-*Escenario 2: Oportunidad de inversión* — Aparece excelente oportunidad de negocio (requiere $150,000). Todo tu dinero está en oro que "no puedes tocar". Pierdes la oportunidad por rigidez mental.
+*Escenario 2: Oportunidad de inversión* - Aparece excelente oportunidad de negocio (requiere $150,000). Todo tu dinero está en oro que "no puedes tocar". Pierdes la oportunidad por rigidez mental.
 
-*Escenario 3: Objetivo alcanzado* — Acumulaste oro para enganche de casa. Ya tienes la cantidad necesaria hace 6 meses. No vendes porque "¿y si sube más?". Pierdes oportunidad de comprar casa a buen precio.
+*Escenario 3: Objetivo alcanzado* - Acumulaste oro para enganche de casa. Ya tienes la cantidad necesaria hace 6 meses. No vendes porque "¿y si sube más?". Pierdes oportunidad de comprar casa a buen precio.
 
 **Cómo evitarlo:**
 
