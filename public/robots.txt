@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /embeds/
 
 # Crawlers de motores generativos (GEO) — permitidos explícitamente
 User-agent: GPTBot

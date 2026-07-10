@@ -3,6 +3,12 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.auragold.io" }],
+      "destination": "https://auragold.io/:path*",
+      "permanent": true
+    },
+    {
       "source": "/categorias/:slug*",
       "destination": "/blog",
       "permanent": true
@@ -11,6 +17,17 @@
       "source": "/autores",
       "destination": "/blog",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": ".*\\.vercel\\.app" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/embeds/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
     }
   ]
 }
