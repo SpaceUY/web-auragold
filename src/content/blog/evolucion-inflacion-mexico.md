@@ -1,5 +1,7 @@
 ---
 title: "Inflación histórica en México"
+seoTitle: "Inflación en México: cuánto ha perdido tu dinero en datos reales"
+seoDescription: "El peso mexicano ha perdido más del 85% de su valor desde 1994. Datos anuales de inflación en México y qué activos te han protegido realmente."
 description: "¡Cómo ha evolucionado la inflación en México desde 1985? ¿Cuánto poder adquisitivo ha perdido el peso en las últimas décadas?"
 pubDate: 2026-03-10
 author: "juan-manuel-sobral"

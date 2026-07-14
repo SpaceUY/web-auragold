@@ -1,5 +1,7 @@
 ---
 title: "Por qué el oro protege frente a la inflación: Ejemplos reales y datos de México"
+seoTitle: "Por qué el oro protege de la inflación en México"
+seoDescription: "El oro no es moneda: no se puede imprimir ni devaluar. Por eso históricamente sube cuando el peso pierde valor. Ejemplos reales y datos del mercado mexicano."
 description: "La inflación en México alcanzó el 4.66% anual en 2024, mientras el peso mexicano perdió más del 12% de su valor frente al dólar en los últimos tres años."
 pubDate: 2026-02-13
 author: "federico-sendra"

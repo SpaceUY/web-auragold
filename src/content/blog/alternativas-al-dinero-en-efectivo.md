@@ -1,5 +1,7 @@
 ---
 title: "Alternativas al dinero en efectivo: Opciones para proteger tus ahorros en 2026"
+seoTitle: "Alternativas al efectivo para proteger tus ahorros que igual no conoces"
+seoDescription: "El efectivo pierde valor cada año. Compara CETES, oro, cripto y bolsa para proteger tus ahorros en México en 2026."
 description: "Guardar dinero en efectivo bajo el colchón, en una cuenta bancaria sin rendimientos o simplemente \"dejarlo ahí\" es garantizar que pierdas poder adquisitivo cada año."
 pubDate: 2026-02-16
 author: "juan-manuel-sobral"
