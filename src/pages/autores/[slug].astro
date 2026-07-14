@@ -36,7 +36,7 @@ const socialLabel = (url: string) => {
 };
 ---
 
-<BaseLayout title={titles[author.slug] ?? author.name} description={author.description} ogImage={author.image}>
+<BaseLayout title={titles[author.slug] ?? author.name} description={author.metaDescription} ogImage={author.image}>
   <PersonJsonLD author={author} />
 
   <Header />

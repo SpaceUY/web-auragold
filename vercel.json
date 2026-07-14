@@ -9,11 +9,6 @@
       "permanent": true
     },
     {
-      "source": "/categorias/:slug*",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
       "source": "/autores",
       "destination": "/blog",
       "permanent": true

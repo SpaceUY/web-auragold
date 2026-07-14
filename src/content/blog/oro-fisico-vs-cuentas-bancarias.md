@@ -1,5 +1,7 @@
 ---
 title: "Oro físico vs cuentas bancarias: dónde proteger mejor tu dinero en 2026"
+seoTitle: "Oro físico vs cuenta bancaria: ¿cuál protege más? - Comparativa"
+seoDescription: "Las cuentas bancarias ofrecen intereses, pero ¿superan la inflación? Comparativa entre oro físico y ahorro bancario con datos del mercado mexicano."
 description: "Comparamos el oro físico y las cuentas bancarias como formas de proteger tus ahorros en México. ¿Cuándo conviene mantener liquidez en el banco?"
 pubDate: 2026-03-31
 author: "juan-manuel-sobral"

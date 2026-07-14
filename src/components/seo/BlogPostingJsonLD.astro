@@ -23,7 +23,7 @@ const json = JSON.stringify({
           "@type": "ListItem",
           position: 2,
           name: categoryLabel,
-          item: new URL(`/blog?categoria=${categorySlug}`, Astro.site).toString(),
+          item: new URL(`/categorias/${categorySlug}`, Astro.site).toString(),
         },
         { "@type": "ListItem", position: 3, name: title, item: url },
       ],

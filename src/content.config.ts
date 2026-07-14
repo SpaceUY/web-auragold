@@ -6,6 +6,9 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    // Metadata SEO para el <head>. Si no se define, cae al title/description de arriba.
+    seoTitle: z.string().optional(),
+    seoDescription: z.string().optional(),
     pubDate: z.coerce.date(),
     author: z.enum(["federico-sendra", "juan-manuel-sobral"]),
     category: z.enum(["Educación", "Guías", "Mercado", "Seguridad"]),

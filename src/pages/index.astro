@@ -6,6 +6,16 @@ import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import JsonLD from "../components/seo/JsonLD.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import { getCollection } from "astro:content";
+import { authors } from "../data/authors";
+
+// Últimos contenidos del blog (3 más recientes)
+const latestPosts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const formatPostDate = (date: Date) =>
+  date.toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });
 
 // icon: paths SVG (estilo Lucide) que replican los íconos rojos del original
 const painPoints = [
@@ -205,7 +215,7 @@ const faqItems = [
 
 <BaseLayout
   title="AuraGold - Compra e invierte en oro desde nuestra App"
-  description="Compra Oro desde cualquier cantidad. Sin mínimos, sin broncas."
+  description="Compra oro físico 24k desde $1 MXN. Custodia certificada en Suiza, liquidez en 24-48h. Protege tu dinero de la inflación con Aura Gold."
 >
   <JsonLD />
   <FAQJsonLD items={faqItems} />
@@ -452,6 +462,64 @@ const faqItems = [
       />
       <div class="mt-12">
         <FAQ items={faqItems} />
+      </div>
+    </section>
+
+    <!-- Últimos contenidos -->
+    <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <SectionHeading
+          eyebrow="Blog"
+          title="Últimos contenidos"
+          description="Educación financiera e insights del mercado para proteger tu ahorro con oro."
+          class="max-w-2xl"
+        />
+        <a
+          href="/blog"
+          class="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-ag-gold hover:underline"
+        >
+          Ver todo el blog
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          latestPosts.map((post, index) => {
+            const author = authors[post.data.author];
+            return (
+              <a
+                href={`/blog/${post.id}`}
+                data-animate
+                data-delay={index * 70}
+                class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:bg-white/10"
+              >
+                <div class="relative aspect-[16/9] overflow-hidden">
+                  <img
+                    src={post.data.heroImage}
+                    alt={post.data.title}
+                    width="640"
+                    height="360"
+                    loading="lazy"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <span class="absolute left-4 top-4 rounded-md bg-ag-black/80 px-3 py-1 font-mono text-xs uppercase tracking-widest text-ag-gold">
+                    {post.data.category}
+                  </span>
+                </div>
+                <div class="flex flex-1 flex-col p-6">
+                  <h3 class="font-display text-lg text-white">{post.data.title}</h3>
+                  <p class="mt-2 line-clamp-3 text-sm text-white/60">{post.data.description}</p>
+                  <div class="mt-4 flex items-center gap-2 text-xs text-white/40">
+                    <span>{formatPostDate(post.data.pubDate)}</span>
+                    <span>/</span>
+                    <span>Por {author?.name}</span>
+                  </div>
+                </div>
+              </a>
+            );
+          })
+        }
       </div>
     </section>
 

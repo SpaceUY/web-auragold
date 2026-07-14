@@ -1,5 +1,7 @@
 ---
 title: "Errores comunes al invertir en oro"
+seoTitle: "7 errores al invertir en oro (y cómo evitarlos) este 2026"
+seoDescription: "Desde pagar custodia oculta hasta confundir el oro digital con cripto: los 7 errores más frecuentes al comprar oro en México y qué comprobar antes de invertir."
 description: "Los 7 errores más frecuentes al invertir en oro. Sigue nuestra guía para invertir bien."
 pubDate: 2026-04-12
 author: "federico-sendra"

@@ -1,5 +1,7 @@
 ---
 title: "Cómo invertir en oro paso a paso: Guía práctica para proteger tu dinero en 2026"
+seoTitle: "Cómo invertir en oro en México desde $1"
+seoDescription: "Guía práctica para empezar a invertir en oro físico en México: qué tipo de oro comprar, cómo funciona la custodia digital y cuánto necesitas para empezar."
 description: "La inflación en México ha provocado que el peso pierda más del 4.5% de su poder adquisitivo en el último año. Guía práctica para invertir en oro físico sin conocimientos financieros avanzados."
 pubDate: 2026-02-12
 author: "juan-manuel-sobral"

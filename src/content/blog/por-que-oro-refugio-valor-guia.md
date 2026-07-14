@@ -1,5 +1,7 @@
 ---
 title: "Por qué el oro es un refugio de valor: guía completa"
+seoTitle: "Oro como refugio de valor: qué es y por qué protege tu dinero"
+seoDescription: "Un activo refugio mantiene o sube de valor en crisis económicas. El oro lleva siglos en ese rol. Qué lo hace diferente de acciones, divisas y otros activos."
 description: "Descubre por qué el oro ha sido considerado un refugio de valor durante siglos, cómo ha protegido patrimonio en tiempos de crisis y qué papel sigue jugando hoy frente a inflación."
 pubDate: 2026-03-20
 author: "juan-manuel-sobral"

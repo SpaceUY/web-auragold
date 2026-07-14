@@ -40,6 +40,11 @@ const featured = otherPosts.slice(0, 2);
 const sameCategory = otherPosts.filter((p) => p.data.category === post.data.category);
 const related = (sameCategory.length ? sameCategory : otherPosts).slice(0, 2);
 
+// Slugs de categoría que tienen al menos un post (tienen página real en /categorias).
+const existingCategorySlugs = new Set(
+  allPosts.map((p) => categorySlugs[p.data.category]).filter(Boolean),
+);
+
 // Explora temas (categorías)
 const topics = [
   {
@@ -71,8 +76,8 @@ const topics = [
 ---
 
 <BaseLayout
-  title={post.data.title}
-  description={post.data.description}
+  title={post.data.seoTitle ?? post.data.title}
+  description={post.data.seoDescription ?? post.data.description}
   ogImage={post.data.heroImage}
   ogType="article"
   publishedTime={post.data.pubDate.toISOString()}
@@ -230,7 +235,10 @@ const topics = [
             <div class="mt-4 space-y-4">
               {
                 topics.map((t) => (
-                  <a href="/blog" class="group flex items-center gap-3">
+                  <a
+                    href={existingCategorySlugs.has(t.slug) ? `/categorias/${t.slug}` : "/blog"}
+                    class="group flex items-center gap-3"
+                  >
                     <img
                       src={t.image}
                       alt={t.name}
