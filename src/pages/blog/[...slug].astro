@@ -115,9 +115,13 @@ const topics = [
           <p class="mt-4 text-lg text-white/60">{post.data.description}</p>
 
           <div class="mt-6 flex items-center gap-3">
-            {author && <img src={author.image} alt={author.name} width="44" height="44" class="h-11 w-11 rounded-full object-cover" />}
+            {author && (
+              <a href={`/autores/${post.data.author}`}>
+                <img src={author.image} alt={author.name} width="44" height="44" class="h-11 w-11 rounded-full object-cover" />
+              </a>
+            )}
             <div class="text-sm">
-              <p class="text-white">{author?.name}</p>
+              <a href={`/autores/${post.data.author}`} class="text-white hover:text-ag-gold">{author?.name}</a>
               <p class="text-white/40">{formatDate(post.data.pubDate)}</p>
             </div>
           </div>
