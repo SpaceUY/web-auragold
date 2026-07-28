@@ -1,0 +1,471 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import SectionHeading from "../components/ui/SectionHeading.astro";
+import FAQ from "../components/ui/FAQ.astro";
+import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import {
+  INFLATION_RATE_BY_YEAR,
+  GOLD_PRICE_MXN_PER_OZ_BY_YEAR,
+  START_YEARS,
+  LAST_CLOSED_YEAR,
+  cumulativeInflationFactor,
+} from "../data/gold-inflation-history";
+
+// Snapshot inicial (fallback si falla el fetch en vivo). Mismo criterio que /precio-del-oro-hoy.
+const SNAPSHOT_MXN_PER_OZ = 71476;
+const DEFAULT_START_YEAR = 2020;
+const DEFAULT_AMOUNT = 100000;
+
+const defaultInflationValue = Math.round(DEFAULT_AMOUNT * cumulativeInflationFactor(DEFAULT_START_YEAR));
+const defaultGoldValue = Math.round(
+  (DEFAULT_AMOUNT / GOLD_PRICE_MXN_PER_OZ_BY_YEAR[DEFAULT_START_YEAR]) * SNAPSHOT_MXN_PER_OZ,
+);
+
+const fmt = (n: number) => `MXN ${n.toLocaleString("es-MX", { maximumFractionDigits: 0 })}`;
+
+const PAGE_URL = "https://auragold.io/calculadora-inflacion-oro";
+
+const webApplicationJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Calculadora de Inflación de México",
+  url: PAGE_URL,
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  inLanguage: "es",
+  description:
+    "Calculadora que compara, para el año y el monto que elijas, cuánto necesitarías hoy solo para mantener tu poder adquisitivo frente a la inflación en México contra lo que tendrías si lo hubieras convertido en oro.",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "MXN",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "AuraGold",
+    url: "https://auragold.io/",
+  },
+});
+
+// answer: HTML con links reales para el FAQ visual. plainAnswer: mismo texto sin
+// tags, para el schema FAQPage (schema.org espera texto plano, no HTML).
+const faqItems = [
+  {
+    question: "¿Cuánto ha subido el oro frente a la inflación en México?",
+    answer:
+      'Depende del período: desde 2020, la inflación acumulada en México supera el 30% según datos del Banco Mundial e INEGI, mientras que el precio del oro en pesos ha subido considerablemente más, porque combina el alza del metal en dólares con la devaluación del peso frente al dólar. Elige el año que te interesa en la calculadora de arriba, o mira el <a href="/precio-del-oro-hoy" class="text-ag-gold hover:underline">detalle año por año del precio del oro</a>.',
+    plainAnswer:
+      "Depende del período: desde 2020, la inflación acumulada en México supera el 30% según datos del Banco Mundial e INEGI, mientras que el precio del oro en pesos ha subido considerablemente más, porque combina el alza del metal en dólares con la devaluación del peso frente al dólar. Elige el año que te interesa en la calculadora de arriba para ver el detalle.",
+  },
+  {
+    question: "¿Cuánto vale 1 kg de oro hoy en México?",
+    answer:
+      'El precio del oro cambia continuamente según el mercado internacional (XAU/USD) y el tipo de cambio MXN/USD. Puedes ver la cotización en vivo, por gramo o por kilo, en la <a href="/precio-del-oro-hoy" class="text-ag-gold hover:underline">página de precio del oro hoy</a>.',
+    plainAnswer:
+      "El precio del oro cambia continuamente según el mercado internacional (XAU/USD) y el tipo de cambio MXN/USD. Puedes ver la cotización en vivo, por gramo o por kilo, en la página de precio del oro hoy.",
+  },
+  {
+    question: "¿Qué fue la hiperinflación en México?",
+    answer:
+      'Entre 1985 y 1988, México vivió su peor episodio inflacionario moderno: en 1987 el IPC anual alcanzó 131.8%, destruyendo el poder adquisitivo de millones de familias en meses. Fue el origen de la desconfianza histórica hacia el ahorro en efectivo en el país. Repasamos esta y otras etapas en el <a href="/blog/evolucion-inflacion-mexico" class="text-ag-gold hover:underline">artículo sobre inflación histórica en México</a>.',
+    plainAnswer:
+      "Entre 1985 y 1988, México vivió su peor episodio inflacionario moderno: en 1987 el IPC anual alcanzó 131.8%, destruyendo el poder adquisitivo de millones de familias en meses. Fue el origen de la desconfianza histórica hacia el ahorro en efectivo en el país. Repasamos esta y otras etapas en el artículo sobre inflación histórica en México.",
+  },
+  {
+    question: "¿Hay una app para invertir en oro en México?",
+    answer:
+      'Sí. Con Aura puedes comprar oro físico 24k certificado (LBMA) desde 1 peso mexicano, sin mínimos ni comisiones de custodia, con custodia institucional en Suiza y liquidez en 24-48 horas. Conoce <a href="/invertir-en-oro-mexico" class="text-ag-gold hover:underline">cómo invertir en oro en México</a> o <a href="/#descargar" class="text-ag-gold hover:underline">descarga la app</a> para empezar.',
+    plainAnswer:
+      "Sí. Con Aura puedes comprar oro físico 24k certificado (LBMA) desde 1 peso mexicano, sin mínimos ni comisiones de custodia, con custodia institucional en Suiza y liquidez en 24-48 horas. Conoce cómo invertir en oro en México o descarga la app para empezar.",
+  },
+];
+
+const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer: item.plainAnswer }));
+---
+
+<BaseLayout
+  title="Calculadora de Inflación de México vs. Oro"
+  description="Elige el año y el monto: compara cuánto necesitarías hoy solo para mantener tu poder adquisitivo frente a la inflación en México, contra lo que tendrías si lo hubieras convertido en oro."
+>
+  <script type="application/ld+json" is:inline set:html={webApplicationJson} />
+  <FAQJsonLD items={faqJsonLdItems} />
+
+  <Header />
+
+  <main class="bg-ag-black font-body text-white">
+    <!-- Hero -->
+    <section class="mx-auto max-w-[1200px] px-6 pb-4 pt-16 lg:px-10 lg:pt-20">
+      <div class="text-center">
+        <span class="rounded-full border border-white/20 px-4 py-1 font-body text-xs text-white/70">
+          Calculadora
+        </span>
+        <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold lg:text-6xl">
+          Calculadora de <span class="text-ag-gold">Inflación</span> de México
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-white/60">
+          Elige el año y el monto. Comparamos qué pasó con un ahorro en pesos sin rendimiento frente a haberlo
+          convertido en oro, con datos reales de inflación (Banco Mundial/INEGI) hasta {LAST_CLOSED_YEAR} y el
+          precio del oro en vivo para hoy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Calculadora: inflación vs. oro -->
+    <section class="mx-auto max-w-[1200px] px-6 py-12 lg:px-10">
+      <div class="rounded-3xl border border-white/10 bg-ag-slate/40 p-6 lg:p-10" data-inflation-calc>
+        <div class="flex flex-wrap items-end gap-6">
+          <div>
+            <label
+              for="year-select"
+              class="block uppercase text-white/40"
+              style="font-size:12px; line-height:16px; letter-spacing:0.1em; font-weight:400;"
+              >Año de partida</label
+            >
+            <div class="mt-2 flex h-[52px] items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4">
+              <select
+                id="year-select"
+                data-year-select
+                class="w-full bg-transparent text-lg text-white outline-none"
+              >
+                {
+                  START_YEARS.map((year) => (
+                    <option value={year} selected={year === DEFAULT_START_YEAR}>
+                      {year}
+                    </option>
+                  ))
+                }
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label
+              for="amount-input"
+              class="block uppercase text-white/40"
+              style="font-size:12px; line-height:16px; letter-spacing:0.1em; font-weight:400;"
+              >Monto que tenías (MXN)</label
+            >
+            <div class="mt-2 flex h-[52px] items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4">
+              <span class="shrink-0 text-sm text-white/40">$</span>
+              <input
+                id="amount-input"
+                type="number"
+                inputmode="decimal"
+                min="0"
+                step="1000"
+                value={DEFAULT_AMOUNT}
+                data-amount-input
+                class="w-40 bg-transparent text-lg text-white outline-none"
+              />
+            </div>
+          </div>
+
+          <span class="flex items-center gap-2 rounded-full bg-ag-green/10 px-3 py-1 text-xs text-ag-green">
+            <span class="h-2 w-2 rounded-full bg-ag-green"></span> Precio de hoy en vivo · años anteriores históricos
+          </span>
+        </div>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-xl bg-white/5 p-5">
+            <p class="text-xs uppercase tracking-widest text-white/40">
+              En <span data-label-start-year>{DEFAULT_START_YEAR}</span> tenías
+            </p>
+            <p class="mt-2 text-xl font-semibold text-white" data-amount-original>{fmt(DEFAULT_AMOUNT)}</p>
+          </div>
+          <div class="rounded-xl bg-white/5 p-5">
+            <p class="text-xs uppercase tracking-widest text-white/40">Hoy necesitarías (misma capacidad de compra)</p>
+            <p class="mt-2 text-xl font-semibold text-ag-red" data-amount-inflation>
+              {fmt(defaultInflationValue)}
+            </p>
+          </div>
+          <div class="rounded-xl bg-ag-gold p-5">
+            <p class="text-xs uppercase tracking-widest text-ag-dark/70">Si lo hubieras convertido en oro</p>
+            <p class="mt-2 text-xl font-semibold text-ag-dark" data-amount-gold>{fmt(defaultGoldValue)}</p>
+          </div>
+        </div>
+
+        <!-- Versión mobile: barras simples (el SVG de abajo está pensado para
+             desktop; a menos de 810px se ve muy chico si solo se escala, así que
+             mostramos algo distinto, igual que el iframe de la bóveda en la home). -->
+        <div class="mt-8 space-y-5 sm:hidden" data-mobile-bars>
+          <div>
+            <p class="text-xs text-white/40">Tenías</p>
+            <p class="mt-1 text-2xl font-semibold text-white" data-mobile-value-start></p>
+          </div>
+          <div>
+            <p class="text-xs text-white/50">Ajustado por inflación</p>
+            <div class="mt-2 h-2.5 overflow-hidden rounded-full bg-white/10">
+              <div
+                class="h-full rounded-full bg-ag-red transition-all duration-700 ease-out"
+                style="width:0%"
+                data-mobile-bar-inflation
+              >
+              </div>
+            </div>
+            <p class="mt-1.5 text-xl font-semibold text-ag-red" data-mobile-value-inflation></p>
+          </div>
+          <div>
+            <p class="text-xs text-ag-gold">Convertido en oro</p>
+            <div class="mt-2 h-2.5 overflow-hidden rounded-full bg-white/10">
+              <div
+                class="h-full rounded-full bg-ag-gold transition-all duration-700 ease-out"
+                style="width:0%"
+                data-mobile-bar-gold
+              >
+              </div>
+            </div>
+            <p class="mt-1.5 text-xl font-semibold text-ag-gold" data-mobile-value-gold></p>
+          </div>
+        </div>
+
+        <!-- Gráfica: dumbbell (antes → después). Un punto de partida compartido
+             (guía vertical) que se bifurca en dos destinos, cada uno con su valor
+             escrito al lado: no hace falta leer ningún eje para entender la brecha. -->
+        <div class="mt-8 hidden sm:block">
+          <svg
+            viewBox="0 0 800 230"
+            class="h-[230px] w-full font-body"
+            data-chart
+            role="img"
+            aria-label="Comparación entre el monto ajustado por inflación y el mismo monto convertido en oro, partiendo del mismo monto inicial"
+          >
+            <line
+              data-guide-start
+              x1="0"
+              y1="48"
+              x2="0"
+              y2="200"
+              stroke="rgba(255,255,255,0.25)"
+              stroke-dasharray="3,3"
+              style="transition: x1 0.7s cubic-bezier(.4,0,.2,1), x2 0.7s cubic-bezier(.4,0,.2,1);"></line>
+            <text
+              data-start-caption
+              x="0"
+              y="18"
+              fill="rgba(255,255,255,0.4)"
+              font-size="12"
+              text-anchor="middle"
+              style="transition: x 0.7s cubic-bezier(.4,0,.2,1);">Tenías</text>
+            <text
+              data-value-start
+              x="0"
+              y="38"
+              fill="#ffffff"
+              font-size="16"
+              font-weight="600"
+              text-anchor="middle"
+              style="transition: x 0.7s cubic-bezier(.4,0,.2,1);"></text>
+
+            <text x="24" y="72" fill="rgba(255,255,255,0.45)" font-size="13">Ajustado por inflación</text>
+            <line data-line-inflation x1="0" y1="95" x2="0" y2="95" stroke="#ff575a" stroke-width="2" style="transition: x1 0.7s cubic-bezier(.4,0,.2,1), x2 0.7s cubic-bezier(.4,0,.2,1);"></line>
+            <circle data-dot-start-inflation cx="0" cy="95" r="5" fill="rgba(255,255,255,0.5)" style="transition: cx 0.7s cubic-bezier(.4,0,.2,1);"></circle>
+            <circle data-dot-end-inflation cx="0" cy="95" r="8" fill="#ff575a" stroke="#090909" stroke-width="2" style="transition: cx 0.7s cubic-bezier(.4,0,.2,1);"></circle>
+            <text data-value-inflation x="0" y="122" fill="#ff575a" font-size="16" font-weight="600" text-anchor="middle" style="transition: x 0.7s cubic-bezier(.4,0,.2,1);"></text>
+
+            <text x="24" y="152" fill="rgba(255,255,255,0.45)" font-size="13">Convertido en oro</text>
+            <line data-line-gold x1="0" y1="175" x2="0" y2="175" stroke="#f2b334" stroke-width="2" style="transition: x1 0.7s cubic-bezier(.4,0,.2,1), x2 0.7s cubic-bezier(.4,0,.2,1);"></line>
+            <circle data-dot-start-gold cx="0" cy="175" r="5" fill="rgba(255,255,255,0.5)" style="transition: cx 0.7s cubic-bezier(.4,0,.2,1);"></circle>
+            <circle data-dot-end-gold cx="0" cy="175" r="8" fill="#f2b334" stroke="#090909" stroke-width="2" style="transition: cx 0.7s cubic-bezier(.4,0,.2,1);"></circle>
+            <text data-value-gold x="0" y="202" fill="#f2b334" font-size="16" font-weight="600" text-anchor="middle" style="transition: x 0.7s cubic-bezier(.4,0,.2,1);"></text>
+          </svg>
+          <p class="mt-3 text-center text-sm text-white/50" data-gap-caption></p>
+        </div>
+
+        <p class="mt-6 text-xs leading-relaxed text-white/40">
+          Cálculo ilustrativo con datos históricos públicos (Banco Mundial, INEGI, precio del oro promedio anual) e
+          inflación oficial hasta {LAST_CLOSED_YEAR}. El valor de hoy en oro usa la cotización en vivo. No es una
+          proyección de rendimientos futuros ni asesoría financiera. Ver{" "}
+          <a href="/blog/evolucion-inflacion-mexico" class="text-ag-gold hover:underline">
+            fuente de inflación
+          </a>{" "}
+          y{" "}
+          <a href="/precio-del-oro-hoy" class="text-ag-gold hover:underline">
+            histórico del precio del oro
+          </a>
+          .
+        </p>
+      </div>
+    </section>
+
+    <script
+      define:vars={{
+        SNAPSHOT_MXN_PER_OZ,
+        INFLATION_RATE_BY_YEAR,
+        GOLD_PRICE_MXN_PER_OZ_BY_YEAR,
+        LAST_CLOSED_YEAR,
+      }}
+    >
+      // Precio del oro en vivo desde CoinGecko (tether-gold / XAUT ≈ 1 onza troy).
+      // Progressive enhancement: si falla el fetch, se usa SNAPSHOT_MXN_PER_OZ.
+      let livePricePerOz = SNAPSHOT_MXN_PER_OZ;
+
+      const fmt = (n) => `MXN ${Math.round(n).toLocaleString("es-MX")}`;
+
+      const cumulativeInflationFactor = (fromYear) => {
+        let factor = 1;
+        for (let year = fromYear; year <= LAST_CLOSED_YEAR; year++) {
+          const rate = INFLATION_RATE_BY_YEAR[year];
+          if (rate === undefined) continue;
+          factor *= 1 + rate / 100;
+        }
+        return factor;
+      };
+
+      const calc = document.querySelector("[data-inflation-calc]");
+      if (calc) {
+        const yearSelect = calc.querySelector("[data-year-select]");
+        const amountInput = calc.querySelector("[data-amount-input]");
+        const originalEl = calc.querySelector("[data-amount-original]");
+        const inflationEl = calc.querySelector("[data-amount-inflation]");
+        const goldEl = calc.querySelector("[data-amount-gold]");
+        const startYearLabels = calc.querySelectorAll("[data-label-start-year]");
+        const gapCaption = calc.querySelector("[data-gap-caption]");
+
+        const guideStart = calc.querySelector("[data-guide-start]");
+        const startCaption = calc.querySelector("[data-start-caption]");
+        const valueStart = calc.querySelector("[data-value-start]");
+        const dotStartInflation = calc.querySelector("[data-dot-start-inflation]");
+        const dotEndInflation = calc.querySelector("[data-dot-end-inflation]");
+        const lineInflation = calc.querySelector("[data-line-inflation]");
+        const valueInflation = calc.querySelector("[data-value-inflation]");
+        const dotStartGold = calc.querySelector("[data-dot-start-gold]");
+        const dotEndGold = calc.querySelector("[data-dot-end-gold]");
+        const lineGold = calc.querySelector("[data-line-gold]");
+        const valueGold = calc.querySelector("[data-value-gold]");
+
+        const mobileValueStart = calc.querySelector("[data-mobile-value-start]");
+        const mobileBarInflation = calc.querySelector("[data-mobile-bar-inflation]");
+        const mobileValueInflation = calc.querySelector("[data-mobile-value-inflation]");
+        const mobileBarGold = calc.querySelector("[data-mobile-bar-gold]");
+        const mobileValueGold = calc.querySelector("[data-mobile-value-gold]");
+
+        // Mismo formato "MXN X" que usan las tarjetas de arriba (antes decía "$X",
+        // inconsistente con el resto de la página).
+        const fmtShort = (n) => `MXN ${Math.round(n).toLocaleString("es-MX")}`;
+
+        // Escala horizontal del dumbbell: el punto de partida queda SIEMPRE fijo en
+        // ANCHOR_X (no depende del año/monto). Las dos ramas se ubican según su
+        // múltiplo relativo al monto inicial ("indexado a una base común"), así el
+        // ancla nunca se corre al cambiar de escenario, solo se mueven los destinos.
+        const ANCHOR_X = 210;
+        const PLOT_RIGHT = 780;
+        const clampX = (x) => Math.min(Math.max(x, 70), 730);
+
+        const render = () => {
+          const startYear = Number(yearSelect.value);
+          const amount = parseFloat(amountInput.value) || 0;
+
+          startYearLabels.forEach((el) => (el.textContent = String(startYear)));
+
+          const inflationValue = amount * cumulativeInflationFactor(startYear);
+          const startGoldPrice = GOLD_PRICE_MXN_PER_OZ_BY_YEAR[startYear];
+          const ounces = amount / startGoldPrice;
+          const goldValue = ounces * livePricePerOz;
+
+          // --- Tarjetas ---
+          originalEl.textContent = fmt(amount);
+          inflationEl.textContent = fmt(inflationValue);
+          goldEl.textContent = fmt(goldValue);
+
+          // --- Dumbbell ---
+          // Múltiplo de cada destino respecto al monto inicial (1 = el propio monto).
+          const inflationMultiple = amount > 0 ? inflationValue / amount : 1;
+          const goldMultiple = amount > 0 ? goldValue / amount : 1;
+          const maxMultiple = Math.max(inflationMultiple, goldMultiple, 1) * 1.08;
+          const pxPerMultiple = maxMultiple > 1 ? (PLOT_RIGHT - ANCHOR_X) / (maxMultiple - 1) : 0;
+
+          const amountX = ANCHOR_X;
+          const inflationX = clampX(ANCHOR_X + (inflationMultiple - 1) * pxPerMultiple);
+          const goldX = clampX(ANCHOR_X + (goldMultiple - 1) * pxPerMultiple);
+
+          guideStart.setAttribute("x1", String(amountX));
+          guideStart.setAttribute("x2", String(amountX));
+          startCaption.setAttribute("x", String(amountX));
+          valueStart.setAttribute("x", String(amountX));
+          valueStart.textContent = fmtShort(amount);
+
+          dotStartInflation.setAttribute("cx", String(amountX));
+          dotEndInflation.setAttribute("cx", String(inflationX));
+          lineInflation.setAttribute("x1", String(amountX));
+          lineInflation.setAttribute("x2", String(inflationX));
+          valueInflation.setAttribute("x", String(inflationX));
+          valueInflation.textContent = fmtShort(inflationValue);
+
+          dotStartGold.setAttribute("cx", String(amountX));
+          dotEndGold.setAttribute("cx", String(goldX));
+          lineGold.setAttribute("x1", String(amountX));
+          lineGold.setAttribute("x2", String(goldX));
+          valueGold.setAttribute("x", String(goldX));
+          valueGold.textContent = fmtShort(goldValue);
+
+          // --- Versión mobile (barras) ---
+          const maxBarValue = Math.max(inflationValue, goldValue, 1);
+          mobileValueStart.textContent = fmtShort(amount);
+          mobileBarInflation.style.width = `${Math.min(100, (inflationValue / maxBarValue) * 100)}%`;
+          mobileValueInflation.textContent = fmtShort(inflationValue);
+          mobileBarGold.style.width = `${Math.min(100, (goldValue / maxBarValue) * 100)}%`;
+          mobileValueGold.textContent = fmtShort(goldValue);
+
+          const gap = goldValue - inflationValue;
+          gapCaption.textContent =
+            gap >= 0
+              ? `El oro te habría dado ${fmtShort(gap)} más que solo protegerte de la inflación.`
+              : `En este escenario, el ahorro ajustado por inflación superó al oro por ${fmtShort(-gap)}.`;
+        };
+
+        yearSelect.addEventListener("change", render);
+        amountInput.addEventListener("input", render);
+        render();
+        calc._render = render;
+      }
+
+      fetch(
+        "https://api.coingecko.com/api/v3/coins/tether-gold?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false",
+      )
+        .then((r) => r.json())
+        .then((json) => {
+          const price = json?.market_data?.current_price?.mxn;
+          if (!price) return;
+          livePricePerOz = price;
+          calc?._render?.();
+        })
+        .catch((err) => console.error("CoinGecko fetch failed:", err));
+    </script>
+
+    <!-- FAQ -->
+    <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
+      <SectionHeading eyebrow="FAQs" title="Preguntas frecuentes" align="left" />
+      <div class="mt-12">
+        <FAQ items={faqItems} />
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
+      <div data-animate class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
+        <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
+          Protege tu ahorro con oro real, no con hojas de cálculo.
+        </h2>
+        <p class="mt-4 text-white/60">Compra oro físico 24k desde $1 MXN, sin mínimos ni comisiones de custodia.</p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="/#descargar"
+            class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
+          >
+            Descargar Aura
+          </a>
+          <a
+            href="/invertir-en-oro-mexico"
+            class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
+          >
+            Cómo invertir en oro en México
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

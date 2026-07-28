@@ -83,7 +83,7 @@ Conocer la historia inflacionaria de México no es un ejercicio académico: es e
 
 Existen distintas estrategias para proteger el valor del dinero frente a la inflación: desde instrumentos de deuda indexados al INPC que ofrece el propio gobierno mexicano, hasta activos físicos con valor histórico comprobado. Lo que tienen en común las opciones más sólidas es que generan un rendimiento real por encima de la inflación, o que su valor intrínseco no depende de la política monetaria de ningún banco central.
 
-Si quieres ver cómo ha evolucionado el valor del oro frente al peso mexicano en ese mismo período, consulta la página con el precio del oro hoy en México, donde actualizamos la cotización y su evolución histórica en pesos.
+Si quieres ver cómo ha evolucionado el valor del oro frente al peso mexicano en ese mismo período, consulta la página con el [precio del oro hoy en México](/precio-del-oro-hoy), donde actualizamos la cotización y su evolución histórica en pesos. Si prefieres verlo con tus propios números, la [calculadora de oro](/calculadora-inflacion-oro) compara en segundos, para el año que elijas, cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
 
 El primer paso, siempre, es el mismo: entender qué está pasando con el dinero que ya tienes.
 
