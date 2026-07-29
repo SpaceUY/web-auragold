@@ -196,6 +196,24 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
         </div>
 
         <p class="mt-4 font-mono text-[10px] uppercase tracking-widest text-white/30" data-field="updated"></p>
+
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <label for="gold-widget-grams" class="text-xs text-white/40">¿Cuántos gramos quieres calcular?</label>
+          <div class="mt-2 flex items-center gap-3">
+            <input
+              id="gold-widget-grams"
+              type="number"
+              inputmode="decimal"
+              min="0"
+              step="0.1"
+              value="10"
+              data-grams-input
+              class="w-24 rounded-lg border border-white/10 bg-white/5 px-3 py-2 font-mono text-sm text-white outline-none"
+            />
+            <span class="text-sm text-white/40">g =</span>
+            <span class="font-mono text-sm text-white" data-grams-output>MXN {fmt(snapshot.mxnPerGram * 10)}</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -248,6 +266,13 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
             const now = new Date().toLocaleTimeString("es-MX", { hour: "2-digit", minute: "2-digit" });
             updatedEl.textContent = `Últ. actualización ${now}`;
           }
+
+          const gramsInput = widget.querySelector<HTMLInputElement>("[data-grams-input]");
+          const gramsOutput = widget.querySelector("[data-grams-output]");
+          if (gramsInput && gramsOutput) {
+            const grams = parseFloat(gramsInput.value) || 0;
+            gramsOutput.textContent = `${code} ${fmt((d.price / GRAMS_PER_OZ) * grams)}`;
+          }
         };
 
         const setCurrency = (cur: "mxn" | "usd") => {
@@ -260,6 +285,8 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
           });
           render();
         };
+
+        widget.querySelector<HTMLInputElement>("[data-grams-input]")?.addEventListener("input", render);
 
         widget.querySelectorAll("[data-cur-btn]").forEach((btn) => {
           btn.addEventListener("click", () =>
@@ -340,6 +367,14 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
           </tbody>
         </table>
       </div>
+
+      <p class="mt-6 text-sm text-white/50">
+        ¿Quieres saber cuánto vale tu oro en pesos hoy?{" "}
+        <a href="/calculadora-inflacion-oro" class="text-ag-gold hover:underline">
+          Usa la calculadora de oro
+        </a>
+        .
+      </p>
     </section>
 
     <!-- XAU/MXN explicado -->

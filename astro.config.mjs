@@ -32,6 +32,7 @@ function sitemapMeta(url) {
   if (path === '/') return { priority: 1.0, changefreq: 'weekly' };
   if (path === '/precio-del-oro-hoy') return { priority: 0.9, changefreq: 'daily' };
   if (path === '/invertir-en-oro-mexico') return { priority: 0.9, changefreq: 'weekly' };
+  if (path === '/calculadora-inflacion-oro') return { priority: 0.8, changefreq: 'weekly' };
   if (path === '/blog') return { priority: 0.8, changefreq: 'weekly' };
   if (path.startsWith('/blog/')) return { priority: 0.7, changefreq: 'monthly' };
   if (path === '/transparencia') return { priority: 0.6, changefreq: 'monthly' };
