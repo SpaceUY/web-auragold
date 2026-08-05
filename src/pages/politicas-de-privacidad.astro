@@ -263,19 +263,127 @@ import Footer from "../components/layout/Footer.astro";
           modificaciones.
         </p>
 
-        <h3>¿Tienes dudas sobre nuestras políticas de privacidad?</h3>
-        <p>Nuestro equipo de soporte puede ayudarte.</p>
-        <p>
-          <a
-            href="mailto:info@mintia.tech"
-            class="not-prose inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-body text-sm font-medium text-white no-underline hover:bg-white/10"
+        <h3 id="soporte">¿Tienes dudas sobre nuestras políticas de privacidad?</h3>
+        <p>Nuestro equipo de soporte puede ayudarte. Completa el formulario y te responderemos a tu email.</p>
+
+        <form data-support-form class="not-prose mt-2 max-w-lg space-y-4">
+          <!-- Honeypot anti-spam: campo oculto que un humano nunca completa -->
+          <div class="hidden" aria-hidden="true">
+            <label for="website">No completar este campo</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div>
+            <label for="support-name" class="block text-xs uppercase tracking-widest text-white/40">Nombre</label>
+            <input
+              id="support-name"
+              name="name"
+              type="text"
+              required
+              maxlength="100"
+              class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
+            />
+          </div>
+
+          <div>
+            <label for="support-email" class="block text-xs uppercase tracking-widest text-white/40">Email</label>
+            <input
+              id="support-email"
+              name="email"
+              type="email"
+              required
+              maxlength="200"
+              class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
+            />
+          </div>
+
+          <div>
+            <label for="support-category" class="block text-xs uppercase tracking-widest text-white/40">
+              Tipo de consulta
+            </label>
+            <select
+              id="support-category"
+              name="category"
+              required
+              class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
+            >
+              <option value="">Selecciona una opción</option>
+              <option>Eliminación de cuenta</option>
+              <option>Mis datos personales / privacidad</option>
+              <option>Problema con una transacción u orden</option>
+              <option>Problema técnico con la app</option>
+              <option>Otros</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="support-message" class="block text-xs uppercase tracking-widest text-white/40">
+              Cuéntanos qué necesitas
+            </label>
+            <textarea
+              id="support-message"
+              name="message"
+              required
+              minlength="10"
+              maxlength="5000"
+              rows="5"
+              class="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            data-support-submit
+            class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-body text-sm font-medium text-ag-dark hover:opacity-90 disabled:opacity-50"
           >
-            Contactar a soporte
-          </a>
+            Enviar
+          </button>
+
+          <p class="text-sm" data-support-status role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="not-prose text-sm text-white/50">
+          ¿Prefieres escribirnos directo? <span class="select-all font-medium text-white">info@mintia.tech</span>.
         </p>
       </div>
     </article>
   </main>
 
   <Footer />
+
+  <script>
+    const form = document.querySelector<HTMLFormElement>("[data-support-form]");
+    const submitBtn = document.querySelector<HTMLButtonElement>("[data-support-submit]");
+    const status = document.querySelector<HTMLParagraphElement>("[data-support-status]");
+
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!submitBtn || !status) return;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      submitBtn.disabled = true;
+      status.textContent = "Enviando...";
+      status.className = "text-sm text-white/50";
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        if (!res.ok) throw new Error("request failed");
+
+        status.textContent = "¡Listo! Te responderemos a la brevedad.";
+        status.className = "text-sm text-ag-green";
+        form.reset();
+      } catch {
+        status.textContent = "No pudimos enviar tu mensaje. Escríbenos directo a info@mintia.tech.";
+        status.className = "text-sm text-ag-red";
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
 </BaseLayout>
