@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# contexto local de trabajo, nunca se sube
+PROJECT_CONTEXT.md
