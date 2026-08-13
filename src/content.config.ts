@@ -10,6 +10,9 @@ const blog = defineCollection({
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
     pubDate: z.coerce.date(),
+    // Solo completar si el contenido se edita de verdad después de publicado
+    // (no tocar en cada deploy solo para "parecer" actualizado).
+    updatedDate: z.coerce.date().optional(),
     author: z.enum(["federico-sendra", "juan-manuel-sobral"]),
     category: z.enum(["Educación", "Guías", "Mercado", "Seguridad"]),
     heroImage: z.string(),

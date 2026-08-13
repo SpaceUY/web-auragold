@@ -9,6 +9,8 @@ heroImage: "/images/blog/errores-al-invertir-en-oro.png"
 category: "Educación"
 ---
 
+*Nota: esto es contenido educativo, no asesoría financiera.*
+
 ## Los 7 errores más frecuentes al invertir en oro
 
 ### Error 1: Comprar oro sin entender su propósito

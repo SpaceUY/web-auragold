@@ -4,13 +4,15 @@ interface Props {
   description: string;
   slug: string;
   pubDate: Date;
-  authorName: string;
+  updatedDate?: Date;
+  authorSlug: string;
   categoryLabel: string;
   categorySlug: string;
 }
 
-const { title, description, slug, pubDate, authorName, categoryLabel, categorySlug } = Astro.props;
+const { title, description, slug, pubDate, updatedDate, authorSlug, categoryLabel, categorySlug } = Astro.props;
 const url = new URL(`/blog/${slug}`, Astro.site).toString();
+const authorUrl = new URL(`/autores/${authorSlug}`, Astro.site).toString();
 
 const json = JSON.stringify({
   "@context": "https://schema.org",
@@ -34,9 +36,9 @@ const json = JSON.stringify({
       description,
       url,
       datePublished: pubDate.toISOString(),
-      dateModified: pubDate.toISOString(),
-      author: { "@type": "Person", name: authorName },
-      publisher: { "@type": "Organization", name: "AuraGold" },
+      dateModified: (updatedDate ?? pubDate).toISOString(),
+      author: { "@id": `${authorUrl}#person` },
+      publisher: { "@id": "https://auragold.io/#organization" },
     },
   ],
 });

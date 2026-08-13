@@ -1,0 +1,16 @@
+---
+// Disclaimer reutilizable para páginas/posts que hablan de estrategia
+// financiera concreta (porcentajes de asignación, comparativas de
+// instrumentos, reglas de ahorro). Sumar en toda página de educación
+// financiera, no solo donde "se acuerden".
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<p class={`text-xs leading-relaxed text-white/40 ${className}`}>
+  Este contenido es educativo e informativo, no constituye asesoría financiera, de inversión ni de ningún otro
+  tipo. Antes de tomar una decisión, evalúa tu propia situación o consulta a un profesional calificado.
+</p>
