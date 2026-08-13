@@ -91,6 +91,6 @@ Compra oro físico real desde cualquier cantidad, directo desde tu celular. Sin 
 
 ## Fuentes
 
-1. Banco Mundial. *Inflación, precios al consumidor (% anual) - México*. Indicadores del Desarrollo Mundial, código FP.CPI.TOTL.ZG. Última actualización: febrero 2026. data.worldbank.org
-2. INEGI. *Índice Nacional de Precios al Consumidor (INPC)*. Instituto Nacional de Estadística y Geografía, publicación quincenal. inegi.org.mx
-3. Banco de México. *Series históricas del INPC y política monetaria*. Portal de Información Económica. banxico.org.mx
+1. Banco Mundial. *Inflación, precios al consumidor (% anual) - México*. Indicadores del Desarrollo Mundial, código FP.CPI.TOTL.ZG. Última actualización: febrero 2026. [data.worldbank.org](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MX)
+2. INEGI. *Índice Nacional de Precios al Consumidor (INPC)*. Instituto Nacional de Estadística y Geografía, publicación quincenal. [inegi.org.mx](https://www.inegi.org.mx/temas/inpc/)
+3. Banco de México. *Series históricas del INPC y política monetaria*. Portal de Información Económica. [banxico.org.mx](https://www.banxico.org.mx/SieInternet/)

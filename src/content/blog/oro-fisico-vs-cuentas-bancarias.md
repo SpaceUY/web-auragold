@@ -17,6 +17,8 @@ category: "Mercado"
 - El IPAB protege depósitos bancarios hasta 400,000 UDIs, pero no protege contra pérdida de poder adquisitivo.
 - La estrategia más razonable suele combinar banco, instrumentos líquidos y activos refugio.
 
+*Nota: esto es contenido educativo, no asesoría financiera.*
+
 Tienes $50,000 pesos ahorrados. ¿Los dejas en el banco o los conviertes parcialmente en oro físico?
 
 La respuesta no debería ser "todo al banco" ni "todo al oro". La decisión inteligente depende de tres factores: liquidez, inflación y horizonte temporal.

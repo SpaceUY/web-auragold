@@ -88,7 +88,8 @@ const topics = [
     description={post.data.description}
     slug={post.id}
     pubDate={post.data.pubDate}
-    authorName={author?.name ?? post.data.author}
+    updatedDate={post.data.updatedDate}
+    authorSlug={post.data.author}
     categoryLabel={post.data.category}
     categorySlug={categorySlugs[post.data.category] ?? ""}
   />

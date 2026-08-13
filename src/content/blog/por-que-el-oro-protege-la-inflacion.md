@@ -9,7 +9,7 @@ heroImage: "/images/blog/por-que-el-oro-protege-la-inflacion.png"
 category: "Educación"
 ---
 
-La inflación en México alcanzó el 4.66% anual en 2024, mientras el peso mexicano perdió más del 12% de su valor frente al dólar en los últimos tres años. En este contexto económico, cada vez más personas buscan activos refugio que protejan el poder adquisitivo de su dinero sin necesidad de conocimientos financieros avanzados.
+La inflación en México alcanzó el [4.66% anual en 2024](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MX) (Banco Mundial), mientras el peso mexicano perdió más del 12% de su valor frente al dólar en los últimos tres años. En este contexto económico, cada vez más personas buscan activos refugio que protejan el poder adquisitivo de su dinero sin necesidad de conocimientos financieros avanzados.
 
 El oro lleva más de 5,000 años cumpliendo ese rol. Pero ¿por qué funciona? ¿Qué tiene el oro que otros activos no tienen? Y más importante: ¿cómo puedes usarlo tú para proteger tu dinero en 2025?
 

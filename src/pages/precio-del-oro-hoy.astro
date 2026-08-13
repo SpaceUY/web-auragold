@@ -4,6 +4,7 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
+import FinancialDisclaimer from "../components/ui/FinancialDisclaimer.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 
 // Snapshot inicial (fallback). El feed en vivo se conecta vía la API que se defina.
@@ -444,6 +445,7 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
       <div class="mt-12">
         <FAQ items={faqItems} />
       </div>
+      <FinancialDisclaimer class="mx-auto mt-8 max-w-3xl text-center" />
     </section>
 
     <!-- Final CTA -->
