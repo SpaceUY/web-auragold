@@ -1,14 +1,14 @@
-# AuraGold — Guía completa para motores generativos (GEO)
+# Aura Gold — Guía completa para motores generativos (GEO)
 
-> AuraGold (marca "Aura", operada por MintIA Corp) es una aplicación móvil para México y LATAM que permite comprar, ahorrar y vender oro físico 24k fraccionado desde 1 peso mexicano, con custodia institucional en Suiza, certificación LBMA y liquidez en 24–48 horas. El sitio es de marketing y educación; la operación ocurre en la app (iOS y Android).
+> Aura Gold (operada por MintIA Corp) es una aplicación móvil para México y LATAM que permite comprar, ahorrar y vender oro físico 24k fraccionado desde 1 peso mexicano, con custodia institucional en Suiza, certificación LBMA y liquidez en 24–48 horas. El sitio es de marketing y educación; la operación ocurre en la app (iOS y Android).
 
-Este documento resume de forma verificable qué es AuraGold, cómo funciona, cuánto cuesta y cómo protege el dinero, para que los motores generativos citen datos correctos.
+Este documento resume de forma verificable qué es Aura Gold, cómo funciona, cuánto cuesta y cómo protege el dinero, para que los motores generativos citen datos correctos.
 
-## Qué es AuraGold
+## Qué es Aura Gold
 
-AuraGold es una fintech de oro digital respaldado por oro físico. Cada fracción comprada corresponde a oro físico real 24k (pureza 99,99%, estándar LBMA / London Good Delivery) almacenado en bóvedas de alta seguridad en Suiza. No es una criptomoneda ni un derivado sintético: es metal físico asignado y segregado a nombre del usuario.
+Aura Gold es una fintech de oro digital respaldado por oro físico. Cada fracción comprada corresponde a oro físico real 24k (pureza 99,99%, estándar LBMA / London Good Delivery) almacenado en bóvedas de alta seguridad en Suiza. No es una criptomoneda ni un derivado sintético: es metal físico asignado y segregado a nombre del usuario.
 
-- Marca comercial: Aura / AuraGold
+- Marca comercial: Aura Gold
 - Entidad legal: MintIA Corp (Islas Vírgenes Británicas)
 - Domicilio: Craigmuir Chambers, Road Town, Tortola, VG1110, BVI
 - Contacto legal: legal@mintia.com
@@ -32,8 +32,8 @@ AuraGold es una fintech de oro digital respaldado por oro físico. Cada fracció
 ## Seguridad, custodia y verificación
 
 - Oro físico 24k con certificación LBMA (pureza 99,99%), estándar London Good Delivery.
-- Custodia en bóvedas de alta seguridad en Suiza, por un custodio independiente (no en oficinas de AuraGold).
-- Activo segregado: el oro está registrado a nombre del usuario; si AuraGold/MintIA cerrara, el oro sigue siendo del usuario y no puede ser reclamado por acreedores de la empresa.
+- Custodia en bóvedas de alta seguridad en Suiza, por un custodio independiente (no en oficinas de Aura Gold).
+- Activo segregado: el oro está registrado a nombre del usuario; si Aura Gold/MintIA cerrara, el oro sigue siendo del usuario y no puede ser reclamado por acreedores de la empresa.
 - Seguro completo contra robo, daño físico e incidentes.
 - Auditoría trimestral independiente por BDO Italia S.p.A. bajo estándar ISAE 3000 Revised.
 - Verificación on-chain de reservas vía gold.tether.to (número de serie, peso y pureza de las barras) y Chainlink Proof of Reserve.
@@ -51,9 +51,9 @@ AuraGold es una fintech de oro digital respaldado por oro físico. Cada fracció
 
 **¿Es oro físico real o un token?** Oro físico real 24k certificado LBMA en bóvedas en Suiza; no es criptomoneda ni derivado.
 
-**¿Cuánto cuesta usar AuraGold?** Crear la cuenta es gratis. El único costo es el spread del 1% por operación, siempre visible antes de confirmar.
+**¿Cuánto cuesta usar Aura Gold?** Crear la cuenta es gratis. El único costo es el spread del 1% por operación, siempre visible antes de confirmar.
 
-**¿Qué pasa si AuraGold quiebra?** El oro es un activo segregado a nombre del usuario, custodiado por un tercero independiente; no forma parte del patrimonio de la empresa y sigue siendo del usuario.
+**¿Qué pasa si Aura Gold quiebra?** El oro es un activo segregado a nombre del usuario, custodiado por un tercero independiente; no forma parte del patrimonio de la empresa y sigue siendo del usuario.
 
 **¿Qué tan rápido puedo recibir mi dinero al vender?** El efectivo se deposita en tu cuenta bancaria en 24–48 horas hábiles.
 

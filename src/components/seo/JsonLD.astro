@@ -3,8 +3,10 @@ const graph = [
   {
     "@type": "Organization",
     "@id": "https://auragold.io/#organization",
-    name: "AuraGold",
-    alternateName: "Aura",
+    name: "Aura Gold",
+    // Variantes históricas: no son copy visible, sirven para que los motores
+    // resuelvan la misma entidad cuando el usuario busca "Aura" o "AuraGold".
+    alternateName: ["Aura", "AuraGold"],
     url: "https://auragold.io/",
     legalName: "MintIA Corp",
     email: "legal@mintia.com",
@@ -30,7 +32,7 @@ const graph = [
     "@type": "WebSite",
     "@id": "https://auragold.io/#website",
     url: "https://auragold.io/",
-    name: "AuraGold",
+    name: "Aura Gold",
     publisher: { "@id": "https://auragold.io/#organization" },
     inLanguage: "es",
   },
@@ -38,7 +40,7 @@ const graph = [
     "@type": "WebPage",
     "@id": "https://auragold.io/#webpage",
     url: "https://auragold.io/",
-    name: "AuraGold | Compra e invierte en oro desde nuestra App",
+    name: "Aura Gold | Compra e invierte en oro desde nuestra App",
     isPartOf: { "@id": "https://auragold.io/#website" },
     about: { "@id": "https://auragold.io/#app" },
     description:
@@ -48,8 +50,8 @@ const graph = [
   {
     "@type": "SoftwareApplication",
     "@id": "https://auragold.io/#app",
-    name: "AuraGold",
-    alternateName: "Aura",
+    name: "Aura Gold",
+    alternateName: ["Aura", "AuraGold"],
     url: "https://auragold.io/",
     applicationCategory: "FinanceApplication",
     operatingSystem: "iOS, Android",

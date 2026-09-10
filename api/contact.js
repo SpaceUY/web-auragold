@@ -76,10 +76,10 @@ export default async function handler(req, res) {
         accept: "application/json",
       },
       body: JSON.stringify({
-        sender: { name: "Formulario de soporte AuraGold", email: SUPPORT_EMAIL },
-        to: [{ email: SUPPORT_EMAIL, name: "Soporte AuraGold" }],
+        sender: { name: "Formulario de soporte Aura Gold", email: SUPPORT_EMAIL },
+        to: [{ email: SUPPORT_EMAIL, name: "Soporte Aura Gold" }],
         replyTo: { email, name },
-        subject: `[Soporte Aura] ${category} - ${name}`,
+        subject: `[Soporte Aura Gold] ${category} - ${name}`,
         htmlContent: `
           <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
