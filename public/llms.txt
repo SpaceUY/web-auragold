@@ -1,6 +1,6 @@
-# AuraGold
+# Aura Gold
 
-> AuraGold (marca "Aura", operada por MintIA Corp) es una app móvil de México y LATAM para comprar, ahorrar y vender oro físico 24k fraccionado desde 1 peso mexicano (MXN), con custodia institucional en Suiza, certificación LBMA (pureza 99,99%) y liquidez para vender y recibir el efectivo en 24–48 horas.
+> Aura Gold (operada por MintIA Corp) es una app móvil de México y LATAM para comprar, ahorrar y vender oro físico 24k fraccionado desde 1 peso mexicano (MXN), con custodia institucional en Suiza, certificación LBMA (pureza 99,99%) y liquidez para vender y recibir el efectivo en 24–48 horas.
 
 ## Datos clave verificables
 
@@ -16,10 +16,10 @@
 
 ## Páginas principales
 
-- [Inicio](https://auragold.io/): qué es AuraGold, cómo funciona (invertir, guardar en bóveda, liquidez), beneficios y preguntas frecuentes.
+- [Inicio](https://auragold.io/): qué es Aura Gold, cómo funciona (invertir, guardar en bóveda, liquidez), beneficios y preguntas frecuentes.
 - [Precio del oro hoy en México](https://auragold.io/precio-del-oro-hoy): cotización XAU/MXN en tiempo real, evolución histórica en pesos y factores que mueven el precio.
 - [Cómo invertir en oro en México](https://auragold.io/invertir-en-oro-mexico): guía para comprar oro físico desde 1 peso, comparativa con bancos, cripto y efectivo, y proceso paso a paso.
-- [Transparencia](https://auragold.io/transparencia): cómo gana dinero AuraGold, dónde se custodia el oro, auditorías y qué pasa en el peor escenario.
+- [Transparencia](https://auragold.io/transparencia): cómo gana dinero Aura Gold, dónde se custodia el oro, auditorías y qué pasa en el peor escenario.
 
 ## Blog (educación financiera sobre oro e inflación)
 
