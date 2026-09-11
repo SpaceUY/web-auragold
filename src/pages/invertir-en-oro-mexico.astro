@@ -5,6 +5,7 @@ import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FinancialDisclaimer from "../components/ui/FinancialDisclaimer.astro";
+import AppDownloadButtons from "../components/ui/AppDownloadButtons.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 
 const stats = [
@@ -195,22 +196,7 @@ const faqItems = [
         La guía completa para comprar oro físico y proteger tu dinero de la inflación. Con Aura Gold compras oro
         físico fraccionado desde el móvil, con custodia certificada y sin comisiones de custodia.
       </p>
-      <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.space.aura"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-ag-gold px-5 py-3 font-medium text-ag-dark hover:opacity-90"
-        >
-          Descargar Aura Gold para Android
-        </a>
-        <span
-          aria-disabled="true"
-          class="inline-flex cursor-not-allowed items-center justify-center whitespace-nowrap rounded-full border border-white/10 px-5 py-3 font-medium text-white/40"
-        >
-          Próximamente en iOS
-        </span>
-      </div>
+      <AppDownloadButtons class="mt-8 justify-center" />
 
       <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
         {
