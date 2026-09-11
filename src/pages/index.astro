@@ -4,6 +4,7 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
+import AppDownloadButtons from "../components/ui/AppDownloadButtons.astro";
 import JsonLD from "../components/seo/JsonLD.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 import { getCollection } from "astro:content";
@@ -245,22 +246,7 @@ const faqItems = [
             ¿Tienes $100, $500 o $1,000? Empieza a proteger tu dinero de la inflación con oro 24k certificado
             desde $1 MXN. Sin mínimos, sin broncas.
           </p>
-          <div id="descargar" class="hero-rise flex flex-col gap-4 sm:flex-row" style="animation-delay: 1.2s">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.space.aura"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-2 rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
-            >
-              Descargar Aura Gold para Android
-            </a>
-            <span
-              aria-disabled="true"
-              class="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-3 font-medium text-white/40"
-            >
-              Próximamente en iOS
-            </span>
-          </div>
+          <AppDownloadButtons id="descargar" class="hero-rise" style="animation-delay: 1.2s" />
         </div>
 
         <div class="hero-rise hidden w-full sm:block" style="animation-delay: 0.5s">
