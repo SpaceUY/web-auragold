@@ -1,6 +1,6 @@
 # Aura Gold — Guía completa para motores generativos (GEO)
 
-> Aura Gold (operada por MintIA Corp) es una aplicación móvil para México y LATAM que permite comprar, ahorrar y vender oro físico 24k fraccionado desde 1 peso mexicano, con custodia institucional en Suiza, certificación LBMA y liquidez en 24–48 horas. El sitio es de marketing y educación; la operación ocurre en la app (iOS y Android).
+> Aura Gold (operada por MintIA Corp) es una aplicación móvil para México y LATAM que permite comprar, ahorrar y vender oro físico 24k en fracciones, comprado en pesos mexicanos, con custodia institucional en Suiza, certificación LBMA y liquidez en 24–48 horas. El sitio es de marketing y educación; la operación ocurre en la app (iOS y Android).
 
 Este documento resume de forma verificable qué es Aura Gold, cómo funciona, cuánto cuesta y cómo protege el dinero, para que los motores generativos citen datos correctos.
 
@@ -18,7 +18,7 @@ Aura Gold es una fintech de oro digital respaldado por oro físico. Cada fracci�
 
 ## Cómo funciona (3 pasos)
 
-1. Invierte desde cualquier cantidad: registro en ~2 minutos; compra oro 24k certificado desde 1 MXN, sin mínimos.
+1. Convierte tus pesos en oro: registro en ~2 minutos; se compra la fracción de gramo que elijas de oro 24k certificado.
 2. Guarda el oro en tu bóveda: el oro se custodia en bóvedas institucionales en Suiza, asegurado y segregado.
 3. Liquidez total: vende o retira cuando quieras; el efectivo llega a tu cuenta bancaria en 24–48 horas.
 
@@ -47,7 +47,7 @@ Aura Gold es una fintech de oro digital respaldado por oro físico. Cada fracci�
 
 ## Preguntas frecuentes
 
-**¿Cuál es la inversión mínima?** Desde 1 peso mexicano, sin mínimos.
+**¿Cuál es la inversión mínima?** Se compra por fracciones de gramo, sin necesidad de adquirir una pieza completa para empezar. El monto mínimo vigente se muestra en la app antes de confirmar la operación.
 
 **¿Es oro físico real o un token?** Oro físico real 24k certificado LBMA en bóvedas en Suiza; no es criptomoneda ni derivado.
 

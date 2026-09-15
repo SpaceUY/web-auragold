@@ -1,7 +1,7 @@
 ---
 title: "Qué es el oro fraccionado y cómo funciona"
 seoTitle: "Qué es el oro fraccionado, cómo funciona y cómo invertir desde México"
-seoDescription: "El oro fraccionado permite comprar partes de un lingote físico desde cualquier cantidad. Descubre cómo funciona, qué garantías exige y cómo protege tu dinero de la inflación en México."
+seoDescription: "El oro fraccionado permite comprar partes de un lingote físico, por fracciones de gramo. Descubre cómo funciona, qué garantías exige y cómo protege tu dinero de la inflación en México."
 description: "Explicamos qué es el oro fraccionado, cómo funciona paso a paso, en qué se diferencia de un ETF o del oro tokenizado, y qué garantías debe cumplir para ser seguro."
 pubDate: 2026-08-31
 author: "federico-sendra"
@@ -29,7 +29,7 @@ El oro funciona como contrapeso a esa erosión. Tiende a conservar su valor a la
 
 El mecanismo es más simple de lo que parece:
 
-**1. Compras una fracción de lingote.** A través de una app o plataforma regulada, adquieres la cantidad de oro que quieres — sin mínimos. El precio que pagas refleja la cotización internacional del metal en ese momento, más un spread transparente.
+**1. Compras una fracción de lingote.** A través de una app o plataforma regulada, adquieres la fracción de oro que quieres, sin tener que pagar la pieza completa. El precio que pagas refleja la cotización internacional del metal en ese momento, más un spread transparente.
 
 **2. El oro físico existe en una bóveda.** No es un token, no es un papel, no es una promesa digital. Es metal real custodiado en instalaciones institucionales certificadas. Tu fracción está asignada como activo segregado — separada del balance de la empresa emisora.
 
@@ -44,7 +44,7 @@ No todo lo que se llama "oro" funciona igual. Esta tabla resume las diferencias 
 | Factor | Oro fraccionado físico | ETF de oro | Oro tokenizado (cripto) | Lingote físico propio |
 | --- | --- | --- | --- | --- |
 | Tienes oro real | Sí, asignado | Exposición indirecta | Derecho contractual | Sí, en tu poder |
-| Desde pequeñas cantidades | Sí, sin mínimo | Sí (precio de 1 acción) | Limitado | No (precio de 1 onza+) |
+| Desde pequeñas cantidades | Sí, por fracciones | Sí (precio de 1 acción) | Limitado | No (precio de 1 onza+) |
 | Riesgo de contraparte | Bajo (activo segregado) | Medio (depende del fondo) | Alto (depende del emisor cripto) | Nulo |
 | Custodia propia necesaria | No | No | Sí (wallet) | Sí (caja fuerte, seguro) |
 | Retiro físico posible | Sí | No | Muy limitado | Ya lo tienes |
@@ -107,7 +107,7 @@ Depende de la plataforma. Las más accesibles permiten empezar desde cantidades 
 
 ## Protege tu dinero con oro físico real desde el móvil
 
-El oro fraccionado no es un producto nuevo ni experimental — es la versión digital y accesible del mismo activo que los bancos centrales del mundo llevan acumulando históricamente. Los bancos centrales compraron más de 1.000 toneladas de oro en 2024. La diferencia es que hoy cualquier persona puede hacer lo mismo desde su teléfono, sin mínimos y sin conocimientos financieros.
+El oro fraccionado no es un producto nuevo ni experimental — es la versión digital y accesible del mismo activo que los bancos centrales del mundo llevan acumulando históricamente. Los bancos centrales compraron más de 1.000 toneladas de oro en 2024. La diferencia es que hoy cualquier persona puede hacer lo mismo desde su teléfono, en fracciones y sin conocimientos financieros.
 
 Aura Gold es una app que te permite comprar oro físico fraccionado certificado LBMA, custodiado en bóvedas institucionales, con activo segregado a tu nombre y opción de retiro físico en lingotes. Sin comisiones de custodia, con spread transparente y liquidez inmediata.
 

@@ -106,7 +106,7 @@ Muchas personas ven el histórico de subida de Bitcoin y asumen que va a repetir
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si tu prioridad es proteger, no especular, con Aura Gold podés empezar desde cualquier cantidad, sin mínimos ni comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas bajo estándar LBMA y podés venderlo cuando quieras. Mirá [cómo funciona Aura Gold](/#como-funciona) o [empezá a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si tu prioridad es proteger, no especular, con Aura Gold podés comprar fracciones de oro, sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas bajo estándar LBMA y podés venderlo cuando quieras. Mirá [cómo funciona Aura Gold](/#como-funciona) o [empezá a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y criptomonedas en México
 
