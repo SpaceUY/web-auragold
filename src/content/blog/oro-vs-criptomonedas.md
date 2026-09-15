@@ -6,6 +6,7 @@ description: "Comparamos oro y criptomonedas para proteger tu dinero en México:
 pubDate: 2026-08-17
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/oro-vs-criptomonedas.png"
+heroImageAlt: "Una mano sostiene una moneda dorada con el símbolo de Bitcoin sobre un montón de monedas cripto, junto a lingotes de oro apilados a la izquierda."
 category: "Mercado"
 ---
 

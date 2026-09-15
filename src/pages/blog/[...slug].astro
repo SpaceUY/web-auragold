@@ -129,7 +129,7 @@ const topics = [
 
           <img
             src={post.data.heroImage}
-            alt={post.data.title}
+            alt={post.data.heroImageAlt ?? post.data.title}
             width="768"
             height="432"
             class="mt-8 aspect-[16/9] w-full rounded-2xl object-cover"
@@ -213,7 +213,7 @@ const topics = [
                       <div class="relative aspect-[16/9] overflow-hidden">
                         <img
                           src={p.data.heroImage}
-                          alt={p.data.title}
+                          alt=""
                           loading="lazy"
                           class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
@@ -278,7 +278,7 @@ const topics = [
                     <div class="relative aspect-[16/9] overflow-hidden">
                       <img
                         src={p.data.heroImage}
-                        alt={p.data.title}
+                        alt=""
                         loading="lazy"
                         class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />

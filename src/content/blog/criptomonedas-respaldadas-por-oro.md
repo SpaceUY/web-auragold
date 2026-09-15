@@ -6,6 +6,7 @@ description: "Explicamos qué son las criptomonedas respaldadas por oro (PAXG, X
 pubDate: 2026-08-26
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/criptomonedas-respaldadas-por-oro.png"
+heroImageAlt: "Una persona consulta un gráfico de precios en su celular frente a estanterías con decenas de lingotes de oro apilados."
 category: "Educación"
 ---
 

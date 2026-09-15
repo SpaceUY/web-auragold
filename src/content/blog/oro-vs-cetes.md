@@ -6,6 +6,7 @@ description: "Comparamos oro y CETES para proteger tu ahorro en México: rendimi
 pubDate: 2026-08-12
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/oro-vs-cetes.png"
+heroImageAlt: "Pila de lingotes de oro sobre el escritorio de una oficina financiera, entre formularios impresos, una laptop y un asesor trabajando al fondo."
 category: "Mercado"
 ---
 

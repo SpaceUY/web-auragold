@@ -6,6 +6,7 @@ description: "¡Cómo ha evolucionado la inflación en México desde 1985? ¿Cu�
 pubDate: 2026-03-10
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/evolucion-inflacion-mexico.png"
+heroImageAlt: "Una vendedora con delantal entrega un billete a una clienta en un puesto de verduras de un mercado mexicano, con jitomates y lechugas en el mostrador."
 category: "Mercado"
 ---
 
