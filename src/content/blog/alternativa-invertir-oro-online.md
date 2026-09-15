@@ -6,6 +6,7 @@ description: "Comparamos BullionVault con Aura Gold, Goldmoney, ETFs de oro, CFD
 pubDate: 2026-09-01
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/alternativa-invertir-oro-online.png"
+heroImageAlt: "Manos de una persona de traje acomodando un lingote de oro sobre filas de lingotes apilados en una bóveda."
 category: "Guías"
 ---
 

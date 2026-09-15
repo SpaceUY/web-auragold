@@ -6,6 +6,7 @@ description: "La inflación en México alcanzó el 4.66% anual en 2024, mientras
 pubDate: 2026-02-13
 author: "federico-sendra"
 heroImage: "/images/blog/por-que-el-oro-protege-la-inflacion.png"
+heroImageAlt: "Un asesor de traje revisa un documento con una calculadora y lingotes de oro sobre el escritorio, frente a una pantalla con gráficos de mercado."
 category: "Educación"
 ---
 

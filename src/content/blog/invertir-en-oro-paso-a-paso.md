@@ -6,6 +6,7 @@ description: "La inflación en México ha provocado que el peso pierda más del 
 pubDate: 2026-02-12
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/invertir-en-oro-paso-a-paso.png"
+heroImageAlt: "Una persona lee un libro abierto sobre una mesa de madera, con lingotes de oro desparramados en primer plano y una laptop a un costado."
 category: "Guías"
 ---
 

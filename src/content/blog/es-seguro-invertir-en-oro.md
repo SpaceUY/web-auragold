@@ -6,6 +6,7 @@ description: "Separamos la volatilidad normal del precio de los riesgos de custo
 pubDate: 2026-09-08
 author: "federico-sendra"
 heroImage: "/images/blog/es-seguro-invertir-en-oro.png"
+heroImageAlt: "Manos tomando un lingote de un maletín de seguridad forrado y lleno de lingotes de oro acomodados en filas."
 category: "Seguridad"
 ---
 

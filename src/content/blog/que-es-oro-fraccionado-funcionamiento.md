@@ -6,6 +6,7 @@ description: "Explicamos qué es el oro fraccionado, cómo funciona paso a paso,
 pubDate: 2026-08-31
 author: "federico-sendra"
 heroImage: "/images/blog/que-es-oro-fraccionado-funcionamiento.png"
+heroImageAlt: "Un operario con gorra y camisa azul revisa láminas rectangulares de oro ordenadas sobre una mesa blanca en un taller de refinación, con una computadora y una planilla al lado."
 category: "Guías"
 ---
 

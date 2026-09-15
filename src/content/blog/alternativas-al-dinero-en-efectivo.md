@@ -6,6 +6,7 @@ description: "Guardar dinero en efectivo bajo el colchón, en una cuenta bancari
 pubDate: 2026-02-16
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/alternativas-al-dinero-en-efectivo.png"
+heroImageAlt: "Alcancía de cerámica dorada con forma de cerdito sobre una mesa de comedor, rodeada de monedas mexicanas sueltas."
 category: "Educación"
 ---
 

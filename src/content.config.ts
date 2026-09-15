@@ -16,6 +16,11 @@ const blog = defineCollection({
     author: z.enum(["federico-sendra", "juan-manuel-sobral"]),
     category: z.enum(["Educación", "Guías", "Mercado", "Seguridad"]),
     heroImage: z.string(),
+    // Describe la imagen, no el artículo: es el texto que oye quien no puede verla.
+    // Solo se usa en el hero del post; en las cards la portada es decorativa
+    // (el título va al lado como texto) y ahí el alt va vacío a propósito.
+    // Si no se define, cae al title, que es peor pero no deja la imagen sin alt.
+    heroImageAlt: z.string().optional(),
   }),
 });
 

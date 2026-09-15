@@ -6,6 +6,7 @@ description: "Los 7 errores más frecuentes al invertir en oro. Sigue nuestra gu
 pubDate: 2026-04-12
 author: "federico-sendra"
 heroImage: "/images/blog/errores-al-invertir-en-oro.png"
+heroImageAlt: "Una persona con la cabeza apoyada en la mano frente a su laptop, rodeada de papeles desordenados y monitores encendidos en una oficina de noche."
 category: "Educación"
 ---
 

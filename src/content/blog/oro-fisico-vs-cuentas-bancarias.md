@@ -6,6 +6,7 @@ description: "Comparamos el oro físico y las cuentas bancarias como formas de p
 pubDate: 2026-03-31
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/oro-fisico-vs-cuentas-bancarias.png"
+heroImageAlt: "Laptop abierta mostrando un gráfico ascendente del precio del oro, con tres lingotes apoyados sobre el escritorio a su izquierda."
 category: "Mercado"
 ---
 

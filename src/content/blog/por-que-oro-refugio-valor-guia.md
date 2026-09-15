@@ -6,6 +6,7 @@ description: "Descubre por qué el oro ha sido considerado un refugio de valor d
 pubDate: 2026-03-20
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/por-que-oro-refugio-valor-guia.png"
+heroImageAlt: "Manos de una persona de traje abriendo un maletín negro lleno de lingotes de oro apilados, sobre un escritorio con una laptop y documentos."
 category: "Guías"
 ---
 

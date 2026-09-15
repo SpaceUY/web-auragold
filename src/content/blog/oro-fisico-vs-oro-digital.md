@@ -6,6 +6,7 @@ description: "Comparamos oro físico tradicional, oro digital respaldado y oro p
 pubDate: 2026-09-03
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/oro-fisico-vs-oro-digital.png"
+heroImageAlt: "Una persona sostiene un celular que muestra una moneda de oro en pantalla, con lingotes de oro apilados sobre la mesa a un costado y un asesor sonriendo al fondo."
 category: "Mercado"
 ---
 

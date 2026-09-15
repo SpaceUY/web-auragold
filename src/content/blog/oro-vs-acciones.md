@@ -6,6 +6,7 @@ description: "Comparamos oro y acciones para proteger tu ahorro en México: crec
 pubDate: 2026-08-14
 author: "federico-sendra"
 heroImage: "/images/blog/oro-vs-acciones.png"
+heroImageAlt: "Lingotes de oro apilados en primer plano frente a tres monitores con gráficos bursátiles en alza, en una mesa de operaciones."
 category: "Mercado"
 ---
 
