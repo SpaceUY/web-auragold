@@ -6,7 +6,7 @@ description: "Comparamos las tres opciones reales de almacenamiento de oro por s
 pubDate: 2026-09-11
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/donde-guardar-oro-casa-banco-boveda.png"
-heroImageAlt: "Interior de una bóveda de alta seguridad con lingotes de oro ordenados en estantes metálicos."
+heroImageAlt: "Una mano deposita un lingote de oro dentro de una caja fuerte abierta, junto a otros lingotes apilados y cajas de cartón."
 category: "Seguridad"
 ---
 

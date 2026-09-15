@@ -6,7 +6,7 @@ description: "Qué impuestos aplican al oro de inversión en México: por qué c
 pubDate: 2026-09-09
 author: "federico-sendra"
 heroImage: "/images/blog/fiscalidad-oro-inversion-mexico.png"
-heroImageAlt: "Escritorio con formularios de declaración, una calculadora y lingotes de oro, con una persona revisando documentos."
+heroImageAlt: "Dos personas de traje se entregan un documento oficial con sello por encima de un mostrador cubierto de lingotes de oro apilados, en una nave industrial."
 category: "Guías"
 ---
 

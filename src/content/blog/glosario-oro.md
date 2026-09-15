@@ -6,7 +6,7 @@ description: "Referencia de los términos que necesitas para invertir en oro con
 pubDate: 2026-09-15
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/glosario-oro.png"
-heroImageAlt: "Lingotes y monedas de oro ordenados sobre una superficie oscura junto a un cuaderno abierto con anotaciones."
+heroImageAlt: "Un hombre de traje azul y lentes lee un libro abierto de gran formato en una biblioteca de estanterías altas iluminadas."
 category: "Educación"
 ---
 
