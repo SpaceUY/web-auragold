@@ -13,7 +13,7 @@ category: "Educación"
 
 Una criptomoneda respaldada por oro es un token digital cuyo valor está vinculado 1:1 a una cantidad de oro físico almacenado en bóvedas por el emisor. Son activos on-chain asegurados por reservas de oro físicas mantenidas por sus emisores o custodios externos autorizados. No son criptomonedas especulativas como Bitcoin: su precio sigue al del oro, no a la demanda del mercado cripto.
 
-Si buscas [proteger tu dinero de la inflación con oro](/blog/por-que-el-oro-protege-la-inflacion), es importante entender qué estás comprando exactamente — porque un token de oro y el oro físico no son lo mismo. En Aura Gold puedes invertir en oro físico real desde cualquier cantidad, sin necesitar saber nada de criptomonedas ni wallets.
+Si buscas [proteger tu dinero de la inflación con oro](/blog/por-que-el-oro-protege-la-inflacion), es importante entender qué estás comprando exactamente — porque un token de oro y el oro físico no son lo mismo. En Aura Gold puedes invertir en oro físico real por fracciones de gramo, sin necesitar saber nada de criptomonedas ni wallets.
 
 Los dos proyectos dominantes en oro tokenizado son Tether Gold (XAUT) y Pax Gold (PAXG). Juntos concentran aproximadamente tres cuartas partes de la capitalización total de este nicho.
 
@@ -63,7 +63,7 @@ Esta tabla resume las diferencias que más importan para un ahorrador en México
 | Riesgo de contraparte | Alto (depende del emisor) | Activo segregado e independiente |
 | Requiere conocimientos cripto | Sí | No |
 | Puede ser congelado | Sí (función del emisor) | No |
-| Desde pequeñas cantidades | Limitado por precio de 1 onza | Desde cualquier cantidad |
+| Desde pequeñas cantidades | Limitado por precio de 1 onza | Por fracciones de gramo |
 | Regulación en México | Sin marco claro | Marco fintech aplicable |
 | Retiro físico en lingotes | Complicado, mínimos altos | Disponible |
 | Estándar LBMA | Sí (PAXG y XAUT) | Sí |
@@ -112,6 +112,6 @@ La London Bullion Market Association es el estándar internacional de referencia
 
 Si llegaste a este artículo buscando una forma de protegerte de la inflación y la devaluación del peso, las criptomonedas respaldadas por oro resuelven parte del problema — pero añaden complejidad y riesgos que la mayoría de ahorradores no necesitan asumir.
 
-Aura Gold es una app que te permite comprar oro físico real certificado LBMA, custodiado en bóvedas institucionales, desde cualquier cantidad y sin saber nada de cripto. Tu oro está segregado a tu nombre — no es un token, no depende de un emisor cripto, y puedes retirarlo en lingotes físicos cuando quieras.
+Aura Gold es una app que te permite comprar oro físico real certificado LBMA, custodiado en bóvedas institucionales, por fracciones de gramo y sin saber nada de cripto. Tu oro está segregado a tu nombre — no es un token, no depende de un emisor cripto, y puedes retirarlo en lingotes físicos cuando quieras.
 
 [Empieza a proteger tu dinero con oro físico real →](/invertir-en-oro-mexico)

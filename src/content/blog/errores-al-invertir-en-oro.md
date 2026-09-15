@@ -336,7 +336,7 @@ Calendario de revisión: cada 6 meses revisar balance general de portafolio, anu
 
 Frecuencia correcta de monitoreo: oro para protección cada 6-12 meses; oro para trading cada día (pero esto no es lo que buscas).
 
-Si después de conocer estos errores quieres empezar con una plataforma que los evita por diseño, en Aura Gold puedes invertir en oro en México desde $1 peso, con precio transparente antes de cada compra y custodia en bóvedas certificadas.
+Si después de conocer estos errores quieres empezar con una plataforma que los evita por diseño, en Aura Gold puedes invertir en oro en México por fracciones de gramo, con precio transparente antes de cada compra y custodia en bóvedas certificadas.
 
 ## Empieza a invertir en oro de forma segura con Aura Gold
 
@@ -349,7 +349,7 @@ Con Aura Gold evitas automáticamente los errores más comunes:
 - ✓ Oro certificado LBMA garantizado: No puedes recibir oro falso o de menor pureza, todo es 99.99% certificado
 - ✓ Compra gradual facilitada: Programa compras automáticas recurrentes desde $500 pesos mensuales
 - ✓ Liquidez inmediata anti-pánico: Si necesitas vender (bien o mal), lo haces en 30 segundos y recibes efectivo en 24-48 horas
-- ✓ Diversificación natural: Invierte desde $1 peso, no necesitas comprometer todo tu capital de golpe
+- ✓ Diversificación natural: Invierte por fracciones, no necesitas comprometer todo tu capital de golpe
 - ✓ Plan de salida flexible: Vende todo, parcial, o retira físico cuando alcances tus objetivos
 
 Descarga Aura Gold y empieza a invertir en oro correctamente desde el primer día.

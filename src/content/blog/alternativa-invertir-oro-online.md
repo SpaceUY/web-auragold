@@ -13,7 +13,7 @@ Si buscas una alternativa a BullionVault en México, casi siempre es por lo mism
 
 BullionVault es una plataforma seria. Pero "seria" no significa "adecuada para ti". Este artículo compara las opciones reales para invertir en oro online desde México y te ayuda a elegir según lo que de verdad importa: moneda, mínimos, tipo de oro y costes. Si ya tienes claro [por qué el oro funciona como refugio de valor](/blog/por-que-oro-refugio-valor-guia), aquí bajamos a lo práctico: qué plataforma usar.
 
-**Respuesta corta:** para un ahorrador mexicano que quiere oro físico real, en pesos y desde cantidades pequeñas, una app local de oro fraccionado como Aura Gold (que permite [invertir en oro físico en pesos desde $1](/invertir-en-oro-mexico)) encaja mejor que BullionVault. Si manejas montos grandes en dólares y quieres custodia en varias jurisdicciones, BullionVault sigue siendo una opción válida.
+**Respuesta corta:** para un ahorrador mexicano que quiere oro físico real, en pesos y desde cantidades pequeñas, una app local de oro fraccionado como Aura Gold (que permite [invertir en oro físico en pesos, por fracciones de gramo](/invertir-en-oro-mexico)) encaja mejor que BullionVault. Si manejas montos grandes en dólares y quieres custodia en varias jurisdicciones, BullionVault sigue siendo una opción válida.
 
 ## ¿Qué es BullionVault y por qué buscar una alternativa desde México?
 
@@ -51,7 +51,7 @@ Estas son las vías reales que compiten con BullionVault, con lo bueno y lo malo
 
 Es la alternativa más directa a BullionVault para el perfil mexicano: oro físico real, pero comprado en pesos, desde cantidades mínimas y con experiencia 100% en español.
 
-Con Aura Gold inviertes en oro físico fraccionado desde $1 peso, sin comisiones de custodia mensuales, con [custodia institucional del oro fuera de México](/transparencia) y opción de retiro físico. La diferencia frente a BullionVault no es el activo (ambos son oro físico), sino el encaje: pesos en lugar de dólares, sin mínimo práctico de $40,000 MXN, y sin depender de un servicio externo de cambio de divisa.
+Con Aura Gold inviertes en oro físico fraccionado por fracciones de gramo, sin comisiones de custodia mensuales, con [custodia institucional del oro fuera de México](/transparencia) y opción de retiro físico. La diferencia frente a BullionVault no es el activo (ambos son oro físico), sino el encaje: pesos en lugar de dólares, sin mínimo práctico de $40,000 MXN, y sin depender de un servicio externo de cambio de divisa.
 
 * **A favor:** oro físico real, en pesos, desde importes muy bajos, sin cuota de custodia, en español.
 * **A tener en cuenta:** es una plataforma enfocada en México y LATAM, no en dar servicio global multi-jurisdicción como BullionVault.
@@ -114,7 +114,7 @@ En resumen: Goldmoney es legítima y su oro es real, pero su estructura de coste
 | --- | --- | --- | --- | --- | --- | --- |
 | Tipo de oro | Físico real fraccionado | Físico asignado | Físico asignado | Papel (exposición) | Contrato apalancado | Físico directo |
 | Moneda | Pesos (MXN) | USD/GBP/EUR/JPY | USD/EUR/GBP/CAD… | MXN o USD según ruta | Según bróker | Pesos |
-| Entrada práctica | Desde $1 MXN | ~$2,000 USD | Alta (custodia mín. $10 USD/mes) | Baja | Muy baja | Precio de 1 moneda/lingote |
+| Entrada práctica | Fracciones de gramo | ~$2,000 USD | Alta (custodia mín. $10 USD/mes) | Baja | Muy baja | Precio de 1 moneda/lingote |
 | Custodia | Institucional, sin cuota mensual | Bóvedas globales, cuota de custodia | Bóvedas globales, mín. $10 USD/mes | La del fondo | No aplica | Tú (riesgo propio) |
 | Retiro físico | Sí (opcional) | Sí (entregas grandes) | Sí (desde 1 kg oro) | No | No | Ya lo tienes |
 | Idioma/soporte | Español, México | App en español, soporte internacional | Inglés, internacional | Español (según plataforma) | Según bróker | Local |
@@ -132,14 +132,14 @@ En resumen: Goldmoney es legítima y su oro es real, pero su estructura de coste
 
 **Quieres el metal en la mano y no te importa la prima ni la custodia propia:** monedas como el Centenario o la Libertad.
 
-## Protege tu dinero con oro físico en pesos, desde $1, con Aura Gold
+## Protege tu dinero con oro físico en pesos, con Aura Gold
 
 Si llegaste buscando una alternativa a BullionVault en español para México, el motivo real suele ser este: quieres oro físico de verdad, pero en pesos, sin un mínimo alto y sin pelearte con el cambio de divisa. Y si aún dudas entre dejar el dinero donde está o convertirlo, esta comparación de [oro físico frente a las cuentas bancarias](/blog/oro-fisico-vs-cuentas-bancarias) lo desarrolla en detalle.
 
 Aura Gold está pensado exactamente para eso:
 
 * Oro físico real fraccionado, comprado en pesos mexicanos
-* Desde $1 peso, sin mínimos de entrada
+* Compra por fracciones de gramo, sin pagar una pieza completa para empezar
 * Sin comisiones de custodia mensuales
 * Custodia institucional fuera de México, con opción de retiro físico
 * Compra y venta con liquidez rápida, desde tu celular
@@ -157,7 +157,7 @@ Sí, aceptan usuarios mexicanos, pero solo operas en dólares, libras, euros o y
 
 ### ¿Cuál es la principal diferencia entre Aura Gold y BullionVault?
 
-El encaje, no el activo: ambos son oro físico. Aura Gold opera en pesos, desde $1 y sin cuota de custodia, con experiencia mexicana. BullionVault opera en divisas extranjeras, con entrada eficiente desde ~$2,000 USD y enfoque internacional.
+El encaje, no el activo: ambos son oro físico. Aura Gold opera en pesos, por fracciones de gramo y sin cuota de custodia, con experiencia mexicana. BullionVault opera en divisas extranjeras, con entrada eficiente desde ~$2,000 USD y enfoque internacional.
 
 ### ¿Los ETFs de oro son una alternativa real a BullionVault?
 

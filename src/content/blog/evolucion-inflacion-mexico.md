@@ -87,7 +87,7 @@ Si quieres ver cómo ha evolucionado el valor del oro frente al peso mexicano en
 
 El primer paso, siempre, es el mismo: entender qué está pasando con el dinero que ya tienes.
 
-Compra oro físico real desde cualquier cantidad, directo desde tu celular. Sin comisiones de custodia, con liquidez inmediata y retiro físico opcional.
+Compra oro físico real por fracciones de gramo, directo desde tu celular. Sin comisiones de custodia, con liquidez inmediata y retiro físico opcional.
 
 ## Fuentes
 

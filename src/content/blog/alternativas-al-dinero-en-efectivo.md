@@ -47,7 +47,7 @@ El oro ha sido históricamente el activo refugio por excelencia para proteger di
 
 **Oro físico tradicional (lingotes, monedas):** ventaja de posesión directa y control total; desventaja de inversión mínima alta ($8,000+ MXN), riesgo de custodia personal y problemas de liquidez al vender.
 
-**Oro fraccionado digital (apps modernas):** inversión desde $1 peso, custodia profesional en bóvedas certificadas, liquidez inmediata 24/7. Rendimiento histórico: +35-40% en últimos 5 años (vs inflación acumulada de 23%).
+**Oro fraccionado digital (apps modernas):** inversión en fracciones de gramo, custodia profesional en bóvedas certificadas, liquidez inmediata 24/7. Rendimiento histórico: +35-40% en últimos 5 años (vs inflación acumulada de 23%).
 
 El oro no se "imprime" como los billetes. Es un recurso físico limitado extraído de la tierra, con oferta finita que protege su valor. Cuando los gobiernos imprimen más dinero, el oro mantiene su escasez relativa.
 
@@ -88,7 +88,7 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 
 | Factor | Bienes raíces | Oro fraccionado |
 |---|---|---|
-| Capital inicial | $500,000+ MXN | Desde $1 MXN |
+| Capital inicial | $500,000+ MXN | Fracciones de gramo |
 | Liquidez | Muy baja (meses) | Inmediata (segundos) |
 | Mantenimiento | Alto (2-5% anual) | Cero |
 | Divisibilidad | No puedes vender "un cuarto" | Vendes la cantidad exacta que necesites |
@@ -119,13 +119,13 @@ Los dólares protegen contra devaluación del peso (-12.4% últimos 5 años) per
 
 **Regla de oro universal:** nunca mantengas más del 15-20% de tus ahorros totales como efectivo sin protección.
 
-## La alternativa más accesible: oro fraccionado desde $1 peso
+## La alternativa más accesible: el oro fraccionado
 
-De todas las alternativas analizadas, el oro fraccionado digital es la única que combina accesibilidad extrema (desde $1 peso), protección real contra inflación y devaluación, liquidez inmediata, cero mantenimiento y respaldo físico tangible.
+De todas las alternativas analizadas, el oro fraccionado digital es la única que combina accesibilidad extrema (se compra por fracciones de gramo), protección real contra inflación y devaluación, liquidez inmediata, cero mantenimiento y respaldo físico tangible.
 
-**Comparativa de barreras de entrada:** CETES requiere cuenta Cetesdirecto + $100 pesos mínimo; acciones requieren cuenta de inversión + conocimiento del mercado + $500-$1,000 mínimo; bienes raíces requieren $500,000+ MXN; oro fraccionado requiere solo celular + inversión desde $1 peso.
+**Comparativa de barreras de entrada:** CETES requiere cuenta Cetesdirecto + $100 pesos mínimo; acciones requieren cuenta de inversión + conocimiento del mercado + $500-$1,000 mínimo; bienes raíces requieren $500,000+ MXN; oro fraccionado requiere solo celular y se compra por fracciones de gramo.
 
-Con Aura Gold podés empezar a proteger tu dinero hoy mismo: oro físico certificado LBMA (99.99% de pureza) custodiado en bóvedas internacionales, inversión desde $1 peso mexicano sin comisiones de custodia mensuales, liquidez 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold podés empezar a proteger tu dinero hoy mismo: oro físico certificado LBMA (99.99% de pureza) custodiado en bóvedas internacionales, compra por fracciones de gramo sin comisiones de custodia mensuales, liquidez 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre alternativas al efectivo
 
@@ -147,7 +147,7 @@ Para protección completa, sí. Los dólares solo protegen contra devaluación d
 
 **¿Desde cuánto dinero vale la pena buscar alternativas al efectivo?**
 
-Desde $1 peso con oro fraccionado digital. No esperes a "tener mucho" para empezar a proteger.
+En fracciones de gramo con oro fraccionado digital. No esperes a "tener mucho" para empezar a proteger.
 
 **¿Las criptomonedas son buena alternativa al efectivo?**
 

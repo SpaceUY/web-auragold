@@ -11,7 +11,7 @@ category: "Mercado"
 
 Oro físico y oro digital no son activos opuestos: el oro digital bien hecho es oro físico real custodiado a tu nombre, solo que lo gestionas desde el móvil. La diferencia que de verdad importa no es la pantalla, sino si ese oro está respaldado 1:1 por metal certificado. Ahí se decide tu riesgo y tu coste.
 
-Si estás comparando por dónde empezar a [invertir en oro físico en pesos desde $1](/invertir-en-oro-mexico), aquí tienes las diferencias reales (sin marketing) y una guía para elegir según tu perfil. El punto que casi nadie explica llega al final del primer bloque: [cómo comprobar que el oro esté respaldado y segregado](/transparencia).
+Si estás comparando por dónde empezar a [invertir en oro físico en pesos](/invertir-en-oro-mexico), aquí tienes las diferencias reales (sin marketing) y una guía para elegir según tu perfil. El punto que casi nadie explica llega al final del primer bloque: [cómo comprobar que el oro esté respaldado y segregado](/transparencia).
 
 ## ¿Qué es el oro físico y qué es el oro digital?
 
@@ -42,7 +42,7 @@ Comparemos las tres formas reales de tener oro, sin adornos.
 | Criterio | Oro físico tradicional | Oro digital respaldado | Oro "papel" (ETF/CFD) |
 | --- | --- | --- | --- |
 | Posesión | Metal en tu mano | Metal real a tu nombre | Solo exposición al precio |
-| Entrada mínima | Precio de 1 pieza completa | Desde $1 peso | Baja |
+| Entrada mínima | Precio de 1 pieza completa | Fracciones de gramo | Baja |
 | Divisibilidad | Baja (no vendes media moneda) | Total | Alta |
 | Custodia | Tú (riesgo de robo) | Institucional, asegurada | La del fondo/bróker |
 | Liquidez | Buscar comprador y negociar | Venta inmediata desde el móvil | Alta |
@@ -69,21 +69,21 @@ No hay una respuesta única. Depende de qué valoras y de cómo inviertes.
 
 Sea cual sea tu caso, el criterio de fondo es el mismo, y te ayuda a esquivar varios de los [errores más comunes al invertir en oro](/blog/errores-al-invertir-en-oro): prioriza oro real, verificable y líquido, por encima de la etiqueta "físico" o "digital". Si además quieres ver a qué cotización estarías comprando hoy, consulta el [precio del oro hoy en tiempo real](/precio-del-oro-hoy).
 
-## Invierte en oro físico con la comodidad de lo digital, desde $1
+## Invierte en oro físico con la comodidad de lo digital
 
 La conclusión es sencilla: no tienes que elegir entre oro real y oro cómodo. Puedes tener los dos.
 
 Con Aura Gold inviertes en oro físico fraccionado (metal real, certificado y custodiado fuera de México) con la operativa de una app:
 
 - Oro físico real respaldado, comprado en pesos mexicanos
-- Desde $1 peso, sin mínimos ni comisiones de custodia mensuales
+- Compra por fracciones de gramo, sin comisiones de custodia mensuales
 - Divisible y líquido: compra y vende desde el móvil en segundos
 - Custodia institucional y opción de retiro físico cuando quieras
 - Transparencia en respaldo y precios (nada de oro "papel")
 
 La pregunta nunca fue físico o digital. Fue oro real o no. Elige oro real, y que la tecnología solo te lo ponga fácil.
 
-[Empieza a invertir en oro físico real desde $1 →](/invertir-en-oro-mexico)
+[Empieza a invertir en oro físico real →](/invertir-en-oro-mexico)
 
 ## Otras preguntas frecuentes sobre oro físico y oro digital
 

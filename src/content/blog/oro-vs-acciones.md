@@ -111,7 +111,7 @@ Si querés verlo con tus propios números, la [calculadora de inflación de Méx
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si el oro encaja en tu plan, con Aura Gold podés [empezar desde cualquier cantidad](/invertir-en-oro-mexico), sin mínimos ni comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y podés venderlo cuando quieras. Mirá [cómo funciona Aura Gold](/#como-funciona) o [empezá a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si el oro encaja en tu plan, con Aura Gold podés [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y podés venderlo cuando quieras. Mirá [cómo funciona Aura Gold](/#como-funciona) o [empezá a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y acciones en México
 

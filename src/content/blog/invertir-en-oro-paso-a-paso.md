@@ -1,6 +1,6 @@
 ---
 title: "Cómo invertir en oro paso a paso: Guía práctica para proteger tu dinero en 2026"
-seoTitle: "Cómo invertir en oro en México desde $1"
+seoTitle: "Cómo invertir en oro en México paso a paso"
 seoDescription: "Guía práctica para empezar a invertir en oro físico en México: qué tipo de oro comprar, cómo funciona la custodia digital y cuánto necesitas para empezar."
 description: "La inflación en México ha provocado que el peso pierda más del 4.5% de su poder adquisitivo en el último año. Guía práctica para invertir en oro físico sin conocimientos financieros avanzados."
 pubDate: 2026-02-12
@@ -35,7 +35,7 @@ Cuando invertís en oro físico real, no estás comprando un papel, un derivado 
 - Bancos institucionales: lingotes de oro con barreras altas - inversión mínima de $50,000-$100,000 MXN, comisiones de custodia y procesos burocráticos extensos.
 - Compra directa de lingotes: implica asumir custodia personal (riesgo de robo), verificar autenticidad y enfrentar problemas de liquidez al vender.
 
-**La alternativa moderna: oro fraccionado digital.** Permite comprar fracciones mínimas de oro físico (desde $1 peso mexicano) manteniendo todos los beneficios del activo real: tu inversión representa oro físico tangible custodiado en bóvedas certificadas, y podés comprarlo, venderlo y monitorearlo desde tu celular en segundos.
+**La alternativa moderna: oro fraccionado digital.** Permite comprar fracciones mínimas de oro físico (por fracciones de gramo) manteniendo todos los beneficios del activo real: tu inversión representa oro físico tangible custodiado en bóvedas certificadas, y podés comprarlo, venderlo y monitorearlo desde tu celular en segundos.
 
 ## Paso 2: Define tu objetivo de inversión en oro
 
@@ -64,7 +64,7 @@ La recomendación tradicional sugiere destinar entre 5-15% de tu patrimonio líq
 
 **Fondos cotizados de oro (ETFs):** liquidez en mercados financieros, pero no poseés oro real sino un derivado, sujeto a comisiones anuales y requiere cuenta de inversión.
 
-**Apps de inversión en oro fraccionado:** oro físico real desde $1 peso, custodia profesional en bóvedas certificadas, liquidez inmediata, sin comisiones de custodia, seguimiento en tiempo real. Desventaja: dependés de la plataforma tecnológica (resuelto con activo segregado legalmente a tu nombre).
+**Apps de inversión en oro fraccionado:** oro físico real por fracciones de gramo, custodia profesional en bóvedas certificadas, liquidez inmediata, sin comisiones de custodia, seguimiento en tiempo real. Desventaja: dependés de la plataforma tecnológica (resuelto con activo segregado legalmente a tu nombre).
 
 Si estás empezando, buscás simplicidad y no tenés grandes capitales, el oro fraccionado digital elimina todas las barreras tradicionales manteniendo el beneficio del activo físico real.
 
@@ -118,13 +118,13 @@ Destiná un porcentaje fijo de tus ingresos mensuales a oro, tratándolo como un
 
 ## Da el primer paso: comienza a proteger tu dinero hoy
 
-Con Aura Gold podés empezar a invertir en oro físico certificado desde $1 peso mexicano: oro físico real custodiado en bóvedas certificadas internacionalmente, sin mínimos de inversión ni comisiones de custodia mensuales, compra y venta en segundos desde tu celular 24/7, liquidez inmediata, activo segregado legalmente a tu nombre, opción de retiro físico en lingotes, y transparencia total en precios y costos.
+Con Aura Gold podés empezar a invertir en oro físico certificado comprando fracciones de gramo: oro físico real custodiado en bóvedas certificadas internacionalmente, sin comisiones de custodia mensuales, compra y venta en segundos desde tu celular 24/7, liquidez inmediata, activo segregado legalmente a tu nombre, opción de retiro físico en lingotes, y transparencia total en precios y costos.
 
 ## Preguntas frecuentes sobre cómo invertir en oro
 
 **¿Cuánto dinero necesito para empezar a invertir en oro?**
 
-Con plataformas modernas de oro fraccionado como Aura Gold, podés comenzar desde $1 peso mexicano, en vez de los $8,000-$50,000 MXN que requerirían las casas de cambio tradicionales o bancos.
+Con plataformas modernas de oro fraccionado como Aura Gold, podés comprar fracciones de gramo, en vez de los $8,000-$50,000 MXN que requerirían las casas de cambio tradicionales o bancos.
 
 **¿El oro realmente protege contra la inflación?**
 

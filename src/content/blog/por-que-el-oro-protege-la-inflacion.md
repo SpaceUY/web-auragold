@@ -70,7 +70,7 @@ Ambos tipos de oro te protegen de la inflación porque representan el mismo acti
 
 **Oro físico tradicional:** posesión directa, pero inversión mínima alta ($8,000-$50,000 MXN), riesgo de custodia personal, dificultad para liquidar parcialmente y problemas de verificación al revender.
 
-**Oro fraccionado digital:** protección idéntica contra inflación (mismo oro físico certificado), inversión desde $1 peso mexicano, custodia profesional en bóvedas institucionales, liquidez inmediata, y activo segregado legalmente a tu nombre.
+**Oro fraccionado digital:** protección idéntica contra inflación (mismo oro físico certificado), inversión en fracciones de gramo, custodia profesional en bóvedas institucionales, liquidez inmediata, y activo segregado legalmente a tu nombre.
 
 ## El oro no "gana dinero", mantiene valor: entendiendo la diferencia
 
@@ -88,13 +88,13 @@ El oro no genera dividendos o intereses, no duplica tu dinero en 6 meses, y no e
 
 Regla práctica: el dinero que no vas a necesitar en los próximos 12-36 meses debería estar protegido contra inflación con oro, no estancado en cuentas bancarias perdiendo valor.
 
-## Cómo empezar con poco: protección inflacionaria desde $1 peso
+## Cómo empezar con poco: protección inflacionaria en fracciones de oro
 
 Podés comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales como ahorro recurrente, o $5,000+ convirtiendo ahorros estancados. La clave no es cuánto invertís de golpe, sino crear el hábito de convertir parte de tus ingresos a oro automáticamente cada mes.
 
 ## Oro vs otras alternativas contra inflación: comparativa real
 
-**Oro vs bienes raíces:** bienes raíces protegen bien pero requieren capital masivo ($500,000+ MXN), baja liquidez y costos de mantenimiento. El oro ofrece protección similar desde $1 peso con liquidez inmediata.
+**Oro vs bienes raíces:** bienes raíces protegen bien pero requieren capital masivo ($500,000+ MXN), baja liquidez y costos de mantenimiento. El oro ofrece protección similar en fracciones, con liquidez inmediata.
 
 **Oro vs criptomonedas:** las criptomonedas tienen volatilidad extrema (±40% mensual) y riesgo tecnológico. El oro tiene volatilidad baja (±5-12% anual) y 5,000 años de historia probada.
 
@@ -102,9 +102,9 @@ Podés comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales co
 
 **Oro vs acciones:** las acciones tienen potencial de crecimiento alto (15-25% anual) pero riesgo empresarial. El oro preserva valor sin crecimiento agresivo pero sin riesgo de quiebra. No son competidores, son complementarios.
 
-## Protege tu dinero de la inflación hoy: empieza desde $1 peso
+## Protege tu dinero de la inflación hoy: convierte tus pesos en oro
 
-Con Aura Gold podés convertir tu dinero en oro físico certificado desde $1 peso mexicano: oro físico real custodiado en bóvedas certificadas internacionalmente (estándar LBMA), sin mínimos ni comisiones de custodia mensuales, liquidez inmediata 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold podés convertir tus pesos en oro físico certificado, comprando fracciones de gramo: oro físico real custodiado en bóvedas certificadas internacionalmente (estándar LBMA), sin comisiones de custodia mensuales, liquidez inmediata 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre oro e inflación
 
@@ -126,7 +126,7 @@ Ambos protegen contra devaluación del peso. El oro protege adicionalmente contr
 
 **¿Desde cuánto puedo empezar a protegerme con oro?**
 
-Desde $1 peso mexicano con plataformas de oro fraccionado modernas.
+En fracciones de gramo con plataformas de oro fraccionado modernas.
 
 **¿El oro digital realmente protege igual que oro físico?**
 

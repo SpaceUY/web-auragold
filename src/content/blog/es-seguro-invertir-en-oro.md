@@ -11,7 +11,7 @@ category: "Seguridad"
 
 Sí, el oro es uno de los activos más seguros para conservar valor a largo plazo: es un metal escaso, aceptado en todo el mundo, que no depende de ninguna empresa ni gobierno y no puede quebrar como una acción. El riesgo real no está en el oro en sí, sino en cómo y con quién lo compras.
 
-Antes de [invertir en oro físico certificado en pesos desde $1](/invertir-en-oro-mexico), conviene separar tres cosas que suelen mezclarse: la volatilidad normal del precio, los riesgos de custodia y los fraudes. Casi todos son evitables si sabes qué verificar, empezando por [cómo se custodia y audita el oro](/transparencia).
+Antes de [invertir en oro físico certificado en pesos](/invertir-en-oro-mexico), conviene separar tres cosas que suelen mezclarse: la volatilidad normal del precio, los riesgos de custodia y los fraudes. Casi todos son evitables si sabes qué verificar, empezando por [cómo se custodia y audita el oro](/transparencia).
 
 ## ¿Cuáles son los riesgos reales de invertir en oro?
 
@@ -71,12 +71,12 @@ Con Aura Gold conviertes el miedo en tranquilidad con señales verificables, no 
 - Oro físico real certificado (estándar LBMA), no "oro papel"
 - Activo segregado a tu nombre y custodia institucional fuera de México
 - Respaldo 1:1 y transparencia en precios (ves el spread antes de confirmar)
-- Desde $1 peso, sin comisiones de custodia, con liquidez rápida
+- Compra por fracciones de gramo, sin comisiones de custodia, con liquidez rápida
 - Opción de retiro físico del metal cuando lo desees
 
 El oro lleva miles de años siendo seguro. Tu trabajo es solo elegir bien dónde y con quién lo tienes.
 
-[Empieza a invertir en oro con respaldo real desde $1 →](/invertir-en-oro-mexico)
+[Empieza a invertir en oro con respaldo real →](/invertir-en-oro-mexico)
 
 ## Otras preguntas frecuentes sobre la seguridad de invertir en oro
 

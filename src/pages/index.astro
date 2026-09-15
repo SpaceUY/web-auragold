@@ -42,10 +42,10 @@ const steps = [
   {
     number: "1",
     icon: "/images/icons/step-1-money-bag.png",
-    iconAlt: "Bolsa de dinero dorada - invierte desde cualquier cantidad",
-    title: "Invierte desde cualquier cantidad",
-    description: "Regístrate en 2 minutos. Empieza con MX$100, MX$50, o la cantidad que tú decidas.",
-    detail: "Sin mínimos: Compra oro 24k certificado (con respaldo LBMA) desde 1 MXN. Tú controlas cuánto y cuándo.",
+    iconAlt: "Bolsa de dinero dorada - convierte tus pesos en oro",
+    title: "Convierte tus pesos en oro",
+    description: "Regístrate en 2 minutos y compra la fracción de oro que quieras, sin necesidad de pagar una pieza completa.",
+    detail: "Compra oro 24k certificado (con respaldo LBMA) por fracciones de gramo. Tú controlas cuánto y cuándo.",
   },
   {
     number: "2",
@@ -99,7 +99,7 @@ const comparisonRows = [
     goal: "Protección + Liquidez",
     inflation: { ok: true, text: "Sí" },
     liquidity: { ok: true, text: "Flexible (24-48 hrs)" },
-    complexity: { ok: true, text: "Ultra simple (desde cualquier cantidad)" },
+    complexity: { ok: true, text: "Ultra simple (compra fraccionada)" },
     highlight: true,
   },
 ];
@@ -116,10 +116,10 @@ const benefits = [
   },
   {
     icon: '<path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/>',
-    title: "Desde 1 MX$",
-    tagline: "Sin mínimos, sin límites",
+    title: "Fracciones, no lingotes",
+    tagline: "Compra la parte que quieras",
     description:
-      "Compra o vende desde cualquier cantidad. MX$50, MX$200, MX$1,000... lo que tú decidas. Tu dinero crece a tu ritmo, sin presión ni montos mínimos.",
+      "Compra o vende la fracción de oro que quieras, sin tener que adquirir una pieza completa. Tu dinero crece a tu ritmo y a tu medida.",
   },
   {
     icon: '<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>',
@@ -184,7 +184,7 @@ const faqItems = [
   {
     question: "¿Cuánto oro puedo comprar? ¿Hay un mínimo?",
     answer:
-      "Puedes empezar desde montos muy bajos. No necesitas comprar un lingote completo ni invertir grandes cantidades. Aura Gold te permite adquirir fracciones de oro físico, por lo que puedes invertir sin mínimos y acumular progresivamente según tus objetivos.",
+      "No necesitas comprar un lingote completo ni invertir grandes cantidades. Aura Gold te permite adquirir fracciones de oro físico y acumular progresivamente según tus objetivos. El monto mínimo vigente se muestra en la app antes de confirmar la operación.",
   },
   {
     question: "¿Qué pasa con mi oro si Aura Gold desaparece o quiebra?",
@@ -216,7 +216,7 @@ const faqItems = [
 
 <BaseLayout
   title="Aura Gold - Compra e invierte en oro desde nuestra App"
-  description="Compra oro físico 24k desde $1 MXN. Custodia certificada en Suiza, liquidez en 24-48h. Protege tu dinero de la inflación con Aura Gold."
+  description="Convierte tus pesos en oro físico 24k certificado. Custodia en Suiza, liquidez en 24-48h. Protege tu dinero de la inflación con Aura Gold."
 >
   <JsonLD />
   <FAQJsonLD items={faqItems} />
@@ -236,15 +236,15 @@ const faqItems = [
           </span>
           <h1 class="font-display text-5xl font-semibold lg:text-6xl">
             <span class="hero-rise block" style="animation-delay: 0.2s">
-              Compra <span class="text-ag-gold">oro</span>
+              Convierte
             </span>
             <span class="hero-rise block" style="animation-delay: 0.65s">
-              desde <span class="text-ag-gold">$1 peso.</span>
+              tus <span class="text-ag-gold">pesos</span> en <span class="text-ag-gold">oro.</span>
             </span>
           </h1>
           <p class="hero-rise max-w-xl text-lg text-white/60" style="animation-delay: 1s">
-            ¿Tienes $100, $500 o $1,000? Empieza a proteger tu dinero de la inflación con oro 24k certificado
-            desde $1 MXN. Sin mínimos, sin broncas.
+            Oro físico 24k certificado, guardado en Suiza y segregado a tu nombre. Compra y vende
+            desde tu celular, cuando quieras.
           </p>
           <AppDownloadButtons id="descargar" class="hero-rise" style="animation-delay: 1.2s" />
         </div>
@@ -519,7 +519,7 @@ const faqItems = [
 
         <ul class="mt-8 flex flex-col items-center gap-2 text-sm text-white/70 sm:flex-row sm:justify-center sm:gap-8">
           <li>Sin costos de apertura</li>
-          <li>Sin mínimos, desde MX$1</li>
+          <li>Compra por fracciones de gramo</li>
           <li>Cierra tu cuenta cuando quieras</li>
         </ul>
 

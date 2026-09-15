@@ -111,7 +111,7 @@ Si querés verlo con tus propios números, la [calculadora de inflación de Méx
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si el oro encaja en tu plan, con Aura Gold podés [empezar desde cualquier cantidad](/invertir-en-oro-mexico), sin mínimos ni comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y podés venderlo cuando quieras.
+Si el oro encaja en tu plan, con Aura Gold podés [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y podés venderlo cuando quieras.
 
 ## Preguntas frecuentes sobre oro y CETES en México
 
@@ -133,4 +133,4 @@ Sí, y suele ser lo más sensato: CETES como base estable de corto plazo, y oro 
 
 ### ¿Qué ventaja tiene el oro custodiado digitalmente frente al oro físico tradicional?
 
-Combina lo mejor de ambos mundos: oro físico real en bóveda certificada, con la comodidad de comprarlo y venderlo desde el móvil, desde cualquier cantidad y sin preocuparte por la custodia.
+Combina lo mejor de ambos mundos: oro físico real en bóveda certificada, con la comodidad de comprarlo y venderlo desde el móvil, en fracciones y sin preocuparte por la custodia.
