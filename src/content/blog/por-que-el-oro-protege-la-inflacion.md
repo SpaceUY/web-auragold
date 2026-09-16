@@ -32,7 +32,7 @@ Muchas personas creen que tener dinero "en el banco" es seguro. Y sí, tu dinero
 
 Cuentas de ahorro bancarias en México (2025): rendimiento promedio 2.5%-3.5% anual vs inflación real de 4.5%-5.5% anual = pérdida neta de poder adquisitivo de -1.5% a -2% anual.
 
-Traducido a pesos reales: guardás $50,000 pesos en cuenta de ahorro, el banco te paga $1,500 de intereses al año, pero la inflación te quita $2,500 de poder adquisitivo. Resultado: perdiste $1,000 pesos de valor real a pesar de "ahorrar".
+Traducido a pesos reales: guardas $50,000 pesos en cuenta de ahorro, el banco te paga $1,500 de intereses al año, pero la inflación te quita $2,500 de poder adquisitivo. Resultado: perdiste $1,000 pesos de valor real a pesar de "ahorrar".
 
 Los bancos tradicionales no son tu aliado contra la inflación. Son parte del problema.
 
@@ -91,7 +91,7 @@ Regla práctica: el dinero que no vas a necesitar en los próximos 12-36 meses d
 
 ## Cómo empezar con poco: protección inflacionaria en fracciones de oro
 
-Podés comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales como ahorro recurrente, o $5,000+ convirtiendo ahorros estancados. La clave no es cuánto invertís de golpe, sino crear el hábito de convertir parte de tus ingresos a oro automáticamente cada mes.
+Puedes comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales como ahorro recurrente, o $5,000+ convirtiendo ahorros estancados. La clave no es cuánto inviertes de golpe, sino crear el hábito de convertir parte de tus ingresos a oro automáticamente cada mes.
 
 ## Oro vs otras alternativas contra inflación: comparativa real
 
@@ -105,7 +105,7 @@ Podés comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales co
 
 ## Protege tu dinero de la inflación hoy: convierte tus pesos en oro
 
-Con Aura Gold podés convertir tus pesos en oro físico certificado, comprando fracciones de gramo: oro físico real custodiado en bóvedas certificadas internacionalmente (estándar LBMA), sin comisiones de custodia mensuales, liquidez inmediata 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold puedes convertir tus pesos en oro físico certificado, comprando fracciones de gramo: oro físico real custodiado en bóvedas certificadas internacionalmente (estándar LBMA), sin comisiones de custodia mensuales, liquidez inmediata 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre oro e inflación
 
@@ -135,4 +135,4 @@ Sí, si es oro físico respaldado y certificado (LBMA). No confundir con criptom
 
 **¿Qué pasa si necesito el dinero urgentemente?**
 
-En plataformas modernas, vendés tu oro instantáneamente desde la app y recibís pesos mexicanos en minutos/horas.
+En plataformas modernas, vendes tu oro instantáneamente desde la app y recibes pesos mexicanos en minutos/horas.

@@ -16,13 +16,13 @@ category: "Mercado"
 - El oro es una reserva de valor con historial probado.
 - Si tu objetivo es proteger tu dinero frente a la inflación y la devaluación del peso, el oro ofrece una base mucho más sólida.
 
-Las criptomonedas prometen revolucionar las finanzas. El oro lleva siglos siendo refugio de valor. Si estás evaluando cuál encaja mejor en tu estrategia, la pregunta real no es cuál rinde más, sino cuál cumple mejor el objetivo que vos tenés: proteger lo que ahorraste sin exponerte a pérdidas que no podés asumir.
+Las criptomonedas prometen revolucionar las finanzas. El oro lleva siglos siendo refugio de valor. Si estás evaluando cuál encaja mejor en tu estrategia, la pregunta real no es cuál rinde más, sino cuál cumple mejor el objetivo que tú tienes: proteger lo que ahorraste sin exponerte a pérdidas que no puedes asumir.
 
 *Nota: esto es contenido educativo, no asesoría financiera.*
 
 ## El problema real que tienen muchos ahorradores mexicanos hoy
 
-### Por qué el peso mexicano pierde valor aunque vos no hagas nada
+### Por qué el peso mexicano pierde valor aunque tú no hagas nada
 
 La inflación y la [devaluación del peso](/blog/evolucion-inflacion-mexico) erosionan el poder adquisitivo de forma silenciosa. Dejar el dinero parado en una cuenta bancaria equivale, en muchos casos, a perder valor cada año. Eso empuja a muchas personas a buscar alternativas, y ahí es donde aparecen tanto el oro como las criptomonedas.
 
@@ -39,7 +39,7 @@ El oro no paga intereses ni dividendos. Su función principal es preservar el va
 ### Qué formas existen hoy para tener oro en México sin complicaciones
 
 - **Oro físico (lingotes, monedas):** tangible y directo, pero requiere custodia y seguridad propias.
-- **Oro custodiado digitalmente:** fracciones de oro físico real almacenadas en bóvedas certificadas. Comprás y vendés desde el móvil sin preocuparte por la logística.
+- **Oro custodiado digitalmente:** fracciones de oro físico real almacenadas en bóvedas certificadas. Compras y vendes desde el móvil sin preocuparte por la logística.
 - **Productos derivados del oro (ETFs, futuros):** siguen el precio, pero no implican oro físico real a tu nombre.
 
 ### Cómo distinguir el oro físico real del oro "de papel"
@@ -83,17 +83,17 @@ En la crisis de 2008, el oro subió mientras los mercados colapsaban. En la vola
 
 ### En qué situaciones el oro es la opción más coherente para proteger tu ahorro
 
-- Priorizás no perder lo que tenés sobre la posibilidad de multiplicarlo.
+- Priorizas no perder lo que tienes sobre la posibilidad de multiplicarlo.
 - Te preocupa la inflación o la devaluación del peso a largo plazo.
-- Querés un activo con siglos de historia como reserva de valor.
-- No podés asumir el escenario de pérdida total de tu inversión.
+- Quieres un activo con siglos de historia como reserva de valor.
+- No puedes asumir el escenario de pérdida total de tu inversión.
 
 ### En qué situaciones las criptomonedas pueden tener un papel en tu portafolio
 
-- Ya tenés una base de ahorro estable y querés especular con una pequeña parte.
-- Entendés la tecnología y el riesgo real que implica.
+- Ya tienes una base de ahorro estable y quieres especular con una pequeña parte.
+- Entiendes la tecnología y el riesgo real que implica.
 - Tu horizonte es especulativo, no de protección patrimonial.
-- Podés perder el 100% de lo que destines sin que afecte tu situación financiera.
+- Puedes perder el 100% de lo que destines sin que afecte tu situación financiera.
 
 ## Cuáles son los errores más comunes al comparar oro y criptomonedas
 
@@ -101,13 +101,13 @@ En la crisis de 2008, el oro subió mientras los mercados colapsaban. En la vola
 
 El oro custodiado digitalmente no es oro digital en el sentido cripto. Son categorías radicalmente distintas: uno es un metal físico real con infraestructura de custodia regulada; el otro es un activo especulativo sin respaldo material. Confundirlos lleva a decisiones equivocadas en ambas direcciones.
 
-### Por qué la rentabilidad pasada de Bitcoin no predice lo que necesitás saber
+### Por qué la rentabilidad pasada de Bitcoin no predice lo que necesitas saber
 
 Muchas personas ven el histórico de subida de Bitcoin y asumen que va a repetirse. Pero ese dato ignora la volatilidad extrema, los episodios de pérdidas del 70–80%, y que la mayoría de inversores retail no capturaron esas subidas porque vendieron durante las caídas.
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si tu prioridad es proteger, no especular, con Aura Gold podés comprar fracciones de oro, sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas bajo estándar LBMA y podés venderlo cuando quieras. Mirá [cómo funciona Aura Gold](/#como-funciona) o [empezá a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si tu prioridad es proteger, no especular, con Aura Gold puedes comprar fracciones de oro, sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas bajo estándar LBMA y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y criptomonedas en México
 
@@ -129,4 +129,4 @@ Sí. De hecho, algunos perfiles destinan una base a oro como protección y una p
 
 ### ¿Cómo sé que el oro de Aura Gold es real y está bien custodiado?
 
-Aura Gold opera con oro físico certificado bajo estándar LBMA, con activos segregados y auditorías periódicas. Podés consultar en todo momento dónde está tu oro y quién lo custodia.
+Aura Gold opera con oro físico certificado bajo estándar LBMA, con activos segregados y auditorías periódicas. Puedes consultar en todo momento dónde está tu oro y quién lo custodia.

@@ -24,11 +24,11 @@ La comparación no es "oro o acciones", sino qué papel juega cada uno en tu est
 
 ### Qué hace exactamente una acción con tu dinero
 
-Cuando comprás una acción, adquirís una pequeña parte de una empresa. Si la empresa crece, tu inversión puede crecer también. Si pierde valor, tu dinero también baja. Las acciones ofrecen potencial de rentabilidad alta, pero con volatilidad real: el precio puede caer significativamente en periodos cortos.
+Cuando compras una acción, adquieres una pequeña parte de una empresa. Si la empresa crece, tu inversión puede crecer también. Si pierde valor, tu dinero también baja. Las acciones ofrecen potencial de rentabilidad alta, pero con volatilidad real: el precio puede caer significativamente en periodos cortos.
 
 ### Por qué las acciones no siempre protegen frente a la inflación y la devaluación
 
-En periodos de inestabilidad económica, las bolsas tienden a caer justo cuando el ahorrador más necesita estabilidad. Además, si invertís en acciones denominadas en pesos, la [devaluación del peso](/blog/evolucion-inflacion-mexico) puede erosionar tu rendimiento real incluso cuando el precio nominal sube.
+En periodos de inestabilidad económica, las bolsas tienden a caer justo cuando el ahorrador más necesita estabilidad. Además, si inviertes en acciones denominadas en pesos, la [devaluación del peso](/blog/evolucion-inflacion-mexico) puede erosionar tu rendimiento real incluso cuando el precio nominal sube.
 
 ## Qué significa realmente invertir en oro y por qué no es lo mismo que las acciones
 
@@ -39,12 +39,12 @@ El oro no paga dividendos ni intereses. Su función es otra: preservar valor a l
 ### Qué formas existen hoy para invertir en oro en México
 
 - **Oro físico (lingotes, monedas):** tangible, pero con costes de custodia y seguridad.
-- **Oro custodiado digitalmente:** comprás fracciones y el oro se guarda en bóveda certificada. Accesible, fraccionable y fácil de comprar y vender desde el móvil.
+- **Oro custodiado digitalmente:** compras fracciones y el oro se guarda en bóveda certificada. Accesible, fraccionable y fácil de comprar y vender desde el móvil.
 - **Productos que siguen al oro (ETFs, derivados):** liquidez alta, pero no es oro físico real.
 
 ### Cómo se diferencia el oro físico custodiado del oro especulativo
 
-El oro custodiado digitalmente —como el que ofrece Aura Gold— es oro físico real almacenado en bóvedas certificadas. No es una criptomoneda ni un derivado financiero. Tenés respaldo físico real, no solo un contrato o una apuesta sobre el precio.
+El oro custodiado digitalmente —como el que ofrece Aura Gold— es oro físico real almacenado en bóvedas certificadas. No es una criptomoneda ni un derivado financiero. Tienes respaldo físico real, no solo un contrato o una apuesta sobre el precio.
 
 ## Cómo comparar oro y acciones según tu situación financiera real
 
@@ -57,7 +57,7 @@ El oro custodiado digitalmente —como el que ofrece Aura Gold— es oro físico
 | Volatilidad | Alta | Media |
 | Horizonte ideal | Largo plazo (5+ años) | Medio–largo (años) |
 | Protección ante inflación | Variable (depende del sector) | Cobertura histórica a largo plazo |
-| Exposición a devaluación del peso | Alta (si invertís en MXN) | Baja (precio global en USD) |
+| Exposición a devaluación del peso | Alta (si inviertes en MXN) | Baja (precio global en USD) |
 | Rendimiento en crisis | Suele caer | Suele mantenerse o subir |
 
 ### Qué pasa con tu ahorro en cada escenario económico
@@ -68,15 +68,15 @@ En periodos de crecimiento económico y estabilidad, las acciones suelen superar
 
 ### Cuándo las acciones son la opción más lógica para hacer crecer tu dinero
 
-- Tenés un horizonte de 5 años o más y podés tolerar caídas temporales.
-- Buscás crecimiento patrimonial activo, no solo preservación.
-- Ya tenés un colchón de ahorro estable y querés multiplicarlo.
+- Tienes un horizonte de 5 años o más y puedes tolerar caídas temporales.
+- Buscas crecimiento patrimonial activo, no solo preservación.
+- Ya tienes un colchón de ahorro estable y quieres multiplicarlo.
 
 ### Cuándo tiene más sentido incluir oro en tu estrategia de ahorro
 
 - Tu prioridad es no perder poder adquisitivo frente a la inflación.
 - Te preocupa la devaluación del peso mexicano a largo plazo.
-- Querés un activo que no dependa del desempeño de empresas ni gobiernos.
+- Quieres un activo que no dependa del desempeño de empresas ni gobiernos.
 
 ## Cómo combinar oro y acciones en una estrategia de ahorro equilibrada
 
@@ -94,25 +94,25 @@ Oro y acciones tienden a moverse en direcciones opuestas en momentos de crisis. 
 
 ### Por qué comparar solo la rentabilidad histórica lleva a decisiones equivocadas
 
-Las acciones han superado al oro en rentabilidad en muchos periodos. Pero ese dato ignora la volatilidad, el momento en que necesitás el dinero y tu capacidad real para aguantar caídas sin vender en pánico. La rentabilidad en papel no es la rentabilidad que vos obtenés.
+Las acciones han superado al oro en rentabilidad en muchos periodos. Pero ese dato ignora la volatilidad, el momento en que necesitas el dinero y tu capacidad real para aguantar caídas sin vender en pánico. La rentabilidad en papel no es la rentabilidad que tú obtienes.
 
-### Qué pasa cuando usás oro como sustituto del crecimiento
+### Qué pasa cuando usas oro como sustituto del crecimiento
 
-El oro no está diseñado para hacer crecer tu patrimonio de forma acelerada. Si lo usás con esa expectativa, te va a decepcionar. Su valor está en la estabilidad y la protección, no en la rentabilidad explosiva.
+El oro no está diseñado para hacer crecer tu patrimonio de forma acelerada. Si lo usas con esa expectativa, te va a decepcionar. Su valor está en la estabilidad y la protección, no en la rentabilidad explosiva.
 
 ## Cómo decidir entre oro y acciones en menos de un minuto
 
 ### Tres preguntas que definen qué opción encaja con tu situación
 
-1. **¿Cuándo vas a necesitar ese dinero?** Menos de 5 años y no podés asumir pérdidas temporales → el oro es más predecible. Más de 5 años con tolerancia a la volatilidad → las acciones pueden tener más sentido.
+1. **¿Cuándo vas a necesitar ese dinero?** Menos de 5 años y no puedes asumir pérdidas temporales → el oro es más predecible. Más de 5 años con tolerancia a la volatilidad → las acciones pueden tener más sentido.
 2. **¿Qué te quita más el sueño: perder dinero en una caída bursátil o que la inflación erosione tu ahorro?** Caídas de mercado → oro como base. Pérdida de poder adquisitivo a largo plazo → ambos tienen su papel.
-3. **¿Buscás crecer o proteger?** Crecer activamente → acciones. Proteger lo que tenés → oro. Hacer las dos cosas → combinalos.
+3. **¿Buscas crecer o proteger?** Crecer activamente → acciones. Proteger lo que tienes → oro. Hacer las dos cosas → combinalos.
 
-Si querés verlo con tus propios números, la [calculadora de inflación de México](/calculadora-inflacion-oro) compara en segundos cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
+Si quieres verlo con tus propios números, la [calculadora de inflación de México](/calculadora-inflacion-oro) compara en segundos cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si el oro encaja en tu plan, con Aura Gold podés [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y podés venderlo cuando quieras. Mirá [cómo funciona Aura Gold](/#como-funciona) o [empezá a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si el oro encaja en tu plan, con Aura Gold puedes [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y acciones en México
 
@@ -130,7 +130,7 @@ No. Su valor potencial viene del precio y de su función como reserva de valor. 
 
 ### ¿Cómo sé que mi oro está realmente custodiado y es físico?
 
-Los proveedores serios operan con estándares como la certificación LBMA, activos segregados y auditorías periódicas. En Aura Gold podés consultar en todo momento dónde está tu oro y quién lo custodia.
+Los proveedores serios operan con estándares como la certificación LBMA, activos segregados y auditorías periódicas. En Aura Gold puedes consultar en todo momento dónde está tu oro y quién lo custodia.
 
 ### ¿Qué ventaja tiene el oro custodiado digitalmente frente a comprar acciones de una minera de oro?
 

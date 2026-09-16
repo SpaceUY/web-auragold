@@ -94,7 +94,7 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 | Mantenimiento | Alto (2-5% anual) | Cero |
 | Divisibilidad | No puedes vender "un cuarto" | Vendes la cantidad exacta que necesites |
 
-**Veredicto:** los bienes raíces son excelentes si ya tenés capital alto y visión de muy largo plazo (10+ años). Para cantidades menores o necesidad de flexibilidad, el oro es superior.
+**Veredicto:** los bienes raíces son excelentes si ya tienes capital alto y visión de muy largo plazo (10+ años). Para cantidades menores o necesidad de flexibilidad, el oro es superior.
 
 ## Alternativa 6: Dólares estadounidenses (dolarización de ahorros)
 
@@ -126,7 +126,7 @@ De todas las alternativas analizadas, el oro fraccionado digital es la única qu
 
 **Comparativa de barreras de entrada:** CETES requiere cuenta Cetesdirecto + $100 pesos mínimo; acciones requieren cuenta de inversión + conocimiento del mercado + $500-$1,000 mínimo; bienes raíces requieren $500,000+ MXN; oro fraccionado requiere solo celular y se compra por fracciones de gramo.
 
-Con Aura Gold podés empezar a proteger tu dinero hoy mismo: oro físico certificado LBMA (99.99% de pureza) custodiado en bóvedas internacionales, compra por fracciones de gramo sin comisiones de custodia mensuales, liquidez 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold puedes empezar a proteger tu dinero hoy mismo: oro físico certificado LBMA (99.99% de pureza) custodiado en bóvedas internacionales, compra por fracciones de gramo sin comisiones de custodia mensuales, liquidez 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre alternativas al efectivo
 

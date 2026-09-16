@@ -106,13 +106,13 @@ Si necesitas ese dinero pronto, la volatilidad del precio del oro puede jugarte 
 
 1. **¿Cuándo vas a necesitar ese dinero?** Menos de 12 meses → CETES. Más de 3 años → el oro tiene sentido como parte del plan.
 2. **¿Qué te quita más el sueño: la volatilidad o la inflación?** Volatilidad → CETES. Pérdida de poder adquisitivo → oro parcial.
-3. **¿Buscás rendimiento definido o protección patrimonial?** Rendimiento definido → CETES. Diversificación y protección → oro.
+3. **¿Buscas rendimiento definido o protección patrimonial?** Rendimiento definido → CETES. Diversificación y protección → oro.
 
-Si querés verlo con tus propios números, la [calculadora de inflación de México](/calculadora-inflacion-oro) compara en segundos cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
+Si quieres verlo con tus propios números, la [calculadora de inflación de México](/calculadora-inflacion-oro) compara en segundos cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si el oro encaja en tu plan, con Aura Gold podés [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y podés venderlo cuando quieras.
+Si el oro encaja en tu plan, con Aura Gold puedes [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y puedes venderlo cuando quieras.
 
 ## Preguntas frecuentes sobre oro y CETES en México
 
@@ -126,7 +126,7 @@ No. Su valor potencial viene del precio y de su función como reserva de valor a
 
 ### ¿Cómo sé que mi oro está realmente custodiado y es físico?
 
-Los proveedores de oro custodiado serios operan con estándares como la certificación LBMA, activos segregados y auditorías periódicas. En Aura Gold podés consultar en todo momento dónde está tu oro y quién lo custodia.
+Los proveedores de oro custodiado serios operan con estándares como la certificación LBMA, activos segregados y auditorías periódicas. En Aura Gold puedes consultar en todo momento dónde está tu oro y quién lo custodia.
 
 ### ¿Puedo combinar oro y CETES en mi estrategia de ahorro?
 
