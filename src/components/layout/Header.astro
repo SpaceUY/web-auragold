@@ -1,4 +1,6 @@
 ---
+import { ANDROID_APP_URL } from "../../data/links";
+
 const navLinks = [
   { label: "Cómo funciona", href: "/#como-funciona" },
   { label: "Beneficios", href: "/#beneficios" },
@@ -25,7 +27,10 @@ const navLinks = [
     </nav>
 
     <a
-      href="/#descargar"
+      href={ANDROID_APP_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Descargar Aura Gold para Android"
       class="hidden lg:inline-flex items-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark hover:opacity-90 transition-opacity"
     >
       Descargar
@@ -56,7 +61,10 @@ const navLinks = [
       ))
     }
     <a
-      href="/#descargar"
+      href={ANDROID_APP_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Descargar Aura Gold para Android"
       class="mt-2 inline-flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark"
     >
       Descargar

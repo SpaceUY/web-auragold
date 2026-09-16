@@ -7,6 +7,8 @@
 // Por eso el nombre accesible lo completan el aria-label del link y el span
 // sr-only del botón deshabilitado: sin eso, un lector de pantalla anunciaría
 // dos botones sin forma de distinguir a qué sistema corresponde cada uno.
+import { ANDROID_APP_URL } from "../../data/links";
+
 interface Props {
   id?: string;
   class?: string;
@@ -14,13 +16,11 @@ interface Props {
 }
 
 const { id, class: className = "", style } = Astro.props;
-
-const ANDROID_URL = "https://play.google.com/store/apps/details?id=com.space.aura";
 ---
 
 <div id={id} class={`flex flex-col gap-4 sm:flex-row sm:flex-wrap ${className}`} style={style}>
   <a
-    href={ANDROID_URL}
+    href={ANDROID_APP_URL}
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Descargar Aura Gold para Android"

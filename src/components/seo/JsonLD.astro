@@ -1,4 +1,6 @@
 ---
+import { ANDROID_APP_URL } from "../../data/links";
+
 const graph = [
   {
     "@type": "Organization",
@@ -26,7 +28,7 @@ const graph = [
     founder: { "@id": "https://auragold.io/autores/federico-sendra#person" },
     // Perfil verificado de la app (única presencia de terceros confirmada hoy).
     // Sumar acá LinkedIn/Instagram de la empresa apenas existan esos perfiles reales.
-    sameAs: ["https://play.google.com/store/apps/details?id=com.space.aura"],
+    sameAs: [ANDROID_APP_URL],
   },
   {
     "@type": "WebSite",
