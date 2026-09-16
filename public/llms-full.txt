@@ -25,7 +25,7 @@ Aura Gold es una fintech de oro digital respaldado por oro físico. Cada fracci�
 ## Costos y modelo de negocio
 
 - Único ingreso: spread del 1% por operación (compra y venta), calculado sobre el precio internacional de referencia del oro y visible antes de confirmar.
-- Ejemplo: si el oro está a $1.500 MXN/gramo, al comprar pagás $1.515/g y al vender recibís $1.485/g.
+- Ejemplo: si el oro está a $1.500 MXN/gramo, al comprar pagas $1.515/g y al vender recibes $1.485/g.
 - Costo total de ida y vuelta (comprar y vender): ~2% del capital operado.
 - Sin comisiones de: apertura de cuenta, custodia mensual, mantenimiento de bóveda, inactividad ni cierre de cuenta.
 

@@ -46,13 +46,13 @@ En México, una cuenta de ahorro tradicional suele ofrecer rendimientos bajos:
 
 Esto significa que, incluso recibiendo intereses, el rendimiento real puede seguir siendo negativo.
 
-**Ejemplo simple:** guardás $100,000 pesos en una cuenta al 2% anual, el banco te paga $2,000 pesos en intereses, pero la inflación erosiona $3,690 pesos de poder adquisitivo. Resultado real: perdés valor aunque "ganes" intereses. Ese dinero sigue ahí, pero compra menos.
+**Ejemplo simple:** guardas $100,000 pesos en una cuenta al 2% anual, el banco te paga $2,000 pesos en intereses, pero la inflación erosiona $3,690 pesos de poder adquisitivo. Resultado real: pierdes valor aunque "ganes" intereses. Ese dinero sigue ahí, pero compra menos.
 
-Para entender cómo funciona este proceso en perspectiva histórica, podés leer nuestra guía sobre la evolución de la inflación en México.
+Para entender cómo funciona este proceso en perspectiva histórica, puedes leer nuestra guía sobre la evolución de la inflación en México.
 
 ### La inflación real vs la inflación que sientes
 
-La inflación oficial mide una canasta promedio. Pero tu inflación personal depende de en qué gastás.
+La inflación oficial mide una canasta promedio. Pero tu inflación personal depende de en qué gastas.
 
 En la práctica, muchas familias mexicanas concentran buena parte de su gasto en categorías que suelen encarecerse más rápido que el promedio: alimentos, gasolina, educación, salud, vivienda.
 
@@ -66,11 +66,11 @@ Más allá de la inflación, concentrar todo tu ahorro en el sistema bancario im
 
 **2. Restricciones de acceso en crisis.** Aunque no es el escenario base en México, la historia financiera internacional demuestra que en crisis severas pueden existir restricciones temporales de acceso al dinero. Ha ocurrido en distintos países bajo distintas formas: Argentina (2001), Chipre (2013), Grecia (2015). El riesgo no es que ocurra siempre. El riesgo es asumir que nunca puede ocurrir.
 
-**3. Pérdida de valor por inflación.** Este es el riesgo más común y más constante. No necesitás una crisis bancaria para perder dinero en el banco. Basta con dejarlo quieto durante años mientras los precios suben más rápido que tu rendimiento. Es la forma más silenciosa -y más frecuente- de perder poder adquisitivo.
+**3. Pérdida de valor por inflación.** Este es el riesgo más común y más constante. No necesitas una crisis bancaria para perder dinero en el banco. Basta con dejarlo quieto durante años mientras los precios suben más rápido que tu rendimiento. Es la forma más silenciosa -y más frecuente- de perder poder adquisitivo.
 
 **4. Tasas reales negativas.** Cuando tu cuenta paga menos que la inflación, estás obteniendo una tasa real negativa. Eso significa que tu dinero crece en números, pero retrocede en valor.
 
-Si estás buscando opciones más allá del efectivo inmóvil, también podés revisar estas alternativas al dinero en efectivo.
+Si estás buscando opciones más allá del efectivo inmóvil, también puedes revisar estas alternativas al dinero en efectivo.
 
 ## Por qué el oro físico puede proteger mejor que una cuenta bancaria
 
@@ -78,11 +78,11 @@ El oro no existe para generar rendimientos rápidos. Su función histórica ha s
 
 **1. Históricamente ha funcionado como cobertura frente a inflación.** El oro no sube de forma lineal ni garantizada. Pero en horizontes largos, históricamente ha mostrado una capacidad consistente para preservar valor frente a inflación, devaluación monetaria y pérdida de confianza financiera. No es una promesa de rentabilidad. Es una herramienta de protección. Acá explicamos con más detalle por qué el oro protege frente a la inflación.
 
-**2. Reduce dependencia del sistema financiero.** Cuando tenés dinero en una cuenta bancaria, dependés del banco. Cuando tenés exposición a oro físico, reducís esa dependencia. No elimina todos los riesgos, pero cambia su naturaleza: pasás de depender de una promesa financiera a depender de un activo escaso con valor reconocido globalmente.
+**2. Reduce dependencia del sistema financiero.** Cuando tienes dinero en una cuenta bancaria, dependes del banco. Cuando tienes exposición a oro físico, reduces esa dependencia. No elimina todos los riesgos, pero cambia su naturaleza: pasas de depender de una promesa financiera a depender de un activo escaso con valor reconocido globalmente.
 
 **3. Tiene oferta limitada.** La oferta de dinero puede expandirse con el tiempo. La del oro también crece, pero históricamente lo hace de forma mucho más lenta y limitada. Esa escasez relativa es una de las razones por las que el oro ha conservado valor durante siglos.
 
-**4. Puede funcionar como diversificador.** El oro no reemplaza al banco. Lo complementa. Su papel no es sustituir tu liquidez diaria, sino proteger una parte del patrimonio que no necesitás usar inmediatamente.
+**4. Puede funcionar como diversificador.** El oro no reemplaza al banco. Lo complementa. Su papel no es sustituir tu liquidez diaria, sino proteger una parte del patrimonio que no necesitas usar inmediatamente.
 
 ## Oro físico vs cuentas bancarias: comparativa directa
 
@@ -103,13 +103,13 @@ El oro no existe para generar rendimientos rápidos. Su función histórica ha s
 
 La mejor respuesta no es elegir uno y descartar el otro. La mejor respuesta es construir equilibrio.
 
-**Si necesitás liquidez inmediata (0-3 meses):** priorizá cuenta bancaria. Ese dinero debe estar disponible sin fricción para gastos corrientes y emergencias inmediatas.
+**Si necesitas liquidez inmediata (0-3 meses):** priorizá cuenta bancaria. Ese dinero debe estar disponible sin fricción para gastos corrientes y emergencias inmediatas.
 
-**Si tenés fondo de emergencia (3-6 meses):** combiná banco + oro. Mantené liquidez suficiente en banco y protegé una parte del capital que probablemente no usarás de inmediato.
+**Si tienes fondo de emergencia (3-6 meses):** combiná banco + oro. Mantené liquidez suficiente en banco y protegé una parte del capital que probablemente no usarás de inmediato.
 
-**Si tenés ahorro de mediano plazo (1-3 años):** diversificá entre banco, instrumentos líquidos y activos de protección. Acá el oro empieza a tener más sentido como herramienta de preservación.
+**Si tienes ahorro de mediano plazo (1-3 años):** diversificá entre banco, instrumentos líquidos y activos de protección. Acá el oro empieza a tener más sentido como herramienta de preservación.
 
-**Si tenés ahorro de largo plazo (5+ años):** el oro puede ocupar un rol más claro dentro de una estrategia de preservación patrimonial. No para reemplazar crecimiento, sino para equilibrarlo.
+**Si tienes ahorro de largo plazo (5+ años):** el oro puede ocupar un rol más claro dentro de una estrategia de preservación patrimonial. No para reemplazar crecimiento, sino para equilibrarlo.
 
 ## Los errores más comunes al comparar banco vs oro
 
@@ -128,4 +128,4 @@ No se trata de abandonar el banco. Se trata de usar cada herramienta para lo que
 
 La combinación correcta depende de tu horizonte, tu perfil y tu necesidad de acceso.
 
-Si querés empezar paso a paso, leé nuestra guía sobre cómo invertir en oro en México.
+Si quieres empezar paso a paso, leé nuestra guía sobre cómo invertir en oro en México.
