@@ -3,28 +3,37 @@ Allow: /
 Disallow: /embeds/
 
 # Crawlers de motores generativos (GEO) — permitidos explícitamente
+# (cada user-agent tiene su propio grupo, así que no hereda el Disallow de "*": se repite acá)
 User-agent: GPTBot
 Allow: /
+Disallow: /embeds/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /embeds/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /embeds/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /embeds/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /embeds/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /embeds/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /embeds/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /embeds/
 
 Sitemap: https://auragold.io/sitemap-index.xml

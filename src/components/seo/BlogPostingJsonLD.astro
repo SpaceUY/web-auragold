@@ -6,13 +6,27 @@ interface Props {
   pubDate: Date;
   updatedDate?: Date;
   authorSlug: string;
+  authorName: string;
   categoryLabel: string;
   categorySlug: string;
+  heroImage: string;
 }
 
-const { title, description, slug, pubDate, updatedDate, authorSlug, categoryLabel, categorySlug } = Astro.props;
+const {
+  title,
+  description,
+  slug,
+  pubDate,
+  updatedDate,
+  authorSlug,
+  authorName,
+  categoryLabel,
+  categorySlug,
+  heroImage,
+} = Astro.props;
 const url = new URL(`/blog/${slug}`, Astro.site).toString();
 const authorUrl = new URL(`/autores/${authorSlug}`, Astro.site).toString();
+const imageUrl = new URL(heroImage, Astro.site).toString();
 
 const json = JSON.stringify({
   "@context": "https://schema.org",
@@ -35,10 +49,16 @@ const json = JSON.stringify({
       headline: title,
       description,
       url,
+      mainEntityOfPage: { "@id": url },
+      image: imageUrl,
       datePublished: pubDate.toISOString(),
       dateModified: (updatedDate ?? pubDate).toISOString(),
-      author: { "@id": `${authorUrl}#person` },
-      publisher: { "@id": "https://auragold.io/#organization" },
+      author: { "@id": `${authorUrl}#person`, "@type": "Person", name: authorName, url: authorUrl },
+      publisher: { "@id": "https://auragold.io/#organization", "@type": "Organization", name: "Aura Gold" },
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", "article p"],
+      },
     },
   ],
 });
