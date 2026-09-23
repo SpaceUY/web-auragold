@@ -5,8 +5,9 @@ import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FinancialDisclaimer from "../components/ui/FinancialDisclaimer.astro";
-import AppDownloadButtons from "../components/ui/AppDownloadButtons.astro";
+import AppCTAButtons from "../components/ui/AppCTAButtons.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import { WEB_APP_URL } from "../data/links";
 
 const stats = [
   { value: "24-48h", label: "Liquidez al vender" },
@@ -90,9 +91,9 @@ const comparisonRows = [
 const steps = [
   {
     number: "1",
-    title: "Descarga la app Aura Gold",
+    title: "Abre tu cuenta en Aura Gold",
     description:
-      "Disponible en iOS y Android. El proceso de registro es guiado y sin documentación compleja. En menos de 5 minutos tienes tu cuenta activa.",
+      "Desde la web, sin instalar nada, o desde la app de Android. El proceso de registro es guiado y sin documentación compleja. En menos de 5 minutos tienes tu cuenta activa.",
     tag: "Gratis · Sin comisión de apertura",
   },
   {
@@ -196,7 +197,7 @@ const faqItems = [
         La guía completa para comprar oro físico y proteger tu dinero de la inflación. Con Aura Gold compras oro
         físico fraccionado desde el móvil, con custodia certificada y sin comisiones de custodia.
       </p>
-      <AppDownloadButtons class="mt-8 justify-center" />
+      <AppCTAButtons centered class="mt-8" />
 
       <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
         {
@@ -380,11 +381,12 @@ const faqItems = [
         </h2>
         <p class="mx-auto mt-4 max-w-2xl text-white/60">
           Oro físico fraccionado al precio más cercano al spot XAU/MXN, sin comisiones de custodia.
-          Descarga la app y empieza en minutos.
+          Abre tu cuenta desde la web y empieza en minutos.
         </p>
         <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <a
-            href="#"
+            href={WEB_APP_URL}
+            data-cta="webapp-final-cta"
             class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
           >
             Proteger mi dinero y abrir una bóveda

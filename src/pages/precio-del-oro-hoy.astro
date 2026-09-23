@@ -6,6 +6,7 @@ import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FinancialDisclaimer from "../components/ui/FinancialDisclaimer.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import { WEB_APP_URL } from "../data/links";
 
 // Snapshot inicial (fallback). El feed en vivo se conecta vía la API que se defina.
 const snapshot = {
@@ -456,11 +457,12 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
         </h2>
         <p class="mx-auto mt-4 max-w-2xl text-white/60">
           Oro físico fraccionado al precio más cercano al spot XAU/MXN, sin comisiones de custodia.
-          Descarga la app y empieza en minutos.
+          Abre tu cuenta desde la web y empieza en minutos.
         </p>
         <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <a
-            href="#"
+            href={WEB_APP_URL}
+            data-cta="webapp-final-cta"
             class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
           >
             Proteger mi dinero y abrir una bóveda

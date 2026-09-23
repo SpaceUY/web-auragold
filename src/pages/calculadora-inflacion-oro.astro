@@ -5,6 +5,7 @@ import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import { WEB_APP_URL } from "../data/links";
 import {
   INFLATION_RATE_BY_YEAR,
   GOLD_PRICE_MXN_PER_OZ_BY_YEAR,
@@ -76,9 +77,9 @@ const faqItems = [
   {
     question: "¿Hay una app para invertir en oro en México?",
     answer:
-      'Sí. Con Aura Gold puedes convertir tus pesos en oro físico 24k certificado (LBMA), comprando fracciones de gramo y sin comisiones de custodia, con custodia institucional en Suiza y liquidez en 24-48 horas. Conoce <a href="/invertir-en-oro-mexico" class="text-ag-gold hover:underline">cómo invertir en oro en México</a> o <a href="/#descargar" class="text-ag-gold hover:underline">descarga la app</a> para empezar.',
+      `Sí. Con Aura Gold puedes convertir tus pesos en oro físico 24k certificado (LBMA), comprando fracciones de gramo y sin comisiones de custodia, con custodia institucional en Suiza y liquidez en 24-48 horas. Conoce <a href="/invertir-en-oro-mexico" class="text-ag-gold hover:underline">cómo invertir en oro en México</a> o <a href="${WEB_APP_URL}" class="text-ag-gold hover:underline">abre tu cuenta</a> para empezar.`,
     plainAnswer:
-      "Sí. Con Aura Gold puedes convertir tus pesos en oro físico 24k certificado (LBMA), comprando fracciones de gramo y sin comisiones de custodia, con custodia institucional en Suiza y liquidez en 24-48 horas. Conoce cómo invertir en oro en México o descarga la app para empezar.",
+      "Sí. Con Aura Gold puedes convertir tus pesos en oro físico 24k certificado (LBMA), comprando fracciones de gramo y sin comisiones de custodia, con custodia institucional en Suiza y liquidez en 24-48 horas. Conoce cómo invertir en oro en México o abre tu cuenta para empezar.",
   },
 ];
 
@@ -451,10 +452,11 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         <p class="mt-4 text-white/60">Convierte tus pesos en oro físico 24k certificado, sin comisiones de custodia.</p>
         <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
-            href="/#descargar"
+            href={WEB_APP_URL}
+            data-cta="webapp-final-cta"
             class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
           >
-            Descargar Aura Gold
+            Empieza ahora
           </a>
           <a
             href="/invertir-en-oro-mexico"
