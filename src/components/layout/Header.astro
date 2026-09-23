@@ -1,5 +1,5 @@
 ---
-import { ANDROID_APP_URL } from "../../data/links";
+import { ANDROID_APP_URL, WEB_APP_URL } from "../../data/links";
 
 const navLinks = [
   { label: "Cómo funciona", href: "/#como-funciona" },
@@ -26,27 +26,34 @@ const navLinks = [
       }
     </nav>
 
+    <!--
+      El header le habla a quien ya tiene cuenta; los usuarios nuevos entran
+      por "Empieza ahora" del hero. Igual la web app tiene un único flujo de
+      login/registro, así que nadie queda afuera por entrar desde acá.
+      Misma pestaña a propósito: es el paso siguiente, no un sitio aparte.
+    -->
     <a
-      href={ANDROID_APP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Descargar Aura Gold para Android"
+      href={WEB_APP_URL}
+      data-cta="webapp-header"
       class="hidden lg:inline-flex items-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark hover:opacity-90 transition-opacity"
     >
-      Descargar
+      Iniciar sesión
     </a>
 
-    <button
-      type="button"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-      data-mobile-menu-toggle
-      class="lg:hidden text-white"
-    >
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
-      </svg>
-    </button>
+    <div class="flex items-center gap-4 lg:hidden">
+      <a
+        href={WEB_APP_URL}
+        data-cta="webapp-header-mobile"
+        class="inline-flex items-center rounded-full bg-ag-gold px-4 py-2 font-body text-sm font-medium text-ag-dark"
+      >
+        Iniciar sesión
+      </a>
+      <button type="button" aria-label="Abrir menú" aria-expanded="false" data-mobile-menu-toggle class="text-white">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
   </div>
 
   <nav
@@ -60,15 +67,24 @@ const navLinks = [
         </a>
       ))
     }
-    <a
-      href={ANDROID_APP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Descargar Aura Gold para Android"
-      class="mt-2 inline-flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark"
-    >
-      Descargar
-    </a>
+    <div class="mt-2 flex flex-col gap-3 border-t border-white/10 pt-5">
+      <a
+        href={WEB_APP_URL}
+        data-cta="webapp-menu"
+        class="inline-flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark"
+      >
+        Iniciar sesión
+      </a>
+      <a
+        href={ANDROID_APP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-cta="android-menu"
+        class="py-1 text-center text-white/60 hover:text-white transition-colors"
+      >
+        Descargar para Android
+      </a>
+    </div>
   </nav>
 </header>
 

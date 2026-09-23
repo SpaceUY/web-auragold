@@ -6,6 +6,7 @@ import Footer from "../../components/layout/Footer.astro";
 import BlogPostingJsonLD from "../../components/seo/BlogPostingJsonLD.astro";
 import FAQJsonLD from "../../components/seo/FAQJsonLD.astro";
 import { authors } from "../../data/authors";
+import { WEB_APP_URL } from "../../data/links";
 import { extractFaqFromMarkdown } from "../../utils/extractFaq";
 
 export async function getStaticPaths() {
@@ -197,10 +198,11 @@ const topics = [
               la solidez del oro.
             </p>
             <a
-              href="/#descargar"
+              href={WEB_APP_URL}
+              data-cta="webapp-blog-sidebar"
               class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark hover:opacity-90"
             >
-              Descargar Aura Gold
+              Empieza ahora
             </a>
           </div>
 

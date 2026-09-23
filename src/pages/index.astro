@@ -4,7 +4,8 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
-import AppDownloadButtons from "../components/ui/AppDownloadButtons.astro";
+import AppCTAButtons from "../components/ui/AppCTAButtons.astro";
+import { WEB_APP_URL } from "../data/links";
 import JsonLD from "../components/seo/JsonLD.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 import { getCollection } from "astro:content";
@@ -246,7 +247,7 @@ const faqItems = [
             Oro físico 24k certificado, guardado en Suiza y segregado a tu nombre. Compra y vende
             desde tu celular, cuando quieras.
           </p>
-          <AppDownloadButtons id="descargar" class="hero-rise" style="animation-delay: 1.2s" />
+          <AppCTAButtons id="descargar" class="hero-rise" style="animation-delay: 1.2s" />
         </div>
 
         <div class="hero-rise hidden w-full sm:block" style="animation-delay: 0.5s">
@@ -525,7 +526,8 @@ const faqItems = [
 
         <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
-            href="#descargar"
+            href={WEB_APP_URL}
+            data-cta="webapp-final-cta"
             class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
           >
             Proteger mi dinero y abrir una bóveda
