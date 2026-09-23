@@ -27,8 +27,9 @@ const navLinks = [
     </nav>
 
     <!--
-      La web app tiene un único flujo de login/registro, así que un solo botón
-      con texto neutral sirve igual a quien ya tiene cuenta y a quien no.
+      El header le habla a quien ya tiene cuenta; los usuarios nuevos entran
+      por "Empieza ahora" del hero. Igual la web app tiene un único flujo de
+      login/registro, así que nadie queda afuera por entrar desde acá.
       Misma pestaña a propósito: es el paso siguiente, no un sitio aparte.
     -->
     <a
@@ -36,7 +37,7 @@ const navLinks = [
       data-cta="webapp-header"
       class="hidden lg:inline-flex items-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark hover:opacity-90 transition-opacity"
     >
-      Ingresar
+      Iniciar sesión
     </a>
 
     <div class="flex items-center gap-4 lg:hidden">
@@ -45,7 +46,7 @@ const navLinks = [
         data-cta="webapp-header-mobile"
         class="inline-flex items-center rounded-full bg-ag-gold px-4 py-2 font-body text-sm font-medium text-ag-dark"
       >
-        Ingresar
+        Iniciar sesión
       </a>
       <button type="button" aria-label="Abrir menú" aria-expanded="false" data-mobile-menu-toggle class="text-white">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -72,7 +73,7 @@ const navLinks = [
         data-cta="webapp-menu"
         class="inline-flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark"
       >
-        Ingresar
+        Iniciar sesión
       </a>
       <a
         href={ANDROID_APP_URL}
