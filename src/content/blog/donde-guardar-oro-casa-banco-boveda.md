@@ -34,7 +34,7 @@ Guardar oro en casa da control total y acceso inmediato, pero traslada todo el r
 
 Sus ventajas son reales: no pagas custodia, tienes el metal a la mano y nadie sabe que lo tienes. El problema aparece con lo que puede salir mal. El robo es el riesgo evidente, pero no el único: incendio, inundación o simplemente no recordar dónde se guardó. Y aquí está el punto que casi nadie verifica hasta que es tarde: la mayoría de los seguros de hogar no cubren el valor total del oro o los metales preciosos salvo que contrates una cobertura específica y declarada. Sin ese respaldo, un robo significa perderlo todo sin compensación.
 
-A esto se suma un riesgo personal: acumular oro en casa puede convertirte a ti y a tu familia en objetivo. **Guardar en casa funciona para cantidades pequeñas y simbólicas; para proteger patrimonio de verdad, se queda corto.** Precisamente subestimar la custodia es uno de los [errores más comunes al invertir en oro](/blog/errores-al-invertir-en-oro).
+A esto se suma un riesgo personal: acumular oro en casa puede convertirte a ti y a tu familia en objetivo. **Guardar en casa funciona para cantidades pequeñas y simbólicas; para proteger patrimonio de verdad, se queda corto.** Precisamente subestimar la custodia es uno de los [errores más comunes al invertir en oro](/blog/errores-al-invertir-en-oro). Si te preguntas [si el oro en casa tributa distinto](/blog/fiscalidad-oro-inversion-mexico) que el custodiado, lo explicamos en nuestra guía fiscal.
 
 ## ¿El banco protege el oro que guardo en su caja de seguridad?
 
@@ -56,7 +56,7 @@ Suiza es la referencia mundial por motivos concretos: neutralidad política, un 
 
 No. El obstáculo histórico de la custodia profesional era el acceso: había que comprar oro por montos altos y gestionar una bóveda en el extranjero. Ese es justo el problema que resuelve un modelo de [oro fraccionado](/blog/que-es-oro-fraccionado-funcionamiento) con custodia institucional.
 
-Aura Gold te permite tener oro físico real bajo custodia segregada fuera de México, con respaldo 1:1 y estándar LBMA, comprando fracciones de gramo y gestionándolo desde el celular. Es decir, la categoría de custodia que antes era solo para grandes patrimonios (asignada, segregada, auditable) sin necesidad de pagar un lingote entero ni volar a Zúrich. Puedes revisar cómo se estructura ese respaldo y la custodia en la [página de transparencia](/transparencia). Si prefieres entender antes las diferencias entre formatos, la guía de [oro físico frente a oro digital](/blog/oro-fisico-vs-oro-digital) lo aterriza; y si vas a empezar, el [paso a paso para invertir en oro](/blog/invertir-en-oro-paso-a-paso) cierra el recorrido.
+Aura Gold te permite tener oro físico real bajo custodia segregada fuera de México, con respaldo 1:1 y estándar LBMA, comprando fracciones de gramo y gestionándolo desde el celular. Es decir, la categoría de custodia que antes era solo para grandes patrimonios (asignada, segregada, auditable) sin necesidad de pagar un lingote entero ni volar a Zúrich. Puedes revisar [cómo se estructura ese respaldo y la custodia](/transparencia) en la página de transparencia. Si prefieres entender antes las diferencias entre formatos, la guía de [oro físico frente a oro digital](/blog/oro-fisico-vs-oro-digital) lo aterriza; y si vas a empezar, el [paso a paso para invertir en oro](/blog/invertir-en-oro-paso-a-paso) cierra el recorrido.
 
 ## Preguntas frecuentes sobre dónde guardar oro
 

@@ -26,7 +26,7 @@ Cada fracción equivale a metal real, certificado y guardado en bóveda a tu nom
 
 ### Oro "papel": ETFs y CFDs sin metal detrás
 
-ETFs, CFDs o cuentas no asignadas siguen el precio del oro sin que poseas nada tangible. Un CFD, además, es un contrato apalancado (no compras oro, apuestas a su precio).
+ETFs, CFDs o cuentas no asignadas siguen el precio del oro sin que poseas nada tangible. Un CFD, además, es un contrato apalancado (no compras oro, apuestas a su precio). Si buscas oro asignado de verdad, comparamos [alternativas como BullionVault](/blog/alternativa-invertir-oro-online) para invertir desde México.
 
 ### Cómo comprobar que un oro digital es oro físico real
 
@@ -35,6 +35,8 @@ Antes de comprar oro digital, comprueba tres cosas (si las tres se cumplen y son
 - **Respaldo 1:1 y asignación:** cada gramo vendido corresponde a metal reservado a tu nombre, no a una promesa contable.
 - **Certificación LBMA:** pureza reconocida internacionalmente, condición para que tenga valor al liquidar.
 - **Segregación legal:** tu oro está separado del patrimonio de la empresa, así que sigue siendo tuyo aunque la plataforma quiebre.
+
+Estos mismos criterios aplican a las [criptomonedas respaldadas por oro](/blog/criptomonedas-respaldadas-por-oro), como PAXG o XAUT.
 
 ## Ventajas y desventajas del oro físico frente al oro digital
 
@@ -50,7 +52,7 @@ Comparemos las tres formas reales de tener oro, sin adornos.
 | Prima / comisiones | Prima alta al comprar y revender | Spread transparente, sin cuota de custodia | Comisión anual o coste de CFD |
 | Riesgo principal | Robo y autenticidad al revender | Que no esté bien respaldado (verificable) | No posees oro; CFD apalancado |
 
-**Oro físico tradicional.** Su ventaja es la posesión directa (no dependes de ninguna plataforma). Su desventaja, para un ahorrador normal, es casi todo lo demás: una prima considerable al comprar y al revender, riesgo de robo, cajas de seguridad cada vez más escasas y una reventa lenta donde tú debes demostrar autenticidad.
+**Oro físico tradicional.** Su ventaja es la posesión directa (no dependes de ninguna plataforma). Su desventaja, para un ahorrador normal, es casi todo lo demás: una prima considerable al comprar y al revender, riesgo de robo, cajas de seguridad cada vez más escasas y una reventa lenta donde tú debes demostrar autenticidad. Si te inclinas por el físico, compara antes si conviene [guardar oro en casa o en bóveda](/blog/donde-guardar-oro-casa-banco-boveda).
 
 **Oro digital respaldado.** Reúne lo mejor de ambos lados: es oro físico real, pero divisible, líquido y sin que lo custodies en casa. Su único punto sensible es verificar el respaldo 1:1 y la asignación (algo que una plataforma seria demuestra con auditorías y certificación).
 

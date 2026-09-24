@@ -30,7 +30,7 @@ El dinero en efectivo (billetes físicos o saldos bancarios sin rendimiento) no 
 
 Imagina que en enero 2020 guardaste $100,000 pesos en efectivo: poder adquisitivo en 2020 $100,000, inflación acumulada 2020-2025 aproximadamente 23%, poder adquisitivo real en 2025 $77,000 pesos. Pérdida invisible: $23,000 pesos.
 
-No gastaste ese dinero, pero perdiste casi una cuarta parte de su valor simplemente por mantenerlo como efectivo sin protección.
+No gastaste ese dinero, pero perdiste casi una cuarta parte de su valor simplemente por mantenerlo como efectivo sin protección. Puedes ver [cuánto ha perdido el peso por inflación](/blog/evolucion-inflacion-mexico) desde 1985 con datos oficiales.
 
 ## Alternativa 1: Cuentas de ahorro e inversión bancarias
 
@@ -40,7 +40,7 @@ No gastaste ese dinero, pero perdiste casi una cuarta parte de su valor simpleme
 
 **CETES (Certificados de la Tesorería):** rendimiento actual 10%-11% anual, respaldados por gobierno mexicano con liquidez semanal. Desventaja: rendimiento en pesos mexicanos (expuesto a devaluación), requiere plataforma especializada (Cetesdirecto).
 
-**Veredicto:** los pagarés y CETES son mejores que efectivo puro, pero solo protegen contra inflación interna, no contra devaluación del peso. Adecuados para objetivos de corto plazo (3-12 meses).
+**Veredicto:** los pagarés y CETES son mejores que efectivo puro, pero solo protegen contra inflación interna, no contra devaluación del peso. Adecuados para objetivos de corto plazo (3-12 meses). Si dudas entre ambos, comparamos los [CETES frente al oro](/blog/oro-vs-cetes) según tu horizonte.
 
 ## Alternativa 2: Inversión en oro físico
 
@@ -69,7 +69,7 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 | Liquidez | Inmediata | Alta pero con comisiones | Alta |
 | Riesgo | Pérdida garantizada por inflación | Pérdida potencial 50%+ | Riesgo técnico/plataforma |
 
-**Veredicto:** las criptomonedas no son una "alternativa al efectivo" para protección conservadora. Son un activo especulativo de alto riesgo. Las stablecoins funcionan mejor como dolarización digital que como refugio contra inflación global.
+**Veredicto:** las criptomonedas no son una "alternativa al efectivo" para protección conservadora. Son un activo especulativo de alto riesgo. Las stablecoins funcionan mejor como dolarización digital que como refugio contra inflación global. Si dudas entre [oro o criptomonedas para ahorrar](/blog/oro-vs-criptomonedas), los comparamos a fondo.
 
 ## Alternativa 4: Inversión en bolsa de valores (acciones, ETFs)
 
@@ -79,7 +79,7 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 
 **Fondos de inversión bancarios:** rendimiento 6%-10% anual, gestión profesional, pero comisiones altas (1-3% anual) y baja transparencia en algunos casos.
 
-**Veredicto:** las acciones son excelentes para crecimiento patrimonial, no para protección defensiva. Combinar acciones (60%) + oro (30%) + efectivo (10%) ofrece balance entre crecimiento y protección.
+**Veredicto:** las acciones son excelentes para crecimiento patrimonial, no para protección defensiva. Combinar acciones (60%) + oro (30%) + efectivo (10%) ofrece balance entre crecimiento y protección. Lo desarrollamos en [oro frente a acciones de la bolsa](/blog/oro-vs-acciones).
 
 ## Alternativa 5: Bienes raíces (propiedades, terrenos)
 
@@ -126,7 +126,7 @@ De todas las alternativas analizadas, el oro fraccionado digital es la única qu
 
 **Comparativa de barreras de entrada:** CETES requiere cuenta Cetesdirecto + $100 pesos mínimo; acciones requieren cuenta de inversión + conocimiento del mercado + $500-$1,000 mínimo; bienes raíces requieren $500,000+ MXN; oro fraccionado requiere solo celular y se compra por fracciones de gramo.
 
-Con Aura Gold puedes empezar a proteger tu dinero hoy mismo: oro físico certificado LBMA (99.99% de pureza) custodiado en bóvedas internacionales, compra por fracciones de gramo sin comisiones de custodia mensuales, liquidez 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold puedes [empezar a proteger tu dinero hoy mismo](/invertir-en-oro-mexico): oro físico certificado LBMA (99.99% de pureza) custodiado en bóvedas internacionales, compra por fracciones de gramo sin comisiones de custodia mensuales, liquidez 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre alternativas al efectivo
 

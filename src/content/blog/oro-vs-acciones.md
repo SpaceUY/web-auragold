@@ -86,6 +86,8 @@ En periodos de crecimiento económico y estabilidad, las acciones suelen superar
 - **Equilibrado:** 50% acciones + 50% oro como cobertura patrimonial.
 - **Crecimiento con protección:** 70% acciones + 30% oro como "seguro" ante crisis.
 
+Si tu parte estable va a renta fija, te ayudamos a decidir entre [oro o CETES](/blog/oro-vs-cetes).
+
 ### Por qué tener oro en tu portafolio reduce el impacto de las caídas bursátiles
 
 Oro y acciones tienden a moverse en direcciones opuestas en momentos de crisis. Cuando los mercados caen, el oro suele mantenerse o subir. Esta correlación negativa hace que combinar ambos activos reduzca la volatilidad total de tu ahorro sin sacrificar necesariamente el crecimiento.
