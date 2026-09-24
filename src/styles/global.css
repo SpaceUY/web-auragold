@@ -86,6 +86,19 @@
     letter-spacing: -0.02em;
   }
 
+  /* Los <select> usan text-white sobre fondo transparente, y las <option>
+     heredan ese blanco. El desplegable nativo (Windows, Android) se abre con
+     fondo claro salvo que se pida el esquema oscuro: sin esto, las opciones
+     quedan blanco sobre blanco. */
+  select {
+    color-scheme: dark;
+  }
+
+  select option {
+    background-color: var(--color-ag-dark);
+    color: #fff;
+  }
+
   /* Profundidad de fondo (como el original: bandas sutiles near-black ↔ navy).
      Se aplica global; el hero tiene su propio gradiente por encima. */
   main {
