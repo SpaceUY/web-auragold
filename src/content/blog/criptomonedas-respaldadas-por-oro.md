@@ -66,7 +66,7 @@ Aura Gold está respaldado por Tether Gold (XAUT). La diferencia no está en el 
 | Wallet | La creas y la proteges tú | Entras con tu cuenta, sin configurar nada |
 | Conocimientos cripto | Necesarios | No hacen falta |
 | Desde pequeñas cantidades | Depende del mínimo del exchange | Por fracciones de gramo |
-| Canje por lingote físico | Directo con el emisor, con entrega solo en Suiza | Disponible, a partir de un monto mínimo |
+| Canje por lingote físico | Sí, con Tether Gold: lingotes completos (11-13 kg), entrega en Suiza | Sí, con Tether Gold y las mismas condiciones |
 | Riesgo de emisor | Sí (Tether / TG Commodities) | El mismo: el respaldo es el mismo token |
 | Estándar LBMA | Sí | Sí |
 
@@ -114,6 +114,6 @@ La London Bullion Market Association es el estándar internacional de referencia
 
 Si llegaste a este artículo buscando protegerte de la inflación y la devaluación del peso, el oro tokenizado tiene lo que necesitas: precio de oro y respaldo físico verificable. Lo que suele frenar a los ahorradores es la parte técnica: wallets, exchanges y pagos en cripto.
 
-Aura Gold resuelve esa parte. Compras oro respaldado por Tether Gold (XAUT) desde la app, en pesos y por fracciones de gramo. Puedes verificar qué barras respaldan tu oro, venderlo cuando quieras o canjearlo por un lingote a partir de un monto mínimo.
+Aura Gold resuelve esa parte. Compras oro respaldado por Tether Gold (XAUT) desde la app, en pesos y por fracciones de gramo. Puedes verificar qué barras respaldan tu oro, venderlo cuando quieras o canjearlo por lingotes físicos a través de Tether Gold.
 
 [Empieza a proteger tu dinero con oro →](/invertir-en-oro-mexico)
