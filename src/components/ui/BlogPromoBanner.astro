@@ -1,0 +1,56 @@
+---
+// Banner de la columna lateral de los posts: reemplaza la tarjeta "Sobre aura"
+// (solo texto) por algo que se entienda de un vistazo como app de oro.
+// El fondo es un degradado con brillo dorado armado en CSS; si más adelante hay
+// una foto o render del diseñador, se pasa por `backgroundImage` y el resto
+// del banner (texto, botón, logo) queda igual.
+import { WEB_APP_URL } from "../../data/links";
+
+interface Props {
+  backgroundImage?: string;
+}
+
+const { backgroundImage } = Astro.props;
+---
+
+<a
+  href={WEB_APP_URL}
+  data-cta="webapp-blog-banner"
+  class="group relative isolate flex min-h-[340px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-ag-dark-2 p-6"
+>
+  {
+    backgroundImage ? (
+      <img src={backgroundImage} alt="" class="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" />
+    ) : (
+      <>
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-ag-navy via-ag-dark-2 to-ag-black" />
+        <div class="absolute -bottom-24 -right-16 -z-10 h-72 w-72 rounded-full bg-ag-gold/30 blur-3xl" />
+        <img
+          src="/images/icons/step-2-vault.png"
+          alt=""
+          width="372"
+          height="331"
+          loading="lazy"
+          class="absolute -bottom-6 -right-10 -z-10 w-56 -rotate-6 transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-105"
+        />
+      </>
+    )
+  }
+
+  <span
+    class="absolute right-4 top-4 rounded-xl border border-ag-gold/40 bg-ag-black/80 px-2.5 py-1 font-display text-sm font-semibold text-white"
+    >aura</span
+  >
+
+  <p class="mt-10 max-w-[15rem] text-lg leading-snug text-white/85">¿Tu ahorro pierde contra la inflación?</p>
+  <p class="mt-1 font-display text-2xl font-semibold text-white">Con oro, no.</p>
+
+  <span
+    class="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark transition-opacity group-hover:opacity-90"
+  >
+    Empieza ahora
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+      <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </span>
+</a>
