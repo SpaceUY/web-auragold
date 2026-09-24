@@ -57,7 +57,7 @@ La recomendación tradicional sugiere destinar entre 5-15% de tu patrimonio líq
 - Ahorro mensual protegido: $500-$2,000 MXN mensuales.
 - Protección patrimonial seria: $10,000+ MXN.
 
-**Cálculo práctico del impacto de la inflación:** si guardas $20,000 pesos sin rendimientos, con una inflación del 4.5% anual pierdes $900 pesos en el año 1, $2,700 acumulados en el año 3, y $4,500 de valor real en el año 5. Esos mismos $20,000 en oro mantendrían su valor intrínseco.
+**Cálculo práctico del impacto de la inflación:** si guardas $20,000 pesos sin rendimientos, con una inflación del 4.5% anual pierdes $900 pesos en el año 1, $2,700 acumulados en el año 3, y $4,500 de valor real en el año 5. Esos mismos $20,000 en oro mantendrían su valor intrínseco. Puedes hacer esta cuenta con tu propio monto en la [calculadora de inflación](/calculadora-inflacion-oro).
 
 ## Paso 4: Elige la forma correcta de invertir en oro
 
@@ -67,7 +67,7 @@ La recomendación tradicional sugiere destinar entre 5-15% de tu patrimonio líq
 
 **Apps de inversión en oro fraccionado:** oro físico real por fracciones de gramo, custodia profesional en bóvedas certificadas, liquidez inmediata, sin comisiones de custodia, seguimiento en tiempo real. Desventaja: dependes de la plataforma tecnológica (resuelto con activo segregado legalmente a tu nombre).
 
-Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fraccionado digital elimina todas las barreras tradicionales manteniendo el beneficio del activo físico real.
+Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fraccionado digital elimina todas las barreras tradicionales manteniendo el beneficio del activo físico real. Si quieres ver opciones concretas, revisa nuestra [comparativa de plataformas para invertir en oro](/blog/alternativa-invertir-oro-online).
 
 ## Paso 5: Verifica la seguridad y transparencia antes de invertir
 
@@ -76,6 +76,8 @@ Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fr
 3. **Activo segregado legalmente:** el oro está a tu nombre, separado de los activos de la empresa. Si la plataforma quiebra, tu oro sigue siendo tuyo.
 4. **Transparencia en precios (spread):** debe mostrarte claramente el precio de compra y venta antes de confirmar.
 5. **Proceso de retiro claro:** debes poder retirar físicamente tu oro en forma de lingotes si acumulas suficiente cantidad.
+
+Por ejemplo, en Aura Gold puedes [revisar el spread, la custodia y las auditorías](/transparencia) en la página de transparencia.
 
 ## Paso 6: Realiza tu primera compra de oro (proceso práctico)
 
@@ -87,15 +89,15 @@ Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fr
 6. **Primera compra simbólica:** empieza con un monto pequeño ($50-$100 MXN) para probar el proceso completo.
 7. **Confirmación y seguimiento:** recibes confirmación inmediata; tu saldo en oro se actualiza en tiempo real.
 
-Consejo práctico: no inviertas todo de golpe. Haz una primera compra pequeña, observá cómo funciona durante 1-2 semanas, vendé una fracción para probar la liquidez, y luego escalá tu inversión con confianza.
+Consejo práctico: no inviertas todo de golpe. Haz una primera compra pequeña, observá cómo funciona durante 1-2 semanas, vendé una fracción para probar la liquidez, y luego escalá tu inversión con confianza. Si quieres ver cómo se hace con Aura Gold, aquí explicamos cómo [comprar oro en México desde la app](/invertir-en-oro-mexico).
 
 ## Paso 7: Monitorea tu inversión sin obsesionarte
 
 **Frecuencia recomendada:** primeras semanas cada 2-3 días; después del primer mes, semanalmente o cada 15 días; largo plazo, recordatorios mensuales.
 
-**Volatilidad normal del oro:** diaria ±0.5-2%, mensual ±3-5%, anual histórica 10-15% - significativamente menor que acciones (25-40% anual) o criptomonedas (80-200% anual).
+**Volatilidad normal del oro:** diaria ±0.5-2%, mensual ±3-5%, anual histórica 10-15% - significativamente menor que acciones (25-40% anual) o criptomonedas (80-200% anual). Si quieres entender [qué mueve el precio del oro](/blog/por-que-sube-baja-precio-oro), lo explicamos factor por factor.
 
-**Cuándo considerar vender:** necesitas liquidez urgente real, alcanzaste tu objetivo de ahorro, o hay rebalanceo de cartera.
+**Cuándo considerar vender:** necesitas liquidez urgente real, alcanzaste tu objetivo de ahorro, o hay rebalanceo de cartera. Antes de vender, revisa [cómo declarar la venta de oro](/blog/fiscalidad-oro-inversion-mexico) si obtienes ganancia.
 
 **Cuándo NO vender:** el precio bajó 3-5% en una semana (fluctuación normal), lees noticias alarmistas, o quieres "ganar rápido" cambiándote a otra inversión.
 

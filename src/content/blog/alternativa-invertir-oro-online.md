@@ -38,7 +38,7 @@ Antes de comparar plataformas, ten claros los cinco criterios que de verdad afec
 
 **Mínimo real de entrada.** No mires solo el "mínimo teórico", mira desde cuánto es eficiente invertir considerando comisiones y custodia. Una plataforma "sin mínimo" que te cobra custodia fija es cara si inviertes poco.
 
-**Tipo de oro: físico real vs papel.** No es lo mismo poseer oro físico asignado a tu nombre que comprar un ETF (exposición al precio, pero sin oro tuyo) o un CFD (un contrato apalancado donde ni siquiera posees el activo). Para protección patrimonial, quieres oro real segregado.
+**Tipo de oro: físico real vs papel.** No es lo mismo poseer oro físico asignado a tu nombre que comprar un ETF (exposición al precio, pero sin oro tuyo) o un CFD (un contrato apalancado donde ni siquiera posees el activo). Para protección patrimonial, quieres oro real segregado. El [oro tokenizado](/blog/criptomonedas-respaldadas-por-oro) es otra vía de oro físico, registrada en blockchain.
 
 **Estructura de comisiones.** Revisa las tres capas: compra/venta (spread o comisión), custodia (idealmente sin cuota mensual fija) y retiro. Una comisión "baja" con custodia cara puede salir más que un spread algo mayor sin cuotas.
 

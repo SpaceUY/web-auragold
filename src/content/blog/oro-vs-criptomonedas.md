@@ -28,7 +28,7 @@ La inflación y la [devaluación del peso](/blog/evolucion-inflacion-mexico) ero
 
 ### Por qué no todas las alternativas al banco protegen igual
 
-No todo activo que "no es banco" protege de la misma manera. Las criptomonedas y el oro son radicalmente distintos en su naturaleza, su comportamiento histórico y el papel que cumplen en una estrategia de ahorro. Confundirlos es uno de los errores más comunes.
+No todo activo que "no es banco" protege de la misma manera. Las criptomonedas y el oro son radicalmente distintos en su naturaleza, su comportamiento histórico y el papel que cumplen en una estrategia de ahorro. Confundirlos es uno de los errores más comunes. Si quieres ver el panorama completo, comparamos [otras alternativas al dinero en el banco](/blog/alternativas-al-dinero-en-efectivo), de los CETES a la bolsa.
 
 ## Qué es el oro como activo y qué no es
 
@@ -99,7 +99,7 @@ En la crisis de 2008, el oro subió mientras los mercados colapsaban. En la vola
 
 ### Por qué confundir oro digital con criptomonedas es un error costoso
 
-Que el oro digital use blockchain no lo convierte en una cripto especulativa. Lo que define a un activo es qué tiene detrás: el token de oro tiene metal físico; Bitcoin, solo la demanda del mercado. Confundirlos lleva a decisiones equivocadas en ambas direcciones.
+Que el oro digital use blockchain no lo convierte en una cripto especulativa. Lo que define a un activo es qué tiene detrás: el token de oro tiene metal físico; Bitcoin, solo la demanda del mercado. Confundirlos lleva a decisiones equivocadas en ambas direcciones. Si quieres entender cómo funcionan, repasamos las [criptomonedas respaldadas por oro como PAXG](/blog/criptomonedas-respaldadas-por-oro) y XAUT.
 
 ### Por qué la rentabilidad pasada de Bitcoin no predice lo que necesitas saber
 
@@ -129,4 +129,4 @@ Sí. De hecho, algunos perfiles destinan una base a oro como protección y una p
 
 ### ¿Cómo sé que el oro de Aura Gold es real y está bien custodiado?
 
-Aura Gold opera con oro físico certificado bajo estándar LBMA, con activos segregados y auditorías periódicas. Puedes consultar en todo momento dónde está tu oro y quién lo custodia.
+Aura Gold opera con oro físico certificado bajo estándar LBMA, con activos segregados y auditorías periódicas. Puedes consultar en todo momento [dónde está tu oro y quién lo custodia](/transparencia).

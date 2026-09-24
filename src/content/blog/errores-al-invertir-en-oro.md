@@ -103,7 +103,7 @@ Alternativa moderna: El oro fraccionado digital elimina estos costos:
 - Sin comisión de venta adicional
 - Liquidez inmediata sin descuentos
 
-Cuándo sí tiene sentido oro físico tradicional: Si vas a acumular cantidades grandes ($500,000+ MXN), quieres posesión física directa, y tienes custodia segura sin costo (bóveda propia).
+Cuándo sí tiene sentido oro físico tradicional: Si vas a acumular cantidades grandes ($500,000+ MXN), quieres posesión física directa, y tienes custodia segura sin costo (bóveda propia). Si vas por esa vía, compara antes los [costos de guardar oro físico](/blog/donde-guardar-oro-casa-banco-boveda) en casa, banco o bóveda.
 
 ### Error 3: No verificar la certificación y pureza del oro
 
@@ -145,7 +145,7 @@ Banderas rojas que indican posible fraude:
 - Presión para comprar "ahora mismo antes de que suba"
 - No acepta verificación por tercero independiente
 
-Con oro fraccionado digital certificado: todo el oro está certificado LBMA automáticamente, la plataforma verifica pureza antes de custodia, no puedes recibir oro falso o de menor pureza, y hay transparencia total en origen y certificación.
+Con oro fraccionado digital certificado: todo el oro está certificado LBMA automáticamente, la plataforma verifica pureza antes de custodia, no puedes recibir oro falso o de menor pureza, y hay transparencia total en origen y certificación. En Aura Gold puedes [verificar la custodia y la pureza](/transparencia) de las barras que respaldan tu oro.
 
 ### Error 4: Invertir todo de golpe en un solo momento
 
@@ -192,7 +192,7 @@ Excepción válida para compra de golpe: Si estás en crisis inmediata (hiperinf
 
 **Por qué es problemático:**
 
-El oro es volátil en el corto plazo pero estable en el largo plazo. Las fluctuaciones de ±5-10% en semanas o meses son completamente normales y no indican problema alguno.
+El oro es volátil en el corto plazo pero estable en el largo plazo. Las fluctuaciones de ±5-10% en semanas o meses son completamente normales y no indican problema alguno. Entender [por qué sube y baja el precio del oro](/blog/por-que-sube-baja-precio-oro) ayuda a no reaccionar con miedo.
 
 **Volatilidad normal del oro vs otros activos:**
 
@@ -302,11 +302,11 @@ Crea plan de liquidación antes de comprar oro:
 
 Ejemplo de plan completo: "Invierto $150,000 en oro fraccionado digital. $100,000 (67%) es protección largo plazo que no tocaré por mínimo 5 años. $50,000 (33%) es reserva flexible. Venderé parcial si: (1) necesito cubrir emergencia mayor a $30,000, (2) encuentro oportunidad de inversión excepcional, (3) oro supera 35% de mi portafolio total. Revisaré plan cada 6 meses."
 
-Ventaja clave: Con plan definido, las decisiones son racionales, no emocionales.
+Ventaja clave: Con plan definido, las decisiones son racionales, no emocionales. Considera también desde el principio los [impuestos al vender oro en México](/blog/fiscalidad-oro-inversion-mexico) para que no te sorprendan.
 
 ## Cómo evitar estos errores: guía práctica paso a paso
 
-Conocer los errores no es suficiente. Necesitas un plan de acción concreto para evitarlos desde el inicio.
+Conocer los errores no es suficiente. Necesitas un plan de acción concreto para evitarlos desde el inicio. Si partes de cero, complementa estos pasos con nuestra [guía para empezar a invertir en oro](/blog/invertir-en-oro-paso-a-paso).
 
 **Paso 1: Define tu objetivo real antes de comprar**
 

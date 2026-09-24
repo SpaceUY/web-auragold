@@ -18,7 +18,7 @@ category: "Mercado"
 - La inflación acumulada erosiona más de lo que parece: lo que costaba $100 en 2015 hoy cuesta alrededor de $163.
 - Entender la inflación es clave para proteger tu patrimonio: conocer su impacto es el primer paso para tomar mejores decisiones financieras a largo plazo.
 
-Si los datos anteriores te generan inquietud, tiene sentido preguntarse qué activos han resistido históricamente esa erosión. En otro artículo explicamos con ejemplos reales y datos de México por qué el oro protege frente a la inflación y qué lo hace diferente de mantener el dinero en una cuenta bancaria.
+Si los datos anteriores te generan inquietud, tiene sentido preguntarse qué activos han resistido históricamente esa erosión. En otro artículo explicamos con ejemplos reales y datos de México [por qué el oro protege frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion) y qué lo hace diferente de mantener el dinero en una cuenta bancaria.
 
 ## ¿Cuánto ha perdido tu dinero? La inflación en México en perspectiva
 
@@ -38,7 +38,7 @@ Pocos países de América Latina han vivido tantos ciclos inflacionarios distint
 
 **Estabilización gradual y apertura comercial (1989–1994):** con la firma del TLCAN y políticas de ajuste estructural, la inflación comenzó a ceder de forma sostenida. De más del 100% se descendió hasta cifras de un solo dígito por primera vez en años. Sin embargo, la calma resultó ser frágil.
 
-**El "error de diciembre" y el rebote inflacionario (1995):** la crisis del peso de finales de 1994 detonó una nueva espiral. En 1995, la inflación repuntó al 35%, borrando buena parte de los avances del quinquenio anterior. Esta crisis dejó una cicatriz duradera en la memoria financiera del país y reforzó la desconfianza hacia las instituciones bancarias.
+**El "error de diciembre" y el rebote inflacionario (1995):** la crisis del peso de finales de 1994 detonó una nueva espiral. En 1995, la inflación repuntó al 35%, borrando buena parte de los avances del quinquenio anterior. Esta crisis dejó una cicatriz duradera en la memoria financiera del país y reforzó la desconfianza hacia las instituciones bancarias. Episodios como este explican por qué muchos mexicanos ven [el oro como refugio en crisis](/blog/por-que-oro-refugio-valor-guia).
 
 **La larga normalización (1996–2008):** a lo largo de más de una década, México sostuvo un proceso de desinflación consistente. Para el año 2000 la inflación era ya de un dígito, y en 2005 se situaba por debajo del 4%. El Banco de México consolidó su autonomía y su mandato de estabilidad de precios, dando al país su período más largo de inflación controlada hasta entonces.
 
@@ -52,9 +52,9 @@ Pocos países de América Latina han vivido tantos ciclos inflacionarios distint
 
 Un punto porcentual de inflación puede sonar abstracto. Para hacerlo concreto: si guardas $100,000 pesos en efectivo o en una cuenta que no genera rendimiento real por encima de la inflación, y ésta promedia el 5% anual, después de 10 años ese dinero tendrá el poder adquisitivo equivalente a unos $61,000 pesos de hoy. No porque haya desaparecido, sino porque el mundo a su alrededor se encareció.
 
-Este fenómeno afecta de manera especialmente pronunciada a quienes guardan en efectivo o en instrumentos con rendimientos por debajo de la inflación, situación que históricamente ha incluido las cuentas de ahorro bancarias tradicionales en México, cuyos rendimientos nominales han sido frecuentemente inferiores al IPC anual.
+Este fenómeno afecta de manera especialmente pronunciada a quienes guardan en efectivo o en instrumentos con rendimientos por debajo de la inflación, situación que históricamente ha incluido las [cuentas de ahorro bancarias tradicionales](/blog/oro-fisico-vs-cuentas-bancarias) en México, cuyos rendimientos nominales han sido frecuentemente inferiores al IPC anual.
 
-Frente a la pérdida acumulada del peso, muchas personas buscan opciones concretas. Si estás en ese punto, hemos reunido las principales alternativas al dinero en efectivo para proteger tus ahorros con una comparativa de rentabilidad y riesgo para el contexto mexicano.
+Frente a la pérdida acumulada del peso, muchas personas buscan opciones concretas. Si estás en ese punto, hemos reunido las principales [alternativas al dinero en efectivo para proteger tus ahorros](/blog/alternativas-al-dinero-en-efectivo) con una comparativa de rentabilidad y riesgo para el contexto mexicano.
 
 **Dato clave:** según los datos del Banco Mundial y el INEGI, la inflación acumulada en México entre enero de 2015 y diciembre de 2024 supera el 63%. Para mantener exactamente el mismo poder adquisitivo, un ahorro de $100,000 pesos de 2015 debería valer hoy aproximadamente $163,000 pesos.
 
@@ -62,7 +62,7 @@ Frente a la pérdida acumulada del peso, muchas personas buscan opciones concret
 
 Históricamente, el oro ha funcionado como un activo cuyo precio en términos reales tiende a mantenerse o apreciarse en períodos de alta inflación y devaluación monetaria. No es una herramienta especulativa en el sentido tradicional: su rol principal es el de reserva de valor.
 
-Para el ahorrador mexicano común, eso lo convierte en una alternativa que merece considerarse dentro de una estrategia de protección patrimonial a largo plazo, especialmente en un entorno donde la erosión del peso ha sido una constante histórica.
+Para el ahorrador mexicano común, eso lo convierte en una alternativa que merece considerarse dentro de una estrategia de protección patrimonial a largo plazo, especialmente en un entorno donde la erosión del peso ha sido una constante histórica. Hoy puedes [invertir en oro desde pesos en México](/invertir-en-oro-mexico) comprando fracciones de gramo desde el celular.
 
 ## Evolución de la inflación período por período
 
@@ -82,7 +82,7 @@ Desde 2004, la inflación en México ha tenido un comportamiento mucho más cont
 
 Conocer la historia inflacionaria de México no es un ejercicio académico: es el punto de partida para entender por qué el ahorro pasivo tiene un costo oculto. Ese costo es silencioso porque no aparece en el saldo de tu cuenta; aparece en el cajero cuando te das cuenta de que $500 pesos alcanzan para comprar menos que hace cinco años.
 
-Existen distintas estrategias para proteger el valor del dinero frente a la inflación: desde instrumentos de deuda indexados al INPC que ofrece el propio gobierno mexicano, hasta activos físicos con valor histórico comprobado. Lo que tienen en común las opciones más sólidas es que generan un rendimiento real por encima de la inflación, o que su valor intrínseco no depende de la política monetaria de ningún banco central.
+Existen distintas estrategias para proteger el valor del dinero frente a la inflación: desde instrumentos de deuda indexados al [INPC](/blog/glosario-oro#inpc) que ofrece el propio gobierno mexicano, hasta activos físicos con valor histórico comprobado. Lo que tienen en común las opciones más sólidas es que generan un rendimiento real por encima de la inflación, o que su valor intrínseco no depende de la política monetaria de ningún banco central. Si dudas entre un instrumento de deuda y el oro, te ayudamos a [comparar oro y CETES](/blog/oro-vs-cetes) según tu horizonte de ahorro.
 
 Si quieres ver cómo ha evolucionado el valor del oro frente al peso mexicano en ese mismo período, consulta la página con el [precio del oro hoy en México](/precio-del-oro-hoy), donde actualizamos la cotización y su evolución histórica en pesos. Si prefieres verlo con tus propios números, la [calculadora de oro](/calculadora-inflacion-oro) compara en segundos, para el año que elijas, cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
 
