@@ -22,24 +22,31 @@ const DEFAULT_AMOUNT = 100000;
 const defaultInflationFactor = cumulativeInflationFactor(DEFAULT_START_YEAR);
 const defaultGoldValue = (DEFAULT_AMOUNT / GOLD_PRICE_MXN_PER_OZ_BY_YEAR[DEFAULT_START_YEAR]) * SNAPSHOT_MXN_PER_OZ;
 
-// Pilas de billetes vs. lingotes. La altura depende solo de cuánto se multiplicó
-// el dinero, nunca del monto: con un monto enorme cambia lo que vale cada ficha,
-// no la cantidad de fichas. Las dos pilas arrancan con la misma base, y la base
-// se achica cuando el oro se multiplicó mucho para que su pila no pase del tope.
-// El script de abajo repite este cálculo en el navegador (define:vars no permite
-// importar funciones).
+// Pilas de billetes vs. lingotes. Muestran dos cosas a la vez:
+// - Cuánto dinero es: la pila de efectivo crece con el monto en escala
+//   logarítmica (dos fichas por cada cero: $1,000 → 2, $100,000 → 6,
+//   $10,000,000 → 10), porque una escala lineal con tope quedaría igual para
+//   casi cualquier monto real.
+// - Cuánto rindió el oro: su pila es la de efectivo multiplicada por el
+//   rendimiento, así la proporción entre las dos es real. Si el oro pasaría de
+//   20 fichas, se achican las dos juntas y la proporción se mantiene.
+// Con monto 0 no hay fichas. El script de abajo repite este cálculo en el
+// navegador (define:vars no permite importar funciones).
 const PILE_MAX_CHIPS = 20;
-const PILE_MIN_BASE = 3;
 const PILE_MAX_BASE = 10;
 
-function pileLayout(inflationFactor: number, goldMultiple: number) {
-  const base = Math.min(PILE_MAX_BASE, Math.max(PILE_MIN_BASE, Math.round(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))));
-  const lostChips = Math.min(base, Math.round(base * (1 - 1 / inflationFactor)) || (inflationFactor > 1 ? 1 : 0));
-  const goldChips = Math.min(PILE_MAX_CHIPS, Math.round(base * goldMultiple));
-  return { base, lostChips, goldChips };
+function pileLayout(amount: number, purchasingPower: number, goldValue: number) {
+  if (amount <= 0) return null;
+  const goldMultiple = goldValue / amount;
+  const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))));
+  const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
+  const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
+  const goldChips = Math.min(PILE_MAX_CHIPS, Math.max(1, Math.round(base * goldMultiple)));
+  return { unit: amount / base, base, lostChips, goldChips };
 }
 
-const defaultPile = pileLayout(defaultInflationFactor, defaultGoldValue / DEFAULT_AMOUNT);
+const defaultPurchasingPower = DEFAULT_AMOUNT / defaultInflationFactor;
+const defaultPile = pileLayout(DEFAULT_AMOUNT, defaultPurchasingPower, defaultGoldValue)!;
 const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 
 const billChipBase =
@@ -247,7 +254,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           </div>
         </div>
         <p class="mt-6 text-center text-xs text-white/40" data-pile-unit>
-          Cada ficha ≈ {fmtPesos(DEFAULT_AMOUNT / defaultPile.base)}
+          Cada ficha ≈ {fmtPesos(defaultPile.unit)}
         </p>
 
         <p class="mt-6 text-xs leading-relaxed text-white/40">
@@ -273,7 +280,6 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         GOLD_PRICE_MXN_PER_OZ_BY_YEAR,
         LAST_CLOSED_YEAR,
         PILE_MAX_CHIPS,
-        PILE_MIN_BASE,
         PILE_MAX_BASE,
         billChipBase,
         billChipKept,
@@ -297,14 +303,14 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         return factor;
       };
 
-      const pileLayout = (inflationFactor, goldMultiple) => {
-        const base = Math.min(
-          PILE_MAX_BASE,
-          Math.max(PILE_MIN_BASE, Math.round(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))),
-        );
-        const lostChips = Math.min(base, Math.round(base * (1 - 1 / inflationFactor)) || (inflationFactor > 1 ? 1 : 0));
-        const goldChips = Math.min(PILE_MAX_CHIPS, Math.round(base * goldMultiple));
-        return { base, lostChips, goldChips };
+      const pileLayout = (amount, purchasingPower, goldValue) => {
+        if (amount <= 0) return null;
+        const goldMultiple = goldValue / amount;
+        const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))));
+        const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
+        const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
+        const goldChips = Math.min(PILE_MAX_CHIPS, Math.max(1, Math.round(base * goldMultiple)));
+        return { unit: amount / base, base, lostChips, goldChips };
       };
 
       const goldChipSvg = `<svg class="${goldChipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="10,0 90,0 100,100 0,100" fill="#f2b334"></polygon><rect x="10" y="0" width="80" height="18" fill="#ffd36e"></rect></svg>`;
@@ -334,8 +340,21 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           const purchasingPower = amount / inflationFactor;
           const goldValue = (amount / GOLD_PRICE_MXN_PER_OZ_BY_YEAR[startYear]) * livePricePerOz;
           const goldMultiple = livePricePerOz / GOLD_PRICE_MXN_PER_OZ_BY_YEAR[startYear];
-          const { base, lostChips, goldChips } = pileLayout(inflationFactor, goldMultiple);
+          const layout = pileLayout(amount, purchasingPower, goldValue);
 
+          if (!layout) {
+            cashPile.innerHTML = "";
+            goldPile.innerHTML = "";
+            cashValue.textContent = fmtPesos(0);
+            goldValueEl.textContent = fmtPesos(0);
+            cashNote.textContent = "";
+            goldNote.textContent = "";
+            unitCaption.textContent = "Escribe cuánto tenías para ver la comparación.";
+            piles.setAttribute("aria-label", "Escribe un monto para ver la comparación entre efectivo y oro.");
+            return;
+          }
+
+          const { unit, base, lostChips, goldChips } = layout;
           cashPile.innerHTML = Array.from({ length: base }, (_, index) => {
             const state = index >= base - lostChips ? billChipLost : billChipKept;
             return staggered(`<span class="${billChipBase} ${state} pile-chip"></span>`, index);
@@ -346,7 +365,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           cashNote.textContent = `hoy compra ${fmtPesos(purchasingPower)}`;
           goldValueEl.textContent = fmtPesos(goldValue);
           goldNote.textContent = `x${goldMultiple.toFixed(1)} tu dinero`;
-          unitCaption.textContent = `Cada ficha ≈ ${fmtPesos(amount / base)}`;
+          unitCaption.textContent = `Cada ficha ≈ ${fmtPesos(unit)}`;
           piles.setAttribute(
             "aria-label",
             `Guardado en efectivo: ${fmtPesos(amount)}, hoy compra ${fmtPesos(purchasingPower)}. Convertido en oro: ${fmtPesos(goldValue)}.`,
