@@ -34,6 +34,8 @@ const defaultGoldValue = (DEFAULT_AMOUNT / GOLD_PRICE_MXN_PER_OZ_BY_YEAR[DEFAULT
 // navegador (define:vars no permite importar funciones).
 const PILE_MAX_CHIPS = 20;
 const PILE_MAX_BASE = 10;
+// Tope del campo de monto: por encima de esto los números ya no entran en mobile.
+const MAX_AMOUNT = 100_000_000;
 
 function pileLayout(amount: number, purchasingPower: number, goldValue: number) {
   if (amount <= 0) return null;
@@ -184,12 +186,17 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
                 type="number"
                 inputmode="decimal"
                 min="0"
+                max={MAX_AMOUNT}
                 step="1000"
                 value={DEFAULT_AMOUNT}
                 data-amount-input
+                aria-describedby="amount-limit"
                 class="w-40 bg-transparent text-lg text-white outline-none"
               />
             </div>
+            <p id="amount-limit" class="mt-1.5 hidden text-xs text-white/50" data-amount-limit>
+              Monto máximo: {fmtPesos(MAX_AMOUNT)}
+            </p>
           </div>
 
           <span class="flex items-center gap-2 rounded-full bg-ag-green/10 px-3 py-1 text-xs text-ag-green">
@@ -206,8 +213,8 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         >
           <div class="flex flex-col">
             <div class="order-1 flex items-baseline justify-between sm:order-2 sm:mt-4 sm:flex-col sm:items-center">
-              <p class="text-xs text-white/50 sm:text-sm">Guardado en efectivo</p>
-              <p class="text-lg font-semibold text-white sm:mt-1 sm:text-2xl" data-pile-cash-value>
+              <p class="shrink-0 whitespace-nowrap text-xs text-white/50 sm:text-sm">Guardado en efectivo</p>
+              <p class="min-w-0 truncate pl-3 text-lg font-semibold text-white sm:mt-1 sm:pl-0 sm:text-2xl" data-pile-cash-value>
                 {fmtPesos(DEFAULT_AMOUNT)}
               </p>
             </div>
@@ -230,8 +237,8 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
           <div class="flex flex-col">
             <div class="order-1 flex items-baseline justify-between sm:order-2 sm:mt-4 sm:flex-col sm:items-center">
-              <p class="text-xs text-white/50 sm:text-sm">Convertido en oro</p>
-              <p class="text-lg font-semibold text-ag-gold sm:mt-1 sm:text-2xl" data-pile-gold-value>
+              <p class="shrink-0 whitespace-nowrap text-xs text-white/50 sm:text-sm">Convertido en oro</p>
+              <p class="min-w-0 truncate pl-3 text-lg font-semibold text-ag-gold sm:mt-1 sm:pl-0 sm:text-2xl" data-pile-gold-value>
                 {fmtPesos(defaultGoldValue)}
               </p>
             </div>
@@ -281,6 +288,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         LAST_CLOSED_YEAR,
         PILE_MAX_CHIPS,
         PILE_MAX_BASE,
+        MAX_AMOUNT,
         billChipBase,
         billChipKept,
         billChipLost,
@@ -319,6 +327,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
       if (calc) {
         const yearSelect = calc.querySelector("[data-year-select]");
         const amountInput = calc.querySelector("[data-amount-input]");
+        const amountLimit = calc.querySelector("[data-amount-limit]");
         const piles = calc.querySelector("[data-piles]");
         const cashPile = calc.querySelector("[data-pile-cash]");
         const goldPile = calc.querySelector("[data-pile-gold]");
@@ -334,7 +343,13 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
         const render = () => {
           const startYear = Number(yearSelect.value);
-          const amount = Math.max(0, parseFloat(amountInput.value) || 0);
+          let amount = Math.max(0, parseFloat(amountInput.value) || 0);
+          const overLimit = amount > MAX_AMOUNT;
+          if (overLimit) {
+            amount = MAX_AMOUNT;
+            amountInput.value = String(MAX_AMOUNT);
+          }
+          amountLimit.classList.toggle("hidden", !overLimit);
 
           const inflationFactor = cumulativeInflationFactor(startYear);
           const purchasingPower = amount / inflationFactor;
