@@ -104,7 +104,6 @@ Goldmoney es la otra gran plataforma internacional de oro físico vaulted, junto
 
 * **No opera en pesos.** Igual que BullionVault, trabaja en dólares, euros, libras, dólares canadienses y otras divisas, pero no en MXN. Cada operación arrastra conversión de divisa.
 * **Mínimo de custodia de $10 USD al mes, sin importar tu saldo.** Son unos $120 USD al año (~$2,400 MXN) solo en custodia. Para que ese coste fijo sea razonable (menos del 1% anual) necesitarías tener bastante más de $12,000 USD en oro. Para un ahorrador pequeño, esto la vuelve la opción menos eficiente de todas.
-* **Retiro físico solo desde 1 kg de oro.** Un umbral altísimo: hablamos de un lingote de cientos de miles de pesos antes de poder pedir entrega física.
 * **Experiencia internacional, no local.** Plataforma y soporte orientados al inglés, sin pagos locales, y con reseñas de atención al cliente desiguales.
 
 En resumen: Goldmoney es legítima y su oro es real, pero su estructura de costes fijos y sus mínimos están pensados para patrimonios medios-altos en dólares, no para empezar en pesos con poco dinero.

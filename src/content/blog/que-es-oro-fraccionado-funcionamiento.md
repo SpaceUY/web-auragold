@@ -32,7 +32,7 @@ El mecanismo es más simple de lo que parece:
 
 **1. Compras una fracción de lingote.** A través de una app o plataforma regulada, adquieres la fracción de oro que quieres, sin tener que pagar la pieza completa. El precio que pagas refleja la cotización internacional del metal en ese momento, más un spread transparente.
 
-**2. El oro físico existe en una bóveda.** No es un token, no es un papel, no es una promesa digital. Es metal real custodiado en instalaciones institucionales certificadas. Tu fracción está asignada como activo segregado — separada del balance de la empresa emisora.
+**2. El oro físico existe en una bóveda.** Detrás de cada fracción hay metal real custodiado en bóvedas certificadas. En plataformas como Aura Gold, esa fracción se registra como un token en blockchain, y eso permite verificar qué barras la respaldan.
 
 **3. Tu propiedad queda registrada.** Eres propietario legal de esa fracción. Si la empresa que gestiona la custodia tuviera problemas, tu oro no forma parte de su patrimonio ni puede usarse para pagar sus deudas.
 
@@ -46,7 +46,7 @@ No todo lo que se llama "oro" funciona igual. Esta tabla resume las diferencias 
 | --- | --- | --- | --- | --- |
 | Tienes oro real | Sí, asignado | Exposición indirecta | Derecho contractual | Sí, en tu poder |
 | Desde pequeñas cantidades | Sí, por fracciones | Sí (precio de 1 acción) | Limitado | No (precio de 1 onza+) |
-| Riesgo de contraparte | Bajo (activo segregado) | Medio (depende del fondo) | Alto (depende del emisor cripto) | Nulo |
+| Riesgo de contraparte | Bajo (activo segregado) | Medio (depende del fondo) | Depende del emisor (verificable on-chain) | Nulo |
 | Custodia propia necesaria | No | No | Sí (wallet) | Sí (caja fuerte, seguro) |
 | Retiro físico posible | Sí | No | Muy limitado | Ya lo tienes |
 | Requiere conocimientos | Ninguno | Básicos de bolsa | Cripto intermedios | Ninguno |
@@ -100,7 +100,7 @@ El precio del oro fluctúa. A corto plazo puede bajar. Sin embargo, históricame
 
 ### ¿Qué diferencia hay entre oro fraccionado y criptomonedas respaldadas por oro?
 
-En el oro fraccionado físico eres propietario directo del metal. En una criptomoneda respaldada por oro (como PAXG o XAUT) tienes un derecho contractual sobre él, pero dependes del emisor cripto para hacerlo efectivo y necesitas una wallet compatible. Son productos distintos para perfiles distintos.
+El oro tokenizado es una forma de oro fraccionado: cambia cómo se registra la fracción, no lo que la respalda. Lo que sí conviene revisar es quién emite el token, quién custodia el oro y si puedes verificar las barras.
 
 ### ¿Desde cuánto se puede invertir en oro fraccionado?
 
@@ -110,6 +110,6 @@ Depende de la plataforma. Las más accesibles permiten empezar desde cantidades 
 
 El oro fraccionado no es un producto nuevo ni experimental — es la versión digital y accesible del mismo activo que los bancos centrales del mundo llevan acumulando históricamente. Los bancos centrales compraron más de 1.000 toneladas de oro en 2024. La diferencia es que hoy cualquier persona puede hacer lo mismo desde su teléfono, en fracciones y sin conocimientos financieros.
 
-Aura Gold es una app que te permite comprar oro físico fraccionado certificado LBMA, custodiado en bóvedas institucionales, con activo segregado a tu nombre y opción de retiro físico en lingotes. Sin comisiones de custodia, con spread transparente y liquidez inmediata.
+Aura Gold es una app que te permite comprar oro físico fraccionado certificado LBMA, custodiado en bóvedas institucionales, verificable en blockchain y con opción de canje por lingotes. Sin comisiones de custodia, con spread transparente y liquidez inmediata.
 
 [Empieza a proteger tu dinero con oro físico real →](/invertir-en-oro-mexico)

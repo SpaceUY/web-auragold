@@ -44,7 +44,7 @@ El oro no paga intereses ni dividendos. Su función principal es preservar el va
 
 ### Cómo distinguir el oro físico real del oro "de papel"
 
-El oro custodiado digitalmente (como el que ofrece Aura Gold) es oro físico real asignado a tu nombre en bóvedas certificadas bajo estándares LBMA. No es un contrato, no es un token ni un derivado. Es el metal, respaldado y auditable.
+El oro custodiado digitalmente (como el que ofrece Aura Gold) está respaldado por oro físico real en bóvedas certificadas bajo estándares LBMA. Se registra como un token en blockchain, pero su valor no sale de la especulación: sale del metal que lo respalda.
 
 ## Qué son las criptomonedas y qué papel real cumplen en las finanzas personales
 
@@ -99,7 +99,7 @@ En la crisis de 2008, el oro subió mientras los mercados colapsaban. En la vola
 
 ### Por qué confundir oro digital con criptomonedas es un error costoso
 
-El oro custodiado digitalmente no es oro digital en el sentido cripto. Son categorías radicalmente distintas: uno es un metal físico real con infraestructura de custodia regulada; el otro es un activo especulativo sin respaldo material. Confundirlos lleva a decisiones equivocadas en ambas direcciones.
+Que el oro digital use blockchain no lo convierte en una cripto especulativa. Lo que define a un activo es qué tiene detrás: el token de oro tiene metal físico; Bitcoin, solo la demanda del mercado. Confundirlos lleva a decisiones equivocadas en ambas direcciones.
 
 ### Por qué la rentabilidad pasada de Bitcoin no predice lo que necesitas saber
 
@@ -113,7 +113,7 @@ Si tu prioridad es proteger, no especular, con Aura Gold puedes comprar fraccion
 
 ### ¿El oro digital es lo mismo que una criptomoneda?
 
-No. El oro custodiado digitalmente es oro físico real almacenado en bóvedas certificadas. Una criptomoneda es un activo digital sin respaldo físico cuyo valor depende exclusivamente del mercado. Son instrumentos completamente distintos.
+No en lo que importa. Los dos son activos digitales en blockchain, pero Bitcoin vale lo que el mercado quiera pagar, mientras que el oro digital está respaldado 1:1 por oro en bóveda y su precio sigue al del oro.
 
 ### ¿Las criptomonedas protegen contra la inflación en México?
 

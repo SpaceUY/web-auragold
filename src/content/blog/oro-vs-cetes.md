@@ -46,7 +46,7 @@ El oro no paga intereses. Su función es otra: preservar valor a largo plazo y a
 
 ### Cómo se diferencia el oro físico custodiado del oro digital especulativo
 
-El oro custodiado digitalmente, como el que ofrece Aura Gold, es oro físico real almacenado en bóvedas certificadas. No es una criptomoneda ni un derivado financiero. La diferencia es importante: tienes respaldo físico real, no solo un contrato.
+El oro digital, como el que ofrece Aura Gold, está respaldado por oro físico real en bóvedas certificadas. Usa blockchain para registrarlo, pero no es un derivado: detrás de cada unidad hay metal, no una apuesta sobre el precio.
 
 ## Comparar oro y CETES según tu situación financiera real
 

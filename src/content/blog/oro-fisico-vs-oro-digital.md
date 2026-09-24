@@ -102,7 +102,7 @@ El físico tradicional carga una prima alta al comprar y al revender. El digital
 
 ### ¿Puedo convertir oro digital en oro físico de verdad?
 
-En plataformas con respaldo físico, sí: puedes pedir el retiro del metal cuando acumulas cantidad suficiente, porque el oro ya existe en bóveda a tu nombre.
+En plataformas con respaldo físico, sí. En Aura Gold puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold, el emisor del token. El canje es por lingotes completos de estándar LBMA (de 11 a 13 kg), con entrega en Suiza.
 
 ### ¿Qué conviene para empezar a invertir en oro con poco dinero?
 
