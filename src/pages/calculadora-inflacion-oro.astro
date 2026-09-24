@@ -51,11 +51,25 @@ const defaultPurchasingPower = DEFAULT_AMOUNT / defaultInflationFactor;
 const defaultPile = pileLayout(DEFAULT_AMOUNT, defaultPurchasingPower, defaultGoldValue)!;
 const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 
-const billChipBase =
-  "block min-w-0 max-w-3 flex-1 basis-0 h-6 rounded-[2px] border sm:h-2.5 sm:w-24 sm:max-w-none sm:flex-none";
+// Billetes: fajo parejo. Lingotes: pirámide, como se apilan en una bóveda.
+const billChipBase = "block h-2 w-20 rounded-[2px] border sm:h-3 sm:w-28";
 const billChipKept = "border-[#5fae81] bg-[#3f8a5f]";
 const billChipLost = "border-dashed border-ag-red bg-transparent";
-const goldChipClass = "block min-w-0 max-w-3 flex-1 basis-0 h-5 sm:h-2.5 sm:w-[84px] sm:max-w-none sm:flex-none";
+const goldChipClass = "block h-3.5 w-[18px] sm:h-5 sm:w-9";
+
+// Filas de la pirámide, de abajo hacia arriba: la base es la fila más chica
+// que alcanza para todas las fichas y cada fila de arriba tiene una menos.
+function pyramidRows(chips: number) {
+  let width = 1;
+  while ((width * (width + 1)) / 2 < chips) width++;
+  const rows: number[] = [];
+  let remaining = chips;
+  for (let size = width; size > 0 && remaining > 0; size--) {
+    rows.push(Math.min(size, remaining));
+    remaining -= size;
+  }
+  return rows;
+}
 
 const PAGE_URL = "https://auragold.io/calculadora-inflacion-oro";
 
@@ -199,29 +213,17 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             </p>
           </div>
 
-          <span class="flex items-center gap-2 rounded-full bg-ag-green/10 px-3 py-1 text-xs text-ag-green">
-            <span class="h-2 w-2 rounded-full bg-ag-green"></span> Precio de hoy en vivo · años anteriores históricos
-          </span>
         </div>
 
-        <!-- Pilas: filas en mobile, pilas verticales desde 810px (sm) -->
+        <!-- Pilas centradas lado a lado: fajo de billetes vs. pirámide de lingotes -->
         <div
-          class="mt-8 grid gap-6 sm:mt-10 sm:grid-cols-2 sm:gap-10"
+          class="mt-8 grid grid-cols-2 gap-4 sm:mt-10 sm:gap-10"
           data-piles
           role="img"
           aria-label={`Guardado en efectivo: ${fmtPesos(DEFAULT_AMOUNT)}, hoy compra ${fmtPesos(DEFAULT_AMOUNT / defaultInflationFactor)}. Convertido en oro: ${fmtPesos(defaultGoldValue)}.`}
         >
-          <div class="flex flex-col">
-            <div class="order-1 flex items-baseline justify-between sm:order-2 sm:mt-4 sm:flex-col sm:items-center">
-              <p class="shrink-0 whitespace-nowrap text-xs text-white/50 sm:text-sm">Guardado en efectivo</p>
-              <p class="min-w-0 truncate pl-3 text-lg font-semibold text-white sm:mt-1 sm:pl-0 sm:text-2xl" data-pile-cash-value>
-                {fmtPesos(DEFAULT_AMOUNT)}
-              </p>
-            </div>
-            <div
-              class="order-2 mt-2 flex h-7 items-end gap-0.5 sm:order-1 sm:mt-0 sm:h-[280px] sm:flex-col-reverse sm:items-center sm:justify-start sm:gap-1"
-              data-pile-cash
-            >
+          <div class="flex min-w-0 flex-col items-center text-center">
+            <div class="flex h-[120px] flex-col-reverse items-center gap-[3px] sm:h-[160px]" data-pile-cash>
               {
                 Array.from({ length: defaultPile.base }, (_, index) => (
                   <span
@@ -230,32 +232,35 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
                 ))
               }
             </div>
-            <p class="order-3 mt-1.5 text-xs text-ag-red sm:text-center sm:text-sm" data-pile-cash-note>
+            <p class="mt-4 text-xs text-white/50 sm:text-sm">Guardado en efectivo</p>
+            <p class="w-full truncate text-base font-semibold text-white sm:text-2xl" data-pile-cash-value>
+              {fmtPesos(DEFAULT_AMOUNT)}
+            </p>
+            <p class="mt-0.5 text-xs text-ag-red sm:text-sm" data-pile-cash-note>
               hoy compra {fmtPesos(DEFAULT_AMOUNT / defaultInflationFactor)}
             </p>
           </div>
 
-          <div class="flex flex-col">
-            <div class="order-1 flex items-baseline justify-between sm:order-2 sm:mt-4 sm:flex-col sm:items-center">
-              <p class="shrink-0 whitespace-nowrap text-xs text-white/50 sm:text-sm">Convertido en oro</p>
-              <p class="min-w-0 truncate pl-3 text-lg font-semibold text-ag-gold sm:mt-1 sm:pl-0 sm:text-2xl" data-pile-gold-value>
-                {fmtPesos(defaultGoldValue)}
-              </p>
-            </div>
-            <div
-              class="order-2 mt-2 flex h-7 items-end gap-0.5 sm:order-1 sm:mt-0 sm:h-[280px] sm:flex-col-reverse sm:items-center sm:justify-start sm:gap-1"
-              data-pile-gold
-            >
+          <div class="flex min-w-0 flex-col items-center text-center">
+            <div class="flex h-[120px] flex-col-reverse items-center gap-0.5 sm:h-[160px] sm:gap-[3px]" data-pile-gold>
               {
-                Array.from({ length: defaultPile.goldChips }, () => (
-                  <svg class={goldChipClass} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                    <polygon points="10,0 90,0 100,100 0,100" fill="#f2b334" />
-                    <rect x="10" y="0" width="80" height="18" fill="#ffd36e" />
-                  </svg>
+                pyramidRows(defaultPile.goldChips).map((rowSize) => (
+                  <div class="flex gap-0.5 sm:gap-[3px]">
+                    {Array.from({ length: rowSize }, () => (
+                      <svg class={goldChipClass} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <polygon points="12,0 88,0 100,100 0,100" fill="#f2b334" />
+                        <polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e" />
+                      </svg>
+                    ))}
+                  </div>
                 ))
               }
             </div>
-            <p class="order-3 mt-1.5 text-xs text-ag-green sm:text-center sm:text-sm" data-pile-gold-note>
+            <p class="mt-4 text-xs text-white/50 sm:text-sm">Convertido en oro</p>
+            <p class="w-full truncate text-base font-semibold text-ag-gold sm:text-2xl" data-pile-gold-value>
+              {fmtPesos(defaultGoldValue)}
+            </p>
+            <p class="mt-0.5 text-xs text-ag-green sm:text-sm" data-pile-gold-note>
               x{(defaultGoldValue / DEFAULT_AMOUNT).toFixed(1)} tu dinero
             </p>
           </div>
@@ -321,7 +326,19 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         return { unit: amount / base, base, lostChips, goldChips };
       };
 
-      const goldChipSvg = `<svg class="${goldChipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="10,0 90,0 100,100 0,100" fill="#f2b334"></polygon><rect x="10" y="0" width="80" height="18" fill="#ffd36e"></rect></svg>`;
+      const goldChipSvg = `<svg class="${goldChipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="12,0 88,0 100,100 0,100" fill="#f2b334"></polygon><polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e"></polygon></svg>`;
+
+      const pyramidRows = (chips) => {
+        let width = 1;
+        while ((width * (width + 1)) / 2 < chips) width++;
+        const rows = [];
+        let remaining = chips;
+        for (let size = width; size > 0 && remaining > 0; size--) {
+          rows.push(Math.min(size, remaining));
+          remaining -= size;
+        }
+        return rows;
+      };
 
       const calc = document.querySelector("[data-inflation-calc]");
       if (calc) {
@@ -374,7 +391,13 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             const state = index >= base - lostChips ? billChipLost : billChipKept;
             return staggered(`<span class="${billChipBase} ${state} pile-chip"></span>`, index);
           }).join("");
-          goldPile.innerHTML = Array.from({ length: goldChips }, (_, index) => staggered(goldChipSvg, index)).join("");
+          let chipIndex = 0;
+          goldPile.innerHTML = pyramidRows(goldChips)
+            .map((rowSize) => {
+              const row = Array.from({ length: rowSize }, () => staggered(goldChipSvg, chipIndex++)).join("");
+              return `<div class="flex gap-0.5 sm:gap-[3px]">${row}</div>`;
+            })
+            .join("");
 
           cashValue.textContent = fmtPesos(amount);
           cashNote.textContent = `hoy compra ${fmtPesos(purchasingPower)}`;
