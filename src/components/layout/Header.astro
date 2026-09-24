@@ -1,14 +1,18 @@
 ---
-import { ANDROID_APP_URL, WEB_APP_URL } from "../../data/links";
+import AppDownloadLink from "../ui/AppDownloadLink.astro";
+import { WEB_APP_URL } from "../../data/links";
 
 const navLinks = [
   { label: "Cómo funciona", href: "/#como-funciona" },
-  { label: "Beneficios", href: "/#beneficios" },
-  { label: "Por qué Aura Gold", href: "/#por-que-aura" },
+  { label: "Invertir en oro", href: "/invertir-en-oro-mexico" },
   { label: "Precio del oro", href: "/precio-del-oro-hoy" },
+  { label: "Seguridad", href: "/transparencia" },
+];
+
+const learnLink = { label: "Aprende", href: "/blog" };
+const learnSubLinks = [
   { label: "Calculadora de inflación", href: "/calculadora-inflacion-oro" },
-  { label: "Oro en México", href: "/invertir-en-oro-mexico" },
-  { label: "Aprende", href: "/blog" },
+  { label: "Glosario", href: "/blog/glosario-oro" },
 ];
 ---
 
@@ -24,33 +28,70 @@ const navLinks = [
           </a>
         ))
       }
+
+      <!-- Abre con hover/foco en escritorio; el botón lo abre también con toque o teclado -->
+      <div class="group relative" data-learn-menu>
+        <div class="flex items-center gap-1">
+          <a href={learnLink.href} class="hover:text-white transition-colors">{learnLink.label}</a>
+          <button
+            type="button"
+            aria-label="Ver más de Aprende"
+            aria-expanded="false"
+            aria-controls="learn-submenu"
+            data-learn-toggle
+            class="rounded p-0.5 hover:text-white transition-colors"
+          >
+            <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.25 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- pt-3 hace de puente entre el link y el panel para que el hover no se corte -->
+        <div
+          id="learn-submenu"
+          data-learn-panel
+          class="invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 data-[open]:visible data-[open]:opacity-100"
+        >
+          <div class="w-56 rounded-2xl border border-white/10 bg-ag-dark p-2 shadow-2xl">
+            <a href={learnLink.href} class="block rounded-xl px-4 py-2.5 hover:bg-white/5 hover:text-white">Blog</a>
+            {
+              learnSubLinks.map((link) => (
+                <a href={link.href} class="block rounded-xl px-4 py-2.5 hover:bg-white/5 hover:text-white">
+                  {link.label}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!--
-      El header le habla a quien ya tiene cuenta; los usuarios nuevos entran
-      por "Empieza ahora" del hero. Igual la web app tiene un único flujo de
-      login/registro, así que nadie queda afuera por entrar desde acá.
-      Misma pestaña a propósito: es el paso siguiente, no un sitio aparte.
+      "Iniciar sesión" va a la web app, que tiene un único flujo de login/registro.
+      "Descargar app" es la conversión principal y resuelve el destino según el
+      dispositivo (ver AppDownloadLink).
     -->
-    <a
-      href={WEB_APP_URL}
-      data-cta="webapp-header"
-      class="hidden lg:inline-flex items-center rounded-full bg-ag-gold px-5 py-2.5 font-body text-sm font-medium text-ag-dark hover:opacity-90 transition-opacity"
-    >
-      Iniciar sesión
-    </a>
-
-    <div class="flex items-center gap-4 lg:hidden">
-      <a
-        href={WEB_APP_URL}
-        data-cta="webapp-header-mobile"
-        class="inline-flex items-center rounded-full bg-ag-gold px-4 py-2 font-body text-sm font-medium text-ag-dark"
-      >
+    <div class="hidden lg:flex items-center gap-5 font-body text-sm">
+      <a href={WEB_APP_URL} data-cta="webapp-header" class="text-white/80 hover:text-white transition-colors">
         Iniciar sesión
       </a>
+      <AppDownloadLink
+        medium="header"
+        class="inline-flex items-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark hover:opacity-90 transition-opacity"
+      />
+    </div>
+
+    <div class="flex items-center gap-4 lg:hidden">
+      <AppDownloadLink
+        medium="header-mobile"
+        class="inline-flex items-center rounded-full bg-ag-gold px-4 py-2 font-body text-sm font-medium text-ag-dark"
+      />
       <button type="button" aria-label="Abrir menú" aria-expanded="false" data-mobile-menu-toggle class="text-white">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"></path>
         </svg>
       </button>
     </div>
@@ -67,22 +108,28 @@ const navLinks = [
         </a>
       ))
     }
+    <a href={learnLink.href} class="py-1 hover:text-white transition-colors">{learnLink.label}</a>
+    <div class="-mt-2 flex flex-col gap-3 border-l border-white/10 pl-4">
+      {
+        learnSubLinks.map((link) => (
+          <a href={link.href} class="py-1 text-white/60 hover:text-white transition-colors">
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
     <div class="mt-2 flex flex-col gap-3 border-t border-white/10 pt-5">
+      <AppDownloadLink
+        medium="menu"
+        popoverAlign="left"
+        class="flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark"
+      />
       <a
         href={WEB_APP_URL}
         data-cta="webapp-menu"
-        class="inline-flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark"
+        class="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 font-medium text-white"
       >
         Iniciar sesión
-      </a>
-      <a
-        href={ANDROID_APP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        data-cta="android-menu"
-        class="py-1 text-center text-white/60 hover:text-white transition-colors"
-      >
-        Descargar para Android
       </a>
     </div>
   </nav>
@@ -96,5 +143,20 @@ const navLinks = [
     const isOpen = menu?.classList.toggle("flex");
     menu?.classList.toggle("hidden");
     toggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+  });
+
+  const learnMenu = document.querySelector("[data-learn-menu]");
+  const learnToggle = learnMenu?.querySelector("[data-learn-toggle]");
+  const learnPanel = learnMenu?.querySelector("[data-learn-panel]");
+
+  learnToggle?.addEventListener("click", () => {
+    const isOpen = learnPanel?.toggleAttribute("data-open");
+    learnToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (learnMenu?.contains(event.target as Node)) return;
+    learnPanel?.removeAttribute("data-open");
+    learnToggle?.setAttribute("aria-expanded", "false");
   });
 </script>
