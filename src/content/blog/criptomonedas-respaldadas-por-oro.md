@@ -1,9 +1,10 @@
 ---
-title: "Criptomonedas respaldadas por oro: qué son, cómo funcionan y por qué no son lo mismo que oro físico"
+title: "Criptomonedas respaldadas por oro: qué son, cómo funcionan y qué revisar antes de comprar"
 seoTitle: "Criptomonedas respaldadas por oro: PAXG, XAUT y alternativas en México"
-seoDescription: "Qué son las criptomonedas respaldadas por oro, cómo funcionan PAXG y XAUT, sus riesgos reales y cómo invertir en oro físico real desde México sin necesitar cripto."
-description: "Explicamos qué son las criptomonedas respaldadas por oro (PAXG, XAUT), cómo funcionan, sus riesgos de contraparte y técnicos, y en qué se diferencian del oro físico fraccionado."
+seoDescription: "Qué son las criptomonedas respaldadas por oro, cómo funcionan PAXG y XAUT, sus riesgos reales y cómo tener oro tokenizado desde México sin wallet ni exchange."
+description: "Explicamos qué son las criptomonedas respaldadas por oro (PAXG, XAUT), cómo funcionan, sus riesgos de contraparte y técnicos, y cómo acceder a ellas sin conocimientos cripto."
 pubDate: 2026-08-26
+updatedDate: 2026-09-24
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/criptomonedas-respaldadas-por-oro.png"
 heroImageAlt: "Una persona consulta un gráfico de precios en su celular frente a estanterías con decenas de lingotes de oro apilados."
@@ -14,7 +15,7 @@ category: "Educación"
 
 Una criptomoneda respaldada por oro es un token digital cuyo valor está vinculado 1:1 a una cantidad de oro físico almacenado en bóvedas por el emisor. Son activos on-chain asegurados por reservas de oro físicas mantenidas por sus emisores o custodios externos autorizados. No son criptomonedas especulativas como Bitcoin: su precio sigue al del oro, no a la demanda del mercado cripto.
 
-Si buscas [proteger tu dinero de la inflación con oro](/blog/por-que-el-oro-protege-la-inflacion), es importante entender qué estás comprando exactamente — porque un token de oro y el oro físico no son lo mismo. En Aura Gold puedes invertir en oro físico real por fracciones de gramo, sin necesitar saber nada de criptomonedas ni wallets.
+Si buscas [proteger tu dinero de la inflación con oro](/blog/por-que-el-oro-protege-la-inflacion), es importante entender qué estás comprando exactamente y qué riesgos asumes. Aura Gold, por ejemplo, está respaldado por Tether Gold (XAUT): te da ese mismo oro tokenizado, pero en pesos, por fracciones de gramo y sin tener que saber de wallets ni exchanges.
 
 Los dos proyectos dominantes en oro tokenizado son Tether Gold (XAUT) y Pax Gold (PAXG). Juntos concentran aproximadamente tres cuartas partes de la capitalización total de este nicho.
 
@@ -24,7 +25,7 @@ Ambos tokens operan bajo el mismo principio: cada unidad representa una onza tro
 
 Técnicamente, PAXG es un token ERC-20 en la blockchain de Ethereum. Para tenerlo necesitas una wallet compatible y familiaridad básica con el ecosistema cripto. XAUT opera también en la red TRON, orientado a mayor liquidez.
 
-La promesa es atractiva: el oro on-chain se negocia 24/7, se liquida de forma instantánea y se mueve globalmente sin bancos ni fricción geográfica. Pero esa ventaja operativa tiene un precio en forma de riesgos nuevos que el oro físico no tiene.
+La promesa es atractiva: el oro on-chain se negocia 24/7, se liquida de forma instantánea y se mueve globalmente sin bancos ni fricción geográfica. Pero esa ventaja operativa tiene un precio: riesgos que un lingote guardado en tu casa no tiene. Conviene conocerlos, compres el token por tu cuenta o a través de una app.
 
 ## ¿Qué riesgos reales tienen las criptomonedas respaldadas por oro?
 
@@ -42,7 +43,7 @@ No siempre. PAXG se negoció con una prima respecto al spot durante la escasez d
 
 ### ¿Hay riesgos técnicos?
 
-XAUT implica riesgo de contraparte y riesgos blockchain como vulnerabilidades e incidentes. Además, los contratos de PAXG y XAUT incluyen funciones administrativas que permiten al emisor congelar tokens en monederos específicos. Con oro físico asignado a tu nombre, eso es imposible.
+XAUT implica riesgo de contraparte y riesgos blockchain como vulnerabilidades e incidentes. Además, los contratos de PAXG y XAUT incluyen funciones administrativas que permiten al emisor congelar tokens en monederos específicos, normalmente por requerimientos legales.
 
 Y si guardas tus tokens en un exchange centralizado: "No son tus claves, no es tu oro." Almacenar tokens en un exchange expone a los usuarios a riesgos de insolvencia de la plataforma.
 
@@ -52,22 +53,22 @@ El sector creció con fuerza impulsado por el contexto macro. Los precios del or
 
 Según CoinGecko, la capitalización de mercado de los gold-backed tokens supera los 3.700 millones de dólares, con XAUT y PAXG dominando más del 85% del volumen global.
 
-Aun así, la adopción sigue siendo reducida entre inversores no cripto nativos, y el mercado de oro tokenizado sigue siendo pequeño comparado con las stablecoins en dólares. El perfil típico de usuario es un trader cripto que quiere exposición al oro — no un ahorrador que busca proteger su patrimonio.
+Aun así, la adopción sigue siendo reducida entre inversores no cripto nativos, y el mercado de oro tokenizado sigue siendo pequeño comparado con las stablecoins en dólares. El perfil típico de usuario es un trader cripto que quiere exposición al oro. Para el ahorrador que busca proteger su patrimonio, la barrera no es el oro: es la parte técnica.
 
-## Oro físico fraccionado vs. criptomonedas respaldadas por oro
+## Comprar oro tokenizado por tu cuenta vs. con Aura Gold
 
-Esta tabla resume las diferencias que más importan para un ahorrador en México:
+Aura Gold está respaldado por Tether Gold (XAUT). La diferencia no está en el oro, sino en cómo llegas a él:
 
-| Factor | Cripto respaldada por oro (PAXG/XAUT) | Oro físico fraccionado (Aura Gold) |
+| Factor | XAUT por tu cuenta | Con Aura Gold |
 | --- | --- | --- |
-| Qué tienes realmente | Derecho contractual sobre oro | Oro físico asignado a tu nombre |
-| Riesgo de contraparte | Alto (depende del emisor) | Activo segregado e independiente |
-| Requiere conocimientos cripto | Sí | No |
-| Puede ser congelado | Sí (función del emisor) | No |
-| Desde pequeñas cantidades | Limitado por precio de 1 onza | Por fracciones de gramo |
-| Regulación en México | Sin marco claro | Marco fintech aplicable |
-| Retiro físico en lingotes | Complicado, mínimos altos | Disponible |
-| Estándar LBMA | Sí (PAXG y XAUT) | Sí |
+| Qué tienes | Tokens XAUT respaldados por oro LBMA | Lo mismo: oro respaldado por XAUT |
+| Cómo compras | En un exchange cripto, con cripto o dólares | Desde la app, en pesos |
+| Wallet | La creas y la proteges tú | Entras con tu cuenta, sin configurar nada |
+| Conocimientos cripto | Necesarios | No hacen falta |
+| Desde pequeñas cantidades | Depende del mínimo del exchange | Por fracciones de gramo |
+| Canje por lingote físico | Directo con el emisor, con entrega solo en Suiza | Disponible, a partir de un monto mínimo |
+| Riesgo de emisor | Sí (Tether / TG Commodities) | El mismo: el respaldo es el mismo token |
+| Estándar LBMA | Sí | Sí |
 
 Puedes ver también la comparativa directa en [oro físico vs. cuentas bancarias](/blog/oro-fisico-vs-cuentas-bancarias) para entender por qué ni el banco ni las criptos son la mejor opción para proteger tu dinero de la devaluación del peso.
 
@@ -91,7 +92,7 @@ Puedes consultar el [precio del oro hoy](/precio-del-oro-hoy) en tiempo real par
 
 ### ¿Las criptomonedas respaldadas por oro son lo mismo que el oro físico?
 
-No. Son tokens digitales que siguen el precio del oro, pero lo que tienes es un derecho contractual sobre el metal, no el metal en sí. Si el emisor quiebra o congela tu cuenta, pierdes acceso. El oro físico asignado a tu nombre no tiene ese riesgo.
+No exactamente. Tienes un token que representa una cantidad concreta de oro físico en bóveda, y su precio sigue al del oro. La diferencia con tener el lingote en tu casa es que dependes del emisor para custodiarlo y canjearlo; a cambio, no tienes que guardarlo ni asegurarlo, y puedes comprar y vender fracciones al instante.
 
 ### ¿Son seguras PAXG y XAUT?
 
@@ -99,20 +100,20 @@ Son los productos más auditados del sector, pero no están exentos de riesgo. L
 
 ### ¿Puedo comprar oro digital sin saber de criptomonedas?
 
-Con PAXG o XAUT, necesitas wallet y exchange. Existen alternativas como Aura Gold que permiten invertir en oro físico real desde el móvil sin ningún conocimiento de blockchain.
+Sí. Con PAXG o XAUT por tu cuenta necesitas wallet y exchange. Con Aura Gold compras oro respaldado por XAUT desde la app, en pesos, sin ningún conocimiento de blockchain.
 
 ### ¿Qué diferencia hay entre oro tokenizado y oro fraccionado?
 
-El oro tokenizado existe en blockchain — tienes un token. El oro fraccionado es una parte de un lingote físico real custodiado en bóveda, asignado a tu nombre. En el segundo caso, el activo es el metal, no un contrato digital.
+El oro tokenizado es una forma de oro fraccionado: cada token representa una fracción de un lingote real en bóveda, registrada en blockchain. Lo que cambia es el registro, no el respaldo. Lo que sí conviene revisar es quién emite el token, quién custodia el oro y si puedes verificar las barras.
 
 ### ¿Qué es LBMA y por qué importa?
 
 La London Bullion Market Association es el estándar internacional de referencia para la calidad del oro. Solo el oro certificado LBMA garantiza pureza verificable y trazabilidad reconocida globalmente. Cualquier producto de inversión en oro que no lo mencione debería hacerte sospechar.
 
-## La alternativa más simple para proteger tu dinero con oro en México
+## La forma más simple de tener oro tokenizado en México
 
-Si llegaste a este artículo buscando una forma de protegerte de la inflación y la devaluación del peso, las criptomonedas respaldadas por oro resuelven parte del problema — pero añaden complejidad y riesgos que la mayoría de ahorradores no necesitan asumir.
+Si llegaste a este artículo buscando protegerte de la inflación y la devaluación del peso, el oro tokenizado tiene lo que necesitas: precio de oro y respaldo físico verificable. Lo que suele frenar a los ahorradores es la parte técnica: wallets, exchanges y pagos en cripto.
 
-Aura Gold es una app que te permite comprar oro físico real certificado LBMA, custodiado en bóvedas institucionales, por fracciones de gramo y sin saber nada de cripto. Tu oro está segregado a tu nombre — no es un token, no depende de un emisor cripto, y puedes retirarlo en lingotes físicos cuando quieras.
+Aura Gold resuelve esa parte. Compras oro respaldado por Tether Gold (XAUT) desde la app, en pesos y por fracciones de gramo. Puedes verificar qué barras respaldan tu oro, venderlo cuando quieras o canjearlo por un lingote a partir de un monto mínimo.
 
-[Empieza a proteger tu dinero con oro físico real →](/invertir-en-oro-mexico)
+[Empieza a proteger tu dinero con oro →](/invertir-en-oro-mexico)

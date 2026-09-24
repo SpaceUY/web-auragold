@@ -42,7 +42,7 @@ El oro fraccionado es un modelo que permite comprar porciones de una barra de or
 
 ### <span id="oro-digital"></span>¿Qué es el oro digital?
 
-El oro digital es oro físico que compras, gestionas y vendes desde una app, mientras el metal permanece en custodia profesional. No es una criptomoneda: es oro real con una capa tecnológica encima. La diferencia con el oro físico tradicional es el acceso y la liquidez, no la naturaleza del activo. Comparamos ambos en [oro físico frente a oro digital](/blog/oro-fisico-vs-oro-digital).
+El oro digital es oro físico que compras, gestionas y vendes desde una app, mientras el metal permanece en custodia profesional. Cuando se registra en blockchain se le llama oro tokenizado: cada token equivale a una cantidad exacta de oro en bóveda y su precio sigue al del metal. La diferencia con el oro físico tradicional es el acceso y la liquidez, no lo que le da valor. Comparamos ambos en [oro físico frente a oro digital](/blog/oro-fisico-vs-oro-digital).
 
 ### <span id="lingote"></span>¿Qué es un lingote de oro?
 
