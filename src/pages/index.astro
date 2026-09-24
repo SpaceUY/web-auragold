@@ -238,9 +238,10 @@ const faqItems = [
           <h1 class="font-display text-5xl font-semibold lg:text-6xl">
             <span class="hero-rise block" style="animation-delay: 0.2s">
               Convierte
-            </span>
-            <span class="hero-rise block" style="animation-delay: 0.65s">
-              tus <span class="text-ag-gold">pesos</span> en <span class="text-ag-gold">oro.</span>
+            </span>{" "}
+            <!-- El espacio explícito evita que el build junte las dos líneas en "Conviertetus" para buscadores y lectores de pantalla -->
+            <span class="hero-rise block text-balance" style="animation-delay: 0.65s">
+              tus <span class="text-ag-gold">pesos</span> en <span class="text-ag-gold">oro físico</span>
             </span>
           </h1>
           <p class="hero-rise max-w-xl text-lg text-white/60" style="animation-delay: 1s">
