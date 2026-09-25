@@ -1,0 +1,32 @@
+---
+// Botón para empezar a usar Aura (abrir una bóveda). El destino depende del
+// dispositivo: en Android va a Play Store; en iPhone y escritorio, a la web
+// app (el href por defecto, que funciona sin JS). Va directo, sin modal, para
+// no frenar a quien ya decidió empezar.
+import { playStoreUrl, WEB_APP_URL } from "../../data/links";
+
+interface Props {
+  medium: string;
+  class?: string;
+}
+
+const { medium, class: className = "" } = Astro.props;
+---
+
+<a
+  href={WEB_APP_URL}
+  data-app-start
+  data-android-url={playStoreUrl(medium)}
+  data-cta={`start-${medium}`}
+  class={className}
+>
+  <slot />
+</a>
+
+<script>
+  if (/Android/i.test(navigator.userAgent)) {
+    document.querySelectorAll<HTMLAnchorElement>("[data-app-start]").forEach((link) => {
+      if (link.dataset.androidUrl) link.href = link.dataset.androidUrl;
+    });
+  }
+</script>

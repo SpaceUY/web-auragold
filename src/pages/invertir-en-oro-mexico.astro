@@ -7,7 +7,7 @@ import FAQ from "../components/ui/FAQ.astro";
 import FinancialDisclaimer from "../components/ui/FinancialDisclaimer.astro";
 import AppCTAButtons from "../components/ui/AppCTAButtons.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
-import { WEB_APP_URL } from "../data/links";
+import AppStartLink from "../components/ui/AppStartLink.astro";
 
 const stats = [
   { value: "24-48h", label: "Liquidez al vender" },
@@ -398,21 +398,20 @@ const faqJsonLdItems = faqItems.map((item) => ({
         </h2>
         <p class="mx-auto mt-4 max-w-2xl text-white/60">
           Oro físico fraccionado al precio más cercano al spot XAU/MXN, sin comisiones de custodia.
-          Abre tu cuenta desde la web y empieza en minutos.
+          Abre tu cuenta desde la app o la web y empieza en minutos.
         </p>
         <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href={WEB_APP_URL}
-            data-cta="webapp-final-cta"
+          <AppStartLink
+            medium="cta-final-invertir"
             class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
           >
             Proteger mi dinero y abrir una bóveda
-          </a>
+          </AppStartLink>
           <a
-            href="#"
+            href="/#como-funciona"
             class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
           >
-            Quiero ver una demo rápida
+            Ver cómo funciona
           </a>
         </div>
       </div>
