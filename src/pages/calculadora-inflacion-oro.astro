@@ -5,7 +5,7 @@ import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
-import { WEB_APP_URL } from "../data/links";
+import { WEB_APP_URL, playStoreUrl } from "../data/links";
 import {
   INFLATION_RATE_BY_YEAR,
   GOLD_PRICE_MXN_PER_OZ_BY_YEAR,
@@ -171,7 +171,8 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
     <!-- Calculadora: inflación vs. oro -->
     <section class="mx-auto max-w-[1200px] px-6 py-12 lg:px-10">
-      <div class="rounded-3xl border border-white/10 bg-ag-slate/40 p-6 lg:p-10" data-inflation-calc>
+      <!-- Fondo casi negro, igual que la web app y el modal de descarga -->
+      <div class="rounded-3xl border border-white/10 bg-[#101010] p-6 lg:p-10" data-inflation-calc>
         <!-- En mobile, año y monto en una fila (el año angosto); desde 810px, como antes -->
         <div class="grid grid-cols-[auto_minmax(0,1fr)] items-end gap-3 sm:flex sm:flex-wrap sm:items-end sm:gap-6">
           <div>
@@ -227,7 +228,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
         <!-- Pilas centradas lado a lado: fajo de billetes vs. pirámide de lingotes -->
         <div
-          class="mt-8 grid grid-cols-2 gap-4 sm:mt-10 sm:gap-10"
+          class="mt-4 grid grid-cols-2 gap-4 sm:mt-10 sm:gap-10"
           data-piles
           role="img"
           aria-label={`Guardado en efectivo: ${fmtPesos(DEFAULT_AMOUNT)}, hoy compra ${fmtPesos(DEFAULT_AMOUNT / defaultInflationFactor)}. Convertido en oro: ${fmtPesos(defaultGoldValue)}.`}
@@ -281,6 +282,26 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         <p class="mt-6 hidden text-center text-sm text-white/70" data-pile-empty>
           Escribe cuánto tenías para ver la comparación.
         </p>
+
+        <!--
+          Siguiente paso justo después del resultado. Destino según dispositivo:
+          Android → Play Store; iPhone y escritorio → web app (el href por defecto).
+          Va directo, sin modal, para no frenar a quien ya se convenció.
+        -->
+        <div class="mt-8 flex justify-center">
+          <a
+            href={WEB_APP_URL}
+            data-calc-cta
+            data-android-url={playStoreUrl("calculadora")}
+            data-cta="calculadora-cta"
+            class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark transition-opacity hover:opacity-90 sm:w-auto"
+          >
+            Empieza a invertir en oro
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
 
         <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/35">
           Cálculo ilustrativo con inflación oficial (Banco Mundial, INEGI) hasta {LAST_CLOSED_YEAR} y precio del oro en
@@ -426,6 +447,11 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             `Guardado en efectivo: ${fmtPesos(amount)}, hoy compra ${fmtPesos(purchasingPower)}. Convertido en oro: ${fmtPesos(goldValue)}.`,
           );
         };
+
+        const calcCta = calc.querySelector("[data-calc-cta]");
+        if (calcCta && /Android/i.test(navigator.userAgent) && calcCta.dataset.androidUrl) {
+          calcCta.href = calcCta.dataset.androidUrl;
+        }
 
         yearSelect.addEventListener("change", render);
         amountInput.addEventListener("input", render);
