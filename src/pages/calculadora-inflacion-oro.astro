@@ -52,7 +52,7 @@ function pileLayout(amount: number, purchasingPower: number, goldValue: number) 
   const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
   const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
   const goldChips = Math.min(chipCap, Math.max(1, Math.round(base * goldMultiple)));
-  return { unit: amount / base, base, lostChips, goldChips };
+  return { base, lostChips, goldChips };
 }
 
 const defaultPurchasingPower = DEFAULT_AMOUNT / defaultInflationFactor;
@@ -287,9 +287,6 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         <p class="mx-auto mt-6 max-w-xl text-balance text-center text-sm text-white/70" data-pile-explanation>
           {cashExplanation(DEFAULT_AMOUNT, DEFAULT_START_YEAR, defaultPurchasingPower, defaultPile.lostChips)}
         </p>
-        <p class="mt-2 text-center text-xs text-white/40" data-pile-unit>
-          Cada ficha ≈ {fmtPesos(defaultPile.unit)}
-        </p>
 
         <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/35">
           Cálculo ilustrativo con inflación oficial (Banco Mundial, INEGI) hasta {LAST_CLOSED_YEAR} y precio del oro en
@@ -347,7 +344,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
         const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
         const goldChips = Math.min(chipCap, Math.max(1, Math.round(base * goldMultiple)));
-        return { unit: amount / base, base, lostChips, goldChips };
+        return { base, lostChips, goldChips };
       };
 
       const goldChipSvg = (chipClass) => `<svg class="${chipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="12,0 88,0 100,100 0,100" fill="#f2b334"></polygon><polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e"></polygon></svg>`;
@@ -376,7 +373,6 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         const cashNote = calc.querySelector("[data-pile-cash-note]");
         const goldValueEl = calc.querySelector("[data-pile-gold-value]");
         const goldNote = calc.querySelector("[data-pile-gold-note]");
-        const unitCaption = calc.querySelector("[data-pile-unit]");
         const explanation = calc.querySelector("[data-pile-explanation]");
 
         // Cada ficha entra con un pequeño retraso respecto de la anterior, así
@@ -406,13 +402,12 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             goldValueEl.textContent = fmtPesos(0);
             cashNote.textContent = "";
             goldNote.textContent = "";
-            unitCaption.textContent = "";
             explanation.textContent = "Escribe cuánto tenías para ver la comparación.";
             piles.setAttribute("aria-label", "Escribe un monto para ver la comparación entre efectivo y oro.");
             return;
           }
 
-          const { unit, base, lostChips, goldChips } = layout;
+          const { base, lostChips, goldChips } = layout;
           cashPile.innerHTML = Array.from({ length: base }, (_, index) => {
             const state = index >= base - lostChips ? billChipLost : billChipKept;
             return staggered(`<span class="${billChipBase} ${state} pile-chip"></span>`, index);
@@ -433,7 +428,6 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             lostChips > 0 ? `${firstSentence} Los billetes grises son lo que perdiste.` : firstSentence;
           goldValueEl.textContent = fmtPesos(goldValue);
           goldNote.textContent = `x${goldMultiple.toFixed(1)} tu dinero`;
-          unitCaption.textContent = `Cada ficha ≈ ${fmtPesos(unit)}`;
           piles.setAttribute(
             "aria-label",
             `Guardado en efectivo: ${fmtPesos(amount)}, hoy compra ${fmtPesos(purchasingPower)}. Convertido en oro: ${fmtPesos(goldValue)}.`,
