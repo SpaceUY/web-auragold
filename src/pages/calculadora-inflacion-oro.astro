@@ -227,7 +227,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
         <!-- Pilas centradas lado a lado: fajo de billetes vs. pirámide de lingotes -->
         <div
-          class="mt-8 grid grid-cols-2 items-end gap-4 sm:mt-10 sm:gap-10"
+          class="mt-10 grid grid-cols-2 items-end gap-6 sm:gap-10"
           data-piles
           role="img"
           aria-label={`Guardado en efectivo: ${fmtPesos(DEFAULT_AMOUNT)}, vale ${fmtPesos(defaultPurchasingPower)} hoy ajustado por inflación. Convertido en oro: ${fmtPesos(defaultGoldValue)}.`}
@@ -287,13 +287,13 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           Android → Play Store; iPhone y escritorio → web app (el href por defecto).
           Va directo, sin modal, para no frenar a quien ya se convenció.
         -->
-        <div class="mt-8 flex justify-center">
+        <div class="mt-10 flex justify-center">
           <a
             href={WEB_APP_URL}
             data-calc-cta
             data-android-url={playStoreUrl("calculadora")}
             data-cta="calculadora-cta"
-            class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark transition-opacity hover:opacity-90 sm:w-auto"
+            class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-ag-gold px-6 text-[15px] font-medium text-ag-dark transition-opacity hover:opacity-90 sm:h-12 sm:text-base"
           >
             Empieza a invertir en oro
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
