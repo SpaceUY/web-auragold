@@ -59,12 +59,6 @@ const defaultPurchasingPower = DEFAULT_AMOUNT / defaultInflationFactor;
 const defaultPile = pileLayout(DEFAULT_AMOUNT, defaultPurchasingPower, defaultGoldValue)!;
 const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 
-// Frase que explica el fajo de efectivo: "hoy compra $X" solo no se entendía.
-// La segunda oración solo tiene sentido si hay billetes grises dibujados.
-function cashExplanation(amount: number, startYear: number, purchasingPower: number, lostChips: number) {
-  const first = `Por la inflación, tus ${fmtPesos(amount)} hoy solo alcanzan para lo que en ${startYear} comprabas con ${fmtPesos(purchasingPower)}.`;
-  return lostChips > 0 ? `${first} Los billetes grises son lo que perdiste.` : first;
-}
 
 // Billetes: fajo parejo. Lingotes: pirámide, como se apilan en una bóveda.
 const billChipBase = "block h-2 w-20 rounded-[2px] border sm:h-3 sm:w-28";
@@ -254,7 +248,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
               {fmtPesos(DEFAULT_AMOUNT)}
             </p>
             <p class="mt-0.5 text-xs text-ag-red sm:text-sm" data-pile-cash-note>
-              −{fmtPesos(DEFAULT_AMOUNT - defaultPurchasingPower)} por inflación
+              {fmtPesos(defaultPurchasingPower)} real <span class="whitespace-nowrap">(ajustado por inflación)</span>
             </p>
           </div>
 
@@ -284,8 +278,9 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             </p>
           </div>
         </div>
-        <p class="mx-auto mt-6 max-w-xl text-balance text-center text-sm text-white/70" data-pile-explanation>
-          {cashExplanation(DEFAULT_AMOUNT, DEFAULT_START_YEAR, defaultPurchasingPower, defaultPile.lostChips)}
+        <!-- Solo aparece con monto 0 o vacío -->
+        <p class="mt-6 hidden text-center text-sm text-white/70" data-pile-empty>
+          Escribe cuánto tenías para ver la comparación.
         </p>
 
         <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/35">
@@ -373,7 +368,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         const cashNote = calc.querySelector("[data-pile-cash-note]");
         const goldValueEl = calc.querySelector("[data-pile-gold-value]");
         const goldNote = calc.querySelector("[data-pile-gold-note]");
-        const explanation = calc.querySelector("[data-pile-explanation]");
+        const emptyHint = calc.querySelector("[data-pile-empty]");
 
         // Cada ficha entra con un pequeño retraso respecto de la anterior, así
         // la pila se ve crecer en lugar de aparecer de golpe.
@@ -402,7 +397,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             goldValueEl.textContent = fmtPesos(0);
             cashNote.textContent = "";
             goldNote.textContent = "";
-            explanation.textContent = "Escribe cuánto tenías para ver la comparación.";
+            emptyHint.classList.remove("hidden");
             piles.setAttribute("aria-label", "Escribe un monto para ver la comparación entre efectivo y oro.");
             return;
           }
@@ -422,10 +417,9 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             .join("");
 
           cashValue.textContent = fmtPesos(amount);
-          cashNote.textContent = `−${fmtPesos(amount - purchasingPower)} por inflación`;
-          const firstSentence = `Por la inflación, tus ${fmtPesos(amount)} hoy solo alcanzan para lo que en ${startYear} comprabas con ${fmtPesos(purchasingPower)}.`;
-          explanation.textContent =
-            lostChips > 0 ? `${firstSentence} Los billetes grises son lo que perdiste.` : firstSentence;
+          // Solo números formateados: no hay entrada del usuario sin procesar en este HTML.
+          cashNote.innerHTML = `${fmtPesos(purchasingPower)} real <span class="whitespace-nowrap">(ajustado por inflación)</span>`;
+          emptyHint.classList.add("hidden");
           goldValueEl.textContent = fmtPesos(goldValue);
           goldNote.textContent = `x${goldMultiple.toFixed(1)} tu dinero`;
           piles.setAttribute(
