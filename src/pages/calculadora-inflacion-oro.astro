@@ -5,6 +5,8 @@ import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import AppStartLink from "../components/ui/AppStartLink.astro";
+import { getCollection } from "astro:content";
 import { WEB_APP_URL } from "../data/links";
 import {
   INFLATION_RATE_BY_YEAR,
@@ -32,7 +34,14 @@ const defaultGoldValue = (DEFAULT_AMOUNT / GOLD_PRICE_MXN_PER_OZ_BY_YEAR[DEFAULT
 //   20 fichas, se achican las dos juntas y la proporción se mantiene.
 // Con monto 0 no hay fichas. El script de abajo repite este cálculo en el
 // navegador (define:vars no permite importar funciones).
-const PILE_MAX_CHIPS = 20;
+// Tope dinámico del oro: se agranda cuando el oro se multiplicó mucho (años
+// viejos, p. ej. 2009 ≈ x5.7) para que la pila de billetes pueda llegar a
+// PILE_TARGET_BASE y el monto se siga notando. Con más de 21 lingotes (más de
+// 6 filas) se dibujan más chicos para entrar en el mismo alto.
+const PILE_MIN_CHIPS = 20;
+const PILE_MAX_CHIPS = 45;
+const PILE_TARGET_BASE = 7;
+const PILE_SMALL_FROM = 22;
 const PILE_MAX_BASE = 10;
 // Tope del campo de monto: por encima de esto los números ya no entran en mobile.
 const MAX_AMOUNT = 100_000_000;
@@ -40,22 +49,34 @@ const MAX_AMOUNT = 100_000_000;
 function pileLayout(amount: number, purchasingPower: number, goldValue: number) {
   if (amount <= 0) return null;
   const goldMultiple = goldValue / amount;
-  const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))));
+  const chipCap = Math.min(PILE_MAX_CHIPS, Math.max(PILE_MIN_CHIPS, Math.ceil(PILE_TARGET_BASE * goldMultiple)));
+  const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(chipCap / Math.max(goldMultiple, 1))));
   const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
   const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
-  const goldChips = Math.min(PILE_MAX_CHIPS, Math.max(1, Math.round(base * goldMultiple)));
-  return { unit: amount / base, base, lostChips, goldChips };
+  const goldChips = Math.min(chipCap, Math.max(1, Math.round(base * goldMultiple)));
+  return { base, lostChips, goldChips };
 }
 
 const defaultPurchasingPower = DEFAULT_AMOUNT / defaultInflationFactor;
 const defaultPile = pileLayout(DEFAULT_AMOUNT, defaultPurchasingPower, defaultGoldValue)!;
 const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 
+// Artículos sobre lo mismo que muestra la calculadora, en el orden en que se
+// lee el resultado: por qué el oro protege (pila de oro), cuánto perdió el
+// peso (billetes grises) y qué le pasa al ahorro en el banco (efectivo).
+const RELATED_SLUGS = ["por-que-el-oro-protege-la-inflacion", "evolucion-inflacion-mexico", "oro-fisico-vs-cuentas-bancarias"];
+const relatedPosts = (await getCollection("blog"))
+  .filter((post) => RELATED_SLUGS.includes(post.id))
+  .sort((a, b) => RELATED_SLUGS.indexOf(a.id) - RELATED_SLUGS.indexOf(b.id));
+
+
 // Billetes: fajo parejo. Lingotes: pirámide, como se apilan en una bóveda.
 const billChipBase = "block h-2 w-20 rounded-[2px] border sm:h-3 sm:w-28";
 const billChipKept = "border-[#5fae81] bg-[#3f8a5f]";
-const billChipLost = "border-dashed border-ag-red bg-transparent";
+// Los billetes que perdieron poder de compra se ven apagados: siguen ahí, pero ya no valen lo mismo.
+const billChipLost = "border-[#4a505c] bg-[#3a3f4b] opacity-60";
 const goldChipClass = "block h-3.5 w-[18px] sm:h-5 sm:w-9";
+const goldChipClassSmall = "block h-2.5 w-3 sm:h-3.5 sm:w-6";
 
 // Filas de la pirámide, de abajo hacia arriba: la base es la fila más chica
 // que alcanza para todas las fichas y cada fila de arriba tiene una menos.
@@ -160,128 +181,189 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
     <!-- Calculadora: inflación vs. oro -->
     <section class="mx-auto max-w-[1200px] px-6 py-12 lg:px-10">
-      <div class="rounded-3xl border border-white/10 bg-ag-slate/40 p-6 lg:p-10" data-inflation-calc>
-        <div class="flex flex-wrap items-end gap-6">
-          <div>
-            <label
-              for="year-select"
-              class="block uppercase text-white/40"
-              style="font-size:12px; line-height:16px; letter-spacing:0.1em; font-weight:400;"
-              >Año de partida</label
-            >
-            <div class="mt-2 flex h-[52px] items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4">
-              <select
-                id="year-select"
-                data-year-select
-                class="w-full bg-transparent text-lg text-white outline-none"
+      <!-- Calculadora + artículos relacionados: una fila desde 1200px (lg), apilados antes -->
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px]">
+        <!--
+          Fondo casi negro, igual que la web app y el modal de descarga. La tarjeta
+          abraza su contenido (máx. 672px) hasta 1200px; desde ahí comparte la fila con
+          los artículos relacionados, así no quedan vacíos a los costados.
+        -->
+        <div
+          class="mx-auto w-full max-w-2xl rounded-3xl border border-white/10 bg-[#101010] px-5 py-8 sm:px-12 sm:py-12 lg:max-w-none"
+          data-inflation-calc
+        >
+          <!-- En mobile, año y monto en una fila (el año angosto). Desde 810px, centrados:
+               todo el contenido de la tarjeta comparte un mismo eje central. -->
+          <div class="grid grid-cols-[auto_minmax(0,1fr)] items-end gap-3 sm:flex sm:flex-wrap sm:items-end sm:justify-center sm:gap-6">
+            <div>
+              <label
+                for="year-select"
+                class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/60 sm:text-xs"
+                >Año de partida</label
               >
+              <div class="mt-2 flex h-11 items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 sm:h-[52px] sm:px-4">
+                <select
+                  id="year-select"
+                  data-year-select
+                  class="w-full bg-transparent text-base text-white outline-none sm:text-lg"
+                >
+                  {
+                    START_YEARS.map((year) => (
+                      <option value={year} selected={year === DEFAULT_START_YEAR}>
+                        {year}
+                      </option>
+                    ))
+                  }
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="amount-input"
+                class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/60 sm:text-xs"
+                ><span class="sm:hidden">Monto (MXN)</span><span class="hidden sm:inline">Monto que tenías (MXN)</span></label
+              >
+              <div class="mt-2 flex h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 sm:h-[52px] sm:gap-3 sm:px-4">
+                <span class="shrink-0 text-sm text-white/60">$</span>
+                <!-- type="text" + inputmode="numeric": permite mostrar "100,000" y abre el teclado numérico -->
+                <input
+                  id="amount-input"
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="off"
+                  value={DEFAULT_AMOUNT.toLocaleString("es-MX")}
+                  data-amount-input
+                  aria-describedby="amount-limit"
+                  class="w-full min-w-0 bg-transparent text-base text-white outline-none sm:w-40 sm:text-lg"
+                />
+              </div>
+              <p id="amount-limit" class="mt-1.5 hidden text-xs text-white/50" data-amount-limit>
+                Monto máximo: {fmtPesos(MAX_AMOUNT)}
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Pilas centradas lado a lado: fajo de billetes vs. pirámide de lingotes -->
+          <div
+            class="mt-10 grid grid-cols-2 items-end gap-6 sm:gap-10"
+            data-piles
+            role="img"
+            aria-label={`Guardado en efectivo: ${fmtPesos(DEFAULT_AMOUNT)}, vale ${fmtPesos(defaultPurchasingPower)} hoy ajustado por inflación. Convertido en oro: ${fmtPesos(defaultGoldValue)}.`}
+          >
+            <div class="flex min-w-0 flex-col items-center text-center">
+              <div class="flex flex-col-reverse items-center gap-[3px]" data-pile-cash>
                 {
-                  START_YEARS.map((year) => (
-                    <option value={year} selected={year === DEFAULT_START_YEAR}>
-                      {year}
-                    </option>
+                  Array.from({ length: defaultPile.base }, (_, index) => (
+                    <span
+                      class={`${billChipBase} ${index >= defaultPile.base - defaultPile.lostChips ? billChipLost : billChipKept}`}
+                    />
                   ))
                 }
-              </select>
+              </div>
+              <p class="mt-4 text-xs text-white/60 sm:text-sm">Guardado en efectivo</p>
+              <p class="w-full truncate text-base font-semibold text-white sm:text-2xl" data-pile-cash-value>
+                {fmtPesos(DEFAULT_AMOUNT)}
+              </p>
+              <p class="text-xs text-ag-red/90 sm:text-sm" data-pile-cash-note>
+                vale {fmtPesos(defaultPurchasingPower)} hoy
+              </p>
+            </div>
+
+            <div class="flex min-w-0 flex-col items-center text-center">
+              <div class="flex flex-col-reverse items-center gap-0.5 sm:gap-[3px]" data-pile-gold>
+                {
+                  pyramidRows(defaultPile.goldChips).map((rowSize) => (
+                    <div class="flex gap-0.5 sm:gap-[3px]">
+                      {Array.from({ length: rowSize }, () => (
+                        <svg
+                          class={defaultPile.goldChips >= PILE_SMALL_FROM ? goldChipClassSmall : goldChipClass}
+                          viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                          <polygon points="12,0 88,0 100,100 0,100" fill="#f2b334" />
+                          <polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e" />
+                        </svg>
+                      ))}
+                    </div>
+                  ))
+                }
+              </div>
+              <p class="mt-4 text-xs text-white/60 sm:text-sm">Convertido en oro</p>
+              <p class="w-full truncate text-base font-semibold text-ag-gold sm:text-2xl" data-pile-gold-value>
+                {fmtPesos(defaultGoldValue)}
+              </p>
+              <p class="text-xs text-ag-green sm:text-sm" data-pile-gold-note>
+                x{(defaultGoldValue / DEFAULT_AMOUNT).toFixed(1)} tu dinero
+              </p>
             </div>
           </div>
+          <!-- Solo aparece con monto 0 o vacío -->
+          <p class="mt-6 hidden text-center text-sm text-white/70" data-pile-empty>
+            Escribe cuánto tenías para ver la comparación.
+          </p>
 
-          <div>
-            <label
-              for="amount-input"
-              class="block uppercase text-white/40"
-              style="font-size:12px; line-height:16px; letter-spacing:0.1em; font-weight:400;"
-              >Monto que tenías (MXN)</label
+          <!-- Siguiente paso justo después del resultado: Play Store en Android, web app en el resto -->
+          <div class="mt-10 flex justify-center">
+            <AppStartLink
+              medium="calculadora"
+              class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-ag-gold px-6 text-[15px] font-medium text-ag-dark transition-opacity hover:opacity-90 sm:h-12 sm:text-base"
             >
-            <div class="mt-2 flex h-[52px] items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4">
-              <span class="shrink-0 text-sm text-white/40">$</span>
-              <input
-                id="amount-input"
-                type="number"
-                inputmode="decimal"
-                min="0"
-                max={MAX_AMOUNT}
-                step="1000"
-                value={DEFAULT_AMOUNT}
-                data-amount-input
-                aria-describedby="amount-limit"
-                class="w-40 bg-transparent text-lg text-white outline-none"
-              />
-            </div>
-            <p id="amount-limit" class="mt-1.5 hidden text-xs text-white/50" data-amount-limit>
-              Monto máximo: {fmtPesos(MAX_AMOUNT)}
-            </p>
+              Empieza a invertir en oro
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </AppStartLink>
           </div>
 
+          <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/50">
+            Cálculo ilustrativo: el efectivo se ajusta por la inflación oficial (Banco Mundial, INEGI) hasta{" "}
+            {LAST_CLOSED_YEAR} y el oro usa su precio en vivo. No es una proyección ni asesoría financiera. Fuentes:{" "}
+            <a href="/blog/evolucion-inflacion-mexico" class="underline decoration-white/40 hover:text-white/80">inflación</a>
+            {" · "}
+            <a href="/precio-del-oro-hoy" class="underline decoration-white/40 hover:text-white/80">precio del oro</a>.
+          </p>
         </div>
-
-        <!-- Pilas centradas lado a lado: fajo de billetes vs. pirámide de lingotes -->
-        <div
-          class="mt-8 grid grid-cols-2 gap-4 sm:mt-10 sm:gap-10"
-          data-piles
-          role="img"
-          aria-label={`Guardado en efectivo: ${fmtPesos(DEFAULT_AMOUNT)}, hoy compra ${fmtPesos(DEFAULT_AMOUNT / defaultInflationFactor)}. Convertido en oro: ${fmtPesos(defaultGoldValue)}.`}
+        <aside
+          class="mx-auto flex w-full max-w-2xl flex-col rounded-3xl border border-white/10 bg-[#101010] px-3 py-6 sm:px-10 sm:py-12 lg:max-w-none lg:px-4"
+          aria-labelledby="related-title"
         >
-          <div class="flex min-w-0 flex-col items-center text-center">
-            <div class="flex h-[120px] flex-col-reverse items-center gap-[3px] sm:h-[160px]" data-pile-cash>
-              {
-                Array.from({ length: defaultPile.base }, (_, index) => (
-                  <span
-                    class={`${billChipBase} ${index >= defaultPile.base - defaultPile.lostChips ? billChipLost : billChipKept}`}
-                  />
-                ))
-              }
-            </div>
-            <p class="mt-4 text-xs text-white/50 sm:text-sm">Guardado en efectivo</p>
-            <p class="w-full truncate text-base font-semibold text-white sm:text-2xl" data-pile-cash-value>
-              {fmtPesos(DEFAULT_AMOUNT)}
-            </p>
-            <p class="mt-0.5 text-xs text-ag-red sm:text-sm" data-pile-cash-note>
-              hoy compra {fmtPesos(DEFAULT_AMOUNT / defaultInflationFactor)}
-            </p>
-          </div>
-
-          <div class="flex min-w-0 flex-col items-center text-center">
-            <div class="flex h-[120px] flex-col-reverse items-center gap-0.5 sm:h-[160px] sm:gap-[3px]" data-pile-gold>
-              {
-                pyramidRows(defaultPile.goldChips).map((rowSize) => (
-                  <div class="flex gap-0.5 sm:gap-[3px]">
-                    {Array.from({ length: rowSize }, () => (
-                      <svg class={goldChipClass} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                        <polygon points="12,0 88,0 100,100 0,100" fill="#f2b334" />
-                        <polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e" />
-                      </svg>
-                    ))}
-                  </div>
-                ))
-              }
-            </div>
-            <p class="mt-4 text-xs text-white/50 sm:text-sm">Convertido en oro</p>
-            <p class="w-full truncate text-base font-semibold text-ag-gold sm:text-2xl" data-pile-gold-value>
-              {fmtPesos(defaultGoldValue)}
-            </p>
-            <p class="mt-0.5 text-xs text-ag-green sm:text-sm" data-pile-gold-note>
-              x{(defaultGoldValue / DEFAULT_AMOUNT).toFixed(1)} tu dinero
-            </p>
-          </div>
-        </div>
-        <p class="mt-6 text-center text-xs text-white/40" data-pile-unit>
-          Cada ficha ≈ {fmtPesos(defaultPile.unit)}
-        </p>
-
-        <p class="mt-6 text-xs leading-relaxed text-white/40">
-          Cálculo ilustrativo con datos históricos públicos (Banco Mundial, INEGI, precio del oro promedio anual) e
-          inflación oficial hasta {LAST_CLOSED_YEAR}. El valor de hoy en oro usa la cotización en vivo. No es una
-          proyección de rendimientos futuros ni asesoría financiera. Ver{" "}
-          <a href="/blog/evolucion-inflacion-mexico" class="text-ag-gold hover:underline">
-            fuente de inflación
-          </a>{" "}
-          y{" "}
-          <a href="/precio-del-oro-hoy" class="text-ag-gold hover:underline">
-            histórico del precio del oro
+          <h2 id="related-title" class="px-2 font-display text-lg font-semibold text-white">Para entender tu resultado</h2>
+          <ul class="mt-4 space-y-3">
+            {
+              relatedPosts.map((post) => (
+                <li>
+                  <a
+                    href={`/blog/${post.id}`}
+                    class="group flex items-center gap-4 rounded-2xl p-2 transition-colors hover:bg-white/5"
+                  >
+                    <img
+                      src={post.data.heroImage}
+                      alt=""
+                      width="80"
+                      height="80"
+                      loading="lazy"
+                      class="h-20 w-20 shrink-0 rounded-xl object-cover"
+                    />
+                    <div class="min-w-0">
+                      <p class="text-[11px] uppercase tracking-[0.1em] text-ag-gold">{post.data.category}</p>
+                      <p class="mt-1 line-clamp-3 text-sm leading-snug text-white group-hover:text-ag-gold">{post.data.title}</p>
+                    </div>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <!-- mt-auto: en escritorio la tarjeta mide lo mismo que la calculadora y el enlace queda al pie -->
+          <a
+            href="/blog"
+            class="mt-auto inline-flex items-center gap-1 px-2 pt-6 text-sm font-medium text-ag-gold hover:underline"
+          >
+            Ver todos los artículos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
           </a>
-          .
-        </p>
+        </aside>
       </div>
     </section>
 
@@ -291,13 +373,17 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         INFLATION_RATE_BY_YEAR,
         GOLD_PRICE_MXN_PER_OZ_BY_YEAR,
         LAST_CLOSED_YEAR,
+        PILE_MIN_CHIPS,
         PILE_MAX_CHIPS,
+        PILE_TARGET_BASE,
+        PILE_SMALL_FROM,
         PILE_MAX_BASE,
         MAX_AMOUNT,
         billChipBase,
         billChipKept,
         billChipLost,
         goldChipClass,
+        goldChipClassSmall,
       }}
     >
       // Precio del oro en vivo desde CoinGecko (tether-gold / XAUT ≈ 1 onza troy).
@@ -305,6 +391,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
       let livePricePerOz = SNAPSHOT_MXN_PER_OZ;
 
       const fmtPesos = (n) => `$${Math.round(n).toLocaleString("es-MX")}`;
+      const parseAmount = (text) => Math.max(0, Number(String(text).replace(/\D/g, "")) || 0);
 
       const cumulativeInflationFactor = (fromYear) => {
         let factor = 1;
@@ -319,14 +406,18 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
       const pileLayout = (amount, purchasingPower, goldValue) => {
         if (amount <= 0) return null;
         const goldMultiple = goldValue / amount;
-        const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))));
+        const chipCap = Math.min(
+          PILE_MAX_CHIPS,
+          Math.max(PILE_MIN_CHIPS, Math.ceil(PILE_TARGET_BASE * goldMultiple)),
+        );
+        const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(chipCap / Math.max(goldMultiple, 1))));
         const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
         const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
-        const goldChips = Math.min(PILE_MAX_CHIPS, Math.max(1, Math.round(base * goldMultiple)));
-        return { unit: amount / base, base, lostChips, goldChips };
+        const goldChips = Math.min(chipCap, Math.max(1, Math.round(base * goldMultiple)));
+        return { base, lostChips, goldChips };
       };
 
-      const goldChipSvg = `<svg class="${goldChipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="12,0 88,0 100,100 0,100" fill="#f2b334"></polygon><polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e"></polygon></svg>`;
+      const goldChipSvg = (chipClass) => `<svg class="${chipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="12,0 88,0 100,100 0,100" fill="#f2b334"></polygon><polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e"></polygon></svg>`;
 
       const pyramidRows = (chips) => {
         let width = 1;
@@ -352,7 +443,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         const cashNote = calc.querySelector("[data-pile-cash-note]");
         const goldValueEl = calc.querySelector("[data-pile-gold-value]");
         const goldNote = calc.querySelector("[data-pile-gold-note]");
-        const unitCaption = calc.querySelector("[data-pile-unit]");
+        const emptyHint = calc.querySelector("[data-pile-empty]");
 
         // Cada ficha entra con un pequeño retraso respecto de la anterior, así
         // la pila se ve crecer en lugar de aparecer de golpe.
@@ -360,11 +451,11 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
         const render = () => {
           const startYear = Number(yearSelect.value);
-          let amount = Math.max(0, parseFloat(amountInput.value) || 0);
+          let amount = parseAmount(amountInput.value);
           const overLimit = amount > MAX_AMOUNT;
           if (overLimit) {
             amount = MAX_AMOUNT;
-            amountInput.value = String(MAX_AMOUNT);
+            amountInput.value = MAX_AMOUNT.toLocaleString("es-MX");
           }
           amountLimit.classList.toggle("hidden", !overLimit);
 
@@ -381,37 +472,57 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             goldValueEl.textContent = fmtPesos(0);
             cashNote.textContent = "";
             goldNote.textContent = "";
-            unitCaption.textContent = "Escribe cuánto tenías para ver la comparación.";
+            emptyHint.classList.remove("hidden");
             piles.setAttribute("aria-label", "Escribe un monto para ver la comparación entre efectivo y oro.");
             return;
           }
 
-          const { unit, base, lostChips, goldChips } = layout;
+          const { base, lostChips, goldChips } = layout;
           cashPile.innerHTML = Array.from({ length: base }, (_, index) => {
             const state = index >= base - lostChips ? billChipLost : billChipKept;
             return staggered(`<span class="${billChipBase} ${state} pile-chip"></span>`, index);
           }).join("");
           let chipIndex = 0;
+          const chipClass = goldChips >= PILE_SMALL_FROM ? goldChipClassSmall : goldChipClass;
           goldPile.innerHTML = pyramidRows(goldChips)
             .map((rowSize) => {
-              const row = Array.from({ length: rowSize }, () => staggered(goldChipSvg, chipIndex++)).join("");
+              const row = Array.from({ length: rowSize }, () => staggered(goldChipSvg(chipClass), chipIndex++)).join("");
               return `<div class="flex gap-0.5 sm:gap-[3px]">${row}</div>`;
             })
             .join("");
 
           cashValue.textContent = fmtPesos(amount);
-          cashNote.textContent = `hoy compra ${fmtPesos(purchasingPower)}`;
+          cashNote.textContent = `vale ${fmtPesos(purchasingPower)} hoy`;
+          emptyHint.classList.add("hidden");
           goldValueEl.textContent = fmtPesos(goldValue);
           goldNote.textContent = `x${goldMultiple.toFixed(1)} tu dinero`;
-          unitCaption.textContent = `Cada ficha ≈ ${fmtPesos(unit)}`;
           piles.setAttribute(
             "aria-label",
-            `Guardado en efectivo: ${fmtPesos(amount)}, hoy compra ${fmtPesos(purchasingPower)}. Convertido en oro: ${fmtPesos(goldValue)}.`,
+            `Guardado en efectivo: ${fmtPesos(amount)}, vale ${fmtPesos(purchasingPower)} hoy ajustado por inflación. Convertido en oro: ${fmtPesos(goldValue)}.`,
           );
         };
 
+        // Separador de miles mientras se escribe ("100,000"), sin mover el cursor:
+        // se cuenta cuántos dígitos había antes del cursor y se lo vuelve a ubicar
+        // después de la misma cantidad de dígitos en el texto formateado.
+        const formatAmountInput = () => {
+          const { value, selectionStart } = amountInput;
+          const digitsBeforeCursor = value.slice(0, selectionStart ?? value.length).replace(/\D/g, "").length;
+          const digits = value.replace(/\D/g, "").replace(/^0+(?=\d)/, "");
+          const formatted = digits ? Number(digits).toLocaleString("es-MX") : "";
+          amountInput.value = formatted;
+          let cursor = 0;
+          for (let seen = 0; cursor < formatted.length && seen < digitsBeforeCursor; cursor++) {
+            if (/\d/.test(formatted[cursor])) seen++;
+          }
+          amountInput.setSelectionRange(cursor, cursor);
+        };
+
         yearSelect.addEventListener("change", render);
-        amountInput.addEventListener("input", render);
+        amountInput.addEventListener("input", () => {
+          formatAmountInput();
+          render();
+        });
         calc._render = render;
       }
 
@@ -436,27 +547,48 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
       </div>
     </section>
 
-    <!-- CTA final -->
-    <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
-      <div data-animate class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 p-10 text-center lg:p-16">
-        <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
-          Protege tu ahorro con oro real, no con hojas de cálculo.
-        </h2>
-        <p class="mt-4 text-white/60">Convierte tus pesos en oro físico 24k certificado, sin comisiones de custodia.</p>
-        <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-          <a
-            href={WEB_APP_URL}
-            data-cta="webapp-final-cta"
-            class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
-          >
-            Empieza ahora
-          </a>
-          <a
-            href="/invertir-en-oro-mexico"
-            class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
-          >
-            Cómo invertir en oro en México
-          </a>
+    <!--
+      CTA final con la misma estética que la tarjeta principal de la web app:
+      fondo gris azulado, resplandor azul a la derecha y el cerdito 3D que se
+      sale por arriba del borde. En mobile el cerdito va centrado arriba.
+    -->
+    <section class="mx-auto max-w-[1200px] px-6 pb-20 pt-28 lg:px-10 lg:pt-24">
+      <div
+        data-animate
+        class="relative isolate rounded-3xl border border-white/10 bg-[#1b202a] px-6 pb-10 pt-28 text-center sm:px-10 lg:px-14 lg:py-14 lg:text-left"
+      >
+        <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-3xl" aria-hidden="true">
+          <div class="absolute -right-20 top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-[#2c4a8c]/45 blur-3xl"></div>
+        </div>
+        <img
+          src="/images/icons/cerdito-lg.webp"
+          alt=""
+          width="480"
+          height="480"
+          loading="lazy"
+          class="pointer-events-none absolute -top-20 left-1/2 w-40 -translate-x-1/2 drop-shadow-2xl lg:-top-14 lg:left-auto lg:right-14 lg:w-72 lg:translate-x-0"
+        />
+        <div class="lg:max-w-xl">
+          <h2 class="text-balance font-display text-2xl font-semibold text-white sm:text-3xl lg:text-4xl">
+            Protege tu ahorro con oro real, no con hojas de cálculo.
+          </h2>
+          <p class="mt-3 text-balance text-white/70">
+            Convierte tus pesos en oro físico 24k certificado, sin comisiones de custodia.
+          </p>
+          <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            <AppStartLink
+              medium="calculadora-final"
+              class="inline-flex h-11 w-full max-w-72 items-center justify-center rounded-full bg-ag-gold px-6 text-[15px] font-medium text-ag-dark transition-opacity hover:opacity-90 sm:h-12 sm:w-auto sm:text-base"
+            >
+              Empieza ahora
+            </AppStartLink>
+            <a
+              href="/invertir-en-oro-mexico"
+              class="inline-flex h-11 w-full max-w-72 items-center justify-center rounded-full border border-white/20 px-6 text-[15px] font-medium text-white transition-colors hover:bg-white/10 sm:h-12 sm:w-auto sm:text-base"
+            >
+              Cómo invertir en oro en México
+            </a>
+          </div>
         </div>
       </div>
     </section>
