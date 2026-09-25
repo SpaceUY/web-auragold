@@ -105,9 +105,18 @@ const faqItems = [
   {
     question: "¿Puedo comprar oro al precio del mercado que veo en pantalla?",
     answer:
+      'Con Aura Gold compras a un precio muy cercano al spot. Se aplica un <a href="/blog/glosario-oro#spread" class="text-ag-gold hover:underline">spread</a> transparente -diferencia entre precio de compra y venta- que verás antes de confirmar. No hay comisiones de custodia ni cargos ocultos. El precio exacto se muestra en la app antes de confirmar cualquier operación.',
+    plainAnswer:
       "Con Aura Gold compras a un precio muy cercano al spot. Se aplica un spread transparente -diferencia entre precio de compra y venta- que verás antes de confirmar. No hay comisiones de custodia ni cargos ocultos. El precio exacto se muestra en la app antes de confirmar cualquier operación.",
   },
 ];
+
+// answer admite HTML (links) para el FAQ visual; plainAnswer es el mismo texto sin
+// tags para el schema FAQPage. Si un item no tiene plainAnswer, su answer ya es texto plano.
+const faqJsonLdItems = faqItems.map((item) => ({
+  question: item.question,
+  answer: item.plainAnswer ?? item.answer,
+}));
 
 const fmt = (n: number) => n.toLocaleString("es-MX");
 ---
@@ -116,7 +125,7 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
   title="Precio del Oro en México Hoy - Cotización en MXN y USD"
   description="Consulta el precio del oro hoy en México en pesos mexicanos y dólares. Cotización del oro actualizada en tiempo real, gráficos y evolución del valor del oro."
 >
-  <FAQJsonLD items={faqItems} />
+  <FAQJsonLD items={faqJsonLdItems} />
 
   <Header />
 
@@ -175,6 +184,11 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
           <p class="mt-1 font-mono text-sm text-ag-red" data-field="change">
             ↓ {fmt(Math.abs(snapshot.changeAbs))} ({snapshot.changePct}%)
             <span class="text-white/40">vs. cierre anterior</span>
+          </p>
+          <p class="mt-3 text-xs text-white/50">
+            Puedes{" "}
+            <a href="/invertir-en-oro-mexico" class="text-ag-gold hover:underline">comprar oro al precio de hoy</a>{" "}
+            por fracciones de gramo.
           </p>
         </div>
 
@@ -389,7 +403,8 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
       <div class="mt-8 grid gap-10 lg:grid-cols-2">
         <div class="space-y-4 text-white/60">
           <p>
-            El precio del oro se cotiza globalmente en dólares por onza troy. Para obtener el precio del oro en
+            El precio del oro se cotiza globalmente en dólares por{" "}
+            <a href="/blog/glosario-oro#onza-troy" class="text-ag-gold hover:underline">onza troy</a>. Para obtener el precio del oro en
             pesos mexicanos, ese valor se multiplica por el tipo de cambio USD/MXN vigente en cada momento.
           </p>
           <p>
@@ -434,6 +449,14 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
           ))
         }
       </div>
+
+      <p class="mt-6 text-sm text-white/50">
+        Te explicamos en detalle{" "}
+        <a href="/blog/por-que-sube-baja-precio-oro" class="text-ag-gold hover:underline">
+          qué factores mueven el precio del oro
+        </a>{" "}
+        y por qué a veces baja.
+      </p>
     </section>
 
     <!-- FAQ -->

@@ -76,7 +76,7 @@ Puedes ver también la comparativa directa en [oro físico vs. cuentas bancarias
 
 Tanto si evalúas PAXG, XAUT o cualquier alternativa, revisa estos puntos:
 
-**Auditorías independientes.** Los proyectos legítimos incluyen auditorías realizadas por terceros e información transparente sobre el almacenamiento y seguimiento del oro. Sin auditorías públicas, no hay garantía real.
+**Auditorías independientes.** Los proyectos legítimos incluyen auditorías realizadas por terceros e información transparente sobre el almacenamiento y seguimiento del oro. Sin auditorías públicas, no hay garantía real. En Aura Gold puedes revisar el [Proof of Reserve y las auditorías públicas](/transparencia) del oro que respalda tu cuenta.
 
 **Dónde está el oro físicamente.** ¿Quién es el custodio? ¿Suiza? ¿Londres? Si no puedes responder esto, tu "oro" es solo una promesa digital.
 
@@ -100,7 +100,7 @@ Son los productos más auditados del sector, pero no están exentos de riesgo. L
 
 ### ¿Puedo comprar oro digital sin saber de criptomonedas?
 
-Sí. Con PAXG o XAUT por tu cuenta necesitas wallet y exchange. Con Aura Gold compras oro respaldado por XAUT desde la app, en pesos, sin ningún conocimiento de blockchain.
+Sí. Con PAXG o XAUT por tu cuenta necesitas wallet y exchange. Con Aura Gold compras oro respaldado por XAUT desde la app, en pesos, sin ningún conocimiento de blockchain. Y si dudas entre oro y cripto especulativa, repasamos las [diferencias entre oro y Bitcoin](/blog/oro-vs-criptomonedas).
 
 ### ¿Qué diferencia hay entre oro tokenizado y oro fraccionado?
 
@@ -108,7 +108,7 @@ El oro tokenizado es una forma de oro fraccionado: cada token representa una fra
 
 ### ¿Qué es LBMA y por qué importa?
 
-La London Bullion Market Association es el estándar internacional de referencia para la calidad del oro. Solo el oro certificado LBMA garantiza pureza verificable y trazabilidad reconocida globalmente. Cualquier producto de inversión en oro que no lo mencione debería hacerte sospechar.
+La [London Bullion Market Association](/blog/glosario-oro#lbma) es el estándar internacional de referencia para la calidad del oro. Solo el oro certificado LBMA garantiza pureza verificable y trazabilidad reconocida globalmente. Cualquier producto de inversión en oro que no lo mencione debería hacerte sospechar.
 
 ## La forma más simple de tener oro tokenizado en México
 

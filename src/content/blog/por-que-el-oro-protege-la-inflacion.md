@@ -18,11 +18,11 @@ Esta guía te explica con ejemplos reales y números concretos por qué el oro s
 
 ## Qué es realmente la inflación y por qué destruye tu dinero
 
-La inflación no es un concepto abstracto de economistas. Es la razón por la que los $100 pesos de hace 5 años no compran lo mismo hoy.
+La inflación no es un concepto abstracto de economistas. Es la razón por la que los $100 pesos de hace 5 años no compran lo mismo hoy. Puedes ver cuánto suma la [inflación acumulada en México](/blog/evolucion-inflacion-mexico) año por año con datos oficiales.
 
 **Ejemplo práctico en México:** en 2020 un kilo de tortillas costaba $12-15 pesos; en 2025 el mismo kilo cuesta $20-25 pesos - un incremento de más del 60% en 5 años.
 
-Si guardaste $1,000 pesos bajo el colchón en 2020, hoy esos mismos $1,000 pesos compran un 38% menos de productos. No perdiste dinero físicamente, pero perdiste poder adquisitivo real.
+Si guardaste $1,000 pesos bajo el colchón en 2020, hoy esos mismos $1,000 pesos compran un 38% menos de productos. No perdiste dinero físicamente, pero perdiste poder adquisitivo real. Si quieres hacer esta cuenta con tu propio monto y año, usa la [calculadora de inflación contra el oro](/calculadora-inflacion-oro).
 
 La inflación funciona como un "impuesto invisible" que cobra el gobierno sin que te des cuenta: cada año tu dinero vale menos simplemente por existir en forma de pesos mexicanos.
 
@@ -91,17 +91,17 @@ Regla práctica: el dinero que no vas a necesitar en los próximos 12-36 meses d
 
 ## Cómo empezar con poco: protección inflacionaria en fracciones de oro
 
-Puedes comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales como ahorro recurrente, o $5,000+ convirtiendo ahorros estancados. La clave no es cuánto inviertes de golpe, sino crear el hábito de convertir parte de tus ingresos a oro automáticamente cada mes.
+Puedes comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales como ahorro recurrente, o $5,000+ convirtiendo ahorros estancados. La clave no es cuánto inviertes de golpe, sino crear el hábito de convertir parte de tus ingresos a oro automáticamente cada mes. Si quieres [empezar a invertir en oro con poco dinero](/invertir-en-oro-mexico), puedes hacerlo por fracciones de gramo desde el celular.
 
 ## Oro vs otras alternativas contra inflación: comparativa real
 
 **Oro vs bienes raíces:** bienes raíces protegen bien pero requieren capital masivo ($500,000+ MXN), baja liquidez y costos de mantenimiento. El oro ofrece protección similar en fracciones, con liquidez inmediata.
 
-**Oro vs criptomonedas:** las criptomonedas tienen volatilidad extrema (±40% mensual) y riesgo tecnológico. El oro tiene volatilidad baja (±5-12% anual) y 5,000 años de historia probada.
+**[Oro vs criptomonedas](/blog/oro-vs-criptomonedas):** las criptomonedas tienen volatilidad extrema (±40% mensual) y riesgo tecnológico. El oro tiene volatilidad baja (±5-12% anual) y 5,000 años de historia probada.
 
-**Oro vs bonos gubernamentales (CETES):** los CETES rinden 10-11% anual nominal pero están sujetos a devaluación del peso. Combinar 70% bonos + 30% oro ofrece rendimiento y protección.
+**[Oro vs bonos gubernamentales (CETES)](/blog/oro-vs-cetes):** los CETES rinden 10-11% anual nominal pero están sujetos a devaluación del peso. Combinar 70% bonos + 30% oro ofrece rendimiento y protección.
 
-**Oro vs acciones:** las acciones tienen potencial de crecimiento alto (15-25% anual) pero riesgo empresarial. El oro preserva valor sin crecimiento agresivo pero sin riesgo de quiebra. No son competidores, son complementarios.
+**[Oro vs acciones](/blog/oro-vs-acciones):** las acciones tienen potencial de crecimiento alto (15-25% anual) pero riesgo empresarial. El oro preserva valor sin crecimiento agresivo pero sin riesgo de quiebra. No son competidores, son complementarios.
 
 ## Protege tu dinero de la inflación hoy: convierte tus pesos en oro
 
