@@ -5,6 +5,7 @@ import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import AppCTAButtons from "../components/ui/AppCTAButtons.astro";
+import HeroBoveda from "../components/ui/HeroBoveda.astro";
 import { WEB_APP_URL } from "../data/links";
 import JsonLD from "../components/seo/JsonLD.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
@@ -252,19 +253,7 @@ const faqItems = [
         </div>
 
         <div class="hero-rise hidden w-full sm:block" style="animation-delay: 0.5s">
-          <!-- El bundle se renderiza a tamaño de diseño fijo (1200x800) y se escala para entrar en la columna, sin scroll interno -->
-          <div data-boveda-wrap class="relative w-full overflow-hidden">
-            <iframe
-              data-boveda-frame
-              src="/embeds/hero-boveda.html?v=3"
-              title="Animación de la bóveda de Aura Gold: total en bóveda, precio del oro y compra/venta"
-              loading="eager"
-              scrolling="no"
-              width="1200"
-              height="800"
-              class="absolute left-0 top-0 origin-top-left border-0 bg-transparent"
-            ></iframe>
-          </div>
+          <HeroBoveda />
         </div>
       </div>
     </section>
@@ -545,36 +534,4 @@ const faqItems = [
   </main>
 
   <Footer />
-
-  <script>
-    // Mide el contenido real del iframe de la Bóveda (mismo origen) y lo escala
-    // para que entre exacto en su columna, sin scroll interno ni recorte.
-    const wrap = document.querySelector<HTMLElement>("[data-boveda-wrap]");
-    const frame = document.querySelector<HTMLIFrameElement>("[data-boveda-frame]");
-
-    if (wrap && frame) {
-      const fit = () => {
-        const doc = frame.contentDocument;
-        const body = doc?.body;
-        if (!body) return;
-        const cw = body.scrollWidth || 1170;
-        const ch = body.scrollHeight;
-        if (!ch) return; // aún no montó el contenido React
-        const scale = wrap.clientWidth / cw;
-        frame.style.width = `${cw}px`;
-        frame.style.height = `${ch}px`;
-        frame.style.transform = `scale(${scale})`;
-        wrap.style.height = `${ch * scale}px`;
-      };
-
-      // El bundle monta React de forma asíncrona: reintenta durante ~4s.
-      let ticks = 0;
-      const poll = setInterval(() => {
-        fit();
-        if (++ticks > 40) clearInterval(poll);
-      }, 100);
-      frame.addEventListener("load", fit);
-      window.addEventListener("resize", fit);
-    }
-  </script>
 </BaseLayout>
