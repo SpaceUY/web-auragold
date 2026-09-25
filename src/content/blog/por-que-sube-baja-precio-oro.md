@@ -38,7 +38,7 @@ Para un ahorrador en México esto tiene una capa extra clave: el precio del oro 
 
 La inflación influye porque el oro se usa como cobertura del poder adquisitivo. Cuando sube la inflación o crece el miedo a que las monedas pierdan valor, los inversores compran oro para preservar su capacidad de compra, y esa demanda sostiene el precio.
 
-Esta es la función histórica del oro y la razón de fondo por la que se le llama activo refugio: mantiene su valor real cuando el dinero lo pierde. Lo desarrollamos en [por qué el oro protege de la inflación](/blog/por-que-el-oro-protege-la-inflacion), un patrón visible en la [evolución de la inflación en México](/blog/evolucion-inflacion-mexico). No es una garantía de rentabilidad, sino de conservación de valor a lo largo del tiempo.
+Esta es la función histórica del oro y la razón de fondo por la que se le llama activo refugio: mantiene su valor real cuando el dinero lo pierde. Lo desarrollamos en [por qué el oro protege de la inflación](/blog/por-que-el-oro-protege-la-inflacion), un patrón visible en la [evolución de la inflación en México](/blog/evolucion-inflacion-mexico). No es una garantía de rentabilidad, sino de conservación de valor a lo largo del tiempo. Puedes comprobarlo con tus propios números en la [calculadora de inflación vs oro](/calculadora-inflacion-oro).
 
 ## ¿Por qué los bancos centrales influyen tanto en el precio del oro?
 
@@ -54,7 +54,7 @@ Es un factor difícil de predecir precisamente porque los eventos que lo activan
 
 ## ¿Por qué baja el oro a veces, si es un activo refugio?
 
-El oro baja porque los mismos factores que lo impulsan pueden revertirse. Si el dólar se fortalece, si las tasas reales suben, si la incertidumbre se calma o si los bancos centrales frenan sus compras, el precio pierde apoyos y corrige. Ser activo refugio no significa que solo suba.
+El oro baja porque los mismos factores que lo impulsan pueden revertirse. Si el dólar se fortalece, si las tasas reales suben, si la incertidumbre se calma o si los bancos centrales frenan sus compras, el precio pierde apoyos y corrige. Ser [activo refugio](/blog/por-que-oro-refugio-valor-guia) no significa que solo suba.
 
 Además, después de subidas grandes aparece un riesgo de dos direcciones: los máximos atraen a la vez a nuevos compradores y a quienes quieren tomar ganancias, lo que genera vaivenes. Que el oro baje unos días no contradice su papel de largo plazo; es el comportamiento normal de un activo cuyo precio responde a un tira y afloja de fuerzas macro. Para el número exacto de cada jornada, la referencia es el [precio del oro hoy](/precio-del-oro-hoy).
 
@@ -78,4 +78,4 @@ La conclusión práctica para quien ahorra es no confundir ruido con tendencia. 
 
 ## Protege tu ahorro con un activo pensado para el largo plazo
 
-Entender por qué se mueve el precio del oro es el primer paso para usarlo bien: como refugio frente a la inflación y la devaluación, no como apuesta de corto plazo. Aura Gold te permite invertir en oro físico real, comprando la fracción de gramo que quieras, con precio transparente y desde el celular.
+Entender por qué se mueve el precio del oro es el primer paso para usarlo bien: como refugio frente a la inflación y la devaluación, no como apuesta de corto plazo. Aura Gold te permite [invertir en oro físico real](/invertir-en-oro-mexico), comprando la fracción de gramo que quieras, con precio transparente y desde el celular.

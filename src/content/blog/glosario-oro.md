@@ -30,7 +30,7 @@ Este glosario reúne los términos que necesitas entender para invertir en oro c
 
 ### <span id="oro-de-inversion"></span>¿Qué es el oro de inversión?
 
-El oro de inversión es oro de alta pureza (habitualmente 99,5% o superior) adquirido para preservar valor, no para joyería ni uso industrial. Se presenta en lingotes o monedas con peso y pureza certificados. Para el ahorrador mexicano es la forma de exponerse al metal como protección frente a la inflación, sin pagar el sobreprecio de la joyería.
+El oro de inversión es oro de alta pureza (habitualmente 99,5% o superior) adquirido para preservar valor, no para joyería ni uso industrial. Se presenta en lingotes o monedas con peso y pureza certificados. Para el ahorrador mexicano es la forma de exponerse al metal como protección frente a la inflación, sin pagar el sobreprecio de la joyería. Si quieres ir a lo básico, repasamos [qué es el oro como material](/blog/que-es-oro-como-material) y por qué vale tanto.
 
 ### <span id="oro-fisico"></span>¿Qué es el oro físico?
 
@@ -94,7 +94,7 @@ Una bóveda de alta seguridad es una instalación especializada en custodiar met
 
 ### <span id="proof-of-reserve"></span>¿Qué es Proof of Reserve?
 
-La prueba de reservas (Proof of Reserve) es un mecanismo que verifica públicamente que el oro que respalda a los usuarios existe realmente. Puede apoyarse en tecnología on-chain (por ejemplo, Chainlink) para hacer esa verificación consultable en cualquier momento. Es lo que convierte la frase "tu oro está respaldado" en algo comprobable en lugar de una promesa.
+La prueba de reservas (Proof of Reserve) es un mecanismo que verifica públicamente que el oro que respalda a los usuarios existe realmente. Puede apoyarse en tecnología on-chain (por ejemplo, Chainlink) para hacer esa verificación consultable en cualquier momento. Es lo que convierte la frase "tu oro está respaldado" en algo comprobable en lugar de una promesa. Es habitual en el [oro tokenizado en blockchain](/blog/criptomonedas-respaldadas-por-oro), como XAUT o PAXG.
 
 ### <span id="auditoria"></span>¿Qué es una auditoría de reservas?
 
@@ -104,7 +104,7 @@ Una auditoría de reservas es la verificación, por parte de un tercero independ
 
 ### <span id="precio-spot"></span>¿Qué es el precio spot del oro?
 
-El precio spot es el precio internacional del oro para entrega inmediata, la referencia global sobre la que se calculan las operaciones. Es el número que ves cuando consultas el [precio del oro hoy](/precio-del-oro-hoy). Sobre este precio se aplican los pequeños márgenes de compra y venta; entenderlo te permite saber si estás pagando un sobreprecio razonable.
+El precio spot es el precio internacional del oro para entrega inmediata, la referencia global sobre la que se calculan las operaciones. Es el número que ves cuando consultas el [precio del oro hoy](/precio-del-oro-hoy). Sobre este precio se aplican los pequeños márgenes de compra y venta; entenderlo te permite saber si estás pagando un sobreprecio razonable. Si quieres saber [qué mueve el precio del oro](/blog/por-que-sube-baja-precio-oro), lo explicamos factor por factor.
 
 ### <span id="spread"></span>¿Qué es el spread?
 

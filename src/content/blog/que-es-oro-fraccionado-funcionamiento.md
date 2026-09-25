@@ -52,7 +52,7 @@ No todo lo que se llama "oro" funciona igual. Esta tabla resume las diferencias 
 | Requiere conocimientos | Ninguno | Básicos de bolsa | Cripto intermedios | Ninguno |
 | Estándar LBMA exigible | Sí | Sí (fondos serios) | Sí (PAXG/XAUT) | Sí |
 
-Ejemplos de ETF como SPDR Gold Shares (GLD) o iShares Gold Trust (IAU) mantienen lingotes reales en bóvedas y emiten acciones que representan la propiedad fraccionada de ese oro. La diferencia con el oro fraccionado directo es que en un ETF el inversor no es propietario del metal sino de una participación en el fondo — y ese fondo opera en horario bursátil con sus propias comisiones de gestión.
+Ejemplos de ETF como SPDR Gold Shares (GLD) o iShares Gold Trust (IAU) mantienen lingotes reales en bóvedas y emiten acciones que representan la propiedad fraccionada de ese oro. La diferencia con el oro fraccionado directo es que en un ETF el inversor no es propietario del metal sino de una participación en el fondo — y ese fondo opera en horario bursátil con sus propias comisiones de gestión. Si quieres comparar [otras plataformas para invertir en oro online](/blog/alternativa-invertir-oro-online), como BullionVault o Goldmoney, las revisamos aparte.
 
 ## ¿Qué garantías debe tener el oro fraccionado para ser seguro?
 
@@ -62,7 +62,7 @@ Antes de invertir en cualquier producto de oro fraccionado, verifica estos cuatr
 
 **Activo segregado.** Tu oro debe estar asignado a tu nombre de forma segregada, no mezclado en un pool colectivo. La diferencia es crítica: el oro segregado no puede ser reclamado por terceros si el custodio tiene problemas financieros. Si el emisor o el custodio falla y el oro no estuviera correctamente segregado, el inversor podría perder su posición.
 
-**Auditorías independientes periódicas.** Las reservas físicas deben auditarse por terceros, no solo declararse. Una auditoría pública y verificable es la única prueba real de que el oro existe donde dicen que está.
+**Auditorías independientes periódicas.** Las reservas físicas deben auditarse por terceros, no solo declararse. Una auditoría pública y verificable es la única prueba real de que el oro existe donde dicen que está. Puedes ver cómo se aplican en Aura Gold en nuestras [garantías de custodia verificables](/transparencia).
 
 **Transparencia en precios y spread.** El modelo de negocio del oro fraccionado funciona con un spread entre el precio de compra y venta. Un proveedor serio lo muestra antes de que confirmes la operación, no después.
 
@@ -74,7 +74,7 @@ El coste tiene dos componentes principales que conviene entender:
 
 **Sin comisiones de custodia.** En el modelo de oro fraccionado bien diseñado, no pagas una cuota mensual por guardar tu oro. El coste está capturado en el spread al momento de la operación, no en una tarifa recurrente que erosiona tu posición mientras esperas.
 
-**Sin coste de entrada mínimo.** A diferencia del oro físico tradicional donde comprar por debajo de cierto volumen es ineficiente, el oro fraccionado permite empezar con cantidades simbólicas para familiarizarte con el producto antes de comprometer más capital.
+**Sin coste de entrada mínimo.** A diferencia del oro físico tradicional donde comprar por debajo de cierto volumen es ineficiente, el oro fraccionado permite empezar con cantidades simbólicas para familiarizarte con el producto antes de comprometer más capital. Aparte del coste de operar, conviene saber [cómo tributa el oro fraccionado](/blog/fiscalidad-oro-inversion-mexico) cuando vendes con ganancia.
 
 ## ¿El oro fraccionado es adecuado para ahorrar de forma recurrente?
 
@@ -100,7 +100,7 @@ El precio del oro fluctúa. A corto plazo puede bajar. Sin embargo, históricame
 
 ### ¿Qué diferencia hay entre oro fraccionado y criptomonedas respaldadas por oro?
 
-El oro tokenizado es una forma de oro fraccionado: cambia cómo se registra la fracción, no lo que la respalda. Lo que sí conviene revisar es quién emite el token, quién custodia el oro y si puedes verificar las barras.
+El [oro tokenizado](/blog/criptomonedas-respaldadas-por-oro) es una forma de oro fraccionado: cambia cómo se registra la fracción, no lo que la respalda. Lo que sí conviene revisar es quién emite el token, quién custodia el oro y si puedes verificar las barras.
 
 ### ¿Desde cuánto se puede invertir en oro fraccionado?
 

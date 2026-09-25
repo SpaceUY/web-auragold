@@ -56,7 +56,7 @@ La inflación oficial mide una canasta promedio. Pero tu inflación personal dep
 
 En la práctica, muchas familias mexicanas concentran buena parte de su gasto en categorías que suelen encarecerse más rápido que el promedio: alimentos, gasolina, educación, salud, vivienda.
 
-Eso significa que tu inflación real puede sentirse más alta que la cifra oficial. Y si tus ahorros están en una cuenta con rendimiento bajo, esa diferencia se convierte en pérdida silenciosa de poder adquisitivo.
+Eso significa que tu inflación real puede sentirse más alta que la cifra oficial. Y si tus ahorros están en una cuenta con rendimiento bajo, esa diferencia se convierte en pérdida silenciosa de poder adquisitivo. Si quieres ponerle cifra, [calcula cuánto perdió tu ahorro](/calculadora-inflacion-oro) frente a la inflación desde el año que elijas.
 
 ## Los riesgos reales de mantener todo tu dinero en bancos
 
@@ -107,7 +107,7 @@ La mejor respuesta no es elegir uno y descartar el otro. La mejor respuesta es c
 
 **Si tienes fondo de emergencia (3-6 meses):** combina banco + oro. Mantén liquidez suficiente en el banco y protege una parte del capital que probablemente no usarás de inmediato.
 
-**Si tienes ahorro de mediano plazo (1-3 años):** diversifica entre banco, instrumentos líquidos y activos de protección. Aquí el oro empieza a tener más sentido como herramienta de preservación.
+**Si tienes ahorro de mediano plazo (1-3 años):** diversifica entre banco, instrumentos líquidos y activos de protección. Aquí el oro empieza a tener más sentido como herramienta de preservación. Si dudas entre instrumentos como los CETES y el oro, lo comparamos en [oro frente a CETES](/blog/oro-vs-cetes).
 
 **Si tienes ahorro de largo plazo (5+ años):** el oro puede ocupar un rol más claro dentro de una estrategia de preservación patrimonial. No para reemplazar crecimiento, sino para equilibrarlo.
 
@@ -128,4 +128,4 @@ No se trata de abandonar el banco. Se trata de usar cada herramienta para lo que
 
 La combinación correcta depende de tu horizonte, tu perfil y tu necesidad de acceso.
 
-Si quieres empezar paso a paso, lee nuestra guía sobre cómo invertir en oro en México.
+Si quieres empezar paso a paso, lee nuestra guía sobre [cómo invertir en oro en México](/invertir-en-oro-mexico).
