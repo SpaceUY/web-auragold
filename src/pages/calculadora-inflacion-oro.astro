@@ -59,6 +59,13 @@ const defaultPurchasingPower = DEFAULT_AMOUNT / defaultInflationFactor;
 const defaultPile = pileLayout(DEFAULT_AMOUNT, defaultPurchasingPower, defaultGoldValue)!;
 const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 
+// Frase que explica el fajo de efectivo: "hoy compra $X" solo no se entendía.
+// La segunda oración solo tiene sentido si hay billetes grises dibujados.
+function cashExplanation(amount: number, startYear: number, purchasingPower: number, lostChips: number) {
+  const first = `Por la inflación, tus ${fmtPesos(amount)} hoy solo alcanzan para lo que en ${startYear} comprabas con ${fmtPesos(purchasingPower)}.`;
+  return lostChips > 0 ? `${first} Los billetes grises son lo que perdiste.` : first;
+}
+
 // Billetes: fajo parejo. Lingotes: pirámide, como se apilan en una bóveda.
 const billChipBase = "block h-2 w-20 rounded-[2px] border sm:h-3 sm:w-28";
 const billChipKept = "border-[#5fae81] bg-[#3f8a5f]";
@@ -247,7 +254,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
               {fmtPesos(DEFAULT_AMOUNT)}
             </p>
             <p class="mt-0.5 text-xs text-ag-red sm:text-sm" data-pile-cash-note>
-              hoy compra {fmtPesos(DEFAULT_AMOUNT / defaultInflationFactor)}
+              −{fmtPesos(DEFAULT_AMOUNT - defaultPurchasingPower)} por inflación
             </p>
           </div>
 
@@ -277,22 +284,19 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             </p>
           </div>
         </div>
-        <p class="mt-6 text-center text-xs text-white/40" data-pile-unit>
+        <p class="mx-auto mt-6 max-w-xl text-balance text-center text-sm text-white/70" data-pile-explanation>
+          {cashExplanation(DEFAULT_AMOUNT, DEFAULT_START_YEAR, defaultPurchasingPower, defaultPile.lostChips)}
+        </p>
+        <p class="mt-2 text-center text-xs text-white/40" data-pile-unit>
           Cada ficha ≈ {fmtPesos(defaultPile.unit)}
         </p>
 
-        <p class="mt-6 text-xs leading-relaxed text-white/40">
-          Cálculo ilustrativo con datos históricos públicos (Banco Mundial, INEGI, precio del oro promedio anual) e
-          inflación oficial hasta {LAST_CLOSED_YEAR}. El valor de hoy en oro usa la cotización en vivo. No es una
-          proyección de rendimientos futuros ni asesoría financiera. Ver{" "}
-          <a href="/blog/evolucion-inflacion-mexico" class="text-ag-gold hover:underline">
-            fuente de inflación
-          </a>{" "}
-          y{" "}
-          <a href="/precio-del-oro-hoy" class="text-ag-gold hover:underline">
-            histórico del precio del oro
-          </a>
-          .
+        <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/35">
+          Cálculo ilustrativo con inflación oficial (Banco Mundial, INEGI) hasta {LAST_CLOSED_YEAR} y precio del oro en
+          vivo. No es una proyección ni asesoría financiera. Fuentes:{" "}
+          <a href="/blog/evolucion-inflacion-mexico" class="underline decoration-white/30 hover:text-white/70">inflación</a>
+          {" · "}
+          <a href="/precio-del-oro-hoy" class="underline decoration-white/30 hover:text-white/70">precio del oro</a>.
         </p>
       </div>
     </section>
@@ -373,6 +377,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         const goldValueEl = calc.querySelector("[data-pile-gold-value]");
         const goldNote = calc.querySelector("[data-pile-gold-note]");
         const unitCaption = calc.querySelector("[data-pile-unit]");
+        const explanation = calc.querySelector("[data-pile-explanation]");
 
         // Cada ficha entra con un pequeño retraso respecto de la anterior, así
         // la pila se ve crecer en lugar de aparecer de golpe.
@@ -401,7 +406,8 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             goldValueEl.textContent = fmtPesos(0);
             cashNote.textContent = "";
             goldNote.textContent = "";
-            unitCaption.textContent = "Escribe cuánto tenías para ver la comparación.";
+            unitCaption.textContent = "";
+            explanation.textContent = "Escribe cuánto tenías para ver la comparación.";
             piles.setAttribute("aria-label", "Escribe un monto para ver la comparación entre efectivo y oro.");
             return;
           }
@@ -421,7 +427,10 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             .join("");
 
           cashValue.textContent = fmtPesos(amount);
-          cashNote.textContent = `hoy compra ${fmtPesos(purchasingPower)}`;
+          cashNote.textContent = `−${fmtPesos(amount - purchasingPower)} por inflación`;
+          const firstSentence = `Por la inflación, tus ${fmtPesos(amount)} hoy solo alcanzan para lo que en ${startYear} comprabas con ${fmtPesos(purchasingPower)}.`;
+          explanation.textContent =
+            lostChips > 0 ? `${firstSentence} Los billetes grises son lo que perdiste.` : firstSentence;
           goldValueEl.textContent = fmtPesos(goldValue);
           goldNote.textContent = `x${goldMultiple.toFixed(1)} tu dinero`;
           unitCaption.textContent = `Cada ficha ≈ ${fmtPesos(unit)}`;
