@@ -79,7 +79,7 @@ Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fr
 
 ## Paso 6: Realiza tu primera compra de oro (proceso práctico)
 
-1. **Descarga e instalación:** encontrá la app oficial, descargá en iOS o Android (2 minutos).
+1. **Descarga o acceso:** descarga la app oficial en Android o, si tienes iPhone, úsala desde la web (2 minutos).
 2. **Registro simplificado:** datos básicos (nombre, correo, teléfono).
 3. **Exploración sin compromiso:** ver precios en tiempo real y entender el proceso antes de invertir.
 4. **Verificación de identidad:** por regulación fintech, necesitas verificar tu identidad (INE/fotografía), 5 minutos.
@@ -87,7 +87,7 @@ Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fr
 6. **Primera compra simbólica:** empieza con un monto pequeño ($50-$100 MXN) para probar el proceso completo.
 7. **Confirmación y seguimiento:** recibes confirmación inmediata; tu saldo en oro se actualiza en tiempo real.
 
-Consejo práctico: no inviertas todo de golpe. Haz una primera compra pequeña, observá cómo funciona durante 1-2 semanas, vendé una fracción para probar la liquidez, y luego escalá tu inversión con confianza.
+Consejo práctico: no inviertas todo de golpe. Haz una primera compra pequeña, observa cómo funciona durante 1-2 semanas, vende una fracción para probar la liquidez y luego aumenta tu inversión con confianza.
 
 ## Paso 7: Monitorea tu inversión sin obsesionarte
 
@@ -111,11 +111,11 @@ Destiná un porcentaje fijo de tus ingresos mensuales a oro, tratándolo como un
 
 ## Errores comunes al invertir en oro (y cómo evitarlos)
 
-1. **Esperar el "momento perfecto" para comprar** - el precio fluctúa constantemente; empieza con poco y aumentá gradualmente.
-2. **Tratar el oro como inversión especulativa** - el oro protege, no multiplica agresivamente; ajustá expectativas a un horizonte mínimo de 1-3 años.
-3. **Invertir dinero que necesitas en corto plazo** - mantené tu fondo de emergencia en efectivo líquido (3-6 meses de gastos), invertí en oro solo el excedente.
+1. **Esperar el "momento perfecto" para comprar** - el precio fluctúa constantemente; empieza con poco y aumenta gradualmente.
+2. **Tratar el oro como inversión especulativa** - el oro protege, no multiplica agresivamente; ajusta tus expectativas a un horizonte mínimo de 1-3 años.
+3. **Invertir dinero que necesitas en corto plazo** - mantén tu fondo de emergencia en efectivo líquido (3-6 meses de gastos) e invierte en oro solo el excedente.
 4. **No diversificar entre activos** - el oro debe ser una parte (5-20%) de una estrategia más amplia.
-5. **Dejarse llevar por el pánico en caídas temporales** - recordá que el oro tiene volatilidad natural y su propósito es protección a largo plazo.
+5. **Dejarse llevar por el pánico en caídas temporales** - recuerda que el oro tiene volatilidad natural y su propósito es protección a largo plazo.
 
 ## Da el primer paso: comienza a proteger tu dinero hoy
 

@@ -76,7 +76,7 @@ Si estás buscando opciones más allá del efectivo inmóvil, también puedes re
 
 El oro no existe para generar rendimientos rápidos. Su función histórica ha sido otra: preservar valor cuando las monedas pierden poder adquisitivo.
 
-**1. Históricamente ha funcionado como cobertura frente a inflación.** El oro no sube de forma lineal ni garantizada. Pero en horizontes largos, históricamente ha mostrado una capacidad consistente para preservar valor frente a inflación, devaluación monetaria y pérdida de confianza financiera. No es una promesa de rentabilidad. Es una herramienta de protección. Acá explicamos con más detalle por qué el oro protege frente a la inflación.
+**1. Históricamente ha funcionado como cobertura frente a inflación.** El oro no sube de forma lineal ni garantizada. Pero en horizontes largos, históricamente ha mostrado una capacidad consistente para preservar valor frente a inflación, devaluación monetaria y pérdida de confianza financiera. No es una promesa de rentabilidad. Es una herramienta de protección. Aquí explicamos con más detalle por qué el oro protege frente a la inflación.
 
 **2. Reduce dependencia del sistema financiero.** Cuando tienes dinero en una cuenta bancaria, dependes del banco. Cuando tienes exposición a oro físico, reduces esa dependencia. No elimina todos los riesgos, pero cambia su naturaleza: pasas de depender de una promesa financiera a depender de un activo escaso con valor reconocido globalmente.
 
@@ -103,11 +103,11 @@ El oro no existe para generar rendimientos rápidos. Su función histórica ha s
 
 La mejor respuesta no es elegir uno y descartar el otro. La mejor respuesta es construir equilibrio.
 
-**Si necesitas liquidez inmediata (0-3 meses):** priorizá cuenta bancaria. Ese dinero debe estar disponible sin fricción para gastos corrientes y emergencias inmediatas.
+**Si necesitas liquidez inmediata (0-3 meses):** prioriza la cuenta bancaria. Ese dinero debe estar disponible sin fricción para gastos corrientes y emergencias inmediatas.
 
-**Si tienes fondo de emergencia (3-6 meses):** combiná banco + oro. Mantené liquidez suficiente en banco y protegé una parte del capital que probablemente no usarás de inmediato.
+**Si tienes fondo de emergencia (3-6 meses):** combina banco + oro. Mantén liquidez suficiente en el banco y protege una parte del capital que probablemente no usarás de inmediato.
 
-**Si tienes ahorro de mediano plazo (1-3 años):** diversificá entre banco, instrumentos líquidos y activos de protección. Acá el oro empieza a tener más sentido como herramienta de preservación.
+**Si tienes ahorro de mediano plazo (1-3 años):** diversifica entre banco, instrumentos líquidos y activos de protección. Aquí el oro empieza a tener más sentido como herramienta de preservación.
 
 **Si tienes ahorro de largo plazo (5+ años):** el oro puede ocupar un rol más claro dentro de una estrategia de preservación patrimonial. No para reemplazar crecimiento, sino para equilibrarlo.
 
@@ -128,4 +128,4 @@ No se trata de abandonar el banco. Se trata de usar cada herramienta para lo que
 
 La combinación correcta depende de tu horizonte, tu perfil y tu necesidad de acceso.
 
-Si quieres empezar paso a paso, leé nuestra guía sobre cómo invertir en oro en México.
+Si quieres empezar paso a paso, lee nuestra guía sobre cómo invertir en oro en México.
