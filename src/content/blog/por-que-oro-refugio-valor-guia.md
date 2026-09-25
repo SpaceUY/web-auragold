@@ -58,7 +58,7 @@ Para entender por qué el oro sigue siendo considerado un refugio hoy, hay que e
 
 Desde civilizaciones antiguas como Egipto, Grecia o Roma, el oro fue utilizado como medio de intercambio, unidad de cuenta y reserva de valor.
 
-No por simbolismo, sino por propiedades físicas concretas: es durable, divisible, escaso, homogéneo y difícil de falsificar.
+No por simbolismo, sino por [propiedades físicas concretas](/blog/que-es-oro-como-material): es durable, divisible, escaso, homogéneo y difícil de falsificar.
 
 Durante siglos, el oro ha conservado una capacidad de compra relativamente estable frente a bienes reales, algo que pocas formas de dinero han conseguido sostener en el tiempo.
 
@@ -94,7 +94,7 @@ El papel del oro como refugio se observa con más claridad en períodos de estr�
 
 **Crisis del petróleo y estanflación (1973–1980):** durante la crisis energética de los años 70, el oro pasó de $35 a cerca de $800/oz, mientras la inflación se disparaba y los activos financieros tradicionales sufrían en términos reales.
 
-**Crisis financiera global de 2008:** durante la crisis de 2008, el sistema financiero global entró en una fase de desconfianza extrema. Entre octubre de 2007 y marzo de 2009, el S&P 500 cayó alrededor de un 57%, mientras el oro resistió mejor el shock y consolidó su papel como activo defensivo.
+**Crisis financiera global de 2008:** durante la crisis de 2008, el sistema financiero global entró en una fase de desconfianza extrema. Entre octubre de 2007 y marzo de 2009, el S&P 500 cayó alrededor de un 57%, mientras el oro resistió mejor el shock y consolidó su papel como activo defensivo. La comparación completa entre ambos activos está en [oro vs acciones de la bolsa](/blog/oro-vs-acciones).
 
 **Pandemia de 2020:** en 2020, el oro superó por primera vez los $2.000/oz. Tras una corrección inicial por liquidez, el mercado giró hacia activos defensivos ante el shock económico global y la expansión monetaria sin precedentes.
 
@@ -116,7 +116,7 @@ En México, el oro añade una capa de protección adicional: no solo frente a la
 
 **Oro, inflación y tipo de cambio:** desde inicios de los 2000, el tipo de cambio USD/MXN ha pasado de niveles cercanos a un dígito por dólar a niveles significativamente más altos en distintos momentos del ciclo. Eso implica que el oro en pesos mexicanos no solo refleja el movimiento del metal en dólares, sino también la evolución del tipo de cambio. Para el ahorrador mexicano, esto convierte al oro en una cobertura dual: frente a inflación local, y frente a depreciación cambiaria.
 
-**Acceso al oro sin grandes capitales:** durante décadas, acceder al oro físico implicaba barreras operativas: ticket alto, almacenamiento, custodia y seguridad. Hoy, la digitalización permite acceder a exposición a oro físico con importes mucho más bajos que en el pasado, reduciendo la fricción de entrada para pequeños ahorradores.
+**[Acceso al oro sin grandes capitales](/invertir-en-oro-mexico):** durante décadas, acceder al oro físico implicaba barreras operativas: ticket alto, almacenamiento, custodia y seguridad. Hoy, la digitalización permite acceder a exposición a oro físico con importes mucho más bajos que en el pasado, reduciendo la fricción de entrada para pequeños ahorradores.
 
 ## Oro físico vs oro papel: cuál es el verdadero refugio
 
@@ -124,7 +124,7 @@ No toda exposición al oro ofrece el mismo nivel de protección.
 
 **Qué es el oro papel:** el llamado "oro papel" incluye instrumentos financieros vinculados al precio del oro - ETFs, futuros, certificados, acciones mineras. Estos productos replican o siguen el precio del metal, pero no siempre implican propiedad directa sobre oro físico.
 
-**Qué diferencia al oro físico:** el oro físico introduce una diferencia clave: reduce la dependencia de intermediarios financieros. Eso no significa ausencia total de riesgo, pero sí una estructura distinta a la de un activo puramente financiero. En contextos de estrés sistémico, esa diferencia puede ser relevante.
+**Qué diferencia al oro físico:** el oro físico introduce una diferencia clave: reduce la dependencia de intermediarios financieros. Eso no significa ausencia total de riesgo, pero sí una estructura distinta a la de un activo puramente financiero. En contextos de estrés sistémico, esa diferencia puede ser relevante. Eso sí, también cuenta [dónde guardar el oro físico](/blog/donde-guardar-oro-casa-banco-boveda): casa, banco o bóveda no ofrecen la misma protección.
 
 *Importante: antes de invertir en oro a través de cualquier plataforma, conviene revisar la estructura legal, la custodia, los términos de propiedad y las condiciones de liquidez.*
 
@@ -140,7 +140,7 @@ El oro no depende directamente de la política monetaria ni del balance de un em
 
 **¿El oro siempre sube en las crisis?**
 
-No siempre de forma inmediata. Puede corregir en el corto plazo, pero históricamente ha tendido a comportarse mejor que otros activos en escenarios de estrés.
+No siempre de forma inmediata. Puede corregir en el corto plazo, pero históricamente ha tendido a comportarse mejor que otros activos en escenarios de estrés. Aquí explicamos [por qué el oro también baja](/blog/por-que-sube-baja-precio-oro), aunque sea un activo refugio.
 
 **¿El oro protege contra la inflación en México?**
 

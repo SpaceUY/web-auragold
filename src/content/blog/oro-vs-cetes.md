@@ -86,6 +86,8 @@ En escenarios de inflación controlada y tasas altas, los CETES suelen proteger 
 - **Equilibrado:** 50% CETES + 50% oro.
 - **Anti-sustos:** colchón en CETES para 3-6 meses de gastos + aportaciones periódicas de oro a largo plazo.
 
+Si en tu estrategia también entran acciones, comparamos el [oro frente a acciones](/blog/oro-vs-acciones) por separado.
+
 ### Por qué las aportaciones periódicas de oro funcionan mejor que intentar adivinar el momento
 
 Comprar oro en pequeñas cantidades de forma constante reduce el impacto de la volatilidad del precio. No necesitas esperar al "momento perfecto": la consistencia a largo plazo suele ganar a cualquier intento de timing de mercado.

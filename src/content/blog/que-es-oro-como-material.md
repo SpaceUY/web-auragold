@@ -46,6 +46,8 @@ El valor del oro no es magia: son propiedades físicas concretas que casi ningú
 - **Es muy denso:** un volumen pequeño concentra mucho peso y mucho valor.
 - **Es escaso:** todo el oro extraído en la historia cabría, aproximadamente, en un cubo de unos 22 metros por lado.
 
+En inversión, esa calidad se mide por su [pureza 999.9 y kilates](/blog/glosario-oro#kilates): el oro puro es de 24 kilates.
+
 ## ¿Para qué sirve el oro? Aplicaciones más allá de la joyería
 
 El oro es mucho más que un metal para joyas. Sus propiedades lo hacen insustituible en usos muy distintos.
@@ -88,4 +90,4 @@ Entender el oro como material ayuda a entender por qué funciona como protecció
 
 ## Empieza a proteger tu ahorro con oro real
 
-Ahora que sabes qué es el oro, cómo se formó y por qué vale lo que vale, el siguiente paso es tenerlo. Con Aura Gold inviertes en ese mismo oro físico real, certificado y custodiado, comprando la fracción de gramo que quieras, sin necesidad de un lingote entero ni de guardarlo en casa.
+Ahora que sabes qué es el oro, cómo se formó y por qué vale lo que vale, el siguiente paso es tenerlo. Con Aura Gold [inviertes en ese mismo oro físico real](/invertir-en-oro-mexico), certificado y custodiado, comprando la fracción de gramo que quieras, sin necesidad de un lingote entero ni de guardarlo en casa.

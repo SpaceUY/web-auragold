@@ -1,106 +1,20 @@
 ---
 // Botón "Descargar app" que resuelve el destino según el dispositivo:
 // - Android: ficha de Play Store (el href por defecto, funciona sin JS).
-// - iPhone/iPad: todavía no hay app nativa, así que lleva a la web app.
-// - Escritorio: abre un QR para escanear con el celular, porque instalar
-//   una app de Android desde la computadora no tiene sentido.
-//
-// El QR se genera en el build como SVG: no agrega JavaScript al sitio.
-import QRCode from "qrcode";
-import { playStoreUrl, WEB_APP_URL } from "../../data/links";
+// - iPhone/iPad: todavía no hay app nativa. Abre el modal de AppDownloadDialog
+//   con el aviso "llega pronto" y un botón a la web app.
+// - Escritorio: abre el mismo modal con un QR para escanear con el celular.
+// El modal se renderiza una sola vez (en el Header) y lo comparten todos los botones.
+import { playStoreUrl } from "../../data/links";
 
 interface Props {
   medium: string;
   class?: string;
-  popoverAlign?: "left" | "right";
 }
 
-const { medium, class: className = "", popoverAlign = "right" } = Astro.props;
-const qrSvg = await QRCode.toString(playStoreUrl(`qr-${medium}`), {
-  type: "svg",
-  margin: 0,
-  color: { dark: "#090909", light: "#ffffff" },
-});
-const popoverPosition = popoverAlign === "right" ? "right-0" : "left-0";
+const { medium, class: className = "" } = Astro.props;
 ---
 
-<div class="relative" data-app-download>
-  <a
-    href={playStoreUrl(medium)}
-    data-app-download-link
-    data-webapp-url={WEB_APP_URL}
-    data-cta={`download-${medium}`}
-    aria-haspopup="dialog"
-    aria-expanded="false"
-    class={className}
-  >
-    Descargar app
-  </a>
-  <div
-    data-app-download-popover
-    role="dialog"
-    aria-label="Descargar Aura Gold"
-    class={`absolute ${popoverPosition} top-full z-50 mt-3 hidden w-64 rounded-2xl border border-white/10 bg-ag-dark p-5 text-center shadow-2xl`}
-  >
-    <div class="mx-auto w-40 rounded-xl bg-white p-3" set:html={qrSvg} />
-    <p class="mt-4 font-body text-sm font-medium text-white">Escanea con tu Android para descargar la app</p>
-    <p class="mt-2 font-body text-xs text-white/50">
-      ¿Tienes iPhone? <a href={WEB_APP_URL} class="text-ag-gold hover:underline">Usa Aura desde la web</a>
-    </p>
-  </div>
-</div>
-
-<script>
-  type Platform = "android" | "ios" | "desktop";
-
-  function detectPlatform(): Platform {
-    const userAgent = navigator.userAgent;
-    if (/Android/i.test(userAgent)) return "android";
-    // iPadOS se presenta como Mac; se distingue por la pantalla táctil.
-    const isIpadOs = /Macintosh/.test(userAgent) && navigator.maxTouchPoints > 1;
-    if (/iPhone|iPad|iPod/.test(userAgent) || isIpadOs) return "ios";
-    return "desktop";
-  }
-
-  const platform = detectPlatform();
-
-  function closeAll(except?: Element) {
-    document.querySelectorAll("[data-app-download]").forEach((wrapper) => {
-      if (wrapper === except) return;
-      wrapper.querySelector("[data-app-download-popover]")?.classList.add("hidden");
-      wrapper.querySelector("[data-app-download-link]")?.setAttribute("aria-expanded", "false");
-    });
-  }
-
-  document.querySelectorAll<HTMLElement>("[data-app-download]").forEach((wrapper) => {
-    const link = wrapper.querySelector<HTMLAnchorElement>("[data-app-download-link]");
-    const popover = wrapper.querySelector("[data-app-download-popover]");
-    if (!link || !popover) return;
-
-    if (platform === "ios") {
-      link.href = link.dataset.webappUrl ?? link.href;
-      link.removeAttribute("aria-haspopup");
-      return;
-    }
-    if (platform === "android") {
-      link.removeAttribute("aria-haspopup");
-      return;
-    }
-
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const willOpen = popover.classList.contains("hidden");
-      closeAll(wrapper);
-      popover.classList.toggle("hidden", !willOpen);
-      link.setAttribute("aria-expanded", String(willOpen));
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    const target = event.target as Element;
-    if (!target.closest("[data-app-download]")) closeAll();
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeAll();
-  });
-</script>
+<a href={playStoreUrl(medium)} data-app-download-link data-cta={`download-${medium}`} class={className}>
+  Descargar app
+</a>

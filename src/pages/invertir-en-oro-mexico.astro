@@ -7,7 +7,7 @@ import FAQ from "../components/ui/FAQ.astro";
 import FinancialDisclaimer from "../components/ui/FinancialDisclaimer.astro";
 import AppCTAButtons from "../components/ui/AppCTAButtons.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
-import { WEB_APP_URL } from "../data/links";
+import AppStartLink from "../components/ui/AppStartLink.astro";
 
 const stats = [
   { value: "24-48h", label: "Liquidez al vender" },
@@ -20,7 +20,7 @@ const benefits = [
   {
     title: "5.000 años de historia",
     description:
-      "El oro ha sido reserva de valor en todas las civilizaciones. Ninguna divisa ha durado tanto tiempo sin perder relevancia como el oro.",
+      'El oro ha sido <a href="/blog/que-es-oro-como-material" class="text-ag-gold hover:underline">reserva de valor en todas las civilizaciones</a>. Ninguna divisa ha durado tanto tiempo sin perder relevancia como el oro.',
   },
   {
     title: "Protección contra la inflación",
@@ -146,6 +146,8 @@ const faqItems = [
   {
     question: "¿Es realmente oro físico o es algo digital como una cripto?",
     answer:
+      'Es un token digital respaldado 1:1 por oro físico. Lo digital es cómo se registra y se transfiere; lo físico es lo que le da valor: oro 24k <a href="/blog/glosario-oro#lbma" class="text-ag-gold hover:underline">certificado LBMA</a> en bóvedas en Suiza. Por eso su precio sigue al del oro y no a la especulación cripto. Y si lo quieres en físico, puedes canjear tus tokens por lingotes completos directamente con Tether Gold.',
+    plainAnswer:
       "Es un token digital respaldado 1:1 por oro físico. Lo digital es cómo se registra y se transfiere; lo físico es lo que le da valor: oro 24k certificado LBMA en bóvedas en Suiza. Por eso su precio sigue al del oro y no a la especulación cripto. Y si lo quieres en físico, puedes canjear tus tokens por lingotes completos directamente con Tether Gold.",
   },
   {
@@ -156,7 +158,9 @@ const faqItems = [
   {
     question: "¿Puedo sacar mi dinero cuando quiera?",
     answer:
-      "Sí. La liquidez es inmediata. Puedes vender tu oro en cualquier momento y recibir el equivalente en pesos en tu cuenta. También puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold.",
+      'Sí. La liquidez es inmediata. Puedes vender tu oro en cualquier momento y recibir el equivalente en pesos en tu cuenta. También puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold. Si vendes con ganancia, te explicamos los <a href="/blog/fiscalidad-oro-inversion-mexico" class="text-ag-gold hover:underline">impuestos al invertir en oro</a> en México.',
+    plainAnswer:
+      "Sí. La liquidez es inmediata. Puedes vender tu oro en cualquier momento y recibir el equivalente en pesos en tu cuenta. También puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold. Si vendes con ganancia, te explicamos los impuestos al invertir en oro en México.",
   },
   {
     question: "¿El oro en Aura Gold tiene comisiones de custodia?",
@@ -174,13 +178,20 @@ const faqItems = [
       "Especialmente entonces. Si el dinero que ahorras está en pesos, pierde poder adquisitivo con la inflación. Convertirlo en oro, aunque sea en pequeñas fracciones, protege ese valor. Además, la app permite el ahorro recurrente automático para que el hábito sea simple.",
   },
 ];
+
+// answer admite HTML (links) para el FAQ visual; plainAnswer es el mismo texto sin
+// tags para el schema FAQPage. Si un item no tiene plainAnswer, su answer ya es texto plano.
+const faqJsonLdItems = faqItems.map((item) => ({
+  question: item.question,
+  answer: item.plainAnswer ?? item.answer,
+}));
 ---
 
 <BaseLayout
   title="Comprar Oro en México - Invertir en Oro de Forma Segura"
   description="Cómo invertir en oro en México de forma segura con Aura Gold. Descubre las mejores opciones para comprar oro, proteger tu patrimonio y resguardar tus ahorros frente a la inflación."
 >
-  <FAQJsonLD items={faqItems} />
+  <FAQJsonLD items={faqJsonLdItems} />
 
   <Header />
 
@@ -262,7 +273,7 @@ const faqItems = [
           benefits.map((benefit, i) => (
             <div data-animate data-delay={i * 70} class="rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 class="font-display text-lg text-white">{benefit.title}</h3>
-              <p class="mt-2 text-sm text-white/60">{benefit.description}</p>
+              <p class="mt-2 text-sm text-white/60" set:html={benefit.description} />
             </div>
           ))
         }
@@ -309,6 +320,8 @@ const faqItems = [
         <a href="/calculadora-inflacion-oro" class="text-ag-gold hover:underline">
           Calcula cuánto perdiste por inflación en cualquier año
         </a>
+        . ¿Y los CETES? Te explicamos aparte{" "}
+        <a href="/blog/oro-vs-cetes" class="text-ag-gold hover:underline">cómo se compara el oro con los CETES</a>
         .
       </p>
     </section>
@@ -356,7 +369,11 @@ const faqItems = [
       <p class="mx-auto mt-8 max-w-2xl text-center text-sm text-white/50">
         <strong class="text-white">¿Qué pasa si Aura Gold cierra?</strong> Al ser un activo segregado, tu oro
         permanece bajo tu titularidad y puede transferirse o recuperarse. Tu protección no depende de nuestra
-        continuidad.
+        continuidad. Puedes comprobar{" "}
+        <a href="/transparencia" class="text-ag-gold hover:underline">la custodia en Suiza, las auditorías y el spread</a>{" "}
+        en la página de transparencia. Y si quieres el panorama completo, te explicamos los{" "}
+        <a href="/blog/es-seguro-invertir-en-oro" class="text-ag-gold hover:underline">riesgos reales de invertir en oro</a>{" "}
+        y cómo evitarlos.
       </p>
     </section>
 
@@ -381,21 +398,20 @@ const faqItems = [
         </h2>
         <p class="mx-auto mt-4 max-w-2xl text-white/60">
           Oro físico fraccionado al precio más cercano al spot XAU/MXN, sin comisiones de custodia.
-          Abre tu cuenta desde la web y empieza en minutos.
+          Abre tu cuenta desde la app o la web y empieza en minutos.
         </p>
         <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href={WEB_APP_URL}
-            data-cta="webapp-final-cta"
+          <AppStartLink
+            medium="cta-final-invertir"
             class="inline-flex items-center justify-center rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark hover:opacity-90"
           >
             Proteger mi dinero y abrir una bóveda
-          </a>
+          </AppStartLink>
           <a
-            href="#"
+            href="/#como-funciona"
             class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 font-medium text-white hover:bg-white/10"
           >
-            Quiero ver una demo rápida
+            Ver cómo funciona
           </a>
         </div>
       </div>

@@ -90,7 +90,7 @@ Mantener esta documentación en orden es, además, una buena práctica de contro
 
 ## ¿Tributa igual el oro que guardo en casa que el oro fraccionado en una app?
 
-Depende de qué poseas legalmente en cada caso, y esta es la distinción que casi nadie explica. No es lo mismo, a efectos fiscales, guardar un centenario en una caja fuerte que tener oro físico asignado a tu nombre bajo custodia profesional.
+Depende de qué poseas legalmente en cada caso, y esta es la distinción que casi nadie explica. No es lo mismo, a efectos fiscales, guardar un centenario en una caja fuerte que tener [oro físico asignado a tu nombre bajo custodia profesional](/blog/que-es-oro-fraccionado-funcionamiento).
 
 En ambos escenarios, si posees oro físico real y lo vendes con ganancia, el marco general es el mismo: ISR sobre la ganancia bajo enajenación de bienes. Lo que cambia son los detalles operativos: la trazabilidad del costo de adquisición, la facilidad para documentar cada operación y la claridad del precio de compra y de venta. Un modelo digital que registra cada movimiento facilita justamente esa trazabilidad, que es la parte más frágil cuando llega el momento de declarar.
 

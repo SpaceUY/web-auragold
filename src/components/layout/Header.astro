@@ -1,5 +1,6 @@
 ---
 import AppDownloadLink from "../ui/AppDownloadLink.astro";
+import AppDownloadDialog from "../ui/AppDownloadDialog.astro";
 import { WEB_APP_URL } from "../../data/links";
 
 const navLinks = [
@@ -121,7 +122,6 @@ const learnSubLinks = [
     <div class="mt-2 flex flex-col gap-3 border-t border-white/10 pt-5">
       <AppDownloadLink
         medium="menu"
-        popoverAlign="left"
         class="flex items-center justify-center rounded-full bg-ag-gold px-5 py-2.5 font-medium text-ag-dark"
       />
       <a
@@ -134,6 +134,8 @@ const learnSubLinks = [
     </div>
   </nav>
 </header>
+
+<AppDownloadDialog />
 
 <script>
   const toggle = document.querySelector("[data-mobile-menu-toggle]");
