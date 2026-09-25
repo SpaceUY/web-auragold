@@ -1,0 +1,141 @@
+---
+// Modal de "Descargar app" para iPhone (la app llega pronto → web app) y
+// escritorio (QR a Play Store). Usa <dialog> nativo: showModal() ya resuelve
+// el foco, la tecla Esc y que el resto de la página no sea interactivo.
+// En Android los botones van directo a Play Store y este modal no se abre.
+//
+// El QR se genera en el build como SVG: no agrega JavaScript al sitio.
+import QRCode from "qrcode";
+import { playStoreUrl, WEB_APP_URL } from "../../data/links";
+
+const qrSvg = await QRCode.toString(playStoreUrl("qr-modal"), {
+  type: "svg",
+  margin: 0,
+  color: { dark: "#090909", light: "#ffffff" },
+});
+---
+
+<dialog
+  data-app-download-dialog
+  aria-labelledby="app-download-title"
+  class="app-download-dialog m-auto w-[calc(100%-3rem)] max-w-[20rem] overflow-visible bg-transparent p-0 text-white backdrop:bg-ag-black/70 backdrop:backdrop-blur-md"
+>
+  <div
+    class="relative overflow-hidden rounded-3xl border border-white/10 bg-[#101010] px-5 pb-5 pt-7 text-center shadow-[0_24px_60px_-16px_rgba(0,0,0,0.8)]"
+  >
+    <div class="pointer-events-none absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-ag-gold/15 blur-3xl"></div>
+
+    <button
+      type="button"
+      data-dialog-close
+      aria-label="Cerrar"
+      class="absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white/70 transition-colors hover:bg-white/20 hover:text-white"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"></path>
+      </svg>
+    </button>
+
+    <!-- iPhone -->
+    <div data-dialog-ios class="relative hidden">
+      <!-- El mismo cerdito que usa la web app, para que la transición se sienta continua -->
+      <img src="/images/icons/cerdito.png" alt="" width="240" height="240" class="mx-auto w-20" />
+      <h2 id="app-download-title" class="mt-3 text-balance px-6 font-display text-lg font-semibold leading-snug">
+        La app para iPhone llega pronto
+      </h2>
+      <p class="mx-auto mt-1.5 max-w-[15rem] text-balance text-[13px] text-white/60">
+        Mientras tanto, usa Aura desde la web.
+      </p>
+      <a
+        href={WEB_APP_URL}
+        data-cta="webapp-ios-modal"
+        class="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-ag-gold px-4 py-2.5 text-sm font-medium text-ag-dark transition-opacity hover:opacity-90"
+      >
+        Usar Aura en la web
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Escritorio -->
+    <div data-dialog-desktop class="relative hidden">
+      <h2 class="text-balance px-6 font-display text-lg font-semibold leading-snug">Descarga Aura en tu Android</h2>
+      <p class="mt-1.5 text-[13px] text-white/60">Escanea el código con la cámara de tu celular.</p>
+      <div class="mx-auto mt-5 w-36 rounded-2xl bg-white p-3" set:html={qrSvg} />
+      <!-- El {" "} es necesario: el build borra el salto de línea entre el texto y el enlace -->
+      <p class="mt-5 text-[13px] text-white/50">
+        ¿Tienes iPhone?{" "}
+        <a href={WEB_APP_URL} data-cta="webapp-desktop-modal" class="text-ag-gold hover:underline">Usa Aura desde la web</a>
+      </p>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .app-download-dialog[open] {
+      animation: app-download-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .app-download-dialog[open]::backdrop {
+      animation: app-download-fade 0.35s ease-out;
+    }
+
+    @keyframes app-download-in {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.96);
+      }
+    }
+
+    @keyframes app-download-fade {
+      from {
+        opacity: 0;
+      }
+    }
+  }
+</style>
+
+<script>
+  type Platform = "android" | "ios" | "desktop";
+
+  function detectPlatform(): Platform {
+    const userAgent = navigator.userAgent;
+    if (/Android/i.test(userAgent)) return "android";
+    // iPadOS se presenta como Mac; se distingue por la pantalla táctil.
+    const isIpadOs = /Macintosh/.test(userAgent) && navigator.maxTouchPoints > 1;
+    if (/iPhone|iPad|iPod/.test(userAgent) || isIpadOs) return "ios";
+    return "desktop";
+  }
+
+  const platform = detectPlatform();
+  const dialog = document.querySelector<HTMLDialogElement>("[data-app-download-dialog]");
+
+  if (dialog && platform !== "android") {
+    dialog.querySelector(platform === "ios" ? "[data-dialog-ios]" : "[data-dialog-desktop]")?.classList.remove("hidden");
+    if (platform === "desktop") {
+      dialog.querySelector("[data-dialog-desktop] h2")?.setAttribute("id", "app-download-title");
+      dialog.querySelector("[data-dialog-ios] h2")?.removeAttribute("id");
+    }
+
+    const close = () => dialog.close();
+
+    document.querySelectorAll<HTMLAnchorElement>("[data-app-download-link]").forEach((link) => {
+      link.setAttribute("aria-haspopup", "dialog");
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        dialog.showModal();
+        // La página de atrás no se desplaza mientras el modal está abierto.
+        document.documentElement.classList.add("overflow-hidden");
+      });
+    });
+
+    dialog.addEventListener("close", () => document.documentElement.classList.remove("overflow-hidden"));
+    dialog.querySelectorAll("[data-dialog-close]").forEach((button) => button.addEventListener("click", close));
+    // Tocar afuera de la tarjeta (sobre el fondo desenfocado) también cierra.
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) close();
+    });
+  }
+</script>
