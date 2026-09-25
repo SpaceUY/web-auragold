@@ -40,7 +40,7 @@ Piezas chapadas (metal base con una capa de oro), lingotes rellenos de otro meta
 
 ### "Oro digital" sin respaldo físico real
 
-Plataformas que venden "oro" que en realidad no está respaldado 1:1 por metal en bóveda. Si no hay oro real asignado detrás de cada gramo, estás comprando una promesa, no un activo. Este es el fraude más peligroso porque se disfraza de tecnología moderna.
+Plataformas que venden "oro" que en realidad no está respaldado 1:1 por metal en bóveda. Si no hay oro real asignado detrás de cada gramo, estás comprando una promesa, no un activo. Este es el fraude más peligroso porque se disfraza de tecnología moderna. Si te ofrecen oro en forma de token, revisa antes cómo funcionan las [criptomonedas respaldadas por oro](/blog/criptomonedas-respaldadas-por-oro) y qué verificar.
 
 ### Esquemas con rendimientos garantizados
 
@@ -87,7 +87,7 @@ Sí, siempre que uses una vía con oro físico certificado, custodia segura y ac
 
 ### ¿Puedo perder todo mi dinero invirtiendo en oro?
 
-Es muy improbable con oro físico real: el metal no vale cero como una acción que quiebra. Los escenarios de pérdida total suelen venir de fraudes (oro falso, "oro" sin respaldo) o de esquemas de rendimientos garantizados, no del oro en sí.
+Es muy improbable con oro físico real: el metal no vale cero como una acción que quiebra. Los escenarios de pérdida total suelen venir de fraudes (oro falso, "oro" sin respaldo) o de esquemas de rendimientos garantizados, no del oro en sí. Lo que sí conviene prever es [qué impuestos pagas al vender oro](/blog/fiscalidad-oro-inversion-mexico) con ganancia.
 
 ### ¿Cómo sé si una plataforma de oro es confiable?
 
