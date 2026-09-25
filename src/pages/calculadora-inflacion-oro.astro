@@ -32,7 +32,14 @@ const defaultGoldValue = (DEFAULT_AMOUNT / GOLD_PRICE_MXN_PER_OZ_BY_YEAR[DEFAULT
 //   20 fichas, se achican las dos juntas y la proporción se mantiene.
 // Con monto 0 no hay fichas. El script de abajo repite este cálculo en el
 // navegador (define:vars no permite importar funciones).
-const PILE_MAX_CHIPS = 20;
+// Tope dinámico del oro: se agranda cuando el oro se multiplicó mucho (años
+// viejos, p. ej. 2009 ≈ x5.7) para que la pila de billetes pueda llegar a
+// PILE_TARGET_BASE y el monto se siga notando. Con más de 21 lingotes (más de
+// 6 filas) se dibujan más chicos para entrar en el mismo alto.
+const PILE_MIN_CHIPS = 20;
+const PILE_MAX_CHIPS = 45;
+const PILE_TARGET_BASE = 7;
+const PILE_SMALL_FROM = 22;
 const PILE_MAX_BASE = 10;
 // Tope del campo de monto: por encima de esto los números ya no entran en mobile.
 const MAX_AMOUNT = 100_000_000;
@@ -40,10 +47,11 @@ const MAX_AMOUNT = 100_000_000;
 function pileLayout(amount: number, purchasingPower: number, goldValue: number) {
   if (amount <= 0) return null;
   const goldMultiple = goldValue / amount;
-  const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))));
+  const chipCap = Math.min(PILE_MAX_CHIPS, Math.max(PILE_MIN_CHIPS, Math.ceil(PILE_TARGET_BASE * goldMultiple)));
+  const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(chipCap / Math.max(goldMultiple, 1))));
   const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
   const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
-  const goldChips = Math.min(PILE_MAX_CHIPS, Math.max(1, Math.round(base * goldMultiple)));
+  const goldChips = Math.min(chipCap, Math.max(1, Math.round(base * goldMultiple)));
   return { unit: amount / base, base, lostChips, goldChips };
 }
 
@@ -56,6 +64,7 @@ const billChipBase = "block h-2 w-20 rounded-[2px] border sm:h-3 sm:w-28";
 const billChipKept = "border-[#5fae81] bg-[#3f8a5f]";
 const billChipLost = "border-dashed border-ag-red bg-transparent";
 const goldChipClass = "block h-3.5 w-[18px] sm:h-5 sm:w-9";
+const goldChipClassSmall = "block h-2.5 w-3 sm:h-3.5 sm:w-6";
 
 // Filas de la pirámide, de abajo hacia arriba: la base es la fila más chica
 // que alcanza para todas las fichas y cada fila de arriba tiene una menos.
@@ -247,7 +256,9 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
                 pyramidRows(defaultPile.goldChips).map((rowSize) => (
                   <div class="flex gap-0.5 sm:gap-[3px]">
                     {Array.from({ length: rowSize }, () => (
-                      <svg class={goldChipClass} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                      <svg
+                        class={defaultPile.goldChips >= PILE_SMALL_FROM ? goldChipClassSmall : goldChipClass}
+                        viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
                         <polygon points="12,0 88,0 100,100 0,100" fill="#f2b334" />
                         <polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e" />
                       </svg>
@@ -291,13 +302,17 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
         INFLATION_RATE_BY_YEAR,
         GOLD_PRICE_MXN_PER_OZ_BY_YEAR,
         LAST_CLOSED_YEAR,
+        PILE_MIN_CHIPS,
         PILE_MAX_CHIPS,
+        PILE_TARGET_BASE,
+        PILE_SMALL_FROM,
         PILE_MAX_BASE,
         MAX_AMOUNT,
         billChipBase,
         billChipKept,
         billChipLost,
         goldChipClass,
+        goldChipClassSmall,
       }}
     >
       // Precio del oro en vivo desde CoinGecko (tether-gold / XAUT ≈ 1 onza troy).
@@ -319,14 +334,18 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
       const pileLayout = (amount, purchasingPower, goldValue) => {
         if (amount <= 0) return null;
         const goldMultiple = goldValue / amount;
-        const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(PILE_MAX_CHIPS / Math.max(goldMultiple, 1))));
+        const chipCap = Math.min(
+          PILE_MAX_CHIPS,
+          Math.max(PILE_MIN_CHIPS, Math.ceil(PILE_TARGET_BASE * goldMultiple)),
+        );
+        const maxBase = Math.min(PILE_MAX_BASE, Math.max(1, Math.floor(chipCap / Math.max(goldMultiple, 1))));
         const base = Math.min(maxBase, Math.max(1, Math.round(2 * Math.log10(amount) - 4)));
         const lostChips = Math.min(base, Math.round(base * (1 - purchasingPower / amount)));
-        const goldChips = Math.min(PILE_MAX_CHIPS, Math.max(1, Math.round(base * goldMultiple)));
+        const goldChips = Math.min(chipCap, Math.max(1, Math.round(base * goldMultiple)));
         return { unit: amount / base, base, lostChips, goldChips };
       };
 
-      const goldChipSvg = `<svg class="${goldChipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="12,0 88,0 100,100 0,100" fill="#f2b334"></polygon><polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e"></polygon></svg>`;
+      const goldChipSvg = (chipClass) => `<svg class="${chipClass} pile-chip" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="12,0 88,0 100,100 0,100" fill="#f2b334"></polygon><polygon points="12,0 88,0 82,28 18,28" fill="#ffd36e"></polygon></svg>`;
 
       const pyramidRows = (chips) => {
         let width = 1;
@@ -392,9 +411,10 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             return staggered(`<span class="${billChipBase} ${state} pile-chip"></span>`, index);
           }).join("");
           let chipIndex = 0;
+          const chipClass = goldChips >= PILE_SMALL_FROM ? goldChipClassSmall : goldChipClass;
           goldPile.innerHTML = pyramidRows(goldChips)
             .map((rowSize) => {
-              const row = Array.from({ length: rowSize }, () => staggered(goldChipSvg, chipIndex++)).join("");
+              const row = Array.from({ length: rowSize }, () => staggered(goldChipSvg(chipClass), chipIndex++)).join("");
               return `<div class="flex gap-0.5 sm:gap-[3px]">${row}</div>`;
             })
             .join("");
