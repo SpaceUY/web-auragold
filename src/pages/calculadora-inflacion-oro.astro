@@ -61,10 +61,10 @@ const defaultPurchasingPower = DEFAULT_AMOUNT / defaultInflationFactor;
 const defaultPile = pileLayout(DEFAULT_AMOUNT, defaultPurchasingPower, defaultGoldValue)!;
 const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 
-// Artículos que responden lo que el usuario se pregunta después del resultado:
-// por qué pasa, cuánto perdió el peso y cómo se compara con la alternativa
-// más común del ahorrador mexicano (CETES). En este orden.
-const RELATED_SLUGS = ["por-que-el-oro-protege-la-inflacion", "evolucion-inflacion-mexico", "oro-vs-cetes"];
+// Artículos sobre lo mismo que muestra la calculadora, en el orden en que se
+// lee el resultado: por qué el oro protege (pila de oro), cuánto perdió el
+// peso (billetes grises) y qué le pasa al ahorro en el banco (efectivo).
+const RELATED_SLUGS = ["por-que-el-oro-protege-la-inflacion", "evolucion-inflacion-mexico", "oro-fisico-vs-cuentas-bancarias"];
 const relatedPosts = (await getCollection("blog"))
   .filter((post) => RELATED_SLUGS.includes(post.id))
   .sort((a, b) => RELATED_SLUGS.indexOf(a.id) - RELATED_SLUGS.indexOf(b.id));
