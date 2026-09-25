@@ -62,7 +62,8 @@ const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 // Billetes: fajo parejo. Lingotes: pirámide, como se apilan en una bóveda.
 const billChipBase = "block h-2 w-20 rounded-[2px] border sm:h-3 sm:w-28";
 const billChipKept = "border-[#5fae81] bg-[#3f8a5f]";
-const billChipLost = "border-dashed border-ag-red bg-transparent";
+// Los billetes que perdieron poder de compra se ven apagados: siguen ahí, pero ya no valen lo mismo.
+const billChipLost = "border-[#4a505c] bg-[#3a3f4b] opacity-60";
 const goldChipClass = "block h-3.5 w-[18px] sm:h-5 sm:w-9";
 const goldChipClassSmall = "block h-2.5 w-3 sm:h-3.5 sm:w-6";
 
