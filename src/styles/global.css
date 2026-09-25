@@ -151,6 +151,6 @@
 
   .hero-rise {
     opacity: 0;
-    animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: hero-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 }
