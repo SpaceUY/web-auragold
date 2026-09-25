@@ -172,19 +172,19 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
     <!-- Calculadora: inflación vs. oro -->
     <section class="mx-auto max-w-[1200px] px-6 py-12 lg:px-10">
       <div class="rounded-3xl border border-white/10 bg-ag-slate/40 p-6 lg:p-10" data-inflation-calc>
-        <div class="flex flex-wrap items-end gap-6">
+        <!-- En mobile, año y monto en una fila (el año angosto); desde 810px, como antes -->
+        <div class="grid grid-cols-[auto_minmax(0,1fr)] items-end gap-3 sm:flex sm:flex-wrap sm:items-end sm:gap-6">
           <div>
             <label
               for="year-select"
-              class="block uppercase text-white/40"
-              style="font-size:12px; line-height:16px; letter-spacing:0.1em; font-weight:400;"
+              class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/40 sm:text-xs"
               >Año de partida</label
             >
-            <div class="mt-2 flex h-[52px] items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4">
+            <div class="mt-1.5 flex h-11 items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 sm:mt-2 sm:h-[52px] sm:px-4">
               <select
                 id="year-select"
                 data-year-select
-                class="w-full bg-transparent text-lg text-white outline-none"
+                class="w-full bg-transparent text-base text-white outline-none sm:text-lg"
               >
                 {
                   START_YEARS.map((year) => (
@@ -200,11 +200,10 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           <div>
             <label
               for="amount-input"
-              class="block uppercase text-white/40"
-              style="font-size:12px; line-height:16px; letter-spacing:0.1em; font-weight:400;"
-              >Monto que tenías (MXN)</label
+              class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/40 sm:text-xs"
+              ><span class="sm:hidden">Monto (MXN)</span><span class="hidden sm:inline">Monto que tenías (MXN)</span></label
             >
-            <div class="mt-2 flex h-[52px] items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4">
+            <div class="mt-1.5 flex h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 sm:mt-2 sm:h-[52px] sm:gap-3 sm:px-4">
               <span class="shrink-0 text-sm text-white/40">$</span>
               <input
                 id="amount-input"
@@ -216,7 +215,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
                 value={DEFAULT_AMOUNT}
                 data-amount-input
                 aria-describedby="amount-limit"
-                class="w-40 bg-transparent text-lg text-white outline-none"
+                class="w-full min-w-0 bg-transparent text-base text-white outline-none sm:w-40 sm:text-lg"
               />
             </div>
             <p id="amount-limit" class="mt-1.5 hidden text-xs text-white/50" data-amount-limit>
