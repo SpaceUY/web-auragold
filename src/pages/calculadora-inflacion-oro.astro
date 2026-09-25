@@ -178,10 +178,10 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           <div>
             <label
               for="year-select"
-              class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/40 sm:text-xs"
+              class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/60 sm:text-xs"
               >Año de partida</label
             >
-            <div class="mt-1.5 flex h-11 items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 sm:mt-2 sm:h-[52px] sm:px-4">
+            <div class="mt-2 flex h-11 items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 sm:h-[52px] sm:px-4">
               <select
                 id="year-select"
                 data-year-select
@@ -201,19 +201,18 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           <div>
             <label
               for="amount-input"
-              class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/40 sm:text-xs"
+              class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/60 sm:text-xs"
               ><span class="sm:hidden">Monto (MXN)</span><span class="hidden sm:inline">Monto que tenías (MXN)</span></label
             >
-            <div class="mt-1.5 flex h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 sm:mt-2 sm:h-[52px] sm:gap-3 sm:px-4">
-              <span class="shrink-0 text-sm text-white/40">$</span>
+            <div class="mt-2 flex h-11 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 sm:h-[52px] sm:gap-3 sm:px-4">
+              <span class="shrink-0 text-sm text-white/60">$</span>
+              <!-- type="text" + inputmode="numeric": permite mostrar "100,000" y abre el teclado numérico -->
               <input
                 id="amount-input"
-                type="number"
-                inputmode="decimal"
-                min="0"
-                max={MAX_AMOUNT}
-                step="1000"
-                value={DEFAULT_AMOUNT}
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                value={DEFAULT_AMOUNT.toLocaleString("es-MX")}
                 data-amount-input
                 aria-describedby="amount-limit"
                 class="w-full min-w-0 bg-transparent text-base text-white outline-none sm:w-40 sm:text-lg"
@@ -228,13 +227,13 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
         <!-- Pilas centradas lado a lado: fajo de billetes vs. pirámide de lingotes -->
         <div
-          class="mt-4 grid grid-cols-2 gap-4 sm:mt-10 sm:gap-10"
+          class="mt-8 grid grid-cols-2 items-end gap-4 sm:mt-10 sm:gap-10"
           data-piles
           role="img"
-          aria-label={`Guardado en efectivo: ${fmtPesos(DEFAULT_AMOUNT)}, hoy compra ${fmtPesos(DEFAULT_AMOUNT / defaultInflationFactor)}. Convertido en oro: ${fmtPesos(defaultGoldValue)}.`}
+          aria-label={`Guardado en efectivo: ${fmtPesos(DEFAULT_AMOUNT)}, vale ${fmtPesos(defaultPurchasingPower)} hoy ajustado por inflación. Convertido en oro: ${fmtPesos(defaultGoldValue)}.`}
         >
           <div class="flex min-w-0 flex-col items-center text-center">
-            <div class="flex h-[120px] flex-col-reverse items-center gap-[3px] sm:h-[160px]" data-pile-cash>
+            <div class="flex flex-col-reverse items-center gap-[3px]" data-pile-cash>
               {
                 Array.from({ length: defaultPile.base }, (_, index) => (
                   <span
@@ -243,17 +242,17 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
                 ))
               }
             </div>
-            <p class="mt-4 text-xs text-white/50 sm:text-sm">Guardado en efectivo</p>
+            <p class="mt-4 text-xs text-white/60 sm:text-sm">Guardado en efectivo</p>
             <p class="w-full truncate text-base font-semibold text-white sm:text-2xl" data-pile-cash-value>
               {fmtPesos(DEFAULT_AMOUNT)}
             </p>
-            <p class="mt-0.5 text-xs text-ag-red sm:text-sm" data-pile-cash-note>
-              {fmtPesos(defaultPurchasingPower)} real <span class="whitespace-nowrap">(ajustado por inflación)</span>
+            <p class="text-xs text-ag-red/90 sm:text-sm" data-pile-cash-note>
+              vale {fmtPesos(defaultPurchasingPower)} hoy
             </p>
           </div>
 
           <div class="flex min-w-0 flex-col items-center text-center">
-            <div class="flex h-[120px] flex-col-reverse items-center gap-0.5 sm:h-[160px] sm:gap-[3px]" data-pile-gold>
+            <div class="flex flex-col-reverse items-center gap-0.5 sm:gap-[3px]" data-pile-gold>
               {
                 pyramidRows(defaultPile.goldChips).map((rowSize) => (
                   <div class="flex gap-0.5 sm:gap-[3px]">
@@ -269,11 +268,11 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
                 ))
               }
             </div>
-            <p class="mt-4 text-xs text-white/50 sm:text-sm">Convertido en oro</p>
+            <p class="mt-4 text-xs text-white/60 sm:text-sm">Convertido en oro</p>
             <p class="w-full truncate text-base font-semibold text-ag-gold sm:text-2xl" data-pile-gold-value>
               {fmtPesos(defaultGoldValue)}
             </p>
-            <p class="mt-0.5 text-xs text-ag-green sm:text-sm" data-pile-gold-note>
+            <p class="text-xs text-ag-green sm:text-sm" data-pile-gold-note>
               x{(defaultGoldValue / DEFAULT_AMOUNT).toFixed(1)} tu dinero
             </p>
           </div>
@@ -303,12 +302,12 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           </a>
         </div>
 
-        <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/35">
-          Cálculo ilustrativo con inflación oficial (Banco Mundial, INEGI) hasta {LAST_CLOSED_YEAR} y precio del oro en
-          vivo. No es una proyección ni asesoría financiera. Fuentes:{" "}
-          <a href="/blog/evolucion-inflacion-mexico" class="underline decoration-white/30 hover:text-white/70">inflación</a>
+        <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/50">
+          Cálculo ilustrativo: el efectivo se ajusta por la inflación oficial (Banco Mundial, INEGI) hasta{" "}
+          {LAST_CLOSED_YEAR} y el oro usa su precio en vivo. No es una proyección ni asesoría financiera. Fuentes:{" "}
+          <a href="/blog/evolucion-inflacion-mexico" class="underline decoration-white/40 hover:text-white/80">inflación</a>
           {" · "}
-          <a href="/precio-del-oro-hoy" class="underline decoration-white/30 hover:text-white/70">precio del oro</a>.
+          <a href="/precio-del-oro-hoy" class="underline decoration-white/40 hover:text-white/80">precio del oro</a>.
         </p>
       </div>
     </section>
@@ -337,6 +336,7 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
       let livePricePerOz = SNAPSHOT_MXN_PER_OZ;
 
       const fmtPesos = (n) => `$${Math.round(n).toLocaleString("es-MX")}`;
+      const parseAmount = (text) => Math.max(0, Number(String(text).replace(/\D/g, "")) || 0);
 
       const cumulativeInflationFactor = (fromYear) => {
         let factor = 1;
@@ -396,11 +396,11 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
 
         const render = () => {
           const startYear = Number(yearSelect.value);
-          let amount = Math.max(0, parseFloat(amountInput.value) || 0);
+          let amount = parseAmount(amountInput.value);
           const overLimit = amount > MAX_AMOUNT;
           if (overLimit) {
             amount = MAX_AMOUNT;
-            amountInput.value = String(MAX_AMOUNT);
+            amountInput.value = MAX_AMOUNT.toLocaleString("es-MX");
           }
           amountLimit.classList.toggle("hidden", !overLimit);
 
@@ -437,14 +437,13 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             .join("");
 
           cashValue.textContent = fmtPesos(amount);
-          // Solo números formateados: no hay entrada del usuario sin procesar en este HTML.
-          cashNote.innerHTML = `${fmtPesos(purchasingPower)} real <span class="whitespace-nowrap">(ajustado por inflación)</span>`;
+          cashNote.textContent = `vale ${fmtPesos(purchasingPower)} hoy`;
           emptyHint.classList.add("hidden");
           goldValueEl.textContent = fmtPesos(goldValue);
           goldNote.textContent = `x${goldMultiple.toFixed(1)} tu dinero`;
           piles.setAttribute(
             "aria-label",
-            `Guardado en efectivo: ${fmtPesos(amount)}, hoy compra ${fmtPesos(purchasingPower)}. Convertido en oro: ${fmtPesos(goldValue)}.`,
+            `Guardado en efectivo: ${fmtPesos(amount)}, vale ${fmtPesos(purchasingPower)} hoy ajustado por inflación. Convertido en oro: ${fmtPesos(goldValue)}.`,
           );
         };
 
@@ -453,8 +452,27 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           calcCta.href = calcCta.dataset.androidUrl;
         }
 
+        // Separador de miles mientras se escribe ("100,000"), sin mover el cursor:
+        // se cuenta cuántos dígitos había antes del cursor y se lo vuelve a ubicar
+        // después de la misma cantidad de dígitos en el texto formateado.
+        const formatAmountInput = () => {
+          const { value, selectionStart } = amountInput;
+          const digitsBeforeCursor = value.slice(0, selectionStart ?? value.length).replace(/\D/g, "").length;
+          const digits = value.replace(/\D/g, "").replace(/^0+(?=\d)/, "");
+          const formatted = digits ? Number(digits).toLocaleString("es-MX") : "";
+          amountInput.value = formatted;
+          let cursor = 0;
+          for (let seen = 0; cursor < formatted.length && seen < digitsBeforeCursor; cursor++) {
+            if (/\d/.test(formatted[cursor])) seen++;
+          }
+          amountInput.setSelectionRange(cursor, cursor);
+        };
+
         yearSelect.addEventListener("change", render);
-        amountInput.addEventListener("input", render);
+        amountInput.addEventListener("input", () => {
+          formatAmountInput();
+          render();
+        });
         calc._render = render;
       }
 
