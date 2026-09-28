@@ -218,7 +218,8 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
               </div>
             </div>
 
-            <div>
+            <!-- relative: el aviso de monto máximo va debajo sin agrandar la columna ni desalinear las etiquetas -->
+            <div class="relative">
               <label
                 for="amount-input"
                 class="block text-[11px] uppercase leading-4 tracking-[0.1em] text-white/60 sm:text-xs"
@@ -238,8 +239,8 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
                   class="w-full min-w-0 bg-transparent text-base text-white outline-none sm:w-40 sm:text-lg"
                 />
               </div>
-              <p id="amount-limit" class="mt-1.5 hidden text-xs text-white/50" data-amount-limit>
-                Monto máximo: {fmtPesos(MAX_AMOUNT)}
+              <p id="amount-limit" class="absolute left-0 right-0 top-full mt-1.5 hidden whitespace-nowrap text-xs text-white/50" data-amount-limit>
+                <span class="sm:hidden">Máx.</span><span class="hidden sm:inline">Monto máximo:</span> {fmtPesos(MAX_AMOUNT)}
               </p>
             </div>
 
@@ -302,8 +303,16 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
             Escribe cuánto tenías para ver la comparación.
           </p>
 
-          <!-- Siguiente paso justo después del resultado: Play Store en Android, web app en el resto -->
-          <div class="mt-10 flex justify-center">
+          <p class="mx-auto mt-8 max-w-xl text-balance text-center text-[11px] leading-snug text-white/50">
+            Cálculo ilustrativo: el efectivo se ajusta por la inflación oficial (Banco Mundial, INEGI) hasta{" "}
+            {LAST_CLOSED_YEAR} y el oro usa su precio en vivo. No es una proyección ni asesoría financiera. Fuentes:{" "}
+            <a href="/blog/evolucion-inflacion-mexico" class="underline decoration-white/40 hover:text-white/80">inflación</a>
+            {" · "}
+            <a href="/precio-del-oro-hoy" class="underline decoration-white/40 hover:text-white/80">precio del oro</a>.
+          </p>
+
+          <!-- Siguiente paso al cierre del resultado: Play Store en Android, web app en el resto -->
+          <div class="mt-8 flex justify-center">
             <AppStartLink
               medium="calculadora"
               class="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-ag-gold px-6 text-[15px] font-medium text-ag-dark transition-opacity hover:opacity-90 sm:h-12 sm:text-base"
@@ -314,14 +323,6 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
               </svg>
             </AppStartLink>
           </div>
-
-          <p class="mx-auto mt-6 max-w-xl text-balance text-center text-[11px] leading-snug text-white/50">
-            Cálculo ilustrativo: el efectivo se ajusta por la inflación oficial (Banco Mundial, INEGI) hasta{" "}
-            {LAST_CLOSED_YEAR} y el oro usa su precio en vivo. No es una proyección ni asesoría financiera. Fuentes:{" "}
-            <a href="/blog/evolucion-inflacion-mexico" class="underline decoration-white/40 hover:text-white/80">inflación</a>
-            {" · "}
-            <a href="/precio-del-oro-hoy" class="underline decoration-white/40 hover:text-white/80">precio del oro</a>.
-          </p>
         </div>
         <aside
           class="mx-auto flex w-full max-w-2xl flex-col rounded-3xl border border-white/10 bg-[#101010] px-3 py-6 sm:px-10 sm:py-12 lg:max-w-none lg:px-4"
@@ -578,13 +579,13 @@ const faqJsonLdItems = faqItems.map((item) => ({ question: item.question, answer
           <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <AppStartLink
               medium="calculadora-final"
-              class="inline-flex h-11 w-full max-w-72 items-center justify-center rounded-full bg-ag-gold px-6 text-[15px] font-medium text-ag-dark transition-opacity hover:opacity-90 sm:h-12 sm:w-auto sm:text-base"
+              class="inline-flex min-h-11 w-full max-w-72 items-center text-balance py-2.5 text-center leading-snug sm:max-w-none sm:py-0 sm:whitespace-nowrap justify-center rounded-full bg-ag-gold px-6 text-[15px] font-medium text-ag-dark transition-opacity hover:opacity-90 sm:h-12 sm:w-auto sm:text-base"
             >
               Empieza ahora
             </AppStartLink>
             <a
               href="/invertir-en-oro-mexico"
-              class="inline-flex h-11 w-full max-w-72 items-center justify-center rounded-full border border-white/20 px-6 text-[15px] font-medium text-white transition-colors hover:bg-white/10 sm:h-12 sm:w-auto sm:text-base"
+              class="inline-flex min-h-11 w-full max-w-72 items-center text-balance py-2.5 text-center leading-snug sm:max-w-none sm:py-0 sm:whitespace-nowrap justify-center rounded-full border border-white/20 px-6 text-[15px] font-medium text-white transition-colors hover:bg-white/10 sm:h-12 sm:w-auto sm:text-base"
             >
               Cómo invertir en oro en México
             </a>
