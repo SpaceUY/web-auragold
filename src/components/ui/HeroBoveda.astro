@@ -1,0 +1,183 @@
+---
+// Visual de la Bóveda del hero: tarjeta de total, carrusel animado con cursor y
+// recordatorio. Reemplaza al iframe exportado del diseño, que cargaba React,
+// seis archivos de fuente y los preconnect de Google Fonts solo para alternar
+// dos estados. Todas las medidas salen del diseño original (720px de ancho) y
+// se escalan con --u, así el visual entra en la columna sin medir el DOM.
+---
+
+<div
+  data-boveda
+  data-state="0"
+  role="img"
+  aria-label="Animación de la bóveda de Aura Gold: total en bóveda, histórico, retiro de oro y recordatorio"
+  class="boveda"
+>
+  <img
+    src="/images/hero/boveda-total.svg"
+    alt=""
+    width="358"
+    height="195"
+    loading="lazy"
+    decoding="async"
+    class="boveda-img"
+  />
+
+  <div class="boveda-carousel">
+    <div class="boveda-mask">
+      <div class="boveda-track">
+        <img
+          src="/images/hero/boveda-carrusel.svg"
+          alt=""
+          width="488"
+          height="137"
+          loading="lazy"
+          decoding="async"
+          class="boveda-img"
+        />
+        <span class="boveda-highlight boveda-highlight-a"></span>
+        <span class="boveda-highlight boveda-highlight-b"></span>
+      </div>
+    </div>
+
+    <svg class="boveda-cursor" viewBox="0 0 34 38" aria-hidden="true">
+      <defs>
+        <linearGradient id="boveda-cursor-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f4f5f7"></stop>
+          <stop offset="100%" stop-color="#a7acb6"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#boveda-cursor-grad)"
+        d="M6 4c0-2.6 2.9-4.1 5-2.6l19 13.6c2 1.4 1.7 4.4-.5 5.4L10 29.6c-2.4 1.1-5-.6-5-3.2V4Z"
+      ></path>
+    </svg>
+  </div>
+
+  <img
+    src="/images/hero/boveda-recordatorio.svg"
+    alt=""
+    width="358"
+    height="127"
+    loading="lazy"
+    decoding="async"
+    class="boveda-img boveda-reminder"
+  />
+</div>
+
+<style>
+  /* El diseño ocupaba 720px centrados en un lienzo de 1170px: se mantiene esa proporción. */
+  .boveda {
+    container-type: inline-size;
+    width: calc(720 / 1170 * 100%);
+    margin-inline: auto;
+  }
+
+  .boveda > * {
+    --u: calc(100cqw / 720);
+  }
+
+  .boveda-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .boveda-carousel {
+    position: relative;
+    height: calc(261 * var(--u));
+    margin-top: calc(26 * var(--u));
+  }
+
+  .boveda-mask {
+    height: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 calc(90 * var(--u)),
+      #000 calc(100% - 90 * var(--u)),
+      transparent 100%
+    );
+  }
+
+  .boveda-track {
+    position: relative;
+    width: calc(930 * var(--u));
+    height: 100%;
+    transition: transform 0.85s cubic-bezier(0.5, 0, 0.15, 1);
+  }
+
+  .boveda-track .boveda-img {
+    height: 100%;
+  }
+
+  .boveda-highlight {
+    position: absolute;
+    top: calc(19 * var(--u));
+    width: calc(434 * var(--u));
+    height: calc(225 * var(--u));
+    border-radius: calc(15 * var(--u));
+    background: rgba(242, 179, 52, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .boveda-highlight-a {
+    left: calc(20 * var(--u));
+  }
+
+  .boveda-highlight-b {
+    left: calc(476 * var(--u));
+  }
+
+  .boveda-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: calc(34 * var(--u));
+    height: calc(38 * var(--u));
+    pointer-events: none;
+    filter: drop-shadow(0 calc(4 * var(--u)) calc(6 * var(--u)) rgba(0, 0, 0, 0.5));
+    transform: translate(calc(180 * var(--u)), calc(90 * var(--u)));
+    transition: transform 0.85s cubic-bezier(0.5, 0, 0.15, 1);
+  }
+
+  .boveda-reminder {
+    margin-top: calc(26 * var(--u));
+  }
+
+  /* Estado 0: tarjeta de histórico. Estado 1: tarjeta de retiro, con el carrusel corrido. */
+  [data-state="0"] .boveda-highlight-a,
+  [data-state="1"] .boveda-highlight-b {
+    opacity: 1;
+  }
+
+  [data-state="1"] .boveda-track {
+    transform: translateX(calc(-210 * var(--u)));
+  }
+
+  [data-state="1"] .boveda-cursor {
+    transform: translate(calc(364 * var(--u)), calc(220 * var(--u)));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .boveda-track,
+    .boveda-highlight,
+    .boveda-cursor {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const boveda = document.querySelector<HTMLElement>("[data-boveda]");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (boveda && !prefersReduced) {
+    setInterval(() => {
+      boveda.dataset.state = boveda.dataset.state === "1" ? "0" : "1";
+    }, 2400);
+  }
+</script>

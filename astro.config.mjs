@@ -48,6 +48,8 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
   adapter: vercel(),
+  // El CSS del sitio pesa ~10 KB: inline evita la solicitud que bloqueaba el renderizado.
+  build: { inlineStylesheets: 'always' },
   integrations: [
     sitemap({
       serialize(item) {
