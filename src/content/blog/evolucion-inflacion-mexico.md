@@ -1,7 +1,7 @@
 ---
 title: "Inflación histórica en México"
 seoTitle: "Inflación en México: cuánto ha perdido tu dinero en datos reales"
-seoDescription: "El peso mexicano ha perdido más del 85% de su valor desde 1994. Datos anuales de inflación en México y qué activos te han protegido realmente."
+seoDescription: "El peso mexicano ha perdido más del 85% de su valor desde 1994. Datos anuales de inflación en México y qué opciones existen frente a ella."
 description: "¡Cómo ha evolucionado la inflación en México desde 1985? ¿Cuánto poder adquisitivo ha perdido el peso en las últimas décadas?"
 pubDate: 2026-03-10
 author: "juan-manuel-sobral"
@@ -18,7 +18,7 @@ category: "Mercado"
 - La inflación acumulada erosiona más de lo que parece: lo que costaba $100 en 2015 hoy cuesta alrededor de $163.
 - Entender la inflación es clave para proteger tu patrimonio: conocer su impacto es el primer paso para tomar mejores decisiones financieras a largo plazo.
 
-Si los datos anteriores te generan inquietud, tiene sentido preguntarse qué activos han resistido históricamente esa erosión. En otro artículo explicamos con ejemplos reales y datos de México [por qué el oro protege frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion) y qué lo hace diferente de mantener el dinero en una cuenta bancaria.
+Si los datos anteriores te generan inquietud, tiene sentido preguntarse qué activos han resistido históricamente esa erosión. En otro artículo explicamos con ejemplos reales y datos de México [cómo se ha comportado el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion) y qué lo hace diferente de mantener el dinero en una cuenta bancaria.
 
 ## ¿Cuánto ha perdido tu dinero? La inflación en México en perspectiva
 
@@ -60,9 +60,9 @@ Frente a la pérdida acumulada del peso, muchas personas buscan opciones concret
 
 ### ¿Por qué el oro aparece en esta conversación?
 
-Históricamente, el oro ha funcionado como un activo cuyo precio en términos reales tiende a mantenerse o apreciarse en períodos de alta inflación y devaluación monetaria. No es una herramienta especulativa en el sentido tradicional: su rol principal es el de reserva de valor.
+Históricamente, el oro ha funcionado como un activo cuyo precio en términos reales tiende a mantenerse o apreciarse en períodos de alta inflación y devaluación monetaria, aunque no siempre ni al mismo ritmo. No es una herramienta especulativa en el sentido tradicional: su rol principal es el de reserva de valor.
 
-Para el ahorrador mexicano común, eso lo convierte en una alternativa que merece considerarse dentro de una estrategia de protección patrimonial a largo plazo, especialmente en un entorno donde la erosión del peso ha sido una constante histórica. Hoy puedes [invertir en oro desde pesos en México](/invertir-en-oro-mexico) comprando fracciones de gramo desde el celular.
+Para el ahorrador mexicano común, eso lo convierte en una alternativa que merece considerarse dentro de una estrategia de ahorro diversificado a largo plazo, especialmente en un entorno donde la erosión del peso ha sido una constante histórica. Hoy puedes [invertir en oro desde pesos en México](/invertir-en-oro-mexico) comprando fracciones de gramo desde el celular.
 
 ## Evolución de la inflación período por período
 
@@ -88,7 +88,7 @@ Si quieres ver cómo ha evolucionado el valor del oro frente al peso mexicano en
 
 El primer paso, siempre, es el mismo: entender qué está pasando con el dinero que ya tienes.
 
-Compra oro físico real por fracciones de gramo, directo desde tu celular. Sin comisiones de custodia, con liquidez inmediata y retiro físico opcional.
+Compra oro físico real por fracciones de gramo, directo desde tu celular. Sin comisiones de custodia, con venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24-48 horas) y retiro físico opcional.
 
 ## Fuentes
 

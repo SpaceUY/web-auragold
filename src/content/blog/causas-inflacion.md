@@ -12,7 +12,7 @@ category: "Educación"
 
 Las causas de la inflación se resumen en una idea: los precios suben cuando hay más dinero persiguiendo los mismos productos, o cuando producir esos productos se vuelve más caro. Detrás de eso hay varios factores (exceso de dinero, aumento de costos, un peso más débil y las expectativas de la propia gente).
 
-Aquí te explicamos cada causa con ejemplos del día a día, qué efectos tiene en tu bolsillo y qué puedes hacer para que la inflación no se coma tus ahorros. Si quieres el contexto local, revisa antes [cómo ha evolucionado la inflación en México](/blog/evolucion-inflacion-mexico) y por qué [el oro protege frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion).
+Aquí te explicamos cada causa con ejemplos del día a día, qué efectos tiene en tu bolsillo y qué puedes hacer para que la inflación no se coma tus ahorros. Si quieres el contexto local, revisa antes [cómo ha evolucionado la inflación en México](/blog/evolucion-inflacion-mexico) y qué pasa con [el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion).
 
 ## ¿Qué es la inflación, en pocas palabras?
 
@@ -57,9 +57,9 @@ En resumen: si no haces nada, la inflación es una forma silenciosa de perder di
 
 ## ¿Cómo protegerte de la inflación?
 
-La clave es no dejar tu dinero quieto perdiendo valor. Guardar todo en efectivo o en una cuenta sin rendimiento es garantizar que la inflación te gane. Por eso conviene mover parte de tu ahorro a activos que conserven su valor.
+La clave es no dejar tu dinero quieto perdiendo valor. Guardar todo en efectivo o en una cuenta sin rendimiento es garantizar que la inflación te gane. Por eso conviene mover parte de tu ahorro a activos que históricamente han tendido a conservar su valor.
 
-Hay varias [alternativas al efectivo para no perder valor](/blog/alternativas-al-dinero-en-efectivo), pero una destaca justo por la causa de fondo de la inflación: el oro no se puede imprimir. Mientras el dinero pierde valor porque se emite más, el oro es escaso y conserva su poder de compra con el tiempo. Por eso ha sido, durante siglos, el refugio de quienes quieren proteger su dinero.
+Hay varias [alternativas al efectivo](/blog/alternativas-al-dinero-en-efectivo), pero una destaca justo por la causa de fondo de la inflación: el oro no se puede imprimir. Mientras el dinero pierde valor porque se emite más, el oro es escaso y, históricamente, en plazos largos ha tendido a conservar su poder de compra, aunque su precio sube y baja. Por eso, durante siglos, muchas personas lo han usado para diversificar su ahorro.
 
 ## Preguntas frecuentes
 
@@ -77,14 +77,14 @@ Que pierde poder de compra: con el mismo dinero adquieres menos. Además, tu aho
 
 ### ¿Cómo puedo protegerme de la inflación?
 
-Evitando dejar todo tu dinero en efectivo. Mover parte del ahorro a activos que conserven su valor, como el oro (que no se puede imprimir y es escaso), ayuda a que la inflación no te gane con el tiempo.
+Evitando dejar todo tu dinero en efectivo. Mover parte del ahorro a activos que históricamente han tendido a conservar su valor, como el oro (que no se puede imprimir y es escaso), puede ayudarte a diversificar, aunque su precio sube y baja.
 
-### ¿Por qué el oro protege contra la inflación?
+### ¿El oro protege contra la inflación?
 
-Porque su valor no depende de que un banco central imprima o no dinero. Al ser escaso y no poder producirse a voluntad, el oro conserva su poder de compra mientras el dinero fiat lo va perdiendo.
+No hay garantía. Su valor no depende de que un banco central imprima o no dinero y, al ser escaso y no poder producirse a voluntad, históricamente, en plazos largos, el oro ha tendido a conservar su poder de compra mientras el dinero fiat lo va perdiendo, pero no siempre ni al mismo ritmo.
 
-## Protege tu dinero de la inflación con oro
+## Ahorra en oro frente a la inflación
 
-Entender las causas de la inflación sirve de poco si tu dinero sigue parado perdiendo valor. La buena noticia es que hoy protegerlo es sencillo y no necesitas ser rico para empezar: con Aura Gold [conviertes tu dinero en oro físico real](/invertir-en-oro-mexico), en pesos, comprando la fracción de gramo que quieras desde tu celular.
+Entender las causas de la inflación sirve de poco si tu dinero sigue parado perdiendo valor. La buena noticia es que hoy ahorrar en oro es sencillo y no necesitas ser rico para empezar: con Aura Gold [conviertes tu dinero en oro físico real](/invertir-en-oro-mexico), en pesos, comprando la fracción de gramo que quieras desde tu celular.
 
 La inflación no descansa. Tu ahorro tampoco debería quedarse quieto perdiendo valor.

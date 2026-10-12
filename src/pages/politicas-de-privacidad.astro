@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import { LEGAL_ENTITY } from "../data/legal";
 ---
 
 <BaseLayout
@@ -44,7 +45,7 @@ import Footer from "../components/layout/Footer.astro";
         <h3>1. Información importante</h3>
         <p>
           <strong>Responsable del Tratamiento – MintIA Corp.</strong> MintIA Corp ("MintIA") tiene su sede en
-          Craigmuir Chambers, Road Town, Tortola, VG1110, Islas Vírgenes Británicas.
+          {LEGAL_ENTITY.address}, {LEGAL_ENTITY.country}.
         </p>
         <p>
           En este Aviso de Privacidad, "usted" o "su" se refiere a una persona física que es objeto de los Datos
@@ -165,11 +166,14 @@ import Footer from "../components/layout/Footer.astro";
           nuestro control contra el acceso no autorizado, uso indebido, alteración o pérdida accidental.
         </p>
 
-        <h3>8. Cookies</h3>
+        <h3 id="cookies">8. Cookies</h3>
         <p>
           MintIA utiliza cookies para recopilar información sobre su uso del Sitio Web. Las cookies son pequeños
           archivos de texto que nos permiten cargar sus preferencias y mejorar su experiencia. Puede obtener más
           información en www.allaboutcookies.org.
+        </p>
+        <p>
+          Puede cambiar su elección en cualquier momento desde "Configurar cookies", al pie de cada página.
         </p>
 
         <h3>9. Sus derechos</h3>

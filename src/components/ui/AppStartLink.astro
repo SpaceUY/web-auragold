@@ -11,6 +11,15 @@ interface Props {
 }
 
 const { medium, class: className = "" } = Astro.props;
+
+// Desde Astro 7.3 el slot conserva el salto de línea y la sangría del
+// llamador: sin esto, el textContent del enlace (lo que leen GTM/GA4 como
+// texto del clic) queda con espacios alrededor. Solo se quita el espacio de
+// formato (el que lleva salto de línea) junto a una etiqueta, como hacía
+// Astro 7.0; los espacios entre palabras quedan intactos.
+const label = (await Astro.slots.render("default"))
+  .replace(/\s*\n\s*(?=<)|(?<=>)\s*\n\s*/g, "")
+  .trim();
 ---
 
 <a
@@ -18,10 +27,9 @@ const { medium, class: className = "" } = Astro.props;
   data-app-start
   data-android-url={playStoreUrl(medium)}
   data-cta={`start-${medium}`}
+  data-cta-position={medium}
   class={className}
->
-  <slot />
-</a>
+><Fragment set:html={label} /></a>
 
 <script>
   if (/Android/i.test(navigator.userAgent)) {

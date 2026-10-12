@@ -1,8 +1,8 @@
 ---
-title: "Oro vs acciones: ¿qué conviene para proteger tu ahorro en México frente a la inflación?"
-seoTitle: "Oro vs acciones: Proteger tu patrimonio en México"
-seoDescription: "Oro vs acciones en México: compara riesgo, volatilidad y protección ante la inflación y la devaluación del peso. Descubre qué estrategia conviene a tu ahorro."
-description: "Comparamos oro y acciones para proteger tu ahorro en México: crecimiento, volatilidad, protección ante inflación y devaluación del peso, y cómo combinarlos."
+title: "Oro vs acciones: ¿qué conviene para tu ahorro en México frente a la inflación?"
+seoTitle: "Oro vs acciones: Qué conviene a tu patrimonio en México"
+seoDescription: "Oro vs acciones en México: compara riesgo, volatilidad y comportamiento ante la inflación y la devaluación del peso. Descubre qué estrategia conviene a tu ahorro."
+description: "Comparamos oro y acciones para tu ahorro en México: crecimiento, volatilidad, comportamiento ante inflación y devaluación del peso, y cómo combinarlos."
 pubDate: 2026-08-14
 author: "federico-sendra"
 heroImage: "/images/blog/oro-vs-acciones.png"
@@ -13,8 +13,8 @@ category: "Mercado"
 ## Key Takeaways
 
 - Acciones: para crecer a largo plazo con tolerancia a la volatilidad.
-- Oro: para proteger valor frente a la inflación y la devaluación del peso.
-- Para la mayoría, una estrategia mixta que combine crecimiento y protección es la decisión más coherente.
+- Oro: para diversificar pensando en la inflación y la devaluación del peso.
+- Para la mayoría, una estrategia mixta que combine crecimiento y diversificación es la decisión más coherente.
 
 La comparación no es "oro o acciones", sino qué papel juega cada uno en tu estrategia. Las acciones funcionan bien para crecimiento a largo plazo con tolerancia a la volatilidad; el oro se usa como ancla de valor frente a inflación, devaluación del peso o incertidumbre económica.
 
@@ -34,7 +34,7 @@ En periodos de inestabilidad económica, las bolsas tienden a caer justo cuando 
 
 ### Para qué sirve el oro como activo financiero
 
-El oro no paga dividendos ni intereses. Su función es otra: preservar valor a largo plazo y actuar como cobertura en momentos de crisis, inflación sostenida o pérdida de confianza en el sistema financiero. No es para hacerte rico rápido, sino para que tu dinero no se vuelva frágil con el tiempo.
+El oro no paga dividendos ni intereses. Su función es otra: históricamente se ha usado para preservar valor a largo plazo y como cobertura en momentos de crisis, inflación sostenida o pérdida de confianza en el sistema financiero, aunque su precio también sube y baja. No es para hacerte rico rápido, sino para diversificar tu ahorro con el tiempo.
 
 ### Qué formas existen hoy para invertir en oro en México
 
@@ -44,7 +44,7 @@ El oro no paga dividendos ni intereses. Su función es otra: preservar valor a l
 
 ### Cómo se diferencia el oro físico custodiado del oro especulativo
 
-El oro digital, como el que ofrece Aura Gold, está respaldado por oro físico real en bóvedas certificadas. Usa blockchain para registrarlo, pero no es un derivado: detrás de cada unidad hay metal, no una apuesta sobre el precio.
+El oro digital, como el que ofrece Aura Gold, está respaldado por oro físico real: Tether Gold (XAUT), en bóvedas en Suiza. Usa blockchain para registrarlo, pero no es un derivado: detrás de cada unidad hay metal, no una apuesta sobre el precio.
 
 ## Cómo comparar oro y acciones según tu situación financiera real
 
@@ -82,15 +82,15 @@ En periodos de crecimiento económico y estabilidad, las acciones suelen superar
 
 ### Qué porcentajes suelen funcionar según tu perfil de riesgo
 
-- **Conservador:** 60–70% activos estables (oro, renta fija) + 30–40% acciones.
+- **Conservador:** 60–70% activos de menor volatilidad (oro, renta fija) + 30–40% acciones.
 - **Equilibrado:** 50% acciones + 50% oro como cobertura patrimonial.
-- **Crecimiento con protección:** 70% acciones + 30% oro como "seguro" ante crisis.
+- **Crecimiento con diversificación:** 70% acciones + 30% oro como cobertura ante crisis.
 
 Si tu parte estable va a renta fija, te ayudamos a decidir entre [oro o CETES](/blog/oro-vs-cetes).
 
-### Por qué tener oro en tu portafolio reduce el impacto de las caídas bursátiles
+### Por qué tener oro en tu portafolio puede reducir el impacto de las caídas bursátiles
 
-Oro y acciones tienden a moverse en direcciones opuestas en momentos de crisis. Cuando los mercados caen, el oro suele mantenerse o subir. Esta correlación negativa hace que combinar ambos activos reduzca la volatilidad total de tu ahorro sin sacrificar necesariamente el crecimiento.
+Oro y acciones tienden a moverse en direcciones opuestas en momentos de crisis. Cuando los mercados caen, el oro suele mantenerse o subir. Esta correlación negativa hace que combinar ambos activos pueda reducir la volatilidad total de tu ahorro sin sacrificar necesariamente el crecimiento.
 
 ## Qué errores evitar al elegir entre oro y acciones
 
@@ -100,21 +100,21 @@ Las acciones han superado al oro en rentabilidad en muchos periodos. Pero ese da
 
 ### Qué pasa cuando usas oro como sustituto del crecimiento
 
-El oro no está diseñado para hacer crecer tu patrimonio de forma acelerada. Si lo usas con esa expectativa, te va a decepcionar. Su valor está en la estabilidad y la protección, no en la rentabilidad explosiva.
+El oro no está diseñado para hacer crecer tu patrimonio de forma acelerada. Si lo usas con esa expectativa, te va a decepcionar. Su valor está en la diversificación, no en la rentabilidad explosiva.
 
 ## Cómo decidir entre oro y acciones en menos de un minuto
 
 ### Tres preguntas que definen qué opción encaja con tu situación
 
-1. **¿Cuándo vas a necesitar ese dinero?** Menos de 5 años y no puedes asumir pérdidas temporales → el oro es más predecible. Más de 5 años con tolerancia a la volatilidad → las acciones pueden tener más sentido.
+1. **¿Cuándo vas a necesitar ese dinero?** Menos de 5 años y no puedes asumir pérdidas temporales → el oro suele ser menos volátil. Más de 5 años con tolerancia a la volatilidad → las acciones pueden tener más sentido.
 2. **¿Qué te quita más el sueño: perder dinero en una caída bursátil o que la inflación erosione tu ahorro?** Caídas de mercado → oro como base. Pérdida de poder adquisitivo a largo plazo → ambos tienen su papel.
-3. **¿Buscas crecer o proteger?** Crecer activamente → acciones. Proteger lo que tienes → oro. Hacer las dos cosas → combinalos.
+3. **¿Buscas crecer o diversificar?** Crecer activamente → acciones. Diversificar lo que tienes → oro. Hacer las dos cosas → combínalos.
 
 Si quieres verlo con tus propios números, la [calculadora de inflación de México](/calculadora-inflacion-oro) compara en segundos cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
 
-## Cómo empezar a proteger tu ahorro con oro físico real desde México
+## Cómo empezar a ahorrar en oro físico real desde México
 
-Si el oro encaja en tu plan, con Aura Gold puedes [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si el oro encaja en tu plan, con Aura Gold puedes [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado por Tether Gold (XAUT), en bóvedas en Suiza, y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a ahorrar en oro](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y acciones en México
 

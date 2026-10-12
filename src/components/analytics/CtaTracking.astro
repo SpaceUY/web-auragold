@@ -1,0 +1,66 @@
+---
+// WEB-001: mide los clics reales en los botones que llevan a Google Play
+// (click_download) y a la web app (click_open_web). Un solo escuchador para
+// todo el sitio: los botones solo declaran data-cta (cta_id) y
+// data-cta-position (cta_position). GTM toma los eventos del dataLayer.
+// Mapa de botones y cambios de GTM: docs/web-001-cta-map.md
+---
+
+<script>
+  type CtaEventName = "click_download" | "click_open_web";
+
+  interface CtaDestination {
+    event: CtaEventName;
+    destination: string;
+  }
+
+  declare global {
+    interface Window {
+      dataLayer?: unknown[];
+      // OpenPanel (WEB-012A): existe solo si ese módulo cargó.
+      auraAnalytics?: { track(name: string, properties?: Record<string, string | number>): unknown };
+    }
+  }
+
+  const DESTINATIONS: Record<string, CtaDestination> = {
+    "play.google.com": { event: "click_download", destination: "google_play" },
+    "app.auragold.io": { event: "click_open_web", destination: "web_app" },
+  };
+
+  const MIDDLE_BUTTON = 1;
+
+  function trackCtaClick(event: MouseEvent): void {
+    // El modal de "Descargar app" (iPhone y escritorio) frena la navegación:
+    // abrirlo no es un clic a Play y no se mide.
+    if (event.defaultPrevented) return;
+    if (event.type === "auxclick" && event.button !== MIDDLE_BUTTON) return;
+    if (!(event.target instanceof Element)) return;
+
+    // closest: un clic en el ícono o el texto de adentro cuenta como el del link.
+    const link = event.target.closest("a[href]");
+    if (!(link instanceof HTMLAnchorElement)) return;
+
+    const match = DESTINATIONS[link.hostname];
+    if (!match) return;
+
+    try {
+      const properties = {
+        cta_id: link.dataset.cta ?? "sin-id",
+        cta_position: link.dataset.ctaPosition ?? "sin-posicion",
+        destination: match.destination,
+        // Solo la ruta: ni query ni hash (el link de Play lleva el referrer).
+        landing_path: location.pathname,
+      };
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: match.event, ...properties });
+      // El mismo clic va a OpenPanel (WEB-012A) si está activo: sin escuchadores nuevos.
+      window.auraAnalytics?.track(match.event, properties);
+    } catch {
+      // La medición nunca puede frenar la navegación.
+    }
+  }
+
+  document.addEventListener("click", trackCtaClick);
+  // Clic con el botón del medio: abre el link en otra pestaña y no dispara "click".
+  document.addEventListener("auxclick", trackCtaClick);
+</script>

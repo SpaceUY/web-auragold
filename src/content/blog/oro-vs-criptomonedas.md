@@ -1,8 +1,8 @@
 ---
-title: "Oro vs criptomonedas: ¿cuál protege mejor tu dinero en México?"
-seoTitle: "Oro vs criptomonedas: Cómo proteger mejor tu dinero"
-seoDescription: "Oro vs criptomonedas en México: compara volatilidad, riesgo de pérdida total y protección real ante la inflación y la devaluación del peso."
-description: "Comparamos oro y criptomonedas para proteger tu dinero en México: volatilidad, riesgo de pérdida total, comportamiento en crisis y protección ante la inflación."
+title: "Oro vs criptomonedas: ¿cuál conviene más para tu ahorro en México?"
+seoTitle: "Oro vs criptomonedas: Cuál conviene más a tu ahorro"
+seoDescription: "Oro vs criptomonedas en México: compara volatilidad, riesgo de pérdida total y comportamiento ante la inflación y la devaluación del peso."
+description: "Comparamos oro y criptomonedas para tu ahorro en México: volatilidad, riesgo de pérdida total, comportamiento en crisis y ante la inflación."
 pubDate: 2026-08-17
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/oro-vs-criptomonedas.png"
@@ -13,8 +13,8 @@ category: "Mercado"
 ## Key Takeaways
 
 - Las criptomonedas son un activo especulativo de alto riesgo.
-- El oro es una reserva de valor con historial probado.
-- Si tu objetivo es proteger tu dinero frente a la inflación y la devaluación del peso, el oro ofrece una base mucho más sólida.
+- El oro es una reserva de valor con un largo historial.
+- Si te preocupan la inflación y la devaluación del peso, el oro ofrece una base mucho más sólida para tu ahorro.
 
 Las criptomonedas prometen revolucionar las finanzas. El oro lleva siglos siendo refugio de valor. Si estás evaluando cuál encaja mejor en tu estrategia, la pregunta real no es cuál rinde más, sino cuál cumple mejor el objetivo que tú tienes: proteger lo que ahorraste sin exponerte a pérdidas que no puedes asumir.
 
@@ -26,15 +26,15 @@ Las criptomonedas prometen revolucionar las finanzas. El oro lleva siglos siendo
 
 La inflación y la [devaluación del peso](/blog/evolucion-inflacion-mexico) erosionan el poder adquisitivo de forma silenciosa. Dejar el dinero parado en una cuenta bancaria equivale, en muchos casos, a perder valor cada año. Eso empuja a muchas personas a buscar alternativas, y ahí es donde aparecen tanto el oro como las criptomonedas.
 
-### Por qué no todas las alternativas al banco protegen igual
+### Por qué no todas las alternativas al banco funcionan igual
 
-No todo activo que "no es banco" protege de la misma manera. Las criptomonedas y el oro son radicalmente distintos en su naturaleza, su comportamiento histórico y el papel que cumplen en una estrategia de ahorro. Confundirlos es uno de los errores más comunes. Si quieres ver el panorama completo, comparamos [otras alternativas al dinero en el banco](/blog/alternativas-al-dinero-en-efectivo), de los CETES a la bolsa.
+No todo activo que "no es banco" funciona de la misma manera. Las criptomonedas y el oro son radicalmente distintos en su naturaleza, su comportamiento histórico y el papel que cumplen en una estrategia de ahorro. Confundirlos es uno de los errores más comunes. Si quieres ver el panorama completo, comparamos [otras alternativas al dinero en el banco](/blog/alternativas-al-dinero-en-efectivo), de los CETES a la bolsa.
 
 ## Qué es el oro como activo y qué no es
 
 ### Por qué el oro no es una inversión especulativa sino una reserva de valor
 
-El oro no paga intereses ni dividendos. Su función principal es preservar el valor a lo largo del tiempo. Durante siglos ha sido el activo al que recurren personas e instituciones cuando el sistema financiero genera incertidumbre. No sube rápido, pero tampoco desaparece.
+El oro no paga intereses ni dividendos. Su función principal ha sido servir como reserva de valor a lo largo del tiempo, aunque su precio sube y baja. Durante siglos ha sido el activo al que recurren personas e instituciones cuando el sistema financiero genera incertidumbre. No sube rápido, pero tampoco desaparece.
 
 ### Qué formas existen hoy para tener oro en México sin complicaciones
 
@@ -44,7 +44,7 @@ El oro no paga intereses ni dividendos. Su función principal es preservar el va
 
 ### Cómo distinguir el oro físico real del oro "de papel"
 
-El oro custodiado digitalmente (como el que ofrece Aura Gold) está respaldado por oro físico real en bóvedas certificadas bajo estándares LBMA. Se registra como un token en blockchain, pero su valor no sale de la especulación: sale del metal que lo respalda.
+El oro custodiado digitalmente (como el que ofrece Aura Gold) está respaldado por oro físico real: Tether Gold (XAUT), en barras con estándar LBMA guardadas en bóvedas en Suiza. Se registra como un token en blockchain, pero su valor no sale de la especulación: sale del metal que lo respalda.
 
 ## Qué son las criptomonedas y qué papel real cumplen en las finanzas personales
 
@@ -54,7 +54,7 @@ Las criptomonedas son activos digitales descentralizados cuyo valor depende de l
 
 ### Por qué las criptomonedas no funcionan como refugio de valor
 
-Durante las principales crisis financieras recientes, activos como Bitcoin han caído en paralelo a los mercados de renta variable, no en sentido contrario. Eso los diferencia fundamentalmente del oro, que históricamente sube o se mantiene cuando otros activos caen.
+Durante las principales crisis financieras recientes, activos como Bitcoin han caído en paralelo a los mercados de renta variable, no en sentido contrario. Eso los diferencia fundamentalmente del oro, que históricamente ha tendido a subir o mantenerse cuando otros activos caen, aunque no siempre.
 
 ### Qué perfil de ahorrador encaja realmente con las criptomonedas
 
@@ -70,7 +70,7 @@ Las criptomonedas pueden tener sentido para perfiles con alta tolerancia al ries
 | Volatilidad | Muy alta | Media |
 | Función principal | Especulación / tecnología | Reserva de valor / cobertura |
 | Comportamiento en crisis | Suele caer con los mercados | Suele mantenerse o subir |
-| Protección ante inflación | No demostrada históricamente | Sí, a largo plazo |
+| Protección ante inflación | No demostrada históricamente | Historial a largo plazo, sin garantía |
 | Riesgo de pérdida total | Real (proyectos pueden quebrar) | Prácticamente inexistente |
 | Regulación en México | En evolución, incierta | Clara y consolidada |
 | Accesibilidad digital | Alta | Alta (con plataformas como Aura Gold) |
@@ -81,7 +81,7 @@ En la crisis de 2008, el oro subió mientras los mercados colapsaban. En la vola
 
 ## Cuándo tiene sentido el oro y cuándo las criptomonedas en tu estrategia
 
-### En qué situaciones el oro es la opción más coherente para proteger tu ahorro
+### En qué situaciones el oro es la opción más coherente para tu ahorro
 
 - Priorizas no perder lo que tienes sobre la posibilidad de multiplicarlo.
 - Te preocupa la inflación o la devaluación del peso a largo plazo.
@@ -105,9 +105,9 @@ Que el oro digital use blockchain no lo convierte en una cripto especulativa. Lo
 
 Muchas personas ven el histórico de subida de Bitcoin y asumen que va a repetirse. Pero ese dato ignora la volatilidad extrema, los episodios de pérdidas del 70–80%, y que la mayoría de inversores retail no capturaron esas subidas porque vendieron durante las caídas.
 
-## Cómo empezar a proteger tu ahorro con oro físico real desde México
+## Cómo empezar a ahorrar en oro físico real desde México
 
-Si tu prioridad es proteger, no especular, con Aura Gold puedes comprar fracciones de oro, sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas bajo estándar LBMA y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si tu prioridad es ahorrar, no especular, con Aura Gold puedes comprar fracciones de oro, sin comisiones de custodia. Tu oro queda respaldado por Tether Gold (XAUT), en barras con estándar LBMA, y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a ahorrar en oro](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y criptomonedas en México
 
@@ -121,12 +121,12 @@ No hay evidencia histórica sólida que lo respalde. El oro tiene décadas de co
 
 ### ¿Es más seguro el oro que Bitcoin?
 
-En términos de preservación de valor y riesgo de pérdida total, sí. El oro no puede llegar a cero; un proyecto cripto sí puede. Si tu objetivo es proteger, el oro ofrece un perfil de riesgo mucho más adecuado.
+En términos de volatilidad y riesgo de pérdida total, sí. El oro no puede llegar a cero; un proyecto cripto sí puede. Si tu objetivo es ahorrar sin especular, el oro ofrece un perfil de riesgo mucho más adecuado.
 
 ### ¿Puedo tener oro y criptomonedas al mismo tiempo?
 
-Sí. De hecho, algunos perfiles destinan una base a oro como protección y una pequeña parte a criptomonedas como componente especulativo. Lo importante es no confundir los roles de cada uno.
+Sí. De hecho, algunos perfiles destinan una base a oro para diversificar y una pequeña parte a criptomonedas como componente especulativo. Lo importante es no confundir los roles de cada uno.
 
 ### ¿Cómo sé que el oro de Aura Gold es real y está bien custodiado?
 
-Aura Gold opera con oro físico certificado bajo estándar LBMA, con activos segregados y auditorías periódicas. Puedes consultar en todo momento [dónde está tu oro y quién lo custodia](/transparencia).
+Aura Gold opera con oro de Tether Gold (XAUT), en barras con estándar LBMA, con activos segregados, y enlaza los informes trimestrales de reservas del emisor. Puedes consultar en todo momento [dónde está tu oro y quién lo custodia](/transparencia).

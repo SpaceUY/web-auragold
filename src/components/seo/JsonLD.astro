@@ -1,5 +1,6 @@
 ---
 import { ANDROID_APP_URL } from "../../data/links";
+import { LEGAL_ENTITY } from "../../data/legal";
 
 const graph = [
   {
@@ -10,14 +11,14 @@ const graph = [
     // resuelvan la misma entidad cuando el usuario busca "Aura" o "AuraGold".
     alternateName: ["Aura", "AuraGold"],
     url: "https://auragold.io/",
-    legalName: "MintIA Corp",
-    email: "legal@mintia.com",
+    legalName: LEGAL_ENTITY.name,
+    email: LEGAL_ENTITY.legalEmail,
     description:
       "Plataforma para comprar oro físico 24k desde una app móvil, en fracciones de gramo, con custodia internacional y liquidez.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Craigmuir Chambers, Road Town, Tortola, VG1110",
-      addressCountry: "VG",
+      streetAddress: LEGAL_ENTITY.address,
+      addressCountry: LEGAL_ENTITY.countryCode,
     },
     logo: {
       "@type": "ImageObject",
@@ -65,9 +66,9 @@ const graph = [
     featureList: [
       "Compra de oro en fracciones de gramo",
       "Oro físico 24k",
-      "Referencia LBMA",
+      "Oro de Tether Gold (XAUT) en barras con estándar Good Delivery de la LBMA",
       "Custodia internacional en Suiza",
-      "Liquidez para vender y retirar fondos",
+      "Venta de oro desde la app y retiro a tu cuenta bancaria",
       "Canje por lingotes de oro físico",
       "Ahorro programado",
       "Organización del ahorro por objetivos",

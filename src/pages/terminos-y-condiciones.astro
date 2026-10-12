@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import { LEGAL_ENTITY } from "../data/legal";
 ---
 
 <BaseLayout
@@ -35,7 +36,7 @@ import Footer from "../components/layout/Footer.astro";
         <h3>1. Información General y Titularidad</h3>
         <p>
           El Servicio es operado por MintIA Corp, una sociedad constituida bajo las leyes de las Islas Vírgenes
-          Británicas, con domicilio social en Craigmuir Chambers, Road Town, Tortola, VG1110, BVI.
+          Británicas, con domicilio social en {LEGAL_ENTITY.address}, BVI.
         </p>
 
         <h3>2. Capacidad Legal</h3>

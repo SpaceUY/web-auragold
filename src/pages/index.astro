@@ -7,10 +7,13 @@ import FAQ from "../components/ui/FAQ.astro";
 import AppCTAButtons from "../components/ui/AppCTAButtons.astro";
 import HeroBoveda from "../components/ui/HeroBoveda.astro";
 import JsonLD from "../components/seo/JsonLD.astro";
+import { CUSTODY } from "../data/custody";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 import { getCollection } from "astro:content";
 import { authors } from "../data/authors";
 import AppStartLink from "../components/ui/AppStartLink.astro";
+import CostSummary from "../components/ui/CostSummary.astro";
+import { COMMISSION_LABEL, REDEMPTION_FEE_LABEL } from "../data/costs";
 
 // Últimos contenidos del blog (3 más recientes)
 const latestPosts = (await getCollection("blog"))
@@ -32,11 +35,11 @@ const painPoints = [
   },
   {
     icon: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
-    text: "¿Buscas seguridad total pero necesitas poder usar tu dinero cuando quieras?",
+    text: "¿Quieres ahorrar en algo tangible y poder vender cuando lo necesites?",
   },
   {
     icon: '<line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
-    text: "¿Crees que necesitas miles de pesos para empezar a proteger tu ahorro con oro?",
+    text: "¿Crees que necesitas miles de pesos para empezar a ahorrar en oro?",
   },
 ];
 
@@ -47,7 +50,7 @@ const steps = [
     iconAlt: "Bolsa de dinero dorada - convierte tus pesos en oro",
     title: "Convierte tus pesos en oro",
     description: "Regístrate en 2 minutos y compra la fracción de oro que quieras, sin necesidad de pagar una pieza completa.",
-    detail: "Compra oro 24k certificado (con respaldo LBMA) por fracciones de gramo. Tú controlas cuánto y cuándo.",
+    detail: "Compra oro 24k en barras con estándar LBMA por fracciones de gramo. Tú controlas cuánto y cuándo.",
   },
   {
     number: "2",
@@ -55,15 +58,15 @@ const steps = [
     iconAlt: "Bóveda de seguridad dorada - tu oro custodiado en Suiza",
     title: "Guarda el oro en tu Bóveda",
     description: "Tu oro se guarda de forma segura en bóvedas institucionales en Suiza.",
-    detail: "Doble protección: Tienes el valor de un activo físico, sin preocuparte por el almacenamiento o la seguridad.",
+    detail: "Tu saldo está respaldado por oro físico y no tienes que ocuparte de guardarlo.",
   },
   {
     number: "3",
     icon: "/images/icons/step-3-bars.png",
-    iconAlt: "Lingotes de oro apilados - liquidez total para vender o retirar",
-    title: "Disponibilidad de liquidez total",
-    description: "Vende tu oro o retíralo cuando lo necesites, directo a tu cuenta.",
-    detail: "Flexibilidad absoluta: Tu dinero nunca está congelado. Vende de volada y recibe el efectivo en 24-48 horas.",
+    iconAlt: "Lingotes de oro apilados - vende tu oro desde la app",
+    title: "Vende cuando lo necesites",
+    description: "Vende tu oro desde la app y recibe el dinero en tu cuenta bancaria.",
+    detail: "Vendes en unos minutos desde la app y recibes el efectivo en tu cuenta en 24-48 horas.",
   },
 ];
 
@@ -71,35 +74,30 @@ const comparisonRows = [
   {
     option: "Cuenta de Ahorro",
     goal: "Usar dinero diario",
-    inflation: { ok: false, text: "Poco o nada" },
     liquidity: { ok: true, text: "Inmediato" },
     complexity: { ok: true, text: "Muy simple" },
   },
   {
     option: "Oro Físico",
     goal: "Respaldo, valor histórico",
-    inflation: { ok: true, text: "Sí" },
     liquidity: { ok: false, text: "Difícil de vender" },
     complexity: { ok: false, text: "Logística complicada" },
   },
   {
     option: "CETES",
     goal: "Baja Volatilidad",
-    inflation: { ok: null, text: "Parcialmente" },
     liquidity: { ok: false, text: "Fechas de vencimiento" },
     complexity: { ok: null, text: "Requiere trámites" },
   },
   {
     option: "Inversión en Bolsa",
     goal: "Alto rendimiento",
-    inflation: { ok: true, text: "Sí" },
     liquidity: { ok: null, text: "Moderado" },
     complexity: { ok: false, text: "Requiere mucho conocimiento" },
   },
   {
     option: "Aura Gold",
-    goal: "Protección + Liquidez",
-    inflation: { ok: true, text: "Sí" },
+    goal: "Ahorro en oro, con venta desde la app",
     liquidity: { ok: true, text: "Flexible (24-48 hrs)" },
     complexity: { ok: true, text: "Ultra simple (compra fraccionada)" },
     highlight: true,
@@ -121,21 +119,21 @@ const benefits = [
     title: "Fracciones, no lingotes",
     tagline: "Compra la parte que quieras",
     description:
-      "Compra o vende la fracción de oro que quieras, sin tener que adquirir una pieza completa. Tu dinero crece a tu ritmo y a tu medida.",
+      "Compra o vende la fracción de oro que quieras, sin tener que adquirir una pieza completa. Compras a tu ritmo y a tu medida.",
   },
   {
     icon: '<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>',
-    title: "Liquidez Garantizada",
-    tagline: "Vende de inmediato",
+    title: "Vende cuando quieras",
+    tagline: "Venta en minutos",
     description:
-      "Convierte tu oro en efectivo en 2 clics. El dinero se deposita en tu cuenta bancaria en 24-48 horas, sin trámites complejos.",
+      "Vendes tu oro desde la app en unos minutos. El dinero se deposita en tu cuenta bancaria en 24-48 horas, sin trámites complejos.",
   },
   {
     icon: '<rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>',
     title: "Respaldo Físico Real",
-    tagline: "Doble tranquilidad",
+    tagline: "Oro físico detrás de cada gramo",
     description:
-      "Cada gramo digital que compras está respaldado por oro físico 24k guardado en bóvedas aseguradas en Suiza. Puedes pedir tu oro en físico cuando quieras.",
+      "Cada gramo digital que compras está respaldado por oro físico 24k guardado en bóvedas aseguradas en Suiza. Si reúnes un lingote completo, puedes canjearlo con Tether Gold.",
   },
   {
     icon: '<path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/>',
@@ -145,24 +143,24 @@ const benefits = [
   },
   {
     icon: '<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/>',
-    title: "Oro Certificado LBMA",
+    title: "Oro con Estándar LBMA",
     tagline: "Máxima pureza",
-    description: "Cada gramo es oro 24k con certificación LBMA, el estándar global más alto de calidad y autenticidad.",
+    description: "Cada gramo es oro 24k en barras que cumplen el estándar Good Delivery de la LBMA, según Tether Gold.",
   },
 ];
 
 const securityCards = [
   {
     icon: '<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/>',
-    title: "Oro Certificado",
+    title: "Oro con Estándar LBMA",
     description:
-      "Cada gramo que compras es oro 24k (máxima pureza) y cuenta con la certificación de la LBMA, el estándar global más alto de calidad y autenticidad.",
+      "Cada gramo que compras es oro 24k en barras que cumplen el estándar Good Delivery de la LBMA, el que usa el mercado de oro de Londres. Lo informa Tether Gold, el emisor del token.",
   },
   {
     icon: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
     title: "Seguridad Institucional",
     description:
-      "Tu oro físico se guarda en bóvedas de alta seguridad en Suiza y está completamente asegurado. Usamos tecnología de grado institucional para garantizar la propiedad absoluta de tu inversión.",
+      "Tu oro físico se guarda en bóvedas de alta seguridad en Suiza y está completamente asegurado.",
   },
   {
     icon: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>',
@@ -171,9 +169,9 @@ const securityCards = [
   },
   {
     icon: '<line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
-    title: "Puedes Pedirlo en Físico",
+    title: "Canje por Lingotes",
     description:
-      "Si tu plan cambia, puedes solicitar el envío de tu oro físico a tu domicilio (se aplican costos de envío y seguro).",
+      "Si reúnes el equivalente a un lingote completo, puedes canjearlo con Tether Gold, que lo entrega en una dirección en Suiza. No tiene una fecha fija: lo coordinas con nuestro equipo.",
   },
 ];
 
@@ -181,7 +179,7 @@ const faqItems = [
   {
     question: "¿Mi oro está realmente asegurado?",
     answer:
-      "Sí. Todo el oro que compras en Aura Gold está respaldado por oro físico 24k certificado bajo estándares LBMA, almacenado en bóvedas institucionales de alta seguridad en Suiza. Ese oro se encuentra asegurado y custodiado por terceros especializados, lo que significa que no depende físicamente de Aura Gold ni se guarda en oficinas propias. Tu inversión está respaldada por metal real, no por promesas digitales.",
+      "Sí. Todo el oro que compras en Aura Gold está respaldado por oro físico 24k en barras con estándar Good Delivery de la LBMA, almacenado en bóvedas institucionales de alta seguridad en Suiza. Ese oro se encuentra asegurado y custodiado por terceros especializados, lo que significa que no depende físicamente de Aura Gold ni se guarda en oficinas propias. Tu inversión está respaldada por metal real, no por promesas digitales.",
   },
   {
     question: "¿Cuánto oro puedo comprar? ¿Hay un mínimo?",
@@ -196,17 +194,17 @@ const faqItems = [
   {
     question: "¿Qué tan rápido puedo tener mi dinero si vendo mi oro?",
     answer:
-      "Puedes vender tu oro en cualquier momento desde la app. Una vez realizada la venta, el proceso de liquidación suele completarse en un plazo aproximado de 24 a 48 horas, dependiendo de los tiempos bancarios. La idea es que tengas liquidez sin fricciones ni trámites complejos.",
+      "Vendes tu oro desde la app en unos minutos. Una vez realizada la venta, el depósito en tu cuenta bancaria suele completarse en un plazo aproximado de 24 a 48 horas, dependiendo de los tiempos bancarios. La idea es que tengas liquidez sin fricciones ni trámites complejos.",
   },
   {
     question: "¿Aura Gold es cripto?",
     answer:
-      "Usa tecnología cripto, pero no se comporta como Bitcoin. Cada token que compras está respaldado 1:1 por oro físico 24k certificado LBMA, guardado en bóvedas en Suiza. Por eso su precio sigue al del oro en el mercado internacional, no a la especulación del mercado cripto. La blockchain sirve para registrar tu oro y para que puedas verificar en cualquier momento qué barras lo respaldan.",
+      "Usa tecnología cripto, pero no se comporta como Bitcoin. Cada token que compras está respaldado 1:1 por oro físico 24k en barras con estándar LBMA, guardado en bóvedas en Suiza. Por eso su precio sigue al del oro en el mercado internacional, no a la especulación del mercado cripto. La blockchain sirve para registrar tu oro y para que puedas verificar en cualquier momento qué barras lo respaldan.",
   },
   {
     question: "¿Cuánto cuesta usar Aura Gold?",
     answer:
-      "Crear tu cuenta no tiene costo. Aura Gold obtiene ingresos a través del spread entre precio de compra y venta del oro y, en algunos casos, puede existir una comisión asociada a ciertos movimientos (como envíos físicos). Todo se muestra de forma transparente antes de confirmar cualquier operación.",
+      `Crear tu cuenta no tiene costo. Aura Gold cobra una comisión del ${COMMISSION_LABEL} en cada compra y en cada venta, sobre el precio internacional de referencia del oro. El canje por lingotes físicos lo cobra Tether Gold (${REDEMPTION_FEE_LABEL}). Todo se muestra antes de confirmar cualquier operación.`,
   },
   {
     question: "¿Puedo tener mi oro en físico?",
@@ -218,7 +216,7 @@ const faqItems = [
 
 <BaseLayout
   title="Aura Gold - Compra e invierte en oro desde nuestra App"
-  description="Convierte tus pesos en oro físico 24k certificado. Custodia en Suiza, liquidez en 24-48h. Protege tu dinero de la inflación con Aura Gold."
+  description="Convierte tus pesos en oro desde tu celular, en fracciones de gramo, con Aura Gold."
 >
   <JsonLD />
   <FAQJsonLD items={faqItems} />
@@ -250,6 +248,9 @@ const faqItems = [
             desde tu celular, cuando quieras.
           </p>
           <AppCTAButtons id="descargar" class="hero-rise" style="animation-delay: 0.35s" />
+          <a href="#costos" class="hero-rise text-sm text-ag-gold hover:underline" style="animation-delay: 0.4s">
+            Ver cuánto cuesta
+          </a>
         </div>
 
         <div class="hero-rise hidden w-full sm:block" style="animation-delay: 0.15s">
@@ -266,7 +267,7 @@ const faqItems = [
         description="La verdad es simple: si tu dinero está solo en una cuenta de banco o bajo el colchón, cada día vale un poco menos. La inflación trabaja contra ti, sin que te des cuenta."
       />
       <p class="mt-10 text-center font-display text-[22px] font-medium text-ag-gold">
-        Es hora de ser precavido sin caer en inversiones de riesgo.
+        Una forma simple de ahorrar en oro, entendiendo cómo funciona.
       </p>
 
       <div class="mt-10 grid gap-6 sm:grid-cols-2">
@@ -300,7 +301,7 @@ const faqItems = [
     <section id="como-funciona" class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
       <SectionHeading
         eyebrow="La ruta simple"
-        title="Aura Gold es la forma más simple de invertir en oro físico con custodia internacional"
+        title="Así de simple es invertir en oro con Aura Gold"
         description="Invierte en tu futuro sin complicaciones, desde tu celular."
       />
 
@@ -325,8 +326,8 @@ const faqItems = [
     <section id="beneficios" class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
       <SectionHeading
         eyebrow="La inflación no espera"
-        title="Invierte en oro con total flexibilidad liquidez inmediata"
-        description="Un camino de ahorro hecho a tu medida. Aura Gold te da el control para proteger y organizar tu dinero con la solidez del oro."
+        title="Invierte en oro y vende cuando lo necesites"
+        description="Un camino de ahorro hecho a tu medida. Aura Gold te da el control para organizar tu ahorro en oro."
       />
 
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -357,8 +358,8 @@ const faqItems = [
     <!-- Security / transparency -->
     <section id="por-que-aura" class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
       <SectionHeading
-        eyebrow="Confianza total"
-        title="Tu oro está protegido con la máxima seguridad y transparencia."
+        eyebrow="Transparencia"
+        title="Cómo se guarda y se respalda tu oro"
       />
 
       <div class="mt-12 grid gap-6 sm:grid-cols-2">
@@ -383,6 +384,24 @@ const faqItems = [
           ))
         }
       </div>
+
+      <div
+        class="mt-6 flex flex-col gap-4 rounded-2xl bg-ag-slate/65 p-6 lg:flex-row lg:items-center lg:justify-between"
+      >
+        <div>
+          <p class="font-display text-lg text-white">Respaldado por {CUSTODY.token}</p>
+          <p class="mt-2 max-w-2xl text-sm text-ag-gray/80">
+            Barras con estándar {CUSTODY.metalStandard}, guardadas en bóvedas en Suiza. Tether Gold publica cada
+            trimestre un informe de sus reservas, revisado por {CUSTODY.auditor}.
+          </p>
+        </div>
+        <div class="flex shrink-0 flex-col gap-2 text-sm sm:flex-row sm:gap-6">
+          <a href={CUSTODY.reportsUrl} target="_blank" rel="noopener" class="text-ag-gold hover:underline"
+            >Ver informes de reservas ↗</a
+          >
+          <a href="/transparencia#tu-oro" class="text-ag-gold hover:underline">Cómo se guarda tu oro →</a>
+        </div>
+      </div>
     </section>
 
     <!-- Comparison -->
@@ -390,7 +409,7 @@ const faqItems = [
       <SectionHeading
         eyebrow="Nuestra solución"
         title="¿Por qué elegir oro? Comparativa con otras opciones de inversión en México"
-        description="¿Por qué Aura Gold es el mejor camino para el ahorrador mexicano?"
+        description="Compara cómo funciona cada opción."
       />
       <div class="mt-10 overflow-x-auto">
         <table class="w-full min-w-[720px] border-collapse text-left text-sm">
@@ -398,7 +417,6 @@ const faqItems = [
             <tr class="border-b border-white/10 text-white/50">
               <th class="py-4 pl-6 pr-4 font-body font-normal">Opción</th>
               <th class="py-4 pr-4 font-body font-normal">Objetivo principal</th>
-              <th class="py-4 pr-4 font-body font-normal">¿Protege de la Inflación?</th>
               <th class="py-4 pr-4 font-body font-normal">¿Qué tan Líquido es?</th>
               <th class="py-4 pr-6 font-body font-normal">¿Qué tan complejo es?</th>
             </tr>
@@ -413,9 +431,6 @@ const faqItems = [
                     {row.option}
                   </td>
                   <td class="py-4 pr-4 text-white/70">{row.goal}</td>
-                  <td class="py-4 pr-4 text-white/70">
-                    {comparisonMark(row.inflation.ok)} {row.inflation.text}
-                  </td>
                   <td class="py-4 pr-4 text-white/70">
                     {comparisonMark(row.liquidity.ok)} {row.liquidity.text}
                   </td>
@@ -435,7 +450,7 @@ const faqItems = [
       <SectionHeading
         eyebrow="FAQs"
         title="Preguntas Frecuentes"
-        description="Sin rodeos y sin jerga financiera. Todo lo que necesitas saber antes de empezar a proteger tu dinero."
+        description="Sin rodeos y sin jerga financiera. Todo lo que necesitas saber antes de empezar."
       />
       <div class="mt-12">
         <FAQ items={faqItems} />
@@ -448,7 +463,7 @@ const faqItems = [
         <SectionHeading
           eyebrow="Blog"
           title="Últimos contenidos"
-          description="Educación financiera e insights del mercado para proteger tu ahorro con oro."
+          description="Educación financiera y novedades del mercado del oro."
           class="max-w-2xl"
         />
         <a
@@ -500,11 +515,13 @@ const faqItems = [
       </div>
     </section>
 
+    <CostSummary />
+
     <!-- Final CTA -->
     <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
       <div data-animate class="rounded-3xl bg-gradient-to-br from-ag-navy to-ag-dark-2 px-6 py-10 text-center sm:p-10 lg:p-16">
         <h2 class="font-display text-3xl font-semibold text-white lg:text-4xl">
-          La inflación no espera. Protege tu dinero con oro desde hoy.
+          Empieza a ahorrar en oro desde hoy.
         </h2>
         <p class="mt-4 text-white/60">La inflación sigue corriendo. Dale un propósito a tu ahorro hoy.</p>
 

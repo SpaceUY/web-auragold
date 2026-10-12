@@ -1,4 +1,6 @@
 ---
+import { LEGAL_ENTITY } from "../../data/legal";
+
 const footerLinks = [
   { label: "Inicio", href: "/" },
   { label: "Blog", href: "/blog" },
@@ -19,8 +21,7 @@ import OpenPanelAnalytics from "../analytics/OpenPanelAnalytics.astro";
       <div class="max-w-sm">
         <a href="/" class="font-display text-2xl font-semibold text-white">aura</a>
         <p class="mt-4 font-body text-sm text-white/60">
-          La forma más simple y segura de proteger tu dinero con oro físico real desde el móvil. México y
-          LATAM.
+          Compra oro en fracciones de gramo desde tu celular. México y LATAM.
         </p>
       </div>
 
@@ -32,13 +33,28 @@ import OpenPanelAnalytics from "../analytics/OpenPanelAnalytics.astro";
             </a>
           ))
         }
+        <!-- consent.js escucha data-aura-consent-open y abre las preferencias de cookies -->
+        <button type="button" data-aura-consent-open class="cursor-pointer hover:text-white transition-colors">
+          Configurar cookies
+        </button>
       </nav>
     </div>
 
-    <div class="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 font-body text-xs text-white/40 lg:flex-row lg:items-center lg:justify-between">
-      <p>&copy; {new Date().getFullYear()} Aura Gold - MintIA Corp. Todos los derechos reservados.</p>
+    <!--
+      Entidad, dirección y contacto de soporte (WEB-006). Salen de src/data/legal.ts,
+      la misma fuente que usan Términos, Privacidad y el JSON-LD. text-white/50
+      (no /40) para que el texto chico pase el contraste AA sobre el fondo negro.
+    -->
+    <div class="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 font-body text-xs text-white/50 lg:flex-row lg:items-start lg:justify-between">
+      <div class="space-y-1">
+        <p>&copy; {new Date().getFullYear()} Aura Gold - {LEGAL_ENTITY.name}. Todos los derechos reservados.</p>
+        <p>{LEGAL_ENTITY.name} · {LEGAL_ENTITY.address}, {LEGAL_ENTITY.country}</p>
+      </div>
       <p>
-        Soporte: <span class="select-all text-white/70">info@mintia.tech</span>
+        Soporte:{" "}
+        <a href={`mailto:${LEGAL_ENTITY.supportEmail}`} class="text-white/70 transition-colors hover:text-white">
+          {LEGAL_ENTITY.supportEmail}
+        </a>
       </p>
       <p>
         Developed by <a href="https://spacedev.io" class="text-white/70 hover:text-white">SpaceDev</a>

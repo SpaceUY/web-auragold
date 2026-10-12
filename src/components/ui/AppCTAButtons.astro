@@ -7,8 +7,9 @@
 // pestaña: es el paso siguiente del flujo, no una referencia externa. La ficha
 // de Play Store queda como secundaria y sí abre aparte.
 //
-// data-cta identifica la ubicación del click para medirlo desde GTM.
+// data-cta (cta_id) y data-cta-position (cta_position) los lee CtaTracking (WEB-001).
 import { ANDROID_APP_URL, WEB_APP_URL } from "../../data/links";
+import RiskWarning from "./RiskWarning.astro";
 
 interface Props {
   id?: string;
@@ -20,6 +21,7 @@ interface Props {
 
 const { id, class: className = "", style, centered = false, ctaLocation = "hero" } = Astro.props;
 const alignment = centered ? "items-center" : "items-center lg:items-start";
+const textAlignment = centered ? "text-center" : "text-center lg:text-left";
 ---
 
 <div id={id} class={`flex flex-col gap-3 ${alignment} ${className}`} style={style}>
@@ -27,6 +29,7 @@ const alignment = centered ? "items-center" : "items-center lg:items-start";
     <a
       href={WEB_APP_URL}
       data-cta={`webapp-${ctaLocation}`}
+      data-cta-position={ctaLocation}
       class="group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-ag-gold px-6 py-3 font-medium text-ag-dark transition-opacity hover:opacity-90"
     >
       Empieza ahora
@@ -49,6 +52,7 @@ const alignment = centered ? "items-center" : "items-center lg:items-start";
       target="_blank"
       rel="noopener noreferrer"
       data-cta={`android-${ctaLocation}`}
+      data-cta-position={ctaLocation}
       class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/20 px-6 py-3 font-medium text-white transition-colors hover:bg-white/10"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" class="h-[18px] w-[18px]" aria-hidden="true" focusable="false">
@@ -60,4 +64,5 @@ const alignment = centered ? "items-center" : "items-center lg:items-start";
     </a>
   </div>
   <p class="text-balance text-sm text-white/40">En la web y en Android. iOS muy pronto.</p>
+  <RiskWarning class={`max-w-md ${textAlignment}`} />
 </div>

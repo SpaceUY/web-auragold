@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import CtaTracking from "../components/analytics/CtaTracking.astro";
 
 interface Props {
   title: string;
@@ -72,29 +73,14 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-    <script is:inline define:vars={{ GTM_ID }}>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", GTM_ID);
-    </script>
+    <!--
+      Banner de cookies (CMP). GTM ya no se carga acá: lo inyecta consent.js
+      solo cuando el visitante acepta analítica o publicidad. El mismo archivo
+      lo usa app.auragold.io (ver docs/cmp-contrato.md).
+    -->
+    <script is:inline src="/consent/consent.js" data-gtm-id={GTM_ID} defer></script>
   </head>
   <body>
-    <noscript>
-      <iframe
-        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe>
-    </noscript>
     <slot />
 
     <script>
@@ -122,5 +108,6 @@ const ogImageUrl = new URL(ogImage, Astro.site);
         animated.forEach((el) => observer.observe(el));
       }
     </script>
+    <CtaTracking />
   </body>
 </html>
