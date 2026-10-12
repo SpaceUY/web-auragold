@@ -19,7 +19,7 @@ Fuentes revisadas el 2026-10-12:
 
 Los datos están en un solo lugar: `src/data/custody.ts`.
 
-## Quién es quién
+## Los roles
 
 | Rol | Quién | Fuente |
 | --- | --- | --- |
@@ -67,24 +67,30 @@ Estado: **Con fuente** (la fuente lo dice), **Corregida** (estaba mal atribuida 
 | Home, beneficios | Oro Certificado LBMA: "con certificación LBMA, el estándar global más alto" | Oro con Estándar LBMA: "barras que cumplen el estándar Good Delivery de la LBMA, según Tether Gold" |
 | Home, respaldo | Puedes pedir tu oro en físico cuando quieras | Si reúnes un lingote completo, puedes canjearlo con Tether Gold |
 | Home, confianza | Puedes Pedirlo en Físico: envío a tu domicilio | Canje por Lingotes: lingote completo con Tether Gold, entrega en Suiza, sin fecha fija, coordinado con el equipo |
-| Home, confianza | (no había fuentes) | Párrafo "Quién es quién" con un link a los informes de Tether Gold y a Transparencia |
+| Home, confianza | (no había fuentes) | Tarjeta "Respaldado por Tether Gold (XAUT)" con links a los informes de reservas y a Transparencia |
 | Home, FAQ | certificado bajo estándares LBMA / certificado LBMA | barras con estándar Good Delivery de la LBMA / estándar LBMA |
 | Invertir | LBMA "Oro certificado"; "Bóveda certificada"; "barras acreditadas"; "certificado LBMA" | "Estándar de las barras"; "Bóveda en Suiza"; "estándar Good Delivery"; "barras con estándar LBMA" |
 | JsonLD | Referencia LBMA | Oro de Tether Gold (XAUT) en barras con estándar Good Delivery de la LBMA |
 | Transparencia, H1 y meta | custodia, spread y auditorías / Cómo custodiamos tu oro | informes de reservas / Quién custodia tu oro |
-| Transparencia, sección 3 | Realizamos auditorías con BDO; BDO verifica el seguro; 99,99%; "el más grande del mundo" | Lista de quién es quién; informe de Tether Gold revisado por BDO; links a gold.tether.to, /faq y /reports |
+| Transparencia, sección 3 | Realizamos auditorías con BDO; BDO verifica el seguro; 99,99%; "el más grande del mundo" | Ficha con los datos del respaldo (token, emisor, custodia, estándar, informes, Aura Gold); informe de Tether Gold revisado por BDO; links a gold.tether.to, /faq y /reports |
 | Transparencia, FAQ | auditor verifica "el total vendido a usuarios" | informe de Tether Gold: oro suficiente para los XAUT emitidos; no es una auditoría de Aura |
 | Transparencia, compromisos | Auditorías publicadas: "serán públicos" | Informes de reservas de Tether Gold, revisados por BDO Italia |
 | Blog (9 posts) | bóvedas certificadas / certificado LBMA / auditorías de Aura | Tether Gold (XAUT), barras con estándar LBMA, bóvedas en Suiza, informes del emisor |
 
-## Fuera de este PR
+## Lo que va en otros PRs
 
-- **Tres frases que siguen diciendo "certificada" o "certificado (LBMA)"**:
-  - `invertir-en-oro-mexico.astro`, nota de la tabla comparativa: "Custodia certificada LBMA".
-  - `invertir-en-oro-mexico.astro`, subtítulo del hero: "custodia certificada".
-  - `calculadora-inflacion-oro.astro`, FAQ: "certificado (LBMA)".
+Algunas frases de WEB-008B están en líneas que ya cambia otro PR, o en las de al lado. Para que no choquen,
+cada una va en el PR que toca esa línea:
 
-  Están en las mismas líneas que cambian WEB-007 (#45) y WEB-001 (#44), o en las de al lado. Si las cambio
-  acá, los PRs chocan. Van en un PR chico después de mergear #44 y #45.
-- **Pendientes de evidencia del cliente**: seguro, activo segregado y titularidad, dirección (wallet) del
-  usuario, Chainlink, "24k", y lo que cubre la comisión. Hasta tener la evidencia, esas frases no se tocan.
+| Frase | Dónde | PR |
+| --- | --- | --- |
+| "Custodia certificada LBMA" pasa a "Barras con estándar LBMA" | Invertir, tabla comparativa | WEB-007 (#45) |
+| "custodia certificada" pasa a "custodia en Suiza" | Invertir, subtítulo del hero | WEB-007 (#45) |
+| "las auditorías" pasa a "los informes de reservas" (texto del link a Transparencia) | Invertir | WEB-007 (#45) |
+| "oro 24k con certificación LBMA" pasa a "en barras con estándar LBMA" | Transparencia, FAQ "¿Es oro físico o un token digital?" | WEB-008A (#46) |
+| "certificado (LBMA)" pasa a "en barras con estándar LBMA" | Calculadora, FAQ | WEB-001 (#44) |
+
+## Pendientes de evidencia del cliente
+
+Seguro; activo segregado y titularidad; dirección (wallet) del usuario; Chainlink; "24k"; y lo que cubre la
+comisión. Hasta tener la evidencia, esas frases no se tocan.

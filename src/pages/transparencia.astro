@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "¿Y si el oro que dicen que tengo no existe realmente?",
     answer:
-      "Entendemos que esta duda es legítima. El oro que respalda tu cuenta es Tether Gold (XAUT) y no lo guarda Aura Gold: está en manos de un custodio en Suiza. Cada trimestre, Tether Gold publica un informe de sus reservas, revisado por BDO Italia S.p.A. bajo el estándar ISAE 3000 Revised. Ese informe confirma que hay oro suficiente para todos los tokens XAUT emitidos e incluye pruebas sobre una muestra de las barras, hechas por un tercero independiente. Las barras cumplen el estándar Good Delivery de la LBMA. Es un informe sobre Tether Gold, no una auditoría de Aura Gold. Los informes están en gold.tether.to/reports, y en gold.tether.to puedes consultar qué barras corresponden a una dirección (wallet) con XAUT.",
+      "Entendemos que esta duda es legítima. El oro que respalda tu cuenta es Tether Gold (XAUT) y no lo guarda Aura Gold: está en manos de un custodio en Suiza. Cada trimestre, Tether Gold publica un informe de sus reservas, revisado por BDO Italia S.p.A. bajo el estándar ISAE 3000 Revised. Ese informe confirma que hay oro suficiente para todos los tokens XAUT emitidos e incluye pruebas sobre una muestra de las barras, hechas por un tercero independiente. Las barras cumplen el estándar Good Delivery de la LBMA. Los informes están en gold.tether.to/reports, y en gold.tether.to puedes consultar qué barras corresponden a una dirección (wallet) con XAUT.",
   },
   {
     question: "¿Puedo sacar mi dinero cuando quiera?",
@@ -49,6 +49,20 @@ const faqItems = [
   },
 ];
 
+const backingFacts = [
+  { label: "Token", value: CUSTODY.token, detail: "1 XAUT equivale a 1 onza troy de oro fino." },
+  { label: "Emisor", value: CUSTODY.issuer, detail: "Respalda XAUT con más de 20 toneladas de oro, según su sitio." },
+  { label: "Custodia", value: "Bóvedas en Suiza", detail: "A cargo de custodios independientes, no de Aura Gold." },
+  { label: "Estándar de las barras", value: CUSTODY.metalStandard, detail: "El de calidad del mercado de oro de Londres." },
+  {
+    label: "Informes de reservas",
+    value: `Trimestrales, revisados por ${CUSTODY.auditor}`,
+    detail: `Bajo el estándar ${CUSTODY.assuranceStandard}. Los publica Tether Gold.`,
+    link: { href: CUSTODY.reportsUrl, text: "Ver informes ↗" },
+  },
+  { label: "Aura Gold", value: "La app con la que operas", detail: "Compras, vendes y sigues tu oro. No emite el token." },
+];
+
 const commitments = [
   {
     title: "Precio antes de confirmar",
@@ -56,7 +70,7 @@ const commitments = [
   },
   {
     title: "Informes de reservas",
-    text: "Te enlazamos los informes trimestrales de reservas de Tether Gold, revisados por BDO Italia. Son sobre Tether Gold, no auditorías de Aura Gold.",
+    text: "Enlazamos los informes trimestrales de reservas de Tether Gold, revisados por BDO Italia, para que verifiques el respaldo de tu oro.",
   },
   {
     title: "Comunicación en momentos de volatilidad",
@@ -194,32 +208,27 @@ const commitments = [
         3. Tu oro: dónde está, quién lo custodia y qué garantías tienes
       </h2>
       <p class="mt-4 text-white/60">
-        <strong class="text-white">Quién es quién.</strong> Así se reparten los papeles detrás de tu oro:
+        Tu oro está respaldado por {CUSTODY.token}. Estos son los datos clave del respaldo:
       </p>
-      <ul class="mt-3 list-disc space-y-2 pl-5 text-white/60">
-        <li>
-          <strong class="text-white">El token:</strong>{" "}
-          {CUSTODY.token}. Cada XAUT equivale a una onza troy de oro fino.
-        </li>
-        <li>
-          <strong class="text-white">Quién lo emite:</strong>{" "}
-          {CUSTODY.issuer}, la empresa de Tether Gold.
-        </li>
-        <li>
-          <strong class="text-white">Quién guarda el oro:</strong> uno o más custodios en Suiza, que guardan las barras
-          en nombre de quienes tienen XAUT.
-        </li>
-        <li>
-          <strong class="text-white">El estándar del metal:</strong> las barras cumplen el estándar{" "}
-          {CUSTODY.metalStandard}, que fija las reglas de calidad del mercado de oro de Londres. La LBMA no
-          certifica a Aura Gold ni a la custodia.
-        </li>
-        <li>
-          <strong class="text-white">Aura Gold:</strong> es la app con la que compras y vendes. No emite el token ni
-          guarda el oro.
-        </li>
-      </ul>
-      <p class="mt-4 text-white/60">
+      <dl class="mt-6 grid gap-4 sm:grid-cols-2">
+        {
+          backingFacts.map((fact) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <dt class="text-xs tracking-wide text-white/50 uppercase">{fact.label}</dt>
+              <dd class="mt-1 font-display text-white">{fact.value}</dd>
+              <dd class="mt-1 text-sm text-white/60">{fact.detail}</dd>
+              {fact.link && (
+                <dd class="mt-2 text-sm">
+                  <a href={fact.link.href} target="_blank" rel="noopener" class="text-ag-gold hover:underline">
+                    {fact.link.text}
+                  </a>
+                </dd>
+              )}
+            </div>
+          ))
+        }
+      </dl>
+      <p class="mt-6 text-white/60">
         <strong class="text-white">¿Dónde está físicamente el oro?</strong> En{" "}
         <a href="/blog/donde-guardar-oro-casa-banco-boveda" class="text-ag-gold hover:underline">
           bóvedas de alta seguridad en Suiza
@@ -228,10 +237,6 @@ const commitments = [
         <a href={CUSTODY.siteUrl} target="_blank" rel="noopener" class="text-ag-gold hover:underline"
           >gold.tether.to</a
         >.
-      </p>
-      <p class="mt-4 text-white/60">
-        <strong class="text-white">¿Quién emite el token?</strong> El oro que respalda tu cuenta es Tether Gold
-        (XAUT), emitido por {CUSTODY.issuer}, con más de 20 toneladas de oro en bóveda según su sitio.
       </p>
       <p class="mt-4 text-white/60">
         <strong class="text-white">¿Puedo canjear mi oro por un lingote?</strong> Sí. Tu oro está respaldado por
@@ -256,8 +261,7 @@ const commitments = [
       <p class="mt-4 text-white/60">
         <strong class="text-white">¿Cómo puedo verificar que mi oro existe?</strong> Tether Gold publica cada
         trimestre un informe de sus reservas, revisado por {CUSTODY.auditor} S.p.A., una firma de auditoría
-        independiente, bajo el estándar {CUSTODY.assuranceStandard}. Ese informe es sobre Tether Gold: Aura Gold no
-        es la empresa revisada. Los informes están en{" "}
+        independiente, bajo el estándar {CUSTODY.assuranceStandard}. Los informes están en{" "}
         <a href={CUSTODY.reportsUrl} target="_blank" rel="noopener" class="text-ag-gold hover:underline"
           >gold.tether.to/reports</a
         >. Además, en gold.tether.to puedes consultar qué barras corresponden a una dirección (wallet) con XAUT. La

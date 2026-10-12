@@ -385,14 +385,23 @@ const faqItems = [
         }
       </div>
 
-      <p class="mt-8 max-w-3xl text-sm text-ag-gray/80">
-        Quién es quién: el oro que respalda tu cuenta es {CUSTODY.token}, emitido por {CUSTODY.issuer}, y las
-        barras cumplen el estándar {CUSTODY.metalStandard} y están en bóvedas en Suiza, según los{" "}
-        <a href={CUSTODY.reportsUrl} target="_blank" rel="noopener" class="text-ag-gold hover:underline"
-          >informes trimestrales de reservas de Tether Gold</a
-        >, que revisa {CUSTODY.auditor}. Esos informes son sobre Tether Gold, no auditorías de Aura Gold.{" "}
-        <a href="/transparencia#tu-oro" class="text-ag-gold hover:underline">Ver el detalle en Transparencia</a>.
-      </p>
+      <div
+        class="mt-6 flex flex-col gap-4 rounded-2xl bg-ag-slate/65 p-6 lg:flex-row lg:items-center lg:justify-between"
+      >
+        <div>
+          <p class="font-display text-lg text-white">Respaldado por {CUSTODY.token}</p>
+          <p class="mt-2 max-w-2xl text-sm text-ag-gray/80">
+            Barras con estándar {CUSTODY.metalStandard}, guardadas en bóvedas en Suiza. Tether Gold publica cada
+            trimestre un informe de sus reservas, revisado por {CUSTODY.auditor}.
+          </p>
+        </div>
+        <div class="flex shrink-0 flex-col gap-2 text-sm sm:flex-row sm:gap-6">
+          <a href={CUSTODY.reportsUrl} target="_blank" rel="noopener" class="text-ag-gold hover:underline"
+            >Ver informes de reservas ↗</a
+          >
+          <a href="/transparencia#tu-oro" class="text-ag-gold hover:underline">Cómo se guarda tu oro →</a>
+        </div>
+      </div>
     </section>
 
     <!-- Comparison -->
