@@ -17,6 +17,8 @@
   declare global {
     interface Window {
       dataLayer?: unknown[];
+      // OpenPanel (WEB-012A): existe solo si ese módulo cargó.
+      auraAnalytics?: { track(name: string, properties?: Record<string, string | number>): unknown };
     }
   }
 
@@ -42,15 +44,17 @@
     if (!match) return;
 
     try {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: match.event,
+      const properties = {
         cta_id: link.dataset.cta ?? "sin-id",
         cta_position: link.dataset.ctaPosition ?? "sin-posicion",
         destination: match.destination,
         // Solo la ruta: ni query ni hash (el link de Play lleva el referrer).
         landing_path: location.pathname,
-      });
+      };
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: match.event, ...properties });
+      // El mismo clic va a OpenPanel (WEB-012A) si está activo: sin escuchadores nuevos.
+      window.auraAnalytics?.track(match.event, properties);
     } catch {
       // La medición nunca puede frenar la navegación.
     }
