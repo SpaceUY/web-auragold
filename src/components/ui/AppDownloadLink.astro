@@ -15,6 +15,6 @@ interface Props {
 const { medium, class: className = "" } = Astro.props;
 ---
 
-<a href={playStoreUrl(medium)} data-app-download-link data-cta={`download-${medium}`} class={className}>
+<a href={playStoreUrl(medium)} data-app-download-link data-cta={`download-${medium}`} data-cta-position={medium} class={className}>
   Descargar app
 </a>

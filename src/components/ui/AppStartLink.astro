@@ -18,6 +18,7 @@ const { medium, class: className = "" } = Astro.props;
   data-app-start
   data-android-url={playStoreUrl(medium)}
   data-cta={`start-${medium}`}
+  data-cta-position={medium}
   class={className}
 >
   <slot />
