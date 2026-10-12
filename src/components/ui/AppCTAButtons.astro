@@ -9,6 +9,7 @@
 //
 // data-cta (cta_id) y data-cta-position (cta_position) los lee CtaTracking (WEB-001).
 import { ANDROID_APP_URL, WEB_APP_URL } from "../../data/links";
+import RiskWarning from "./RiskWarning.astro";
 
 interface Props {
   id?: string;
@@ -20,6 +21,7 @@ interface Props {
 
 const { id, class: className = "", style, centered = false, ctaLocation = "hero" } = Astro.props;
 const alignment = centered ? "items-center" : "items-center lg:items-start";
+const textAlignment = centered ? "text-center" : "text-center lg:text-left";
 ---
 
 <div id={id} class={`flex flex-col gap-3 ${alignment} ${className}`} style={style}>
@@ -62,4 +64,5 @@ const alignment = centered ? "items-center" : "items-center lg:items-start";
     </a>
   </div>
   <p class="text-balance text-sm text-white/40">En la web y en Android. iOS muy pronto.</p>
+  <RiskWarning class={`max-w-md ${textAlignment}`} />
 </div>

@@ -4,6 +4,7 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import RiskWarning from "../components/ui/RiskWarning.astro";
 
 const faqItems = [
   {
@@ -34,7 +35,7 @@ const faqItems = [
   {
     question: "¿En qué se diferencia de Bitcoin u otras criptomonedas?",
     answer:
-      "En lo que determina su precio. Bitcoin vale lo que el mercado esté dispuesto a pagar: no hay nada detrás. El token de Aura Gold está respaldado 1:1 por oro en bóveda, así que vale lo que vale ese oro: si el oro sube, sube; si baja, baja, con la volatilidad moderada del oro y no la de las criptomonedas. Comparten la tecnología, no la volatilidad.",
+      "En lo que determina su precio. Bitcoin vale lo que el mercado esté dispuesto a pagar: no hay nada detrás. El token de Aura Gold está respaldado 1:1 por oro en bóveda, así que vale lo que vale ese oro: si el oro sube, sube; si baja, baja.",
   },
   {
     question: "¿Qué pasa con mi oro si fallezco?",
@@ -114,6 +115,7 @@ const commitments = [
         comprar pagarías $1.515 MXN/g y al vender recibirías $1.485 MXN/g. Siempre verás el precio final exacto
         antes de confirmar.
       </p>
+      <RiskWarning class="mt-4" />
       <p class="mt-4 text-white/60">El spread cubre los costos operativos reales de la plataforma:</p>
       <ul class="mt-3 list-disc space-y-1 pl-6 text-white/60">
         <li>Custodia profesional del oro físico en bóvedas en Suiza</li>
@@ -144,44 +146,6 @@ const commitments = [
         que descubras meses después.
       </p>
 
-      <div class="mt-6 overflow-x-auto">
-        <table class="w-full min-w-[560px] border-collapse text-left text-sm">
-          <thead>
-            <tr class="border-b border-white/10 text-white/50">
-              <th class="py-3 pr-4 font-normal">Alternativa</th>
-              <th class="py-3 pr-4 font-normal">Costo principal</th>
-              <th class="py-3 pr-4 font-normal">Transparencia</th>
-            </tr>
-          </thead>
-          <tbody class="text-white/70">
-            <tr class="border-b border-white/10 bg-white/5">
-              <td class="py-3 pr-4 font-medium text-ag-gold">Aura Gold</td>
-              <td class="py-3 pr-4">Comisión del 1.0% visible antes de confirmar</td>
-              <td class="py-3 pr-4">Alta</td>
-            </tr>
-            <tr class="border-b border-white/10">
-              <td class="py-3 pr-4">Casa de empeño / joyería</td>
-              <td class="py-3 pr-4">Margen del 20-40% sin disclosure</td>
-              <td class="py-3 pr-4">Baja</td>
-            </tr>
-            <tr class="border-b border-white/10">
-              <td class="py-3 pr-4">ETFs de oro (mercado EUA)</td>
-              <td class="py-3 pr-4">Comisión anual 0.25-0.40% + spread bróker</td>
-              <td class="py-3 pr-4">Media</td>
-            </tr>
-            <tr class="border-b border-white/10">
-              <td class="py-3 pr-4">Compra física tradicional</td>
-              <td class="py-3 pr-4">Premium del 5-15% sobre precio spot</td>
-              <td class="py-3 pr-4">Baja</td>
-            </tr>
-            <tr class="border-b border-white/10">
-              <td class="py-3 pr-4">Banco (cuenta de ahorro)</td>
-              <td class="py-3 pr-4">Tasa real negativa frente a inflación</td>
-              <td class="py-3 pr-4">N/A</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </section>
 
     <!-- 3. Tu oro -->
