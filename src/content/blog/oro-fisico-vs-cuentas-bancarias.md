@@ -72,28 +72,26 @@ Más allá de la inflación, concentrar todo tu ahorro en el sistema bancario im
 
 Si estás buscando opciones más allá del efectivo inmóvil, también puedes revisar estas alternativas al dinero en efectivo.
 
-## Por qué el oro físico puede proteger mejor que una cuenta bancaria
+## Qué puede aportar el oro físico frente a una cuenta bancaria
 
 El oro no existe para generar rendimientos rápidos. Su función histórica ha sido otra: preservar valor cuando las monedas pierden poder adquisitivo.
 
-**1. Históricamente ha funcionado como cobertura frente a inflación.** El oro no sube de forma lineal ni garantizada. Pero en horizontes largos, históricamente ha mostrado una capacidad consistente para preservar valor frente a inflación, devaluación monetaria y pérdida de confianza financiera. No es una promesa de rentabilidad. Es una herramienta de protección. Aquí explicamos con más detalle por qué el oro protege frente a la inflación.
+**1. Históricamente ha funcionado como cobertura frente a inflación.** El oro no sube de forma lineal ni garantizada. Pero en horizontes largos, históricamente ha tendido a preservar valor frente a inflación, devaluación monetaria y pérdida de confianza financiera, aunque no siempre ni al mismo ritmo. No es una promesa de rentabilidad. Es una herramienta de diversificación. Aquí explicamos con más detalle cómo se ha comportado el oro frente a la inflación.
 
 **2. Reduce dependencia del sistema financiero.** Cuando tienes dinero en una cuenta bancaria, dependes del banco. Cuando tienes exposición a oro físico, reduces esa dependencia. No elimina todos los riesgos, pero cambia su naturaleza: pasas de depender de una promesa financiera a depender de un activo escaso con valor reconocido globalmente.
 
 **3. Tiene oferta limitada.** La oferta de dinero puede expandirse con el tiempo. La del oro también crece, pero históricamente lo hace de forma mucho más lenta y limitada. Esa escasez relativa es una de las razones por las que el oro ha conservado valor durante siglos.
 
-**4. Puede funcionar como diversificador.** El oro no reemplaza al banco. Lo complementa. Su papel no es sustituir tu liquidez diaria, sino proteger una parte del patrimonio que no necesitas usar inmediatamente.
+**4. Puede funcionar como diversificador.** El oro no reemplaza al banco. Lo complementa. Su papel no es sustituir tu liquidez diaria, sino diversificar una parte del patrimonio que no necesitas usar inmediatamente.
 
 ## Oro físico vs cuentas bancarias: comparativa directa
 
 | Factor | Cuenta bancaria | Oro físico |
 |---|---|---|
-| Liquidez inmediata | Alta | Media / Alta* |
-| Protección contra inflación | Baja | Históricamente superior |
+| Rapidez para tener el dinero | Alta | Media / Alta* |
 | Riesgo de contraparte | Sí | Menor |
 | Dependencia bancaria | Total | Baja |
 | Rendimiento estable | Bajo | Variable |
-| Protección en crisis sistémica | Limitada | Mayor independencia |
 | Acceso 24/7 | Parcial | Depende del vehículo |
 | Horizonte ideal | Corto plazo | Medio / largo plazo |
 
@@ -105,26 +103,26 @@ La mejor respuesta no es elegir uno y descartar el otro. La mejor respuesta es c
 
 **Si necesitas liquidez inmediata (0-3 meses):** prioriza la cuenta bancaria. Ese dinero debe estar disponible sin fricción para gastos corrientes y emergencias inmediatas.
 
-**Si tienes fondo de emergencia (3-6 meses):** combina banco + oro. Mantén liquidez suficiente en el banco y protege una parte del capital que probablemente no usarás de inmediato.
+**Si tienes fondo de emergencia (3-6 meses):** combina banco + oro. Mantén liquidez suficiente en el banco y destina a oro una parte del capital que probablemente no usarás de inmediato.
 
-**Si tienes ahorro de mediano plazo (1-3 años):** diversifica entre banco, instrumentos líquidos y activos de protección. Aquí el oro empieza a tener más sentido como herramienta de preservación. Si dudas entre instrumentos como los CETES y el oro, lo comparamos en [oro frente a CETES](/blog/oro-vs-cetes).
+**Si tienes ahorro de mediano plazo (1-3 años):** diversifica entre banco, instrumentos líquidos y activos refugio. Aquí el oro empieza a tener más sentido como herramienta de diversificación. Si dudas entre instrumentos como los CETES y el oro, lo comparamos en [oro frente a CETES](/blog/oro-vs-cetes).
 
 **Si tienes ahorro de largo plazo (5+ años):** el oro puede ocupar un rol más claro dentro de una estrategia de preservación patrimonial. No para reemplazar crecimiento, sino para equilibrarlo.
 
 ## Los errores más comunes al comparar banco vs oro
 
 1. **Comparar solo rendimiento nominal.** No importa cuánto "te paga" el banco si la inflación te quita más. Lo relevante no es el rendimiento nominal, es el rendimiento real.
-2. **Pensar que el oro "no hace nada".** El oro no está diseñado para generar intereses. Está diseñado para preservar valor. Y esa función importa más de lo que parece cuando el efectivo pierde poder adquisitivo.
+2. **Pensar que el oro "no hace nada".** El oro no está diseñado para generar intereses. Su papel histórico ha sido preservar valor en plazos largos, aunque su precio sube y baja. Y esa función importa más de lo que parece cuando el efectivo pierde poder adquisitivo.
 3. **Asumir que banco = seguridad total.** El banco ofrece seguridad operativa. No necesariamente protección patrimonial real. Son cosas distintas.
 4. **No considerar el costo de oportunidad.** Mantener dinero inmóvil también es una decisión. Y si ese dinero pierde valor cada año, esa decisión tiene costo.
 
-## Cómo empezar a proteger tu dinero mejor
+## Cómo empezar a organizar mejor tu dinero
 
 No se trata de abandonar el banco. Se trata de usar cada herramienta para lo que mejor hace:
 
 - Banco → liquidez y operativa diaria
 - Instrumentos líquidos → rendimiento moderado
-- Oro → preservación de valor
+- Oro → diversificación a largo plazo
 
 La combinación correcta depende de tu horizonte, tu perfil y tu necesidad de acceso.
 

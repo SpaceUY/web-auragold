@@ -1,8 +1,8 @@
 ---
 title: "Por qué el oro es un refugio de valor: guía completa"
-seoTitle: "Oro como refugio de valor: qué es y por qué protege tu dinero"
-seoDescription: "Un activo refugio mantiene o sube de valor en crisis económicas. El oro lleva siglos en ese rol. Qué lo hace diferente de acciones, divisas y otros activos."
-description: "Descubre por qué el oro ha sido considerado un refugio de valor durante siglos, cómo ha protegido patrimonio en tiempos de crisis y qué papel sigue jugando hoy frente a inflación."
+seoTitle: "Oro como refugio de valor: qué es y por qué se usa"
+seoDescription: "Un activo refugio tiende a mantener o subir de valor en crisis económicas. El oro lleva siglos en ese rol. Qué lo hace diferente de acciones, divisas y otros activos."
+description: "Descubre por qué el oro ha sido considerado un refugio de valor durante siglos, cómo se ha comportado en tiempos de crisis y qué papel sigue jugando hoy frente a inflación."
 pubDate: 2026-03-20
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/por-que-oro-refugio-valor-guia.png"
@@ -14,7 +14,7 @@ El oro lleva más de 5.000 años siendo el activo al que los seres humanos recur
 
 ## Qué es un activo refugio financiero
 
-Un activo refugio de valor es cualquier bien o instrumento que mantiene -o incrementa- su valor cuando los mercados caen, la inflación sube o la incertidumbre económica se dispara.
+Un activo refugio de valor es cualquier bien o instrumento que tiende a mantener -o incrementar- su valor cuando los mercados caen, la inflación sube o la incertidumbre económica se dispara.
 
 No es un activo que siempre sube. Es un activo que no pierde su utilidad cuando todo lo demás falla.
 
@@ -110,17 +110,17 @@ Aunque a menudo se presenta como un activo "tradicional", el oro sigue ocupando 
 
 **Frente al riesgo financiero:** el oro físico tiene una ventaja estructural: no depende del balance de una empresa ni de la solvencia de un banco para existir como activo. Esa menor dependencia institucional es parte central de su función como refugio.
 
-## Cómo protege el oro tu dinero en México
+## Qué papel juega el oro para tu dinero en México
 
-En México, el oro añade una capa de protección adicional: no solo frente a la inflación, sino también frente a la volatilidad cambiaria.
+En México, el oro puede añadir una capa de cobertura adicional: no solo frente a la inflación, sino también frente a la volatilidad cambiaria.
 
-**Oro, inflación y tipo de cambio:** desde inicios de los 2000, el tipo de cambio USD/MXN ha pasado de niveles cercanos a un dígito por dólar a niveles significativamente más altos en distintos momentos del ciclo. Eso implica que el oro en pesos mexicanos no solo refleja el movimiento del metal en dólares, sino también la evolución del tipo de cambio. Para el ahorrador mexicano, esto convierte al oro en una cobertura dual: frente a inflación local, y frente a depreciación cambiaria.
+**Oro, inflación y tipo de cambio:** desde inicios de los 2000, el tipo de cambio USD/MXN ha pasado de niveles cercanos a un dígito por dólar a niveles significativamente más altos en distintos momentos del ciclo. Eso implica que el oro en pesos mexicanos no solo refleja el movimiento del metal en dólares, sino también la evolución del tipo de cambio. Para el ahorrador mexicano, esto puede convertir al oro en una cobertura dual: frente a inflación local, y frente a depreciación cambiaria.
 
 **[Acceso al oro sin grandes capitales](/invertir-en-oro-mexico):** durante décadas, acceder al oro físico implicaba barreras operativas: ticket alto, almacenamiento, custodia y seguridad. Hoy, la digitalización permite acceder a exposición a oro físico con importes mucho más bajos que en el pasado, reduciendo la fricción de entrada para pequeños ahorradores.
 
 ## Oro físico vs oro papel: cuál es el verdadero refugio
 
-No toda exposición al oro ofrece el mismo nivel de protección.
+No toda exposición al oro implica el mismo nivel de riesgo.
 
 **Qué es el oro papel:** el llamado "oro papel" incluye instrumentos financieros vinculados al precio del oro - ETFs, futuros, certificados, acciones mineras. Estos productos replican o siguen el precio del metal, pero no siempre implican propiedad directa sobre oro físico.
 
@@ -132,7 +132,7 @@ No toda exposición al oro ofrece el mismo nivel de protección.
 
 **¿Por qué el oro es considerado un refugio de valor?**
 
-Porque históricamente ha preservado valor en períodos de inflación, crisis financieras y pérdida de confianza monetaria.
+Porque históricamente ha tendido a preservar valor en períodos de inflación, crisis financieras y pérdida de confianza monetaria.
 
 **¿Qué diferencia al oro del dólar o los bonos?**
 
@@ -160,6 +160,6 @@ El oro no es una reliquia del pasado. Es uno de los activos que más consistente
 
 No sustituye una estrategia financiera completa. No elimina el riesgo. No garantiza rentabilidad.
 
-Pero históricamente ha cumplido una función muy concreta: proteger poder adquisitivo cuando la confianza en el sistema financiero se debilita.
+Pero históricamente ha cumplido una función muy concreta: ayudar a preservar poder adquisitivo en muchos momentos en que la confianza en el sistema financiero se debilita.
 
 Y en un entorno de inflación persistente, deuda creciente e incertidumbre monetaria, esa función sigue siendo relevante.

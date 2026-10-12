@@ -1,7 +1,7 @@
 ---
 title: "¿Es seguro invertir en oro? Riesgos reales, fraudes y cómo protegerte"
 seoTitle: "¿Es seguro invertir en oro? Riesgos reales y cómo evitarlos"
-seoDescription: "El oro es uno de los activos más seguros a largo plazo, pero el riesgo está en cómo y con quién lo compras. Riesgos reales, fraudes comunes en México y checklist para invertir seguro."
+seoDescription: "El precio del oro sube y baja, pero buena parte del riesgo está en cómo y con quién lo compras. Riesgos reales, fraudes comunes en México y checklist para invertir seguro."
 description: "Separamos la volatilidad normal del precio de los riesgos de custodia y de los fraudes: qué estafas de oro son comunes en México y qué verificar antes de poner un peso."
 pubDate: 2026-09-08
 author: "federico-sendra"
@@ -10,7 +10,7 @@ heroImageAlt: "Manos tomando un lingote de un maletín de seguridad forrado y ll
 category: "Seguridad"
 ---
 
-Sí, el oro es uno de los activos más seguros para conservar valor a largo plazo: es un metal escaso, aceptado en todo el mundo, que no depende de ninguna empresa ni gobierno y no puede quebrar como una acción. El riesgo real no está en el oro en sí, sino en cómo y con quién lo compras.
+El oro no está libre de riesgo (su precio sube y baja), pero tiene rasgos que lo distinguen: es un metal escaso, aceptado en todo el mundo, que no depende de ninguna empresa ni gobierno y no puede quebrar como una acción. Buena parte del riesgo no está en el oro en sí, sino en cómo y con quién lo compras.
 
 Antes de [invertir en oro físico certificado en pesos](/invertir-en-oro-mexico), conviene separar tres cosas que suelen mezclarse: la volatilidad normal del precio, los riesgos de custodia y los fraudes. Casi todos son evitables si sabes qué verificar, empezando por [cómo se custodia y audita el oro](/transparencia).
 
@@ -20,7 +20,7 @@ Los riesgos existen, pero son distintos de los que la gente imagina. Ninguno imp
 
 ### ¿La volatilidad del precio es una pérdida real?
 
-No, salvo que vendas en el momento equivocado. El precio del oro sube y baja a corto plazo (fluctuaciones de un porcentaje pequeño en semanas son normales), pero a largo plazo ha funcionado como [refugio de valor frente a la inflación](/blog/por-que-oro-refugio-valor-guia). El riesgo no es el oro: es tratarlo como especulación de corto plazo en vez de como protección.
+Se vuelve pérdida real si vendes por debajo de lo que pagaste. El precio del oro sube y baja a corto plazo (fluctuaciones de un porcentaje pequeño en semanas son normales) y puede pasar años por debajo de su máximo, aunque históricamente, en plazos largos, ha tendido a funcionar como [refugio de valor frente a la inflación](/blog/por-que-oro-refugio-valor-guia). Buena parte del riesgo está en tratarlo como especulación de corto plazo en vez de como ahorro de largo plazo.
 
 ### Riesgo de custodia: ¿dónde está realmente tu oro?
 
@@ -44,7 +44,7 @@ Plataformas que venden "oro" que en realidad no está respaldado 1:1 por metal e
 
 ### Esquemas con rendimientos garantizados
 
-El oro protege valor, no "paga intereses garantizados". Cualquiera que prometa rendimientos fijos y altos por "invertir en oro" (con presión para meter más dinero o reclutar a otros) tiene todas las señales de un esquema Ponzi.
+El oro no "paga intereses garantizados": su valor depende del precio de mercado. Cualquiera que prometa rendimientos fijos y altos por "invertir en oro" (con presión para meter más dinero o reclutar a otros) tiene todas las señales de un esquema Ponzi.
 
 ### Vendedores sin certificación ni identidad verificable
 
@@ -52,7 +52,7 @@ Precios "demasiado buenos", urgencia para cerrar la compra "antes de que suba", 
 
 ## ¿Cómo invertir en oro de forma segura y evitar fraudes?
 
-Invertir en oro es seguro cuando eliges bien la vía y verificas señales concretas. Este es el checklist antes de poner un peso:
+Invertir en oro es más seguro cuando eliges bien la vía y verificas señales concretas. Este es el checklist antes de poner un peso:
 
 - **Certificación LBMA:** el oro debe cumplir el estándar internacional de pureza (99.99%), condición para que tenga valor reconocido al vender.
 - **Custodia institucional y asegurada:** el metal debe estar en bóvedas profesionales, no "en las oficinas" de nadie.
@@ -71,11 +71,11 @@ Con Aura Gold conviertes el miedo en tranquilidad con señales verificables, no 
 
 - Oro físico real certificado (estándar LBMA), no "oro papel"
 - Activo segregado a tu nombre y custodia institucional fuera de México
-- Respaldo 1:1 y transparencia en precios (ves el spread antes de confirmar)
-- Compra por fracciones de gramo, sin comisiones de custodia, con liquidez rápida
-- Opción de retiro físico del metal cuando lo desees
+- Respaldo 1:1 y transparencia en precios (una comisión del 1% en cada compra y venta, que ves antes de confirmar)
+- Compra por fracciones de gramo, sin comisiones de custodia; vendes desde la app en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas
+- Opción de canje por lingotes completos a través de Tether Gold, con entrega en Suiza
 
-El oro lleva miles de años siendo seguro. Tu trabajo es solo elegir bien dónde y con quién lo tienes.
+El oro lleva miles de años usándose como reserva de valor. Tu trabajo es solo elegir bien dónde y con quién lo tienes.
 
 [Empieza a invertir en oro con respaldo real →](/invertir-en-oro-mexico)
 
@@ -83,7 +83,7 @@ El oro lleva miles de años siendo seguro. Tu trabajo es solo elegir bien dónde
 
 ### ¿Es seguro invertir en oro en México?
 
-Sí, siempre que uses una vía con oro físico certificado, custodia segura y activo segregado. El oro como activo es muy estable a largo plazo; el riesgo está en plataformas o vendedores sin respaldo verificable.
+Puede serlo, siempre que uses una vía con oro físico certificado, custodia segura y activo segregado. El oro como activo tiene un largo historial como reserva de valor; el riesgo está en plataformas o vendedores sin respaldo verificable.
 
 ### ¿Puedo perder todo mi dinero invirtiendo en oro?
 

@@ -14,7 +14,7 @@ Guardar dinero en efectivo bajo el colchón, en una cuenta bancaria sin rendimie
 
 Si tienes $50,000 pesos en efectivo hoy y no haces nada con ellos, en 5 años tendrán el poder adquisitivo equivalente a $39,500 pesos. Perdiste $10,500 pesos sin gastar absolutamente nada.
 
-Existen alternativas al efectivo que te permiten mantener o incrementar el valor real de tu dinero. Esta guía analiza las opciones disponibles en México, sus ventajas, riesgos y cuál es la más adecuada según tu perfil y objetivos financieros.
+Existen alternativas al efectivo que buscan mantener o incrementar el valor real de tu dinero. Esta guía analiza las opciones disponibles en México, sus ventajas, riesgos y cuál es la más adecuada según tu perfil y objetivos financieros.
 
 ## Por qué el efectivo pierde valor constantemente
 
@@ -44,17 +44,17 @@ No gastaste ese dinero, pero perdiste casi una cuarta parte de su valor simpleme
 
 ## Alternativa 2: Inversión en oro físico
 
-El oro ha sido históricamente el activo refugio por excelencia para proteger dinero del deterioro inflacionario. A diferencia del efectivo, el oro mantiene su valor intrínseco independientemente de políticas gubernamentales.
+El oro ha sido históricamente uno de los activos refugio más usados frente al deterioro inflacionario. A diferencia del efectivo, el valor del oro no depende de las políticas de un gobierno, aunque su precio sube y baja.
 
 **Oro físico tradicional (lingotes, monedas):** ventaja de posesión directa y control total; desventaja de inversión mínima alta ($8,000+ MXN), riesgo de custodia personal y problemas de liquidez al vender.
 
-**Oro fraccionado digital (apps modernas):** inversión en fracciones de gramo, custodia profesional en bóvedas certificadas, liquidez inmediata 24/7. Rendimiento histórico: +35-40% en últimos 5 años (vs inflación acumulada de 23%).
+**Oro fraccionado digital (apps modernas):** inversión en fracciones de gramo, custodia profesional en bóvedas certificadas, venta desde el celular sin buscar comprador. Rendimiento histórico: +35-40% en últimos 5 años (vs inflación acumulada de 23%).
 
-El oro no se "imprime" como los billetes. Es un recurso físico limitado extraído de la tierra, con oferta finita que protege su valor. Cuando los gobiernos imprimen más dinero, el oro mantiene su escasez relativa.
+El oro no se "imprime" como los billetes. Es un recurso físico limitado extraído de la tierra, con oferta finita. Cuando los gobiernos imprimen más dinero, el oro mantiene su escasez relativa.
 
-**Comparativa efectivo vs oro (2020-2025):** $100,000 pesos en efectivo → poder adquisitivo de $77,000 (pérdida -23%). $100,000 pesos convertidos a oro → valor aproximado de $138,000 hoy (ganancia +38%). Diferencia neta: $61,000 pesos de protección.
+**Comparativa efectivo vs oro (2020-2025):** $100,000 pesos en efectivo → poder adquisitivo de $77,000 (pérdida -23%). $100,000 pesos convertidos a oro → valor aproximado de $138,000 hoy (ganancia +38%). Diferencia neta en ese periodo: $61,000 pesos.
 
-**Veredicto:** el oro es la mejor alternativa para preservación de valor a mediano-largo plazo (1-10 años), especialmente con oro fraccionado que elimina barreras de entrada.
+**Veredicto:** el oro es una alternativa a considerar para diversificar tu ahorro a mediano-largo plazo (1-10 años), sobre todo con oro fraccionado, que elimina barreras de entrada. Su precio sube y baja, así que conviene pensarlo a largo plazo.
 
 ## Alternativa 3: Criptomonedas (Bitcoin, Ethereum, stablecoins)
 
@@ -79,7 +79,7 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 
 **Fondos de inversión bancarios:** rendimiento 6%-10% anual, gestión profesional, pero comisiones altas (1-3% anual) y baja transparencia en algunos casos.
 
-**Veredicto:** las acciones son excelentes para crecimiento patrimonial, no para protección defensiva. Combinar acciones (60%) + oro (30%) + efectivo (10%) ofrece balance entre crecimiento y protección. Lo desarrollamos en [oro frente a acciones de la bolsa](/blog/oro-vs-acciones).
+**Veredicto:** las acciones son excelentes para crecimiento patrimonial, no para protección defensiva. Combinar acciones (60%) + oro (30%) + efectivo (10%) ofrece balance entre crecimiento y diversificación. Lo desarrollamos en [oro frente a acciones de la bolsa](/blog/oro-vs-acciones).
 
 ## Alternativa 5: Bienes raíces (propiedades, terrenos)
 
@@ -90,7 +90,7 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 | Factor | Bienes raíces | Oro fraccionado |
 |---|---|---|
 | Capital inicial | $500,000+ MXN | Fracciones de gramo |
-| Liquidez | Muy baja (meses) | Inmediata (segundos) |
+| Liquidez | Muy baja (meses) | Alta (vendes desde el celular) |
 | Mantenimiento | Alto (2-5% anual) | Cero |
 | Divisibilidad | No puedes vender "un cuarto" | Vendes la cantidad exacta que necesites |
 
@@ -104,9 +104,9 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 
 **Inversiones en dólares (bonos del Tesoro USA):** rendimiento 4.5%-5.5% anual, respaldo del gobierno estadounidense; pero requiere plataforma internacional y comisiones de conversión.
 
-Los dólares protegen contra devaluación del peso (-12.4% últimos 5 años) pero NO contra inflación global. El oro protege contra ambos. Resultado neto últimos 5 años: oro +38% vs dólar +12% (en pesos mexicanos).
+Los dólares protegen contra devaluación del peso (-12.4% últimos 5 años) pero NO contra inflación global. Históricamente, en plazos largos, el oro ha tendido a responder a ambos, pero no siempre ni al mismo ritmo. Resultado neto últimos 5 años: oro +38% vs dólar +12% (en pesos mexicanos).
 
-**Veredicto:** los dólares son mejor que pesos sin protección, pero el oro ofrece doble protección: contra devaluación del peso y contra inflación del dólar.
+**Veredicto:** los dólares son mejor que pesos sin protección, pero el oro diversifica frente a dos riesgos: la devaluación del peso y la inflación del dólar.
 
 ## Cómo elegir la mejor alternativa según tu perfil
 
@@ -122,11 +122,11 @@ Los dólares protegen contra devaluación del peso (-12.4% últimos 5 años) per
 
 ## La alternativa más accesible: el oro fraccionado
 
-De todas las alternativas analizadas, el oro fraccionado digital es la única que combina accesibilidad extrema (se compra por fracciones de gramo), protección real contra inflación y devaluación, liquidez inmediata, cero mantenimiento y respaldo físico tangible.
+De las alternativas analizadas, el oro fraccionado digital combina accesibilidad (se compra por fracciones de gramo), exposición a un activo que históricamente ha tendido a subir cuando el peso pierde valor, venta desde el celular, cero mantenimiento y respaldo físico tangible.
 
 **Comparativa de barreras de entrada:** CETES requiere cuenta Cetesdirecto + $100 pesos mínimo; acciones requieren cuenta de inversión + conocimiento del mercado + $500-$1,000 mínimo; bienes raíces requieren $500,000+ MXN; oro fraccionado requiere solo celular y se compra por fracciones de gramo.
 
-Con Aura Gold puedes [empezar a proteger tu dinero hoy mismo](/invertir-en-oro-mexico): oro físico certificado LBMA (99.99% de pureza) custodiado en bóvedas internacionales, compra por fracciones de gramo sin comisiones de custodia mensuales, liquidez 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold puedes [empezar a ahorrar en oro hoy mismo](/invertir-en-oro-mexico): oro físico de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, compra por fracciones de gramo sin comisiones de custodia mensuales, venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24-48 horas), activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre alternativas al efectivo
 
@@ -136,7 +136,7 @@ No es "malo", pero es ineficiente para ahorros de mediano-largo plazo. El efecti
 
 **¿Cuál es la alternativa más segura al efectivo?**
 
-Depende de tu definición de "segura". Para capital garantizado: CETES (10% anual). Para preservación de valor real: oro. Para crecimiento: ETFs diversificados (con más volatilidad).
+Depende de tu definición de "segura". Para capital garantizado: CETES (10% anual). Para diversificar a largo plazo: oro. Para crecimiento: ETFs diversificados (con más volatilidad).
 
 **¿Puedo combinar varias alternativas al efectivo?**
 
@@ -144,15 +144,15 @@ Absolutamente, es lo más recomendable. Una cartera balanceada podría incluir: 
 
 **¿El oro es mejor que los dólares para proteger ahorros?**
 
-Para protección completa, sí. Los dólares solo protegen contra devaluación del peso, pero siguen expuestos a inflación estadounidense. El oro protege contra ambos.
+Depende de tu horizonte. Los dólares solo protegen contra devaluación del peso, pero siguen expuestos a inflación estadounidense. Históricamente, en plazos largos, el oro ha tendido a responder a ambos, pero no siempre ni al mismo ritmo.
 
 **¿Desde cuánto dinero vale la pena buscar alternativas al efectivo?**
 
-En fracciones de gramo con oro fraccionado digital. No esperes a "tener mucho" para empezar a proteger.
+En fracciones de gramo con oro fraccionado digital. No esperes a "tener mucho" para empezar a ahorrar en oro.
 
 **¿Las criptomonedas son buena alternativa al efectivo?**
 
-Las criptomonedas volátiles son activos especulativos, no alternativas conservadoras. Las stablecoins funcionan como dolarización digital pero con riesgos técnicos. Para protección sin volatilidad extrema, el oro es superior.
+Las criptomonedas volátiles son activos especulativos, no alternativas conservadoras. Las stablecoins funcionan como dolarización digital pero con riesgos técnicos. Para ahorrar con menos volatilidad que en cripto, el oro suele ser más adecuado, aunque su precio también sube y baja.
 
 **¿Necesito conocimientos financieros para buscar alternativas al efectivo?**
 
