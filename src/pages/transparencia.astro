@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import { COMMISSION_LABEL, COMMISSION_PERCENT, EXAMPLE_PRICE_MXN, exampleBuyPrice, exampleSellPrice, formatMxn } from "../data/costs";
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 
@@ -29,7 +30,7 @@ const faqItems = [
   {
     question: "¿Cuánto pierdo si entro y salgo en una semana?",
     answer:
-      "Si compras y vendes en un periodo corto, el costo que asumes es el spread de entrada más el spread de salida. Con un spread de 1.00% en cada dirección, el costo total de ida y vuelta es aproximadamente 2.00% del capital operado, independientemente de lo que haga el precio del oro. Aura Gold está diseñado para el ahorrador de mediano-largo plazo. Si buscas operar frecuentemente, el spread acumulado es un factor importante a considerar.",
+      `Si compras y vendes en un periodo corto, pagas la comisión al comprar y otra vez al vender. Con la comisión actual del ${COMMISSION_LABEL} en cada operación, el costo total de ida y vuelta es aproximadamente ${COMMISSION_PERCENT * 2}% del capital operado, independientemente de lo que haga el precio del oro. Aura Gold está diseñado para el ahorrador de mediano-largo plazo. Si buscas operar frecuentemente, las comisiones acumuladas son un factor importante a considerar.`,
   },
   {
     question: "¿En qué se diferencia de Bitcoin u otras criptomonedas?",
@@ -42,16 +43,16 @@ const faqItems = [
       "Tu cuenta en Aura Gold forma parte de tu patrimonio. En caso de fallecimiento, tus herederos pueden contactar a Aura Gold con la documentación sucesoria correspondiente.",
   },
   {
-    question: "¿Pueden cambiar el spread sin avisarme?",
+    question: "¿Pueden cambiar la comisión sin avisarme?",
     answer:
-      "El spread puede variar según condiciones del mercado y costos operativos. Lo que garantizamos es que siempre verás el spread vigente antes de confirmar cualquier operación, y que nunca se aplica un spread distinto al que aceptaste en el momento de la transacción.",
+      `La comisión actual es del ${COMMISSION_LABEL}. Si cambia, siempre verás la comisión vigente antes de confirmar cualquier operación, y nunca se aplica una comisión distinta a la que aceptaste en el momento de la transacción.`,
   },
 ];
 
 const commitments = [
   {
     title: "Precio antes de confirmar",
-    text: "Siempre verás el spread completo antes de ejecutar cualquier compra o venta. Sin sorpresas post-transacción.",
+    text: "Siempre verás la comisión y el precio final antes de ejecutar cualquier compra o venta. Sin sorpresas post-transacción.",
   },
   { title: "Auditorías publicadas", text: "Los informes de auditoría del oro en custodia serán públicos." },
   {
@@ -96,25 +97,25 @@ const commitments = [
     <!-- 1. Spread -->
     <section class="mx-auto max-w-3xl px-6 py-10 lg:px-10">
       <h2 class="font-display text-2xl font-semibold text-white">
-        1. El spread en tiempo real: el precio que pagas y el que recibes
+        1. Lo que cuesta: el precio que pagas y el que recibes
       </h2>
       <p class="mt-4 text-white/60">
-        <strong class="text-white">¿Qué es el spread?</strong> Cuando compras oro en Aura Gold, el precio que
-        pagas es ligeramente superior al precio internacional de mercado. Cuando vendes, recibes un precio
-        ligeramente inferior. Esa diferencia se llama spread y es la única forma en que Aura Gold genera ingresos.
+        <strong class="text-white">¿Cómo se cobra?</strong> Cuando compras oro en Aura Gold, pagas el precio
+        internacional de referencia más una comisión del {COMMISSION_LABEL}. Cuando vendes, recibes el precio de referencia
+        menos esa misma comisión. La diferencia entre el precio de compra y el de venta se llama spread.
       </p>
       <p class="mt-4 text-white/60">
-        No hay comisiones ocultas. No hay costos de custodia mensuales. Solo el spread, visible antes de confirmar
-        cualquier operación.
+        No hay comisiones ocultas. No hay costos de custodia mensuales. Solo la comisión del {COMMISSION_LABEL}, visible
+        antes de confirmar cualquier operación.
       </p>
       <p class="mt-4 text-white/60">
-        <strong class="text-white">Spread actual.</strong> Aura Gold aplica una comisión del 1% por operación,
-        tanto en compras como en ventas. Este porcentaje se calcula sobre el precio internacional de referencia del
-        oro al momento de confirmar tu operación. Por ejemplo: si el precio del oro es de $1.500 MXN por gramo, al
-        comprar pagarías $1.515 MXN/g y al vender recibirías $1.485 MXN/g. Siempre verás el precio final exacto
-        antes de confirmar.
+        <strong class="text-white">Comisión actual.</strong> Aura Gold aplica una comisión del {COMMISSION_LABEL} por
+        operación, tanto en compras como en ventas. Este porcentaje se calcula sobre el precio internacional de
+        referencia del oro al momento de confirmar tu operación. Ejemplo ilustrativo: si el precio del oro es de{" "}
+        {formatMxn(EXAMPLE_PRICE_MXN)} MXN por gramo, al comprar pagarías {formatMxn(exampleBuyPrice())} MXN/g y al
+        vender recibirías {formatMxn(exampleSellPrice())} MXN/g. Siempre verás el precio final exacto antes de confirmar.
       </p>
-      <p class="mt-4 text-white/60">El spread cubre los costos operativos reales de la plataforma:</p>
+      <p class="mt-4 text-white/60">La comisión cubre los costos operativos de la plataforma:</p>
       <ul class="mt-3 list-disc space-y-1 pl-6 text-white/60">
         <li>Custodia profesional del oro físico en bóvedas en Suiza</li>
         <li>Seguro completo sobre el metal almacenado</li>
@@ -129,7 +130,7 @@ const commitments = [
       <h2 class="font-display text-2xl font-semibold text-white">2. ¿Cómo gana dinero Aura Gold?</h2>
       <p class="mt-4 text-white/60">
         Esta es la pregunta que más nos importa que te hagas, y nos alegra que la hagas. Nuestro único ingreso
-        operativo es el spread entre el precio de compra y el precio de venta del oro. No cobramos:
+        es la comisión del {COMMISSION_LABEL} en cada compra y en cada venta. No cobramos:
       </p>
       <ul class="mt-3 space-y-1 text-white/60">
         <li>❌ Comisiones de apertura de cuenta</li>
@@ -139,7 +140,7 @@ const commitments = [
         <li>❌ Cargos por cierre de cuenta</li>
       </ul>
       <p class="mt-4 text-white/60">
-        Elegimos el modelo de spread porque alinea nuestros intereses con los tuyos: cuanto más valor mueves, más
+        Elegimos una comisión por operación porque alinea nuestros intereses con los tuyos: cuanto más valor mueves, más
         crece la plataforma. No tenemos incentivo en cobrarte cuotas si no estás operando, ni en esconder costos
         que descubras meses después.
       </p>

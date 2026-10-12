@@ -1,0 +1,13 @@
+---
+// Advertencia de riesgo siempre visible (WEB-007): va cerca del hero y de los
+// costos, sin tener que abrir una FAQ. El texto sale de src/data/risk.ts.
+import { RISK_WARNING } from "../../data/risk";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<p class={`text-balance text-xs leading-relaxed text-white/60 ${className}`}>{RISK_WARNING}</p>

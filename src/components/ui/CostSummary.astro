@@ -1,0 +1,59 @@
+---
+// Bloque de costos de la home (WEB-005): se ve sin abrir una FAQ ni ir a otra
+// página, y va antes del cierre. Muestra solo lo confirmado (la comisión del 1%
+// y el cargo de Tether Gold por el canje). Apertura y custodia se suman cuando
+// producto las confirme. Las cifras salen de src/data/costs.ts.
+import SectionHeading from "./SectionHeading.astro";
+import RiskWarning from "./RiskWarning.astro";
+import {
+  COMMISSION_LABEL,
+  EXAMPLE_PRICE_MXN,
+  REDEMPTION_FEE_LABEL,
+  REDEMPTION_TERMS_URL,
+  exampleBuyPrice,
+  exampleSellPrice,
+  formatMxn,
+} from "../../data/costs";
+
+const operations = [
+  { title: "Comprar oro", detail: "sobre el precio internacional de referencia del oro" },
+  { title: "Vender oro", detail: "sobre el precio internacional de referencia del oro" },
+];
+---
+
+<section id="costos" class="mx-auto max-w-[1200px] scroll-mt-24 px-6 py-20 lg:px-10">
+  <SectionHeading
+    eyebrow="Costos"
+    title="Cuánto cuesta usar Aura Gold"
+    description="Ves la comisión y el precio final antes de confirmar cualquier operación."
+  />
+
+  <div class="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
+    {
+      operations.map((operation) => (
+        <div data-animate class="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+          <p class="font-body text-sm text-white/60">{operation.title}</p>
+          <p class="mt-2 font-display text-4xl font-semibold text-ag-gold">{COMMISSION_LABEL}</p>
+          <p class="mt-2 text-sm text-white/60">{operation.detail}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="mx-auto mt-6 max-w-3xl space-y-2 text-center text-sm text-white/60">
+    <p>
+      Ejemplo ilustrativo: si el oro está a {formatMxn(EXAMPLE_PRICE_MXN)} MXN por gramo, compras a{" "}
+      {formatMxn(exampleBuyPrice())} y vendes a {formatMxn(exampleSellPrice())}.
+    </p>
+    <p>
+      El canje por lingotes físicos lo cobra Tether Gold ({REDEMPTION_FEE_LABEL}), según{" "}
+      <a href={REDEMPTION_TERMS_URL} class="text-ag-gold hover:underline" target="_blank" rel="noopener noreferrer">sus condiciones</a>.
+    </p>
+    <p>
+      Es la comisión vigente: si cambia, la verás antes de confirmar.{" "}
+      <a href="/transparencia" class="text-ag-gold hover:underline">Más detalle en Transparencia</a>.
+    </p>
+  </div>
+
+  <RiskWarning class="mx-auto mt-6 max-w-xl text-center" />
+</section>

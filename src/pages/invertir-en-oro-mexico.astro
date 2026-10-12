@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { COMMISSION_LABEL } from "../data/costs";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
@@ -108,7 +109,7 @@ const steps = [
     title: "Compra tu fracción de oro",
     description:
       "Selecciona el importe en pesos y confirma. Verás exactamente cuántos gramos de oro estás comprando y a qué precio, antes de confirmar. Sin letra pequeña.",
-    tag: "Precio transparente · Spread visible",
+    tag: "Precio transparente · Comisión visible",
   },
   {
     number: "4",
@@ -138,7 +139,7 @@ const securityCards = [
   {
     title: "Precio transparente",
     description:
-      "Mostramos el spread antes de cada operación. Sin comisiones ocultas, sin sorpresas. Sabes cuánto cuesta.",
+      `Ves la comisión del ${COMMISSION_LABEL} y el precio final antes de cada operación. Sin comisiones ocultas.`,
   },
 ];
 
@@ -165,7 +166,7 @@ const faqItems = [
   {
     question: "¿El oro en Aura Gold tiene comisiones de custodia?",
     answer:
-      "No hay comisiones de custodia. El modelo de ingresos de Aura Gold se basa en un spread transparente entre el precio de compra y el de venta del oro, que siempre verás antes de confirmar cualquier operación.",
+      `No hay comisiones de custodia. Aura Gold cobra una comisión del ${COMMISSION_LABEL} en cada compra y en cada venta, que siempre verás antes de confirmar cualquier operación.`,
   },
   {
     question: "¿Qué pasa con mi oro si Aura Gold cierra o quiebra?",
