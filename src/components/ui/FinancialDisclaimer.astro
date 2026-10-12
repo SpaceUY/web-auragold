@@ -7,10 +7,13 @@ interface Props {
   class?: string;
 }
 
+import { RISK_WARNING } from "../../data/risk";
+
 const { class: className = "" } = Astro.props;
 ---
 
 <p class={`text-xs leading-relaxed text-white/40 ${className}`}>
   Este contenido es educativo e informativo, no constituye asesoría financiera, de inversión ni de ningún otro
   tipo. Antes de tomar una decisión, evalúa tu propia situación o consulta a un profesional calificado.
+  {RISK_WARNING}
 </p>

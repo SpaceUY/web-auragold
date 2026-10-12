@@ -20,17 +20,17 @@ const benefits = [
   {
     title: "5.000 años de historia",
     description:
-      'El oro ha sido <a href="/blog/que-es-oro-como-material" class="text-ag-gold hover:underline">reserva de valor en todas las civilizaciones</a>. Ninguna divisa ha durado tanto tiempo sin perder relevancia como el oro.',
+      'El oro ha sido <a href="/blog/que-es-oro-como-material" class="text-ag-gold hover:underline">reserva de valor en todas las civilizaciones</a>.',
   },
   {
-    title: "Protección contra la inflación",
+    title: "Oro e inflación",
     description:
-      "Cuando el peso pierde poder adquisitivo, el oro tiende a apreciarse en términos locales. Es el escudo natural contra la inflación persistente en México.",
+      "Cuando el peso pierde poder adquisitivo, el precio del oro en pesos suele subir, aunque no siempre ni al mismo ritmo.",
   },
   {
     title: "Independiente del sistema bancario",
     description:
-      "El oro no depende de ningún banco ni gobierno. Su valor no lo fija una institución financiera que pueda quebrar o tomar decisiones que te perjudiquen.",
+      "El precio del oro lo fija el mercado internacional, no un banco ni un gobierno.",
   },
   {
     title: "Liquidez cuando la necesitas",
@@ -38,9 +38,9 @@ const benefits = [
       "El mercado del oro es uno de los más líquidos del mundo. Puedes convertir tu oro en dinero cuando lo necesites, de forma rápida y transparente.",
   },
   {
-    title: "Diversificación sin volatilidad cripto",
+    title: "Un activo distinto a las criptomonedas",
     description:
-      "A diferencia de las criptomonedas, el oro no cae un 50% en días. Es un activo estable que complementa cualquier estrategia de ahorro o inversión.",
+      "El precio del oro también sube y baja, pero responde a factores distintos que el de las criptomonedas. Puede complementar otras formas de ahorro.",
   },
   {
     title: "Tangible y verificable",
@@ -53,37 +53,27 @@ const comparisonRows = [
   {
     option: "Aura Gold – Oro físico",
     note: "Custodia certificada LBMA",
-    inflation: "Históricamente sí",
-    risk: "Bajo",
     access: "Fácil (fraccionada)",
     highlight: true,
   },
   {
     option: "Cuenta de ahorro bancaria",
     note: "BBVA, Banorte, HSBC…",
-    inflation: "No (rendimiento < inflación)",
-    risk: "Muy bajo",
     access: "Fácil",
   },
   {
     option: "Criptomonedas (BTC, ETH…)",
     note: "Intercambios digitales",
-    inflation: "Posible, muy volátil",
-    risk: "Alto",
     access: "Media",
   },
   {
     option: "Oro físico tradicional",
     note: "Joyería, casas de cambio",
-    inflation: "Sí",
-    risk: "Bajo",
     access: "Barrera alta (mínimo alto)",
   },
   {
     option: "Efectivo en casa",
     note: "Colchón bancario",
-    inflation: "Pierde valor garantizado",
-    risk: "Moderado",
     access: "Sin fricción",
   },
 ];
@@ -112,7 +102,7 @@ const steps = [
   },
   {
     number: "4",
-    title: "Tu oro está protegido. Ya.",
+    title: "Tu oro queda en tu bóveda",
     description:
       "Tu oro queda custodiado en bóvedas institucionales en Suiza y puedes verificar en cualquier momento qué barras lo respaldan. Puedes venderlo cuando quieras, seguir acumulando o canjearlo por lingotes físicos a través de Tether Gold.",
     tag: "Bóveda certificada · Activo segregado",
@@ -175,7 +165,7 @@ const faqItems = [
   {
     question: "¿Invertir en oro tiene sentido si solo tengo poco dinero para ahorrar?",
     answer:
-      "Especialmente entonces. Si el dinero que ahorras está en pesos, pierde poder adquisitivo con la inflación. Convertirlo en oro, aunque sea en pequeñas fracciones, protege ese valor. Además, la app permite el ahorro recurrente automático para que el hábito sea simple.",
+      "Especialmente entonces. Si el dinero que ahorras está en pesos, pierde poder adquisitivo con la inflación. Convertirlo en oro, aunque sea en pequeñas fracciones, te permite ahorrar en un activo distinto al peso. Ten en cuenta que el precio del oro también puede bajar. Además, la app permite el ahorro recurrente automático para que el hábito sea simple.",
   },
 ];
 
@@ -188,8 +178,8 @@ const faqJsonLdItems = faqItems.map((item) => ({
 ---
 
 <BaseLayout
-  title="Comprar Oro en México - Invertir en Oro de Forma Segura"
-  description="Cómo invertir en oro en México de forma segura con Aura Gold. Descubre las mejores opciones para comprar oro, proteger tu patrimonio y resguardar tus ahorros frente a la inflación."
+  title="Comprar Oro en México - Cómo Invertir en Oro desde tu Celular"
+  description="Cómo invertir en oro en México con Aura Gold: compra oro en fracciones de gramo desde tu celular y conoce los costos y los riesgos antes de empezar."
 >
   <FAQJsonLD items={faqJsonLdItems} />
 
@@ -205,7 +195,7 @@ const faqJsonLdItems = faqItems.map((item) => ({
         Cómo invertir en <span class="text-ag-gold">oro</span> en México desde tu celular
       </h1>
       <p class="mx-auto mt-6 max-w-2xl text-lg text-white/60">
-        La guía completa para comprar oro físico y proteger tu dinero de la inflación. Con Aura Gold compras oro
+        La guía completa para comprar oro físico en México. Con Aura Gold compras oro
         físico fraccionado desde el móvil, con custodia certificada y sin comisiones de custodia.
       </p>
       <AppCTAButtons centered class="mt-8" />
@@ -228,12 +218,12 @@ const faqJsonLdItems = faqItems.map((item) => ({
       <div class="mt-8 grid gap-10 lg:grid-cols-2">
         <div class="space-y-4 text-white/60">
           <p>
-            Invertir en oro significa convertir una parte de tu dinero en un activo físico que históricamente ha
-            mantenido -e incrementado- su valor frente a la inflación y la devaluación de las monedas.
+            Invertir en oro significa convertir una parte de tu dinero en un activo físico, cuyo precio sube y baja
+            según el mercado internacional.
           </p>
           <p>
-            No es especulación. Es protección. El oro no genera intereses ni dividendos, pero tampoco pierde su
-            valor cuando el peso se devalúa o cuando los bancos atraviesan crisis.
+            El oro no genera intereses ni dividendos: su valor depende del precio de mercado, que puede subir o
+            bajar.
           </p>
           <p>
             Con Aura Gold, cada token que compras está respaldado por oro físico en bóveda. Puedes venderlo
@@ -250,13 +240,6 @@ const faqJsonLdItems = faqItems.map((item) => ({
               <span class="rounded-lg bg-white/5 px-2 py-2 text-center text-white/60">Segregado</span>
             </div>
           </div>
-          <div class="rounded-2xl border border-ag-gold/30 bg-ag-gold/5 p-6">
-            <p class="font-mono text-xs uppercase tracking-widest text-ag-gold">Dato clave</p>
-            <p class="mt-2 text-sm text-white/70">
-              El peso mexicano ha perdido más del 80% de su poder adquisitivo en los últimos 25 años. El oro, en el
-              mismo período, ha multiplicado su valor más de 10 veces en pesos.
-            </p>
-          </div>
         </div>
       </div>
     </section>
@@ -264,9 +247,9 @@ const faqJsonLdItems = faqItems.map((item) => ({
     <!-- Benefits -->
     <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
       <SectionHeading
-        eyebrow="El activo refugio por excelencia"
+        eyebrow="Por qué el oro"
         title="Por qué invertir en oro y no en otras alternativas"
-        description="El dinero en tu cuenta bancaria pierde valor cada año. Invertir en oro, históricamente, lo conserva. Estas son las razones concretas por las que tiene sentido comprar oro en México hoy."
+        description="Estas son las razones por las que muchas personas en México eligen ahorrar en oro, y lo que conviene saber antes."
       />
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {
@@ -283,17 +266,15 @@ const faqJsonLdItems = faqItems.map((item) => ({
     <!-- Comparison -->
     <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
       <SectionHeading
-        eyebrow="Comparativa honesta"
+        eyebrow="Comparativa"
         title="Invertir en oro vs otras opciones de ahorro en México"
         description="Antes de decidir dónde poner tu dinero, compara. Oro físico frente a bancos, criptomonedas y efectivo."
       />
       <div class="mt-10 overflow-x-auto">
-        <table class="w-full min-w-[720px] border-collapse text-left text-sm">
+        <table class="w-full border-collapse text-left text-sm">
           <thead>
             <tr class="border-b border-white/10 text-white/50">
               <th class="py-4 pr-4 font-normal">Alternativa</th>
-              <th class="py-4 pr-4 font-normal">Protege vs inflación</th>
-              <th class="py-4 pr-4 font-normal">Riesgo</th>
               <th class="py-4 pr-4 font-normal">Accesibilidad</th>
             </tr>
           </thead>
@@ -305,8 +286,6 @@ const faqJsonLdItems = faqItems.map((item) => ({
                     <span class={`font-medium ${row.highlight ? "text-ag-gold" : "text-white"}`}>{row.option}</span>
                     <span class="block text-xs text-white/40">{row.note}</span>
                   </td>
-                  <td class="py-4 pr-4 text-white/70">{row.inflation}</td>
-                  <td class="py-4 pr-4 text-white/70">{row.risk}</td>
                   <td class="py-4 pr-4 text-white/70">{row.access}</td>
                 </tr>
               ))
@@ -353,8 +332,8 @@ const faqJsonLdItems = faqItems.map((item) => ({
     <section class="mx-auto max-w-[1200px] px-6 py-16 lg:px-10">
       <SectionHeading
         eyebrow="Seguridad y transparencia"
-        title="Es seguro invertir en oro con Aura Gold"
-        description="Invertir en oro exige pruebas, no solo promesas. Estas son las garantías reales detrás de cada compra."
+        title="Cómo funciona la seguridad en Aura Gold"
+        description="Invertir en oro exige pruebas, no solo promesas. Esto es lo que hay detrás de cada compra."
       />
       <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {
@@ -368,8 +347,8 @@ const faqJsonLdItems = faqItems.map((item) => ({
       </div>
       <p class="mx-auto mt-8 max-w-2xl text-center text-sm text-white/50">
         <strong class="text-white">¿Qué pasa si Aura Gold cierra?</strong> Al ser un activo segregado, tu oro
-        permanece bajo tu titularidad y puede transferirse o recuperarse. Tu protección no depende de nuestra
-        continuidad. Puedes comprobar{" "}
+        permanece bajo tu titularidad y puede transferirse o recuperarse. Puedes
+        comprobar{" "}
         <a href="/transparencia" class="text-ag-gold hover:underline">la custodia en Suiza, las auditorías y el spread</a>{" "}
         en la página de transparencia. Y si quieres el panorama completo, te explicamos los{" "}
         <a href="/blog/es-seguro-invertir-en-oro" class="text-ag-gold hover:underline">riesgos reales de invertir en oro</a>{" "}
@@ -382,7 +361,7 @@ const faqJsonLdItems = faqItems.map((item) => ({
       <SectionHeading
         eyebrow="FAQs"
         title="Preguntas Frecuentes"
-        description="Sin rodeos y sin jerga financiera. Todo lo que necesitas saber antes de empezar a proteger tu dinero."
+        description="Sin rodeos y sin jerga financiera. Todo lo que necesitas saber antes de empezar."
       />
       <div class="mt-12">
         <FAQ items={faqItems} />
