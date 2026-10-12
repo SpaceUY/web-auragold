@@ -49,6 +49,7 @@ const qrSvg = await QRCode.toString(playStoreUrl("qr-modal"), {
       <a
         href={WEB_APP_URL}
         data-cta="webapp-ios-modal"
+        data-cta-position="modal"
         class="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-ag-gold px-4 py-2.5 text-sm font-medium text-ag-dark transition-opacity hover:opacity-90"
       >
         Usar Aura en la web
@@ -66,7 +67,7 @@ const qrSvg = await QRCode.toString(playStoreUrl("qr-modal"), {
       <!-- El {" "} es necesario: el build borra el salto de línea entre el texto y el enlace -->
       <p class="mt-5 text-[13px] text-white/50">
         ¿Tienes iPhone?{" "}
-        <a href={WEB_APP_URL} data-cta="webapp-desktop-modal" class="text-ag-gold hover:underline">Usa Aura desde la web</a>
+        <a href={WEB_APP_URL} data-cta="webapp-desktop-modal" data-cta-position="modal" class="text-ag-gold hover:underline">Usa Aura desde la web</a>
       </p>
     </div>
   </div>
