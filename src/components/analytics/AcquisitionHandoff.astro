@@ -1,0 +1,219 @@
+---
+// WEB-002: guarda la campaña que trajo al visitante y la pasa a la webapp
+// (cookie aura_acq en .auragold.io) y a Google Play (referrer del link).
+// Solo campos permitidos y solo con consentimiento: sin el banner de cookies
+// (window.auraConsent) no guarda nada ni toca ningún link.
+// Contrato de campos: docs/web-002-contrato-adquisicion.md
+---
+
+<script>
+  interface ConsentChoice {
+    analytics: boolean;
+    ads: boolean;
+    replay: boolean;
+  }
+
+  interface AuraConsentApi {
+    get(): ConsentChoice | null;
+    subscribe(listener: (choice: ConsentChoice) => void): () => void;
+  }
+
+  declare global {
+    interface Window {
+      auraConsent?: AuraConsentApi;
+    }
+  }
+
+  type Touch = Record<string, string | number>;
+
+  interface AcquisitionCookie {
+    v: number;
+    first_touch?: Touch;
+    last_non_direct?: Touch;
+  }
+
+  const COOKIE_NAME = "aura_acq";
+  const COOKIE_VERSION = 1;
+  const COOKIE_MAX_AGE = 60 * 60 * 24 * 90;
+
+  const UTM_FIELDS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  const CLICK_ID_FIELD = "gclid";
+  const MAX_VALUE_LENGTH = 100;
+
+  // Valores que no se copian nunca: el PDF prohíbe emails, teléfonos, wallets y tokens.
+  const CONTROL_CHARS = /[\r\n\t]/;
+  const EMAIL_LIKE = /@/;
+  const PHONE_LIKE = /\d{7,}/;
+  const WALLET_LIKE = /0x[0-9a-f]{8,}/i;
+  const CLICK_ID_FORMAT = /^[\w-]+$/;
+
+  const PLAY_HOST = "play.google.com";
+  const BASE_SOURCE = "auragold.io";
+  const MIDDLE_BUTTON = 1;
+
+  function isSafeValue(field: string, value: string): boolean {
+    if (!value || value.length > MAX_VALUE_LENGTH) return false;
+    if (CONTROL_CHARS.test(value) || EMAIL_LIKE.test(value) || WALLET_LIKE.test(value)) return false;
+    if (field === CLICK_ID_FIELD) return CLICK_ID_FORMAT.test(value);
+    return !PHONE_LIKE.test(value);
+  }
+
+  // Lista permitida: todo lo que no esté acá (o no pase la validación) se ignora.
+  function readAllowedParams(search: string, consent: ConsentChoice): Touch {
+    const params = new URLSearchParams(search);
+    const fields = consent.ads ? [...UTM_FIELDS, CLICK_ID_FIELD] : UTM_FIELDS;
+    const touch: Touch = {};
+    for (const field of fields) {
+      const value = params.get(field)?.trim();
+      if (value && isSafeValue(field, value)) touch[field] = value;
+    }
+    return touch;
+  }
+
+  // ------------------------------------------------------------------ cookie
+
+  function cookieDomain(): string {
+    const host = location.hostname;
+    const isAuraDomain = host === "auragold.io" || host.endsWith(".auragold.io");
+    return isAuraDomain ? "; domain=.auragold.io" : "";
+  }
+
+  function readCookie(): AcquisitionCookie | null {
+    const match = document.cookie.match(/(?:^|;\s*)aura_acq=([^;]*)/);
+    if (!match) return null;
+    try {
+      const stored = JSON.parse(decodeURIComponent(match[1])) as AcquisitionCookie;
+      return stored?.v === COOKIE_VERSION ? stored : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function writeCookie(data: AcquisitionCookie): void {
+    const secure = location.protocol === "https:" ? "; Secure" : "";
+    document.cookie = `${COOKIE_NAME}=${encodeURIComponent(JSON.stringify(data))}; path=/; max-age=${COOKIE_MAX_AGE}; SameSite=Lax${cookieDomain()}${secure}`;
+  }
+
+  function deleteCookie(): void {
+    document.cookie = `${COOKIE_NAME}=; path=/; max-age=0${cookieDomain()}`;
+  }
+
+  function withoutClickId(touch?: Touch): Touch | undefined {
+    if (!touch) return touch;
+    const { [CLICK_ID_FIELD]: _removed, ...rest } = touch;
+    return rest;
+  }
+
+  // first_touch no se pisa nunca; last_non_direct solo cambia con otra visita con campaña.
+  function recordVisit(consent: ConsentChoice): void {
+    const touch = readAllowedParams(location.search, consent);
+    if (Object.keys(touch).length === 0) return;
+    const stamped = { ...touch, ts: Math.floor(Date.now() / 1000) };
+    const stored = readCookie();
+    writeCookie({
+      v: COOKIE_VERSION,
+      first_touch: stored?.first_touch ?? stamped,
+      last_non_direct: stamped,
+    });
+  }
+
+  function applyConsent(consent: ConsentChoice): void {
+    if (!consent.analytics) {
+      deleteCookie();
+      return;
+    }
+    const stored = readCookie();
+    if (stored && !consent.ads) {
+      writeCookie({
+        v: COOKIE_VERSION,
+        first_touch: withoutClickId(stored.first_touch),
+        last_non_direct: withoutClickId(stored.last_non_direct),
+      });
+    }
+    recordVisit(consent);
+  }
+
+  // ------------------------------------------------------------ Google Play
+
+  function buttonMedium(link: HTMLAnchorElement, currentReferrer: URLSearchParams): string {
+    return (
+      currentReferrer.get("utm_medium") ??
+      link.dataset.ctaPosition ??
+      link.dataset.cta?.replace(/^(android|download|start|webapp)-/, "") ??
+      "landing"
+    );
+  }
+
+  // Con campaña guardada viaja esa campaña (más el botón en aura_cta); sin campaña,
+  // el formato de siempre: utm_source=auragold.io&utm_medium=<botón>.
+  function buildReferrer(link: HTMLAnchorElement, consent: ConsentChoice): string {
+    const url = new URL(link.href);
+    const current = new URLSearchParams(url.searchParams.get("referrer") ?? "");
+    const medium = buttonMedium(link, current);
+    const campaign = consent.analytics ? readCookie()?.last_non_direct : undefined;
+
+    const referrer = new URLSearchParams();
+    if (campaign) {
+      for (const field of UTM_FIELDS) {
+        if (typeof campaign[field] === "string") referrer.set(field, campaign[field] as string);
+      }
+      referrer.set("aura_cta", link.dataset.cta ?? medium);
+      if (consent.ads && typeof campaign[CLICK_ID_FIELD] === "string") {
+        referrer.set(CLICK_ID_FIELD, campaign[CLICK_ID_FIELD] as string);
+      }
+    } else {
+      referrer.set("utm_source", BASE_SOURCE);
+      referrer.set("utm_medium", medium);
+    }
+    return referrer.toString();
+  }
+
+  function handlePlayClick(event: MouseEvent): void {
+    if (event.type === "auxclick" && event.button !== MIDDLE_BUTTON) return;
+    if (!(event.target instanceof Element)) return;
+    const link = event.target.closest("a[href]");
+    if (!(link instanceof HTMLAnchorElement) || link.hostname !== PLAY_HOST) return;
+
+    const consent = window.auraConsent?.get();
+    if (!consent) return;
+
+    try {
+      const url = new URL(link.href);
+      // searchParams.set codifica una sola vez, como pide el PDF.
+      url.searchParams.set("referrer", buildReferrer(link, consent));
+      link.href = url.toString();
+    } catch {
+      // Si algo falla, el link navega con el referrer que ya tenía.
+    }
+  }
+
+  // ----------------------------------------------------------------- inicio
+
+  function withConsentApi(callback: (api: AuraConsentApi) => void): void {
+    if (window.auraConsent) {
+      callback(window.auraConsent);
+      return;
+    }
+    window.addEventListener(
+      "auraconsent:ready",
+      () => {
+        if (window.auraConsent) callback(window.auraConsent);
+      },
+      { once: true },
+    );
+  }
+
+  try {
+    withConsentApi((api) => {
+      const consent = api.get();
+      if (consent) applyConsent(consent);
+      api.subscribe(applyConsent);
+      // Captura: el referrer se arma antes de que el link navegue, con el destino real
+      // (en Android, "Abrir mi bóveda" ya cambió su href a Play al cargar).
+      document.addEventListener("click", handlePlayClick, true);
+      document.addEventListener("auxclick", handlePlayClick, true);
+    });
+  } catch {
+    // La adquisición nunca puede frenar la página.
+  }
+</script>
