@@ -11,6 +11,8 @@ import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 import { getCollection } from "astro:content";
 import { authors } from "../data/authors";
 import AppStartLink from "../components/ui/AppStartLink.astro";
+import CostSummary from "../components/ui/CostSummary.astro";
+import { COMMISSION_LABEL, REDEMPTION_FEE_LABEL } from "../data/costs";
 
 // Últimos contenidos del blog (3 más recientes)
 const latestPosts = (await getCollection("blog"))
@@ -201,7 +203,7 @@ const faqItems = [
   {
     question: "¿Cuánto cuesta usar Aura Gold?",
     answer:
-      "Crear tu cuenta no tiene costo. Aura Gold obtiene ingresos a través del spread entre precio de compra y venta del oro y, en algunos casos, puede existir una comisión asociada a ciertos movimientos (como envíos físicos). Todo se muestra de forma transparente antes de confirmar cualquier operación.",
+      `Crear tu cuenta no tiene costo. Aura Gold cobra una comisión del ${COMMISSION_LABEL} en cada compra y en cada venta, sobre el precio internacional de referencia del oro. El canje por lingotes físicos lo cobra Tether Gold (${REDEMPTION_FEE_LABEL}). Todo se muestra antes de confirmar cualquier operación.`,
   },
   {
     question: "¿Puedo tener mi oro en físico?",
@@ -245,6 +247,9 @@ const faqItems = [
             desde tu celular, cuando quieras.
           </p>
           <AppCTAButtons id="descargar" class="hero-rise" style="animation-delay: 0.35s" />
+          <a href="#costos" class="hero-rise text-sm text-ag-gold hover:underline" style="animation-delay: 0.4s">
+            Ver cuánto cuesta
+          </a>
         </div>
 
         <div class="hero-rise hidden w-full sm:block" style="animation-delay: 0.15s">
@@ -490,6 +495,8 @@ const faqItems = [
         }
       </div>
     </section>
+
+    <CostSummary />
 
     <!-- Final CTA -->
     <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
