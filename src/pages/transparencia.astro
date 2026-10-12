@@ -5,6 +5,7 @@ import Footer from "../components/layout/Footer.astro";
 import { COMMISSION_LABEL, COMMISSION_PERCENT, EXAMPLE_PRICE_MXN, exampleBuyPrice, exampleSellPrice, formatMxn } from "../data/costs";
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
+import RiskWarning from "../components/ui/RiskWarning.astro";
 
 const faqItems = [
   {
@@ -115,7 +116,8 @@ const commitments = [
         {formatMxn(EXAMPLE_PRICE_MXN)} MXN por gramo, al comprar pagarías {formatMxn(exampleBuyPrice())} MXN/g y al
         vender recibirías {formatMxn(exampleSellPrice())} MXN/g. Siempre verás el precio final exacto antes de confirmar.
       </p>
-      <p class="mt-4 text-white/60">La comisión cubre los costos operativos de la plataforma:</p>
+      <RiskWarning class="mt-4" />
+      <p class="mt-4 text-white/60">El spread cubre los costos operativos reales de la plataforma:</p>
       <ul class="mt-3 list-disc space-y-1 pl-6 text-white/60">
         <li>Custodia profesional del oro físico en bóvedas en Suiza</li>
         <li>Seguro completo sobre el metal almacenado</li>
