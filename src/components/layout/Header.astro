@@ -1,6 +1,7 @@
 ---
 import AppDownloadLink from "../ui/AppDownloadLink.astro";
 import AppDownloadDialog from "../ui/AppDownloadDialog.astro";
+import AcquisitionHandoff from "../analytics/AcquisitionHandoff.astro";
 import { WEB_APP_URL } from "../../data/links";
 
 const navLinks = [
@@ -137,6 +138,8 @@ const learnSubLinks = [
 </header>
 
 <AppDownloadDialog />
+<!-- WEB-002: el Header está en todas las páginas; guarda la campaña y la pasa a Play -->
+<AcquisitionHandoff />
 
 <script>
   const toggle = document.querySelector("[data-mobile-menu-toggle]");
