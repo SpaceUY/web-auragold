@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
+import { LEGAL_ENTITY } from "../data/legal";
 ---
 
 <BaseLayout
@@ -44,7 +45,7 @@ import Footer from "../components/layout/Footer.astro";
         <h3>1. Información importante</h3>
         <p>
           <strong>Responsable del Tratamiento – MintIA Corp.</strong> MintIA Corp ("MintIA") tiene su sede en
-          Craigmuir Chambers, Road Town, Tortola, VG1110, Islas Vírgenes Británicas.
+          {LEGAL_ENTITY.address}, {LEGAL_ENTITY.country}.
         </p>
         <p>
           En este Aviso de Privacidad, "usted" o "su" se refiere a una persona física que es objeto de los Datos
