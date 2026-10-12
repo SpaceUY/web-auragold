@@ -62,7 +62,7 @@ Antes de invertir en cualquier producto de oro fraccionado, verifica estos cuatr
 
 **Activo segregado.** Tu oro debe estar asignado a tu nombre de forma segregada, no mezclado en un pool colectivo. La diferencia es crítica: el oro segregado no puede ser reclamado por terceros si el custodio tiene problemas financieros. Si el emisor o el custodio falla y el oro no estuviera correctamente segregado, el inversor podría perder su posición.
 
-**Auditorías independientes periódicas.** Las reservas físicas deben auditarse por terceros, no solo declararse. Una auditoría pública y verificable es la única prueba real de que el oro existe donde dicen que está. Puedes ver cómo se aplican en Aura Gold en nuestras [garantías de custodia verificables](/transparencia).
+**Auditorías independientes periódicas.** Las reservas físicas deben auditarse por terceros, no solo declararse. Una auditoría pública y verificable es la única prueba real de que el oro existe donde dicen que está. En Aura Gold, el oro es Tether Gold (XAUT) y te enlazamos los [informes trimestrales de reservas del emisor](/transparencia#tu-oro), que revisa BDO Italia. Son sobre Tether Gold, no auditorías de Aura Gold.
 
 **Transparencia en precios y spread.** El modelo de negocio del oro fraccionado funciona con un spread entre el precio de compra y venta. Un proveedor serio lo muestra antes de que confirmes la operación, no después.
 
@@ -110,6 +110,6 @@ Depende de la plataforma. Las más accesibles permiten empezar desde cantidades 
 
 El oro fraccionado no es un producto nuevo ni experimental — es la versión digital y accesible del mismo activo que los bancos centrales del mundo llevan acumulando históricamente. Los bancos centrales compraron más de 1.000 toneladas de oro en 2024. La diferencia es que hoy cualquier persona puede hacer lo mismo desde su teléfono, en fracciones y sin conocimientos financieros.
 
-Aura Gold es una app que te permite comprar oro físico fraccionado certificado LBMA, custodiado en bóvedas institucionales, verificable en blockchain y con opción de canje por lingotes. Sin comisiones de custodia, con spread transparente y liquidez inmediata.
+Aura Gold es una app que te permite comprar oro físico fraccionado de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, verificable en blockchain y con opción de canje por lingotes. Sin comisiones de custodia, con spread transparente y liquidez inmediata.
 
 [Empieza a proteger tu dinero con oro físico real →](/invertir-en-oro-mexico)

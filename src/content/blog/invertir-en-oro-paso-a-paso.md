@@ -77,7 +77,7 @@ Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fr
 4. **Transparencia en precios (spread):** debe mostrarte claramente el precio de compra y venta antes de confirmar.
 5. **Proceso de retiro claro:** debes poder retirar físicamente tu oro en forma de lingotes si acumulas suficiente cantidad.
 
-Por ejemplo, en Aura Gold puedes [revisar el spread, la custodia y las auditorías](/transparencia) en la página de transparencia.
+Por ejemplo, en Aura Gold puedes [revisar el spread, la custodia y los informes de reservas de Tether Gold](/transparencia) en la página de transparencia.
 
 ## Paso 6: Realiza tu primera compra de oro (proceso práctico)
 
@@ -121,7 +121,7 @@ Destiná un porcentaje fijo de tus ingresos mensuales a oro, tratándolo como un
 
 ## Da el primer paso: comienza a proteger tu dinero hoy
 
-Con Aura Gold puedes empezar a invertir en oro físico certificado comprando fracciones de gramo: oro físico real custodiado en bóvedas certificadas internacionalmente, sin comisiones de custodia mensuales, compra y venta en segundos desde tu celular 24/7, liquidez inmediata, activo segregado legalmente a tu nombre, opción de retiro físico en lingotes, y transparencia total en precios y costos.
+Con Aura Gold puedes empezar a invertir en oro físico certificado comprando fracciones de gramo: oro físico real de Tether Gold (XAUT), custodiado en bóvedas en Suiza, sin comisiones de custodia mensuales, compra y venta en segundos desde tu celular 24/7, liquidez inmediata, activo segregado legalmente a tu nombre, opción de retiro físico en lingotes, y transparencia total en precios y costos.
 
 ## Preguntas frecuentes sobre cómo invertir en oro
 
@@ -147,7 +147,7 @@ Horizonte mínimo recomendado: 1-3 años. Horizontes ideales: 3-10 años.
 
 **¿Cómo sé que el oro realmente existe y no es una estafa?**
 
-Verificá: certificación LBMA, custodia en bóvedas privadas certificadas, y activo segregado legalmente a tu nombre.
+Verifica: estándar LBMA de las barras, custodia en bóvedas privadas certificadas, y activo segregado legalmente a tu nombre.
 
 **¿Qué pasa si la plataforma de inversión quiebra?**
 

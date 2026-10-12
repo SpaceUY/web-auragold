@@ -145,7 +145,7 @@ Banderas rojas que indican posible fraude:
 - Presión para comprar "ahora mismo antes de que suba"
 - No acepta verificación por tercero independiente
 
-Con oro fraccionado digital certificado: todo el oro está certificado LBMA automáticamente, la plataforma verifica pureza antes de custodia, no puedes recibir oro falso o de menor pureza, y hay transparencia total en origen y certificación. En Aura Gold puedes [verificar la custodia y la pureza](/transparencia) de las barras que respaldan tu oro.
+Con oro fraccionado digital respaldado por barras con estándar LBMA: el emisor del token responde por las barras, no recibes metal suelto que tengas que validar y hay información pública sobre el respaldo. En Aura Gold, el oro es Tether Gold (XAUT) y te enlazamos [quién guarda el oro y sus informes de reservas](/transparencia#tu-oro).
 
 ### Error 4: Invertir todo de golpe en un solo momento
 
@@ -337,7 +337,7 @@ Calendario de revisión: cada 6 meses revisar balance general de portafolio, anu
 
 Frecuencia correcta de monitoreo: oro para protección cada 6-12 meses; oro para trading cada día (pero esto no es lo que buscas).
 
-Si después de conocer estos errores quieres empezar con una plataforma que los evita por diseño, en Aura Gold puedes invertir en oro en México por fracciones de gramo, con precio transparente antes de cada compra y custodia en bóvedas certificadas.
+Si después de conocer estos errores quieres empezar con una plataforma que los evita por diseño, en Aura Gold puedes invertir en oro en México por fracciones de gramo, con precio transparente antes de cada compra y custodia en bóvedas en Suiza.
 
 ## Empieza a invertir en oro de forma segura con Aura Gold
 

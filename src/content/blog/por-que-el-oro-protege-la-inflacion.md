@@ -105,7 +105,7 @@ Puedes comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales co
 
 ## Protege tu dinero de la inflación hoy: convierte tus pesos en oro
 
-Con Aura Gold puedes convertir tus pesos en oro físico certificado, comprando fracciones de gramo: oro físico real custodiado en bóvedas certificadas internacionalmente (estándar LBMA), sin comisiones de custodia mensuales, liquidez inmediata 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold puedes convertir tus pesos en oro físico certificado, comprando fracciones de gramo: oro físico real de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, sin comisiones de custodia mensuales, liquidez inmediata 24/7, activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre oro e inflación
 

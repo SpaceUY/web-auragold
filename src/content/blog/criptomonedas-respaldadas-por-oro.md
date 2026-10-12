@@ -76,7 +76,7 @@ Puedes ver también la comparativa directa en [oro físico vs. cuentas bancarias
 
 Tanto si evalúas PAXG, XAUT o cualquier alternativa, revisa estos puntos:
 
-**Auditorías independientes.** Los proyectos legítimos incluyen auditorías realizadas por terceros e información transparente sobre el almacenamiento y seguimiento del oro. Sin auditorías públicas, no hay garantía real. En Aura Gold puedes revisar el [Proof of Reserve y las auditorías públicas](/transparencia) del oro que respalda tu cuenta.
+**Auditorías independientes.** Los proyectos legítimos incluyen auditorías realizadas por terceros e información transparente sobre el almacenamiento y seguimiento del oro. Sin auditorías públicas, no hay garantía real. En Aura Gold te enlazamos los [informes trimestrales de reservas de Tether Gold](/transparencia#tu-oro), el emisor del token que respalda tu cuenta. Los revisa BDO Italia y son sobre Tether Gold, no sobre Aura Gold.
 
 **Dónde está el oro físicamente.** ¿Quién es el custodio? ¿Suiza? ¿Londres? Si no puedes responder esto, tu "oro" es solo una promesa digital.
 

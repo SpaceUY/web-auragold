@@ -44,7 +44,7 @@ El oro no paga intereses ni dividendos. Su función principal es preservar el va
 
 ### Cómo distinguir el oro físico real del oro "de papel"
 
-El oro custodiado digitalmente (como el que ofrece Aura Gold) está respaldado por oro físico real en bóvedas certificadas bajo estándares LBMA. Se registra como un token en blockchain, pero su valor no sale de la especulación: sale del metal que lo respalda.
+El oro custodiado digitalmente (como el que ofrece Aura Gold) está respaldado por oro físico real: Tether Gold (XAUT), en barras con estándar LBMA guardadas en bóvedas en Suiza. Se registra como un token en blockchain, pero su valor no sale de la especulación: sale del metal que lo respalda.
 
 ## Qué son las criptomonedas y qué papel real cumplen en las finanzas personales
 
@@ -107,7 +107,7 @@ Muchas personas ven el histórico de subida de Bitcoin y asumen que va a repetir
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si tu prioridad es proteger, no especular, con Aura Gold puedes comprar fracciones de oro, sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas bajo estándar LBMA y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si tu prioridad es proteger, no especular, con Aura Gold puedes comprar fracciones de oro, sin comisiones de custodia. Tu oro queda respaldado por Tether Gold (XAUT), en barras con estándar LBMA, y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y criptomonedas en México
 
@@ -129,4 +129,4 @@ Sí. De hecho, algunos perfiles destinan una base a oro como protección y una p
 
 ### ¿Cómo sé que el oro de Aura Gold es real y está bien custodiado?
 
-Aura Gold opera con oro físico certificado bajo estándar LBMA, con activos segregados y auditorías periódicas. Puedes consultar en todo momento [dónde está tu oro y quién lo custodia](/transparencia).
+Aura Gold opera con oro de Tether Gold (XAUT), en barras con estándar LBMA, con activos segregados, y enlaza los informes trimestrales de reservas del emisor. Puedes consultar en todo momento [dónde está tu oro y quién lo custodia](/transparencia).

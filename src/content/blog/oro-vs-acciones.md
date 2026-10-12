@@ -44,7 +44,7 @@ El oro no paga dividendos ni intereses. Su función es otra: preservar valor a l
 
 ### Cómo se diferencia el oro físico custodiado del oro especulativo
 
-El oro digital, como el que ofrece Aura Gold, está respaldado por oro físico real en bóvedas certificadas. Usa blockchain para registrarlo, pero no es un derivado: detrás de cada unidad hay metal, no una apuesta sobre el precio.
+El oro digital, como el que ofrece Aura Gold, está respaldado por oro físico real: Tether Gold (XAUT), en bóvedas en Suiza. Usa blockchain para registrarlo, pero no es un derivado: detrás de cada unidad hay metal, no una apuesta sobre el precio.
 
 ## Cómo comparar oro y acciones según tu situación financiera real
 
@@ -114,7 +114,7 @@ Si quieres verlo con tus propios números, la [calculadora de inflación de Méx
 
 ## Cómo empezar a proteger tu ahorro con oro físico real desde México
 
-Si el oro encaja en tu plan, con Aura Gold puedes [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado en bóvedas certificadas y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
+Si el oro encaja en tu plan, con Aura Gold puedes [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado por Tether Gold (XAUT), en bóvedas en Suiza, y puedes venderlo cuando quieras. Mira [cómo funciona Aura Gold](/#como-funciona) o [empieza a proteger tu dinero](/invertir-en-oro-mexico) hoy mismo.
 
 ## Preguntas frecuentes sobre oro y acciones en México
 
