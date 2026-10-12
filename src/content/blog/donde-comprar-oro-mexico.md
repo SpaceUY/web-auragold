@@ -37,13 +37,13 @@ Son negocios especializados en compra-venta de oro: monedas, lingotes y onzas de
 En una joyería compras oro, sí, pero pensado para joyería, no para inversión. Suele ser de menor pureza (14 o 18 quilates en lugar de 24) y con un sobreprecio alto por el diseño y la mano de obra.
 
 - **A favor:** disponibilidad y cercanía.
-- **A tener en cuenta:** si pagas oro de inversión y recibes quilataje bajo, pierdes valor desde el primer día. Para proteger tu dinero, no es la vía.
+- **A tener en cuenta:** si pagas oro de inversión y recibes quilataje bajo, pierdes valor desde el primer día. Para invertir, no es la vía.
 
 ### Plataformas y apps de oro en línea
 
-Aquí conviven cosas muy distintas: ETFs de oro (compras exposición al precio, no metal tuyo), brókers de CFDs (contratos apalancados y especulativos) y apps de oro fraccionado, donde compras oro respaldado por metal real en fracciones, en pesos y desde tu celular. En esta última categoría está Aura Gold: compras oro respaldado 1:1 por oro físico 24k certificado LBMA, en pesos y por fracciones de gramo, con custodia en bóvedas en Suiza.
+Aquí conviven cosas muy distintas: ETFs de oro (compras exposición al precio, no metal tuyo), brókers de CFDs (contratos apalancados y especulativos) y apps de oro fraccionado, donde compras oro respaldado por metal real en fracciones, en pesos y desde tu celular. En esta última categoría está Aura Gold: compras oro respaldado 1:1 por oro físico 24k de Tether Gold (XAUT), en barras con estándar LBMA, en pesos y por fracciones de gramo, con custodia en bóvedas en Suiza.
 
-- **A favor:** entras con poco dinero, sin cargar con la custodia y con liquidez rápida.
+- **A favor:** entras con poco dinero, sin cargar con la custodia y puedes vender desde el celular.
 - **A tener en cuenta:** verifica que el oro esté respaldado 1:1 por metal certificado (no todo el "oro digital" tiene metal detrás).
 
 ## ¿Cuál es la forma más segura de comprar oro?
@@ -60,7 +60,7 @@ No hay un "mejor lugar" único: depende de tu objetivo.
 
 **Si quieres empezar con poco dinero:** una app de oro fraccionado te deja entrar desde cantidades chicas, sin comprar una moneda entera ni pagar primas altas.
 
-**Si buscas facilidad y liquidez desde el celular:** el oro fraccionado digital combina oro físico real con la comodidad de comprar y vender en segundos.
+**Si buscas facilidad y liquidez desde el celular:** el oro fraccionado digital combina oro físico real con la comodidad de comprar y vender desde el celular en unos minutos.
 
 **Si solo quieres diversificar una cartera de bolsa:** un ETF de oro cumple, entendiendo que es papel, no oro que puedas retirar.
 
@@ -76,7 +76,7 @@ Las más comunes son el Centenario (moneda de 50 pesos, de 21.6 quilates y con c
 
 ### ¿Es mejor comprar oro en el banco o en una app?
 
-En el banco compras la moneda completa, pagas una prima y te encargas de la custodia. En una app de oro fraccionado compras desde cantidades chicas, sin custodiar el metal en casa y con liquidez inmediata. Para importes pequeños y facilidad, la app suele convenir; para tener la moneda física, el banco o un distribuidor.
+En el banco compras la moneda completa, pagas una prima y te encargas de la custodia. En una app de oro fraccionado compras desde cantidades chicas, sin custodiar el metal en casa y puedes vender desde el celular. Para importes pequeños y facilidad, la app suele convenir; para tener la moneda física, el banco o un distribuidor.
 
 ### ¿Comprar oro en una joyería es buena idea para invertir?
 

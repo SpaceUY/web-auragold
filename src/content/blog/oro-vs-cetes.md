@@ -1,8 +1,8 @@
 ---
-title: "Oro vs CETES: ¿qué conviene para proteger tu ahorro en México frente a la inflación?"
-seoTitle: "Oro vs CETES: ¿cuál protege mejor tu ahorro en México?"
-seoDescription: "Compara oro y CETES en México: riesgo, rendimiento y protección real frente a la inflación. Descubre cuál conviene según tu horizonte de ahorro."
-description: "Comparamos oro y CETES para proteger tu ahorro en México: rendimiento, riesgo, protección ante inflación, y cómo combinarlos según tu horizonte de tiempo."
+title: "Oro vs CETES: ¿qué conviene para tu ahorro en México frente a la inflación?"
+seoTitle: "Oro vs CETES: ¿cuál conviene más para tu ahorro en México?"
+seoDescription: "Compara oro y CETES en México: riesgo, rendimiento y comportamiento frente a la inflación. Descubre cuál conviene según tu horizonte de ahorro."
+description: "Comparamos oro y CETES para tu ahorro en México: rendimiento, riesgo, comportamiento ante la inflación, y cómo combinarlos según tu horizonte de tiempo."
 pubDate: 2026-08-12
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/oro-vs-cetes.png"
@@ -13,7 +13,7 @@ category: "Mercado"
 ## Key Takeaways
 
 - CETES: ideal para corto plazo y estabilidad de tu ahorro.
-- Oro: pensado para proteger el valor de tu dinero a largo plazo.
+- Oro: pensado para diversificar tu ahorro a largo plazo.
 - Para la mayoría de los ahorradores, una estrategia mixta con aportaciones periódicas de oro es la opción más coherente.
 
 Si estás dudando entre oro y CETES, probablemente no buscas "la inversión perfecta", sino algo más concreto: proteger tu ahorro, no complicarte, y tomar una decisión coherente con tu horizonte de tiempo.
@@ -36,7 +36,7 @@ El rendimiento de los CETES puede quedar por debajo de la [inflación real](/blo
 
 ### Para qué sirve el oro como activo financiero
 
-El oro no paga intereses. Su función es otra: preservar valor a largo plazo y actuar como cobertura ante inflación sostenida o incertidumbre económica. No es para hacerse rico rápido, sino para que tu dinero no se vuelva frágil con el tiempo.
+El oro no paga intereses. Su función es otra: diversificar el ahorro a largo plazo, sobre todo ante inflación sostenida o incertidumbre económica. No es para hacerse rico rápido, sino para pensar a largo plazo, sabiendo que su precio sube y baja.
 
 ### Qué formas existen hoy para invertir en oro en México
 
@@ -54,15 +54,15 @@ El oro digital, como el que ofrece Aura Gold, está respaldado por oro físico r
 
 | Factor | CETES | Oro |
 | --- | --- | --- |
-| Objetivo típico | Rendimiento estable | Preservación de valor |
+| Objetivo típico | Rendimiento estable | Diversificación a largo plazo |
 | Riesgo | Bajo | Medio (precio fluctúa) |
 | Horizonte ideal | Corto-medio (meses) | Medio-largo (años) |
-| Protección ante inflación | Buena si tasas > inflación | Cobertura a largo plazo |
+| Protección ante inflación | Buena si tasas > inflación | Histórica a largo plazo, sin garantía |
 | Exposición a devaluación del peso | No | Sí (precio global en USD) |
 
 ### Qué pasa con tu ahorro en cada escenario económico
 
-En escenarios de inflación controlada y tasas altas, los CETES suelen proteger bien. En escenarios de devaluación del peso, desconfianza institucional o inflación persistente, el oro históricamente ha funcionado como ancla de valor cuando otras alternativas fallan.
+En escenarios de inflación controlada y tasas altas, los CETES suelen proteger bien. En escenarios de devaluación del peso, desconfianza institucional o inflación persistente, el oro históricamente ha tendido a comportarse mejor, aunque no siempre ni al mismo ritmo.
 
 ## Cuándo conviene más invertir en CETES y cuándo en oro
 
@@ -82,7 +82,7 @@ En escenarios de inflación controlada y tasas altas, los CETES suelen proteger 
 
 ### Qué porcentajes suelen funcionar según tu perfil de riesgo
 
-- **Conservador:** 70-80% CETES + 20-30% oro como "seguro" patrimonial.
+- **Conservador:** 70-80% CETES + 20-30% oro para diversificar.
 - **Equilibrado:** 50% CETES + 50% oro.
 - **Anti-sustos:** colchón en CETES para 3-6 meses de gastos + aportaciones periódicas de oro a largo plazo.
 
@@ -96,7 +96,7 @@ Comprar oro en pequeñas cantidades de forma constante reduce el impacto de la v
 
 ### Por qué comparar solo el rendimiento anual lleva a decisiones equivocadas
 
-Los CETES tienen rendimiento explícito. El oro se mueve por precio y cumple una función distinta. Compararlos solo por rentabilidad es como comparar un seguro de hogar con una cuenta de ahorro: son herramientas con objetivos diferentes.
+Los CETES tienen rendimiento explícito. El oro se mueve por precio y cumple una función distinta. Compararlos solo por rentabilidad es como comparar una cuenta de ahorro con un activo de largo plazo: son herramientas con objetivos diferentes.
 
 ### Qué pasa cuando usas oro para objetivos de corto plazo
 
@@ -108,11 +108,11 @@ Si necesitas ese dinero pronto, la volatilidad del precio del oro puede jugarte 
 
 1. **¿Cuándo vas a necesitar ese dinero?** Menos de 12 meses → CETES. Más de 3 años → el oro tiene sentido como parte del plan.
 2. **¿Qué te quita más el sueño: la volatilidad o la inflación?** Volatilidad → CETES. Pérdida de poder adquisitivo → oro parcial.
-3. **¿Buscas rendimiento definido o protección patrimonial?** Rendimiento definido → CETES. Diversificación y protección → oro.
+3. **¿Buscas rendimiento definido o diversificar a largo plazo?** Rendimiento definido → CETES. Diversificación a largo plazo → oro.
 
 Si quieres verlo con tus propios números, la [calculadora de inflación de México](/calculadora-inflacion-oro) compara en segundos cuánto necesitarías hoy solo para mantener el poder adquisitivo de un ahorro frente a haberlo convertido en oro.
 
-## Cómo empezar a proteger tu ahorro con oro físico real desde México
+## Cómo empezar a ahorrar en oro físico real desde México
 
 Si el oro encaja en tu plan, con Aura Gold puedes [comprar fracciones de oro](/invertir-en-oro-mexico), sin comisiones de custodia. Tu oro queda respaldado por Tether Gold (XAUT), en bóvedas en Suiza, y puedes venderlo cuando quieras.
 
@@ -132,7 +132,7 @@ Los proveedores de oro custodiado serios operan con estándares como la certific
 
 ### ¿Puedo combinar oro y CETES en mi estrategia de ahorro?
 
-Sí, y suele ser lo más sensato: CETES como base estable de corto plazo, y oro como cobertura patrimonial a largo plazo.
+Sí, y suele ser lo más sensato: CETES como base estable de corto plazo, y oro para diversificar a largo plazo.
 
 ### ¿Qué ventaja tiene el oro custodiado digitalmente frente al oro físico tradicional?
 

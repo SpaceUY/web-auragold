@@ -1,7 +1,7 @@
 ---
 title: "Qué es el oro fraccionado y cómo funciona"
 seoTitle: "Qué es el oro fraccionado, cómo funciona y cómo invertir desde México"
-seoDescription: "El oro fraccionado permite comprar partes de un lingote físico, por fracciones de gramo. Descubre cómo funciona, qué garantías exige y cómo protege tu dinero de la inflación en México."
+seoDescription: "El oro fraccionado permite comprar partes de un lingote físico, por fracciones de gramo. Descubre cómo funciona, qué garantías exige y qué papel puede tener frente a la inflación en México."
 description: "Explicamos qué es el oro fraccionado, cómo funciona paso a paso, en qué se diferencia de un ETF o del oro tokenizado, y qué garantías debe cumplir para ser seguro."
 pubDate: 2026-08-31
 author: "federico-sendra"
@@ -14,7 +14,7 @@ category: "Guías"
 
 El oro fraccionado es una forma de comprar una parte proporcional de un lingote de oro físico real sin necesidad de adquirirlo entero. Cada fracción representa una cantidad concreta de metal custodiado en una bóveda institucional, asignada a tu nombre como activo segregado.
 
-Si quieres entender por qué tiene sentido proteger tu ahorro con oro antes de evaluar cómo hacerlo, empieza por nuestra guía sobre [por qué el oro protege contra la inflación](/blog/por-que-el-oro-protege-la-inflacion). Y si ya quieres ver el precio actual al que estarías comprando, consulta el [precio del oro hoy en tiempo real](/precio-del-oro-hoy).
+Si quieres entender por qué tiene sentido ahorrar en oro antes de evaluar cómo hacerlo, empieza por nuestra guía sobre [el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion). Y si ya quieres ver el precio actual al que estarías comprando, consulta el [precio del oro hoy en tiempo real](/precio-del-oro-hoy).
 
 El oro fraccionado resuelve el principal obstáculo histórico de invertir en oro físico: el coste de entrada. Un lingote estándar de 1 kg de oro cuesta hoy más de 90.000 pesos mexicanos. El oro fraccionado elimina ese mínimo — puedes comprar la fracción equivalente a 100 pesos, 500 o la cantidad que elijas — y el metal existe igualmente, custodiado y certificado.
 
@@ -24,7 +24,7 @@ La tasa de inflación anual en México se situó en el 4.45% en abril de 2026, l
 
 La inflación en México impacta directamente en el poder adquisitivo y el costo de vida, reduciendo la capacidad de compra sin necesidad de ningún impuesto formal — un fenómeno conocido como "impuesto inflacionario".
 
-El oro funciona como contrapeso a esa erosión. Tiende a conservar su valor a largo plazo y a mostrar una evolución más estable que otros activos, lo que lo convierte en un refugio seguro para proteger el capital. No genera rentabilidad por sí solo, pero lo que protege es el poder adquisitivo de lo que ya tienes.
+Muchas personas usan el oro como contrapeso a esa erosión. Históricamente, en plazos largos, su precio en pesos ha tendido a subir cuando el peso pierde poder adquisitivo, pero no siempre ni al mismo ritmo. No genera rentabilidad por sí solo, y su precio sube y baja: puede pasar años por debajo de su máximo.
 
 ## ¿Cómo funciona el oro fraccionado paso a paso?
 
@@ -62,7 +62,7 @@ Antes de invertir en cualquier producto de oro fraccionado, verifica estos cuatr
 
 **Activo segregado.** Tu oro debe estar asignado a tu nombre de forma segregada, no mezclado en un pool colectivo. La diferencia es crítica: el oro segregado no puede ser reclamado por terceros si el custodio tiene problemas financieros. Si el emisor o el custodio falla y el oro no estuviera correctamente segregado, el inversor podría perder su posición.
 
-**Auditorías independientes periódicas.** Las reservas físicas deben auditarse por terceros, no solo declararse. Una auditoría pública y verificable es la única prueba real de que el oro existe donde dicen que está. En Aura Gold, el oro es Tether Gold (XAUT) y te enlazamos los [informes trimestrales de reservas del emisor](/transparencia#tu-oro), que revisa BDO Italia. Son sobre Tether Gold, no auditorías de Aura Gold.
+**Auditorías independientes periódicas.** Las reservas físicas deben auditarse por terceros, no solo declararse. Una auditoría pública y verificable es la única prueba real de que el oro existe donde dicen que está. En Aura Gold, el oro es Tether Gold (XAUT) y te enlazamos los [informes trimestrales de reservas del emisor](/transparencia#tu-oro), revisados por BDO Italia.
 
 **Transparencia en precios y spread.** El modelo de negocio del oro fraccionado funciona con un spread entre el precio de compra y venta. Un proveedor serio lo muestra antes de que confirmes la operación, no después.
 
@@ -80,7 +80,7 @@ El coste tiene dos componentes principales que conviene entender:
 
 Sí, y es uno de sus usos más inteligentes. El oro fraccionado se adapta bien al ahorro programado: apartar una cantidad fija cada semana o mes y convertirla automáticamente en oro. Esto aplica el principio del promedio del coste — compras más fracción cuando el precio baja y menos cuando sube, suavizando el impacto de la volatilidad a corto plazo.
 
-Para un ahorrador en México cuyo objetivo no es especular sino proteger poder adquisitivo, el ahorro recurrente en oro fraccionado es estructuralmente más sólido que mantener ese mismo dinero en pesos en una cuenta de ahorro bancaria con rendimiento por debajo de la inflación real.
+Para un ahorrador en México cuyo objetivo no es especular sino proteger poder adquisitivo, el ahorro recurrente en oro fraccionado es una forma de diversificar en lugar de mantener todo ese dinero en pesos en una cuenta de ahorro bancaria con rendimiento por debajo de la inflación real.
 
 Puedes leer más sobre los errores más comunes que cometen los inversores en esta clase de activo en nuestra guía de [errores al invertir en oro](/blog/errores-al-invertir-en-oro).
 
@@ -96,7 +96,7 @@ Si el oro está estructurado como activo segregado asignado a tu nombre, no form
 
 ### ¿Puedo perder mi inversión con el oro fraccionado?
 
-El precio del oro fluctúa. A corto plazo puede bajar. Sin embargo, históricamente el oro ha preservado poder adquisitivo a largo plazo mejor que mantener efectivo en monedas con inflación crónica como el peso mexicano. El riesgo principal no es el activo — es elegir un proveedor sin las garantías adecuadas.
+El precio del oro fluctúa. A corto plazo puede bajar. Sin embargo, históricamente el oro ha preservado poder adquisitivo a largo plazo mejor que mantener efectivo en monedas con inflación crónica como el peso mexicano, aunque no siempre ni al mismo ritmo. El riesgo principal no es el activo — es elegir un proveedor sin las garantías adecuadas.
 
 ### ¿Qué diferencia hay entre oro fraccionado y criptomonedas respaldadas por oro?
 
@@ -106,10 +106,10 @@ El [oro tokenizado](/blog/criptomonedas-respaldadas-por-oro) es una forma de oro
 
 Depende de la plataforma. Las más accesibles permiten empezar desde cantidades equivalentes a 1 dólar o menos. El objetivo del formato es precisamente eliminar el mínimo de entrada que históricamente excluía a los pequeños ahorradores del acceso al oro físico.
 
-## Protege tu dinero con oro físico real desde el móvil
+## Ahorra en oro físico real desde el móvil
 
 El oro fraccionado no es un producto nuevo ni experimental — es la versión digital y accesible del mismo activo que los bancos centrales del mundo llevan acumulando históricamente. Los bancos centrales compraron más de 1.000 toneladas de oro en 2024. La diferencia es que hoy cualquier persona puede hacer lo mismo desde su teléfono, en fracciones y sin conocimientos financieros.
 
-Aura Gold es una app que te permite comprar oro físico fraccionado de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, verificable en blockchain y con opción de canje por lingotes. Sin comisiones de custodia, con spread transparente y liquidez inmediata.
+Aura Gold es una app que te permite comprar oro físico fraccionado de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, verificable en blockchain y con opción de canje por lingotes. Sin comisiones de custodia, con una comisión del 1% en cada compra y venta, que ves antes de confirmar. Vendes desde la app en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas.
 
-[Empieza a proteger tu dinero con oro físico real →](/invertir-en-oro-mexico)
+[Empieza a ahorrar en oro físico real →](/invertir-en-oro-mexico)

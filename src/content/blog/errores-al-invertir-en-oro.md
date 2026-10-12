@@ -20,13 +20,13 @@ category: "Educación"
 
 **Por qué es problemático:**
 
-El oro no es una inversión especulativa de alto rendimiento. Su función es preservar valor a largo plazo, no multiplicarlo agresivamente en el corto plazo. Si compras oro esperando ganancias del 50% en un año, te frustrarás.
+El oro no es una inversión especulativa de alto rendimiento. Muchas personas lo usan para diversificar su ahorro a largo plazo, no para multiplicarlo agresivamente en el corto plazo. Si compras oro esperando ganancias del 50% en un año, te frustrarás.
 
 **Datos históricos de rendimiento del oro:**
 
 - Rendimiento anual promedio últimos 20 años: ~8-10%
 - Volatilidad anual típica: ±10-15%
-- Función real: protección contra inflación (4-6% anual)
+- Uso más común: diversificar el ahorro frente a la inflación (4-6% anual)
 
 **Comparado con:**
 
@@ -34,16 +34,16 @@ El oro no es una inversión especulativa de alto rendimiento. Su función es pre
 - Bitcoin: puede subir 200% o caer 70% en meses
 - Bienes raíces: 5-12% anual típico
 
-El oro es el "seguro" de tu cartera, no la "apuesta" de crecimiento.
+El oro es una pieza de diversificación en tu cartera, no la "apuesta" de crecimiento.
 
 **Cómo evitarlo:**
 
-Antes de comprar oro, pregúntate: "¿Busco proteger el valor que ya tengo o busco multiplicar dinero rápidamente?"
+Antes de comprar oro, pregúntate: "¿Busco diversificar lo que ya tengo a largo plazo o busco multiplicar dinero rápidamente?"
 
-- Si tu respuesta es proteger: el oro es para ti
+- Si tu respuesta es diversificar a largo plazo: el oro puede encajar
 - Si tu respuesta es multiplicar rápido: considera acciones, ETFs de crecimiento, emprendimientos (con más riesgo)
 
-Expectativa correcta: El oro te protege de perder poder adquisitivo por inflación. Si la inflación es 5% anual y el oro sube 8%, ganaste 3% real. Eso es éxito, aunque suene "aburrido".
+Expectativa correcta: históricamente, en plazos largos, el precio del oro en pesos ha tendido a subir cuando el peso pierde poder adquisitivo, pero no siempre ni al mismo ritmo. Si la inflación es 5% anual y el oro sube 8%, ganaste 3% real. Eso es éxito, aunque suene "aburrido".
 
 ### Error 2: Comprar oro físico tradicional sin calcular los costos reales
 
@@ -101,7 +101,7 @@ Alternativa moderna: El oro fraccionado digital elimina estos costos:
 - Sin prima de compra excesiva (spread transparente 1-2%)
 - Sin costos de custodia mensuales
 - Sin comisión de venta adicional
-- Liquidez inmediata sin descuentos
+- Venta desde la app, sin descuentos por "compra rápida"
 
 Cuándo sí tiene sentido oro físico tradicional: Si vas a acumular cantidades grandes ($500,000+ MXN), quieres posesión física directa, y tienes custodia segura sin costo (bóveda propia). Si vas por esa vía, compara antes los [costos de guardar oro físico](/blog/donde-guardar-oro-casa-banco-boveda) en casa, banco o bóveda.
 
@@ -184,7 +184,7 @@ Estrategia de compra gradual (DCA - Dollar Cost Averaging):
 
 Ventajas del DCA: promedias precio de compra automáticamente, reduces riesgo de entrar "todo arriba", eliminas ansiedad de timing perfecto, construyes posición sin estrés emocional.
 
-Excepción válida para compra de golpe: Si estás en crisis inmediata (hiperinflación, devaluación acelerada, guerra), comprar todo inmediatamente puede ser correcto porque la protección urgente supera el riesgo de timing. Para situaciones normales, gradual siempre es mejor.
+Excepción válida para compra de golpe: Si estás en crisis inmediata (hiperinflación, devaluación acelerada, guerra), comprar todo inmediatamente puede ser correcto porque la urgencia de diversificar puede pesar más que el riesgo de timing. Para situaciones normales, gradual siempre es mejor.
 
 ### Error 5: Vender oro por pánico ante caídas temporales
 
@@ -192,7 +192,7 @@ Excepción válida para compra de golpe: Si estás en crisis inmediata (hiperinf
 
 **Por qué es problemático:**
 
-El oro es volátil en el corto plazo pero estable en el largo plazo. Las fluctuaciones de ±5-10% en semanas o meses son completamente normales y no indican problema alguno. Entender [por qué sube y baja el precio del oro](/blog/por-que-sube-baja-precio-oro) ayuda a no reaccionar con miedo.
+El oro es volátil en el corto plazo y conviene mirarlo en plazos largos. Las fluctuaciones de ±5-10% en semanas o meses son completamente normales y no indican problema alguno. Entender [por qué sube y baja el precio del oro](/blog/por-que-sube-baja-precio-oro) ayuda a no reaccionar con miedo.
 
 **Volatilidad normal del oro vs otros activos:**
 
@@ -218,7 +218,7 @@ Si vendes cada vez que el oro cae 5%, estarás vendiendo constantemente en pérd
 Reglas anti-pánico para mantener oro:
 - Nunca vendas por caídas menores al 15%: Son fluctuaciones normales
 - Establece horizonte temporal mínimo (3-5 años): No revises precio diariamente
-- Recuerda el propósito: Protección, no trading
+- Recuerda el propósito: Largo plazo, no trading
 - Compara con la alternativa: ¿Dejarlo en pesos perdiendo 4.66% garantizado es mejor?
 
 Cuándo SÍ tiene sentido vender oro:
@@ -233,7 +233,7 @@ Cuándo NO vender:
 - ✗ Un amigo te dijo que "el oro va a caer más"
 - ✗ Quieres "ganar rápido" cambiándote a criptomonedas
 
-Recordatorio clave: El oro protege en horizontes de 1-10 años, no 1-10 semanas. La paciencia es parte de la estrategia.
+Recordatorio clave: El oro se mide en horizontes de 1-10 años, no 1-10 semanas. La paciencia es parte de la estrategia.
 
 ### Error 6: No diversificar (poner todo en oro)
 
@@ -241,7 +241,7 @@ Recordatorio clave: El oro protege en horizontes de 1-10 años, no 1-10 semanas.
 
 **Por qué es problemático:**
 
-El oro es excelente para preservación defensiva, pero no genera flujo de caja (ingresos pasivos), no crece agresivamente como acciones exitosas, y puede tener períodos largos de estancamiento.
+El oro puede ser útil para diversificar, pero no genera flujo de caja (ingresos pasivos), no crece agresivamente como acciones exitosas, y puede tener períodos largos de estancamiento.
 
 Períodos históricos donde el oro tuvo bajo rendimiento:
 - 1980-2000: El oro cayó de $850 a $280 USD/onza (-67% en 20 años)
@@ -295,12 +295,12 @@ Sin plan de salida, tomas decisiones emocionales en momentos de presión. Vendes
 
 Crea plan de liquidación antes de comprar oro:
 
-1. **Define objetivos específicos:** "Acumular $200,000 para enganche de casa en 3 años", "Proteger $100,000 de ahorros contra inflación (plazo indefinido)", "Crear fondo de emergencia secundario de $50,000".
+1. **Define objetivos específicos:** "Acumular $200,000 para enganche de casa en 3 años", "Diversificar $100,000 de ahorros frente a la inflación (plazo indefinido)", "Crear fondo de emergencia secundario de $50,000".
 2. **Establece triggers de venta:** objetivo alcanzado ("Cuando acumule $200,000, vendo todo"), emergencia ("Si necesito más del 50% de mi fondo de emergencia, vendo oro parcial"), rebalanceo ("Si oro supera 40% de mi portafolio total, vendo excedente").
 3. **Define porcentaje intocable vs líquido:** 60% oro "largo plazo" (no tocar por 5+ años), 40% oro "flexible" (puedo usar en 1-3 años si es necesario).
-4. **Establece método de venta:** oro digital (vendo desde app en 30 segundos), oro físico (tengo identificados 2-3 compradores confiables con anticipación).
+4. **Establece método de venta:** oro digital (vendo desde la app en unos minutos y el dinero suele llegar a mi cuenta en 24-48 horas), oro físico (tengo identificados 2-3 compradores confiables con anticipación).
 
-Ejemplo de plan completo: "Invierto $150,000 en oro fraccionado digital. $100,000 (67%) es protección largo plazo que no tocaré por mínimo 5 años. $50,000 (33%) es reserva flexible. Venderé parcial si: (1) necesito cubrir emergencia mayor a $30,000, (2) encuentro oportunidad de inversión excepcional, (3) oro supera 35% de mi portafolio total. Revisaré plan cada 6 meses."
+Ejemplo de plan completo: "Invierto $150,000 en oro fraccionado digital. $100,000 (67%) es ahorro de largo plazo que no tocaré por mínimo 5 años. $50,000 (33%) es reserva flexible. Venderé parcial si: (1) necesito cubrir emergencia mayor a $30,000, (2) encuentro oportunidad de inversión excepcional, (3) oro supera 35% de mi portafolio total. Revisaré plan cada 6 meses."
 
 Ventaja clave: Con plan definido, las decisiones son racionales, no emocionales. Considera también desde el principio los [impuestos al vender oro en México](/blog/fiscalidad-oro-inversion-mexico) para que no te sorprendan.
 
@@ -311,7 +311,7 @@ Conocer los errores no es suficiente. Necesitas un plan de acción concreto para
 **Paso 1: Define tu objetivo real antes de comprar**
 
 Antes de comprar un solo gramo de oro, responde con claridad:
-- ¿Por qué quiero oro? (proteger ahorros contra inflación, diversificar mi portafolio, crear fondo de emergencia secundario, acumular para objetivo específico)
+- ¿Por qué quiero oro? (ahorrar a largo plazo frente a la inflación, diversificar mi portafolio, crear fondo de emergencia secundario, acumular para objetivo específico)
 - ¿En qué horizonte temporal? (corto plazo 1-2 años, mediano plazo 3-5 años, largo plazo 5+ años)
 - ¿Cuánto de mi patrimonio debería estar en oro? (patrimonio total actual, porcentaje objetivo, cantidad objetivo)
 
@@ -335,23 +335,23 @@ Escribe y firma tu compromiso: "Me comprometo a NO vender mi oro por caídas men
 
 Calendario de revisión: cada 6 meses revisar balance general de portafolio, anualmente evaluar si objetivo sigue siendo el mismo, nunca revisar precio del oro diariamente.
 
-Frecuencia correcta de monitoreo: oro para protección cada 6-12 meses; oro para trading cada día (pero esto no es lo que buscas).
+Frecuencia correcta de monitoreo: oro de largo plazo cada 6-12 meses; oro para trading cada día (pero esto no es lo que buscas).
 
 Si después de conocer estos errores quieres empezar con una plataforma que los evita por diseño, en Aura Gold puedes invertir en oro en México por fracciones de gramo, con precio transparente antes de cada compra y custodia en bóvedas en Suiza.
 
-## Empieza a invertir en oro de forma segura con Aura Gold
+## Empieza a invertir en oro con Aura Gold
 
 La diferencia entre invertir bien y cometer errores costosos está en comenzar con las herramientas correctas desde el día 1.
 
 Con Aura Gold evitas automáticamente los errores más comunes:
 
-- ✓ Propósito claro desde el inicio: La app te guía a definir objetivos específicos (protección, ahorro, emergencia)
-- ✓ Sin costos ocultos de custodia: $0 pesos de comisión mensual, solo spread transparente en compra/venta
-- ✓ Oro certificado LBMA garantizado: No puedes recibir oro falso o de menor pureza, todo es 99.99% certificado
+- ✓ Propósito claro desde el inicio: La app te guía a definir objetivos específicos (largo plazo, ahorro, emergencia)
+- ✓ Sin costos ocultos de custodia: $0 pesos de comisión mensual, solo una comisión del 1% en cada compra y venta, que ves antes de confirmar
+- ✓ Barras con estándar LBMA: el oro es Tether Gold (XAUT), en barras que cumplen el estándar Good Delivery de la LBMA, así que no compras metal suelto que tengas que validar
 - ✓ Compra gradual facilitada: Programa compras automáticas recurrentes desde $500 pesos mensuales
-- ✓ Liquidez inmediata anti-pánico: Si necesitas vender (bien o mal), lo haces en 30 segundos y recibes efectivo en 24-48 horas
+- ✓ Venta desde la app: Si necesitas vender (bien o mal), lo haces en unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24-48 horas
 - ✓ Diversificación natural: Invierte por fracciones, no necesitas comprometer todo tu capital de golpe
-- ✓ Plan de salida flexible: Vende todo, parcial, o retira físico cuando alcances tus objetivos
+- ✓ Plan de salida flexible: Vende todo o parcial cuando alcances tus objetivos (el canje por lingotes lo hace Tether Gold: lingote completo, entrega en Suiza, sin fecha fija)
 
 Descarga Aura Gold y empieza a invertir en oro correctamente desde el primer día.
 
@@ -361,11 +361,11 @@ Los errores al invertir en oro son completamente evitables. La mayoría ocurren 
 
 **¿Cuál es el error más costoso al invertir en oro?**
 
-Vender por pánico ante caídas temporales del 5-10%. Cristalizas pérdidas innecesarias en un activo diseñado para largo plazo. La paciencia es parte de la estrategia de protección.
+Vender por pánico ante caídas temporales del 5-10%. Cristalizas pérdidas innecesarias en un activo diseñado para largo plazo. La paciencia es parte de la estrategia de largo plazo.
 
 **¿Es error comprar oro en vez de acciones?**
 
-No es "oro O acciones", es "oro Y acciones". El error es no diversificar. Una cartera balanceada incluye ambos: acciones para crecimiento (60-70%), oro para protección (20-30%).
+No es "oro O acciones", es "oro Y acciones". El error es no diversificar. Una cartera balanceada incluye ambos: acciones para crecimiento (60-70%), oro para diversificar (20-30%).
 
 **¿Cuánto oro es "demasiado oro"?**
 
@@ -377,4 +377,4 @@ El concepto de "caro" en oro es relativo. Si la inflación y riesgo persisten, e
 
 **¿Necesito guardar oro físico en mi casa?**
 
-No, y de hecho es riesgoso (robo, pérdida). El oro fraccionado digital con custodia profesional en bóvedas certificadas elimina este riesgo completamente manteniendo todos los beneficios del oro físico.
+No, y de hecho es riesgoso (robo, pérdida). El oro fraccionado digital con custodia profesional en bóvedas certificadas evita este riesgo manteniendo todos los beneficios del oro físico.

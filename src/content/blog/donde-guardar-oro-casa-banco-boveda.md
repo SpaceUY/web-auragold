@@ -34,7 +34,7 @@ Guardar oro en casa da control total y acceso inmediato, pero traslada todo el r
 
 Sus ventajas son reales: no pagas custodia, tienes el metal a la mano y nadie sabe que lo tienes. El problema aparece con lo que puede salir mal. El robo es el riesgo evidente, pero no el único: incendio, inundación o simplemente no recordar dónde se guardó. Y aquí está el punto que casi nadie verifica hasta que es tarde: la mayoría de los seguros de hogar no cubren el valor total del oro o los metales preciosos salvo que contrates una cobertura específica y declarada. Sin ese respaldo, un robo significa perderlo todo sin compensación.
 
-A esto se suma un riesgo personal: acumular oro en casa puede convertirte a ti y a tu familia en objetivo. **Guardar en casa funciona para cantidades pequeñas y simbólicas; para proteger patrimonio de verdad, se queda corto.** Precisamente subestimar la custodia es uno de los [errores más comunes al invertir en oro](/blog/errores-al-invertir-en-oro). Si te preguntas [si el oro en casa tributa distinto](/blog/fiscalidad-oro-inversion-mexico) que el custodiado, lo explicamos en nuestra guía fiscal.
+A esto se suma un riesgo personal: acumular oro en casa puede convertirte a ti y a tu familia en objetivo. **Guardar en casa funciona para cantidades pequeñas y simbólicas; para guardar montos importantes, se queda corto.** Precisamente subestimar la custodia es uno de los [errores más comunes al invertir en oro](/blog/errores-al-invertir-en-oro). Si te preguntas [si el oro en casa tributa distinto](/blog/fiscalidad-oro-inversion-mexico) que el custodiado, lo explicamos en nuestra guía fiscal.
 
 ## ¿El banco protege el oro que guardo en su caja de seguridad?
 
@@ -72,7 +72,7 @@ Aura Gold te permite tener oro físico real bajo custodia segregada fuera de Mé
 
 **¿Puedo tener custodia profesional sin pagar un lingote entero?** Sí. Los modelos de oro fraccionado con custodia institucional dan acceso a ese nivel de seguridad comprando fracciones de gramo, sin gestionar tú la bóveda.
 
-## Protege tu oro sin complicarte la custodia
+## Guarda tu oro sin complicarte la custodia
 
 La decisión de dónde guardar el oro es, en el fondo, una decisión sobre riesgo: quién responde si algo sale mal. La custodia profesional segregada es la que traslada ese riesgo fuera de ti y de tu casa.
 

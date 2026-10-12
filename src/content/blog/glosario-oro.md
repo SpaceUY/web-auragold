@@ -30,7 +30,7 @@ Este glosario reúne los términos que necesitas entender para invertir en oro c
 
 ### <span id="oro-de-inversion"></span>¿Qué es el oro de inversión?
 
-El oro de inversión es oro de alta pureza (habitualmente 99,5% o superior) adquirido para preservar valor, no para joyería ni uso industrial. Se presenta en lingotes o monedas con peso y pureza certificados. Para el ahorrador mexicano es la forma de exponerse al metal como protección frente a la inflación, sin pagar el sobreprecio de la joyería. Si quieres ir a lo básico, repasamos [qué es el oro como material](/blog/que-es-oro-como-material) y por qué vale tanto.
+El oro de inversión es oro de alta pureza (habitualmente 99,5% o superior) adquirido para preservar valor, no para joyería ni uso industrial. Se presenta en lingotes o monedas con peso y pureza certificados. Para el ahorrador mexicano es la forma de exponerse al metal para diversificar su ahorro frente a la inflación, sin pagar el sobreprecio de la joyería. Si quieres ir a lo básico, repasamos [qué es el oro como material](/blog/que-es-oro-como-material) y por qué vale tanto.
 
 ### <span id="oro-fisico"></span>¿Qué es el oro físico?
 
@@ -108,29 +108,29 @@ El precio spot es el precio internacional del oro para entrega inmediata, la ref
 
 ### <span id="spread"></span>¿Qué es el spread?
 
-El spread es la diferencia entre el precio al que compras oro y el precio al que lo vendes. Es la forma habitual (y transparente) en que una plataforma de oro genera ingresos, en lugar de cobrar comisiones ocultas de custodia. En Aura Gold, por ejemplo, es del 1% por operación, siempre visible antes de confirmar. Un spread claro es señal de un modelo honesto.
+El spread es la diferencia entre el precio al que compras oro y el precio al que lo vendes. Es la forma habitual (y transparente) en que una plataforma de oro genera ingresos, en lugar de cobrar comisiones ocultas de custodia. En Aura Gold, por ejemplo, se cobra una comisión del 1% en cada compra y venta, que ves antes de confirmar. Un spread claro es señal de un modelo honesto.
 
 ### <span id="liquidez"></span>¿Qué es la liquidez?
 
-La liquidez es la facilidad para convertir un activo en dinero sin perder valor. El oro es históricamente uno de los activos más líquidos del mundo, pero la liquidez real depende del formato: vender un lingote guardado en casa lleva tiempo, mientras que vender oro fraccionado desde una app puede ser cuestión de segundos.
+La liquidez es la facilidad para convertir un activo en dinero sin perder valor. El oro es históricamente uno de los activos más líquidos del mundo, pero la liquidez real depende del formato: vender un lingote guardado en casa lleva tiempo, mientras que vender oro fraccionado desde una app puede hacerse en unos minutos, aunque el dinero suele tardar más en llegar a tu banco.
 
 ### <span id="volatilidad"></span>¿Qué es la volatilidad?
 
-La volatilidad mide cuánto y con qué rapidez sube y baja el precio de un activo. El oro tiene una volatilidad moderada: se mueve menos que las criptomonedas o muchas acciones, y por eso se usa como estabilizador de patrimonio. Entender la volatilidad ayuda a no asustarse por movimientos de corto plazo en un activo pensado para el largo plazo.
+La volatilidad mide cuánto y con qué rapidez sube y baja el precio de un activo. El oro tiene una volatilidad moderada: se mueve menos que las criptomonedas o muchas acciones, y por eso muchas personas lo usan para diversificar su patrimonio. Entender la volatilidad ayuda a no asustarse por movimientos de corto plazo en un activo pensado para el largo plazo.
 
 ## Economía, inflación y patrimonio
 
 ### <span id="activo-refugio"></span>¿Qué es un activo refugio?
 
-Un activo refugio es aquel que tiende a conservar o aumentar su valor en épocas de crisis, inflación o incertidumbre. El oro es el activo refugio por excelencia: cuando las monedas pierden poder adquisitivo, suele mantener su valor real. Es la base de por qué se usa como [reserva de valor a largo plazo](/blog/por-que-oro-refugio-valor-guia).
+Un activo refugio es aquel que tiende a conservar o aumentar su valor en épocas de crisis, inflación o incertidumbre. El oro es el activo refugio por excelencia: históricamente, cuando las monedas pierden poder adquisitivo, ha tendido a mantener su valor real, aunque no siempre ni al mismo ritmo. Es la base de por qué se usa como [reserva de valor a largo plazo](/blog/por-que-oro-refugio-valor-guia).
 
 ### <span id="reserva-de-valor"></span>¿Qué es una reserva de valor?
 
-Una reserva de valor es un activo capaz de mantener su poder adquisitivo a lo largo del tiempo. El dinero en efectivo es una mala reserva de valor cuando hay inflación, porque pierde capacidad de compra año tras año. El oro cumple esta función desde hace milenios: no genera intereses, pero conserva valor.
+Una reserva de valor es un activo capaz de mantener su poder adquisitivo a lo largo del tiempo. El dinero en efectivo es una mala reserva de valor cuando hay inflación, porque pierde capacidad de compra año tras año. El oro se ha usado con esta función desde hace milenios: no genera intereses y su precio sube y baja, pero en plazos largos ha tendido a conservar valor.
 
 ### <span id="inflacion"></span>¿Qué es la inflación?
 
-La inflación es el aumento generalizado y sostenido de los precios, que reduce lo que puedes comprar con la misma cantidad de dinero. En México se mide con el INPC. Es el motivo principal por el que ahorrar solo en pesos erosiona tu patrimonio, y por el que el oro se usa como cobertura. Lo vemos en la [evolución de la inflación en México](/blog/evolucion-inflacion-mexico) y en [por qué el oro protege de la inflación](/blog/por-que-el-oro-protege-la-inflacion).
+La inflación es el aumento generalizado y sostenido de los precios, que reduce lo que puedes comprar con la misma cantidad de dinero. En México se mide con el INPC. Es el motivo principal por el que ahorrar solo en pesos erosiona tu patrimonio, y por el que el oro se usa como cobertura. Lo vemos en la [evolución de la inflación en México](/blog/evolucion-inflacion-mexico) y en [el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion).
 
 ### <span id="poder-adquisitivo"></span>¿Qué es el poder adquisitivo?
 
@@ -142,8 +142,8 @@ El INPC (Índice Nacional de Precios al Consumidor) es el indicador oficial que 
 
 ### <span id="devaluacion"></span>¿Qué es la devaluación?
 
-La devaluación es la pérdida de valor de una moneda frente a otras divisas, como el peso frente al dólar. Reduce el poder adquisitivo internacional de tu dinero y suele acompañar a episodios de inflación. Históricamente, en México la devaluación del peso ha impulsado el interés por activos que conservan valor, como el oro.
+La devaluación es la pérdida de valor de una moneda frente a otras divisas, como el peso frente al dólar. Reduce el poder adquisitivo internacional de tu dinero y suele acompañar a episodios de inflación. Históricamente, en México la devaluación del peso ha impulsado el interés por activos que históricamente han tendido a conservar valor, como el oro.
 
-## Empieza a proteger tu dinero con oro real
+## Empieza a ahorrar en oro real
 
 Ahora que dominas los términos, el siguiente paso es aplicarlos. Con Aura Gold inviertes en oro físico real, fraccionado, con custodia profesional y precio transparente, comprando desde el celular.

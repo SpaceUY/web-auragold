@@ -28,7 +28,7 @@ El problema no es la plataforma en sí, sino tres fricciones concretas para el u
 
 **3. La experiencia no es local.** La app existe en español, pero el ecosistema (soporte principal, medios de pago, lógica de producto) está diseñado para el inversor internacional que ya piensa en dólares. No hay pagos locales tipo SPEI ni una experiencia nativa mexicana.
 
-Ninguno de estos puntos hace "mala" a BullionVault. Simplemente la vuelven poco práctica si tu objetivo es empezar en pesos, con $500 o $1,000, y proteger tu ahorro de la inflación sin complicarte.
+Ninguno de estos puntos hace "mala" a BullionVault. Simplemente la vuelven poco práctica si tu objetivo es empezar en pesos, con $500 o $1,000, y ahorrar en oro sin complicarte.
 
 ## Qué mirar al elegir una alternativa para invertir en oro
 
@@ -38,7 +38,7 @@ Antes de comparar plataformas, ten claros los cinco criterios que de verdad afec
 
 **Mínimo real de entrada.** No mires solo el "mínimo teórico", mira desde cuánto es eficiente invertir considerando comisiones y custodia. Una plataforma "sin mínimo" que te cobra custodia fija es cara si inviertes poco.
 
-**Tipo de oro: físico real vs papel.** No es lo mismo poseer oro físico asignado a tu nombre que comprar un ETF (exposición al precio, pero sin oro tuyo) o un CFD (un contrato apalancado donde ni siquiera posees el activo). Para protección patrimonial, quieres oro real segregado. El [oro tokenizado](/blog/criptomonedas-respaldadas-por-oro) es otra vía de oro físico, registrada en blockchain.
+**Tipo de oro: físico real vs papel.** No es lo mismo poseer oro físico asignado a tu nombre que comprar un ETF (exposición al precio, pero sin oro tuyo) o un CFD (un contrato apalancado donde ni siquiera posees el activo). Para ahorrar a largo plazo, quieres oro real segregado. El [oro tokenizado](/blog/criptomonedas-respaldadas-por-oro) es otra vía de oro físico, registrada en blockchain.
 
 **Estructura de comisiones.** Revisa las tres capas: compra/venta (spread o comisión), custodia (idealmente sin cuota mensual fija) y retiro. Una comisión "baja" con custodia cara puede salir más que un spread algo mayor sin cuotas.
 
@@ -118,11 +118,11 @@ En resumen: Goldmoney es legítima y su oro es real, pero su estructura de coste
 | Custodia | Institucional, sin cuota mensual | Bóvedas globales, cuota de custodia | Bóvedas globales, mín. $10 USD/mes | La del fondo | No aplica | Tú (riesgo propio) |
 | Retiro físico | Sí (opcional) | Sí (entregas grandes) | Sí (desde 1 kg oro) | No | No | Ya lo tienes |
 | Idioma/soporte | Español, México | App en español, soporte internacional | Inglés, internacional | Español (según plataforma) | Según bróker | Local |
-| Para proteger ahorro | Sí | Sí | Sí | Parcial | No (especulativo) | Sí |
+| Para ahorro a largo plazo | Sí | Sí | Sí | Parcial | No (especulativo) | Sí |
 
 ## ¿Cuál te conviene según tu perfil?
 
-**Quieres empezar en pesos, con poco dinero, y proteger tu ahorro:** una app de oro fraccionado en pesos como Aura Gold es el encaje más directo. Oro físico real sin el mínimo de $40,000 MXN ni el coste de cambio de divisa.
+**Quieres empezar en pesos, con poco dinero, y ahorrar en oro:** una app de oro fraccionado en pesos como Aura Gold es el encaje más directo. Oro físico real sin el mínimo de $40,000 MXN ni el coste de cambio de divisa.
 
 **Manejas montos altos en dólares y quieres custodia en varias jurisdicciones:** BullionVault o Goldmoney tienen sentido, asumiendo el coste de operar en divisa extranjera. Entre las dos, revisa bien los costes fijos: el mínimo de custodia de $10 USD/mes de Goldmoney penaliza mucho los saldos pequeños.
 
@@ -132,7 +132,7 @@ En resumen: Goldmoney es legítima y su oro es real, pero su estructura de coste
 
 **Quieres el metal en la mano y no te importa la prima ni la custodia propia:** monedas como el Centenario o la Libertad.
 
-## Protege tu dinero con oro físico en pesos, con Aura Gold
+## Ahorra en oro físico en pesos, con Aura Gold
 
 Si llegaste buscando una alternativa a BullionVault en español para México, el motivo real suele ser este: quieres oro físico de verdad, pero en pesos, sin un mínimo alto y sin pelearte con el cambio de divisa. Y si aún dudas entre dejar el dinero donde está o convertirlo, esta comparación de [oro físico frente a las cuentas bancarias](/blog/oro-fisico-vs-cuentas-bancarias) lo desarrolla en detalle.
 
@@ -142,12 +142,12 @@ Aura Gold está pensado exactamente para eso:
 * Compra por fracciones de gramo, sin pagar una pieza completa para empezar
 * Sin comisiones de custodia mensuales
 * Custodia institucional fuera de México, con opción de retiro físico
-* Compra y venta con liquidez rápida, desde tu celular
+* Compra y venta desde tu celular: vendes en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas
 * Experiencia y soporte en español
 
 No necesitas dólares ni $40,000 pesos para empezar a tener oro. Necesitas la plataforma correcta para tu situación.
 
-[Empieza a proteger tu dinero con oro físico real →](/invertir-en-oro-mexico)
+[Empieza a ahorrar en oro físico real →](/invertir-en-oro-mexico)
 
 ## Preguntas frecuentes
 

@@ -55,7 +55,7 @@ El artículo 93, fracción XIX, inciso b) de la Ley del ISR exenta los ingresos 
 
 Con el valor de la UMA vigente desde el 1 de febrero de 2026 (42,794.64 pesos anuales), ese umbral queda en aproximadamente **128,384 pesos de ganancia por año calendario**.
 
-Traducido: si en un año vendes oro y tu ganancia acumulada no supera esa cifra, esa ganancia está exenta de ISR. Para el ahorrador que usa el oro como protección patrimonial y no como operación especulativa de gran volumen, lo más probable es que nunca alcance ese umbral.
+Traducido: si en un año vendes oro y tu ganancia acumulada no supera esa cifra, esa ganancia está exenta de ISR. Para el ahorrador que usa el oro como ahorro de largo plazo y no como operación especulativa de gran volumen, lo más probable es que nunca alcance ese umbral.
 
 Dos precisiones importantes. Primero, el umbral se mide sobre la **ganancia** (ventas menos costo comprobado), no sobre el importe vendido. Segundo, estar exento no siempre significa no declarar: si tus ingresos totales del año por cualquier concepto superan los 500,000 pesos, debes manifestar también los ingresos exentos en tu declaración anual.
 
@@ -86,7 +86,7 @@ La ganancia por vender oro se reporta en la declaración anual de personas físi
 
 Para hacerlo sin fricción conviene tener ordenado, desde el momento de la compra: el comprobante de adquisición (precio y fecha), el comprobante de venta, y el registro de cualquier costo asociado que la ley permita considerar. A diferencia de la venta de un inmueble (donde interviene un notario que retiene el impuesto), en la venta de oro como bien mueble no suele haber un tercero que retenga por ti, así que la responsabilidad de declarar recae directamente en ti.
 
-Mantener esta documentación en orden es, además, una buena práctica de control patrimonial, algo natural para quien usa el oro como [protección frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion) y no como especulación de corto plazo.
+Mantener esta documentación en orden es, además, una buena práctica de control patrimonial, algo natural para quien usa el oro como [ahorro de largo plazo frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion) y no como especulación de corto plazo.
 
 ## ¿Tributa igual el oro que guardo en casa que el oro fraccionado en una app?
 

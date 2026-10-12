@@ -70,11 +70,11 @@ El oro vale por la combinación de cuatro cosas que ningún activo creado por el
 
 **No depende de nadie.** Su valor no descansa en la promesa de un gobierno ni en la solvencia de una empresa. Es valioso por lo que es.
 
-Esas cuatro propiedades (escasez, permanencia, aceptación universal e independencia) son exactamente las que convirtieron al oro en dinero y en reserva de valor mucho antes de que existieran los bancos. Y son las mismas que hoy explican que [el oro proteja frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion): cuando el dinero pierde valor, el oro conserva el suyo porque no se puede imprimir.
+Esas cuatro propiedades (escasez, permanencia, aceptación universal e independencia) son exactamente las que convirtieron al oro en dinero y en reserva de valor mucho antes de que existieran los bancos. Y son las mismas que hoy explican [cómo se comporta el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion): no se puede imprimir, y en plazos largos su precio ha tendido a subir cuando el dinero pierde valor, aunque no siempre ni al mismo ritmo.
 
 ## Del material a la reserva de valor
 
-Entender el oro como material ayuda a entender por qué funciona como protección: es escaso, no se degrada y todo el mundo lo reconoce. Lo que durante siglos fue privilegio de pocos (tener oro físico) hoy cabe en el celular.
+Entender el oro como material ayuda a entender por qué muchas personas lo usan para ahorrar: es escaso, no se degrada y todo el mundo lo reconoce. Lo que durante siglos fue privilegio de pocos (tener oro físico) hoy cabe en el celular.
 
 ## Preguntas frecuentes sobre el oro y su valor
 
@@ -86,8 +86,8 @@ Entender el oro como material ayuda a entender por qué funciona como protecció
 
 **¿Para qué se usa el oro además de la joyería?** En electrónica (conectores que no se corroen), medicina y odontología (es biocompatible), industria aeroespacial (recubrimientos que reflejan la radiación) y como inversión y reserva de valor en personas y bancos centrales.
 
-**¿Por qué el oro es tan caro?** Por una combinación de escasez real, dificultad de extracción, permanencia (no se degrada) y aceptación universal. Al no poder producirse a voluntad, su oferta crece muy poco, y eso sostiene su valor con el tiempo.
+**¿Por qué el oro es tan caro?** Por una combinación de escasez real, dificultad de extracción, permanencia (no se degrada) y aceptación universal. Al no poder producirse a voluntad, su oferta crece muy poco, y eso es parte de lo que sostiene su precio, aunque este sube y baja.
 
-## Empieza a proteger tu ahorro con oro real
+## Empieza a ahorrar en oro real
 
 Ahora que sabes qué es el oro, cómo se formó y por qué vale lo que vale, el siguiente paso es tenerlo. Con Aura Gold [inviertes en ese mismo oro físico real](/invertir-en-oro-mexico), certificado y custodiado, comprando la fracción de gramo que quieras, sin necesidad de un lingote entero ni de guardarlo en casa.

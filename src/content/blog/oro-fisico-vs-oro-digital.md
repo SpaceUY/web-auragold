@@ -48,7 +48,7 @@ Comparemos las tres formas reales de tener oro, sin adornos.
 | Entrada mínima | Precio de 1 pieza completa | Fracciones de gramo | Baja |
 | Divisibilidad | Baja (no vendes media moneda) | Total | Alta |
 | Custodia | Tú (riesgo de robo) | Institucional, asegurada | La del fondo/bróker |
-| Liquidez | Buscar comprador y negociar | Venta inmediata desde el móvil | Alta |
+| Liquidez | Buscar comprador y negociar | Venta desde el móvil, sin buscar comprador | Alta |
 | Prima / comisiones | Prima alta al comprar y revender | Spread transparente, sin cuota de custodia | Comisión anual o coste de CFD |
 | Riesgo principal | Robo y autenticidad al revender | Que no esté bien respaldado (verificable) | No posees oro; CFD apalancado |
 
@@ -56,7 +56,7 @@ Comparemos las tres formas reales de tener oro, sin adornos.
 
 **Oro digital respaldado.** Reúne lo mejor de ambos lados: es oro físico real, pero divisible, líquido y sin que lo custodies en casa. Su único punto sensible es verificar el respaldo 1:1 y la asignación (algo que una plataforma seria demuestra con auditorías y certificación).
 
-**Oro "papel".** Sirve para diversificar una cartera de bolsa, no para tener oro. Con un ETF no posees metal y con un CFD ni siquiera inviertes: especulas con apalancamiento. Si buscas proteger patrimonio, no es la vía.
+**Oro "papel".** Sirve para diversificar una cartera de bolsa, no para tener oro. Con un ETF no posees metal y con un CFD ni siquiera inviertes: especulas con apalancamiento. Si buscas tener oro como ahorro, no es la vía.
 
 ## ¿Qué conviene, oro físico o digital, según tu perfil?
 
@@ -64,7 +64,7 @@ No hay una respuesta única. Depende de qué valoras y de cómo inviertes.
 
 **Si comparas todo con datos antes de decidir:** mira el coste total real, no el titular. El físico tradicional suele salir caro por prima y custodia; el papel te cobra comisiones sin darte metal; el digital respaldado tiende a ganar en coste-beneficio para importes pequeños y medianos, siempre que confirmes el respaldo 1:1. Deciden los números, no el eslogan.
 
-**Si quieres invertir fácil desde el celular:** el oro digital respaldado es tu encaje natural. Compras en pesos, desde cantidades mínimas, vendes en segundos y te ahorras el riesgo de guardar metal en casa. Es oro real con la operativa de una app.
+**Si quieres invertir fácil desde el celular:** el oro digital respaldado es tu encaje natural. Compras en pesos, desde cantidades mínimas, vendes desde la app y te ahorras el riesgo de guardar metal en casa. Es oro real con la operativa de una app.
 
 **Si valoras la posesión física por encima de todo:** el oro físico tradicional tiene sentido, asumiendo la prima, la custodia propia y la menor liquidez. Muchos combinan las dos vías (la app para el día a día y algo de metal "en la mano").
 
@@ -80,8 +80,8 @@ Con Aura Gold inviertes en oro físico fraccionado (metal real, certificado y cu
 
 - Oro físico real respaldado, comprado en pesos mexicanos
 - Compra por fracciones de gramo, sin comisiones de custodia mensuales
-- Divisible y líquido: compra y vende desde el móvil en segundos
-- Custodia institucional y opción de retiro físico cuando quieras
+- Divisible y líquido: vendes desde el móvil en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas
+- Custodia institucional y opción de canje por lingotes completos a través de Tether Gold, con entrega en Suiza
 - Transparencia en respaldo y precios (nada de oro "papel")
 
 La pregunta nunca fue físico o digital. Fue oro real o no. Elige oro real, y que la tecnología solo te lo ponga fácil.

@@ -38,7 +38,7 @@ Para un ahorrador en México esto tiene una capa extra clave: el precio del oro 
 
 La inflación influye porque el oro se usa como cobertura del poder adquisitivo. Cuando sube la inflación o crece el miedo a que las monedas pierdan valor, los inversores compran oro para preservar su capacidad de compra, y esa demanda sostiene el precio.
 
-Esta es la función histórica del oro y la razón de fondo por la que se le llama activo refugio: mantiene su valor real cuando el dinero lo pierde. Lo desarrollamos en [por qué el oro protege de la inflación](/blog/por-que-el-oro-protege-la-inflacion), un patrón visible en la [evolución de la inflación en México](/blog/evolucion-inflacion-mexico). No es una garantía de rentabilidad, sino de conservación de valor a lo largo del tiempo. Puedes comprobarlo con tus propios números en la [calculadora de inflación vs oro](/calculadora-inflacion-oro).
+Esta es la función histórica del oro y la razón de fondo por la que se le llama activo refugio: históricamente, en plazos largos, su precio ha tendido a subir cuando el dinero pierde poder adquisitivo, pero no siempre ni al mismo ritmo. Lo desarrollamos en [el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion), un patrón visible en la [evolución de la inflación en México](/blog/evolucion-inflacion-mexico). No es una garantía de rentabilidad ni de conservación de valor. Puedes comprobarlo con tus propios números en la [calculadora de inflación vs oro](/calculadora-inflacion-oro).
 
 ## ¿Por qué los bancos centrales influyen tanto en el precio del oro?
 
@@ -60,9 +60,9 @@ Además, después de subidas grandes aparece un riesgo de dos direcciones: los m
 
 ## ¿Qué significa la volatilidad del oro para un ahorrador en México?
 
-Significa que verás subidas y bajadas, pero más suaves que en otros activos. El oro tiene una volatilidad moderada: se mueve menos que las criptomonedas y que muchas acciones, y por eso se usa para estabilizar patrimonio, no para especular a corto plazo.
+Significa que verás subidas y bajadas, pero más suaves que en otros activos. El oro tiene una volatilidad moderada: se mueve menos que las criptomonedas y que muchas acciones, y por eso se usa para diversificar patrimonio, no para especular a corto plazo.
 
-La conclusión práctica para quien ahorra es no confundir ruido con tendencia. El oro es un activo pensado para el mediano y largo plazo, donde su función es conservar valor frente a la inflación y la devaluación, no ganar en una semana. Reaccionar a cada movimiento diario suele ser el peor enfoque: entrar y salir constantemente solo acumula costes. Si entiendes por qué se mueve el precio, dejas de temer la volatilidad y empiezas a usar el oro para lo que sirve.
+La conclusión práctica para quien ahorra es no confundir ruido con tendencia. El oro es un activo pensado para el mediano y largo plazo, donde muchas personas lo usan para diversificar frente a la inflación y la devaluación, no para ganar en una semana. Reaccionar a cada movimiento diario suele ser el peor enfoque: entrar y salir constantemente solo acumula costes. Si entiendes por qué se mueve el precio, dejas de temer la volatilidad y empiezas a usar el oro para lo que sirve.
 
 ## Preguntas frecuentes sobre el precio del oro
 
@@ -74,8 +74,8 @@ La conclusión práctica para quien ahorra es no confundir ruido con tendencia. 
 
 **¿Por qué el precio del oro en pesos sube aunque el oro no suba en dólares?** Porque el precio en pesos depende del precio internacional en dólares y del tipo de cambio USD/MXN. Si el peso se devalúa, el oro se encarece en pesos aunque su precio en dólares se mantenga.
 
-**¿El oro es muy volátil?** Tiene volatilidad moderada: se mueve, pero históricamente menos que las criptomonedas o muchas acciones. Está pensado como activo de conservación de valor a largo plazo.
+**¿El oro es muy volátil?** Tiene volatilidad moderada: se mueve, pero históricamente menos que las criptomonedas o muchas acciones. Se suele usar como activo de largo plazo para diversificar.
 
-## Protege tu ahorro con un activo pensado para el largo plazo
+## Ahorra en oro, un activo pensado para el largo plazo
 
-Entender por qué se mueve el precio del oro es el primer paso para usarlo bien: como refugio frente a la inflación y la devaluación, no como apuesta de corto plazo. Aura Gold te permite [invertir en oro físico real](/invertir-en-oro-mexico), comprando la fracción de gramo que quieras, con precio transparente y desde el celular.
+Entender por qué se mueve el precio del oro es el primer paso para usarlo bien: para diversificar frente a la inflación y la devaluación, no como apuesta de corto plazo. Aura Gold te permite [invertir en oro físico real](/invertir-en-oro-mexico), comprando la fracción de gramo que quieras, con precio transparente y desde el celular.
