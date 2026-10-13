@@ -105,7 +105,7 @@ Puedes comenzar con $50-$100 pesos como primera prueba, $500-$1,000 mensuales co
 
 ## Empieza hoy: convierte tus pesos en oro
 
-Con Aura Gold puedes convertir tus pesos en oro físico certificado, comprando fracciones de gramo: oro físico real de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, sin comisiones de custodia mensuales, venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24-48 horas), activo segregado legalmente a tu nombre, una comisión del 1% en cada compra y venta que ves antes de confirmar, y retiro físico opcional.
+Con Aura Gold puedes convertir tus pesos en oro físico certificado, comprando fracciones de gramo: oro físico real de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, sin comisiones de custodia mensuales, venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24 a 48 horas hábiles), activo segregado legalmente a tu nombre, una comisión del 1% en cada compra y venta que ves antes de confirmar, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre oro e inflación
 
@@ -135,4 +135,4 @@ Sí, si es oro físico respaldado y certificado (LBMA). No confundir con criptom
 
 **¿Qué pasa si necesito el dinero urgentemente?**
 
-En Aura Gold vendes tu oro desde la app en unos minutos, y el dinero normalmente llega a tu cuenta bancaria en 24-48 horas.
+En Aura Gold vendes tu oro desde la app en unos minutos, y el dinero normalmente llega a tu cuenta bancaria en 24 a 48 horas hábiles.

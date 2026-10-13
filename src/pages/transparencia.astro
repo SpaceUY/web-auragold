@@ -7,6 +7,7 @@ import { COMMISSION_LABEL, COMMISSION_PERCENT, EXAMPLE_PRICE_MXN, exampleBuyPric
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 import RiskWarning from "../components/ui/RiskWarning.astro";
+import { BANK_DEPOSIT_TIME } from "../data/sale";
 
 const faqItems = [
   {
@@ -27,7 +28,7 @@ const faqItems = [
   {
     question: "¿Puedo sacar mi dinero cuando quiera?",
     answer:
-      "Sí. No hay plazos de permanencia ni penalizaciones. Cuando decides vender: pulsas 'vender' en la app, confirmas el precio visible antes de ejecutar, y el dinero se deposita en tu cuenta bancaria en 24 a 48 horas hábiles.",
+      `Sí. No hay plazos de permanencia ni penalizaciones. Cuando decides vender: pulsas 'vender' en la app, confirmas el precio visible antes de ejecutar, y el depósito en tu cuenta bancaria suele tardar ${BANK_DEPOSIT_TIME}.`,
   },
   {
     question: "¿Cuánto pierdo si entro y salgo en una semana?",

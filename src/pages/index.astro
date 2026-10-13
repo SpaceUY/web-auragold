@@ -14,6 +14,7 @@ import { authors } from "../data/authors";
 import AppStartLink from "../components/ui/AppStartLink.astro";
 import CostSummary from "../components/ui/CostSummary.astro";
 import { COMMISSION_LABEL, REDEMPTION_FEE_LABEL } from "../data/costs";
+import { BANK_DEPOSIT_TIME, BANK_DEPOSIT_TIME_SHORT } from "../data/sale";
 
 // Últimos contenidos del blog (3 más recientes)
 const latestPosts = (await getCollection("blog"))
@@ -66,7 +67,7 @@ const steps = [
     iconAlt: "Lingotes de oro apilados - vende tu oro desde la app",
     title: "Vende cuando lo necesites",
     description: "Vende tu oro desde la app y recibe el dinero en tu cuenta bancaria.",
-    detail: "Vendes en unos minutos desde la app y recibes el efectivo en tu cuenta en 24-48 horas.",
+    detail: `Vendes en unos minutos desde la app; el depósito en tu cuenta suele tardar ${BANK_DEPOSIT_TIME}.`,
   },
 ];
 
@@ -98,7 +99,7 @@ const comparisonRows = [
   {
     option: "Aura Gold",
     goal: "Ahorro en oro, con venta desde la app",
-    liquidity: { ok: true, text: "Flexible (24-48 hrs)" },
+    liquidity: { ok: true, text: `Flexible (${BANK_DEPOSIT_TIME_SHORT})` },
     complexity: { ok: true, text: "Ultra simple (compra fraccionada)" },
     highlight: true,
   },
@@ -126,7 +127,7 @@ const benefits = [
     title: "Vende cuando quieras",
     tagline: "Venta en minutos",
     description:
-      "Vendes tu oro desde la app en unos minutos. El dinero se deposita en tu cuenta bancaria en 24-48 horas, sin trámites complejos.",
+      `Vendes tu oro desde la app en unos minutos. El depósito en tu cuenta bancaria suele tardar ${BANK_DEPOSIT_TIME}, sin trámites complejos.`,
   },
   {
     icon: '<rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>',
@@ -194,7 +195,7 @@ const faqItems = [
   {
     question: "¿Qué tan rápido puedo tener mi dinero si vendo mi oro?",
     answer:
-      "Vendes tu oro desde la app en unos minutos. Una vez realizada la venta, el depósito en tu cuenta bancaria suele completarse en un plazo aproximado de 24 a 48 horas, dependiendo de los tiempos bancarios. La idea es que tengas liquidez sin fricciones ni trámites complejos.",
+      `Vendes tu oro desde la app en unos minutos. Una vez realizada la venta, el depósito en tu cuenta bancaria suele completarse en ${BANK_DEPOSIT_TIME}, dependiendo de los tiempos bancarios. La idea es que tengas liquidez sin fricciones ni trámites complejos.`,
   },
   {
     question: "¿Aura Gold es cripto?",

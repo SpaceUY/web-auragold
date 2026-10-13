@@ -126,7 +126,7 @@ De las alternativas analizadas, el oro fraccionado digital combina accesibilidad
 
 **Comparativa de barreras de entrada:** CETES requiere cuenta Cetesdirecto + $100 pesos mínimo; acciones requieren cuenta de inversión + conocimiento del mercado + $500-$1,000 mínimo; bienes raíces requieren $500,000+ MXN; oro fraccionado requiere solo celular y se compra por fracciones de gramo.
 
-Con Aura Gold puedes [empezar a ahorrar en oro hoy mismo](/invertir-en-oro-mexico): oro físico de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, compra por fracciones de gramo sin comisiones de custodia mensuales, venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24-48 horas), activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
+Con Aura Gold puedes [empezar a ahorrar en oro hoy mismo](/invertir-en-oro-mexico): oro físico de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, compra por fracciones de gramo sin comisiones de custodia mensuales, venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24 a 48 horas hábiles), activo segregado legalmente a tu nombre, transparencia total en precios, y retiro físico opcional.
 
 ## Preguntas frecuentes sobre alternativas al efectivo
 

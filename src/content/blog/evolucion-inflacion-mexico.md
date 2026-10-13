@@ -88,7 +88,7 @@ Si quieres ver cómo ha evolucionado el valor del oro frente al peso mexicano en
 
 El primer paso, siempre, es el mismo: entender qué está pasando con el dinero que ya tienes.
 
-Compra oro físico real por fracciones de gramo, directo desde tu celular. Sin comisiones de custodia, con venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24-48 horas) y retiro físico opcional.
+Compra oro físico real por fracciones de gramo, directo desde tu celular. Sin comisiones de custodia, con venta desde la app en unos minutos (el dinero suele llegar a tu cuenta bancaria en 24 a 48 horas hábiles) y retiro físico opcional.
 
 ## Fuentes
 

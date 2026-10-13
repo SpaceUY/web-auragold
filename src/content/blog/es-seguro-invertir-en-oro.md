@@ -72,7 +72,7 @@ Con Aura Gold conviertes el miedo en tranquilidad con señales verificables, no 
 - Oro físico real certificado (estándar LBMA), no "oro papel"
 - Activo segregado a tu nombre y custodia institucional fuera de México
 - Respaldo 1:1 y transparencia en precios (una comisión del 1% en cada compra y venta, que ves antes de confirmar)
-- Compra por fracciones de gramo, sin comisiones de custodia; vendes desde la app en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas
+- Compra por fracciones de gramo, sin comisiones de custodia; vendes desde la app en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24 a 48 horas hábiles
 - Opción de canje por lingotes completos a través de Tether Gold, con entrega en Suiza
 
 El oro lleva miles de años usándose como reserva de valor. Tu trabajo es solo elegir bien dónde y con quién lo tienes.
