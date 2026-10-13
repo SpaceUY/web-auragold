@@ -1,0 +1,94 @@
+---
+// WEB-012A: conecta el módulo de OpenPanel del PDF (src/lib/openpanel, Anexo B)
+// con el banner de cookies y con la campaña guardada por WEB-002. El SDK se
+// importa recién cuando el visitante acepta analítica; sin banner no hace nada.
+// La grabación de sesiones queda apagada (replayReady=false): es WEB-012B.
+// Detalle: docs/web-012a-openpanel.md
+---
+
+<script>
+  import { attachAuraAnalytics } from "../../lib/openpanel/bootstrap.js";
+
+  interface ConsentChoice {
+    analytics: boolean;
+    ads: boolean;
+    replay: boolean;
+  }
+
+  interface ConsentApi {
+    get(): ConsentChoice | null;
+    subscribe(listener: (choice: ConsentChoice) => void): () => void;
+  }
+
+  interface PanelConsent {
+    analytics: boolean;
+    replay: boolean;
+  }
+
+  type EventProperties = Record<string, string | number>;
+
+  // Se accede con un cast en vez de declarar window global: así no choca con las
+  // declaraciones de WEB-001 y WEB-002 cuando los tres estén mergeados.
+  type AnalyticsWindow = Window & {
+    auraConsent?: ConsentApi;
+    auraAnalytics?: { track(name: string, properties?: EventProperties): unknown };
+  };
+  const analyticsWindow = window as AnalyticsWindow;
+
+  const CAMPAIGN_FIELDS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+
+  function toPanelConsent(choice: ConsentChoice | null): PanelConsent {
+    return { analytics: choice?.analytics === true, replay: choice?.replay === true };
+  }
+
+  // Contexto validado: entorno + la última campaña que guardó WEB-002 (cookie aura_acq).
+  // El módulo del PDF vuelve a filtrar todo con su lista de campos permitidos.
+  function readValidatedContext(): EventProperties {
+    const context: EventProperties = { environment: "production" };
+    const match = document.cookie.match(/(?:^|;\s*)aura_acq=([^;]*)/);
+    if (!match) return context;
+    try {
+      const campaign = JSON.parse(decodeURIComponent(match[1]))?.last_non_direct ?? {};
+      for (const field of CAMPAIGN_FIELDS) {
+        if (typeof campaign[field] === "string") context[field] = campaign[field];
+      }
+    } catch {
+      // Cookie ilegible: se manda solo el entorno.
+    }
+    return context;
+  }
+
+  function whenConsentReady(callback: (api: ConsentApi) => void): void {
+    if (analyticsWindow.auraConsent) {
+      callback(analyticsWindow.auraConsent);
+      return;
+    }
+    window.addEventListener(
+      "auraconsent:ready",
+      () => {
+        if (analyticsWindow.auraConsent) callback(analyticsWindow.auraConsent);
+      },
+      { once: true },
+    );
+  }
+
+  try {
+    whenConsentReady((consentApi) => {
+      const { analytics } = attachAuraAnalytics({
+        publicClientId: import.meta.env.PUBLIC_OPENPANEL_CLIENT_ID ?? "",
+        production: import.meta.env.PROD,
+        replayReady: false,
+        readConsent: () => toPanelConsent(consentApi.get()),
+        subscribeConsent: (callback: (choice: PanelConsent) => void) =>
+          consentApi.subscribe((choice) => callback(toPanelConsent(choice))),
+        readValidatedContext,
+      });
+      // El escuchador de WEB-001 (CtaTracking) manda acá los mismos clics que al dataLayer.
+      analyticsWindow.auraAnalytics = {
+        track: (name, properties) => analytics.track(name, properties),
+      };
+    });
+  } catch {
+    // La analítica nunca puede frenar la página.
+  }
+</script>

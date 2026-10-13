@@ -10,6 +10,9 @@ const footerLinks = [
   { label: "Transparencia", href: "/transparencia" },
   { label: "Soporte", href: "/politicas-de-privacidad#soporte" },
 ];
+
+// WEB-012A: OpenPanel. El Footer está en todas las páginas.
+import OpenPanelAnalytics from "../analytics/OpenPanelAnalytics.astro";
 ---
 
 <footer class="bg-ag-black border-t border-white/10">
@@ -59,3 +62,5 @@ const footerLinks = [
     </div>
   </div>
 </footer>
+
+<OpenPanelAnalytics />
