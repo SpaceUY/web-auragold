@@ -4,6 +4,8 @@ import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { satteri } from '@astrojs/markdown-satteri';
+import { tableScrollPlugin } from './src/lib/markdown/table-scroll.mjs';
 
 // lastmod honesto: fecha real de cada post desde su frontmatter (pubDate).
 // Google usa lastmod para priorizar recrawl; no ponemos "hoy" en todo.
@@ -50,6 +52,8 @@ export default defineConfig({
   adapter: vercel(),
   // El CSS del sitio pesa ~10 KB: inline evita la solicitud que bloqueaba el renderizado.
   build: { inlineStylesheets: 'always' },
+  // Las tablas de los posts scrollean dentro de su caja en celular, no la página.
+  markdown: { processor: satteri({ hastPlugins: [tableScrollPlugin] }) },
   integrations: [
     sitemap({
       serialize(item) {

@@ -107,6 +107,30 @@
   }
 }
 
+/* Tablas del blog: el scroll horizontal queda dentro de su caja (src/lib/markdown/table-scroll.mjs),
+   no en la página. Los márgenes pasan de la tabla a la caja para que el espacio con lo de
+   alrededor siga igual: 2em sobre el text-sm de la tabla (28px), y sin margen arriba después
+   de un subtítulo, como typography hace con h2 + *, h3 + * y h4 + *. Fuera de @layer para
+   ganarle al estilo de typography. */
+.prose .table-scroll {
+  overflow-x: auto;
+  font-size: 0.875rem;
+  margin-block: 2em;
+}
+
+.prose :where(h2, h3, h4) + .table-scroll {
+  margin-top: 0;
+}
+
+.prose .table-scroll > table {
+  margin-block: 0;
+}
+
+.prose .table-scroll:focus-visible {
+  outline: 2px solid var(--color-ag-gold);
+  outline-offset: 4px;
+}
+
 /* ─────────────────────────────────────────────
    Scroll reveal — entrada suave de secciones al hacer scroll.
    Replica la entrada whileInView de Framer del sitio original.
