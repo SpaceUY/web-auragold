@@ -298,7 +298,7 @@ Crea plan de liquidación antes de comprar oro:
 1. **Define objetivos específicos:** "Acumular $200,000 para enganche de casa en 3 años", "Diversificar $100,000 de ahorros frente a la inflación (plazo indefinido)", "Crear fondo de emergencia secundario de $50,000".
 2. **Establece triggers de venta:** objetivo alcanzado ("Cuando acumule $200,000, vendo todo"), emergencia ("Si necesito más del 50% de mi fondo de emergencia, vendo oro parcial"), rebalanceo ("Si oro supera 40% de mi portafolio total, vendo excedente").
 3. **Define porcentaje intocable vs líquido:** 60% oro "largo plazo" (no tocar por 5+ años), 40% oro "flexible" (puedo usar en 1-3 años si es necesario).
-4. **Establece método de venta:** oro digital (vendo desde la app en unos minutos y el dinero suele llegar a mi cuenta en 24-48 horas), oro físico (tengo identificados 2-3 compradores confiables con anticipación).
+4. **Establece método de venta:** oro digital (vendo desde la app en unos minutos y el dinero suele llegar a mi cuenta en 24 a 48 horas hábiles), oro físico (tengo identificados 2-3 compradores confiables con anticipación).
 
 Ejemplo de plan completo: "Invierto $150,000 en oro fraccionado digital. $100,000 (67%) es ahorro de largo plazo que no tocaré por mínimo 5 años. $50,000 (33%) es reserva flexible. Venderé parcial si: (1) necesito cubrir emergencia mayor a $30,000, (2) encuentro oportunidad de inversión excepcional, (3) oro supera 35% de mi portafolio total. Revisaré plan cada 6 meses."
 
@@ -349,7 +349,7 @@ Con Aura Gold evitas automáticamente los errores más comunes:
 - ✓ Sin costos ocultos de custodia: $0 pesos de comisión mensual, solo una comisión del 1% en cada compra y venta, que ves antes de confirmar
 - ✓ Barras con estándar LBMA: el oro es Tether Gold (XAUT), en barras que cumplen el estándar Good Delivery de la LBMA, así que no compras metal suelto que tengas que validar
 - ✓ Compra gradual facilitada: Programa compras automáticas recurrentes desde $500 pesos mensuales
-- ✓ Venta desde la app: Si necesitas vender (bien o mal), lo haces en unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24-48 horas
+- ✓ Venta desde la app: Si necesitas vender (bien o mal), lo haces en unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24 a 48 horas hábiles
 - ✓ Diversificación natural: Invierte por fracciones, no necesitas comprometer todo tu capital de golpe
 - ✓ Plan de salida flexible: Vende todo o parcial cuando alcances tus objetivos (el canje por lingotes lo hace Tether Gold: lingote completo, entrega en Suiza, sin fecha fija)
 

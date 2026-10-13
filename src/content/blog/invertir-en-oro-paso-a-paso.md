@@ -121,7 +121,7 @@ Destina un porcentaje fijo de tus ingresos mensuales a oro, tratándolo como un 
 
 ## Da el primer paso: empieza a ahorrar en oro hoy
 
-Con Aura Gold puedes empezar a invertir en oro físico certificado comprando fracciones de gramo: oro físico real de Tether Gold (XAUT), custodiado en bóvedas en Suiza, sin comisiones de custodia mensuales, compra y venta desde tu celular (vendes en unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24-48 horas), activo segregado legalmente a tu nombre, opción de canje por lingotes a través de Tether Gold (lingote completo, entrega en Suiza, sin fecha fija), y transparencia total en precios y costos.
+Con Aura Gold puedes empezar a invertir en oro físico certificado comprando fracciones de gramo: oro físico real de Tether Gold (XAUT), custodiado en bóvedas en Suiza, sin comisiones de custodia mensuales, compra y venta desde tu celular (vendes en unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24 a 48 horas hábiles), activo segregado legalmente a tu nombre, opción de canje por lingotes a través de Tether Gold (lingote completo, entrega en Suiza, sin fecha fija), y transparencia total en precios y costos.
 
 ## Preguntas frecuentes sobre cómo invertir en oro
 
@@ -163,4 +163,4 @@ La recomendación clásica es 5-15% de tu patrimonio líquido, hasta 20-25% si e
 
 **¿Puedo sacar mi dinero rápidamente si necesito liquidez?**
 
-En plataformas modernas de oro fraccionado, puedes vender tu oro desde la app. En Aura Gold la venta toma unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24-48 horas.
+En plataformas modernas de oro fraccionado, puedes vender tu oro desde la app. En Aura Gold la venta toma unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24 a 48 horas hábiles.

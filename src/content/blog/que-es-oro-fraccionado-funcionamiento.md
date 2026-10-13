@@ -110,6 +110,6 @@ Depende de la plataforma. Las más accesibles permiten empezar desde cantidades 
 
 El oro fraccionado no es un producto nuevo ni experimental — es la versión digital y accesible del mismo activo que los bancos centrales del mundo llevan acumulando históricamente. Los bancos centrales compraron más de 1.000 toneladas de oro en 2024. La diferencia es que hoy cualquier persona puede hacer lo mismo desde su teléfono, en fracciones y sin conocimientos financieros.
 
-Aura Gold es una app que te permite comprar oro físico fraccionado de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, verificable en blockchain y con opción de canje por lingotes. Sin comisiones de custodia, con una comisión del 1% en cada compra y venta, que ves antes de confirmar. Vendes desde la app en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas.
+Aura Gold es una app que te permite comprar oro físico fraccionado de Tether Gold (XAUT), en barras con estándar LBMA custodiadas en bóvedas en Suiza, verificable en blockchain y con opción de canje por lingotes. Sin comisiones de custodia, con una comisión del 1% en cada compra y venta, que ves antes de confirmar. Vendes desde la app en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24 a 48 horas hábiles.
 
 [Empieza a ahorrar en oro físico real →](/invertir-en-oro-mexico)

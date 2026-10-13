@@ -83,7 +83,7 @@ Sí, si la plataforma respalda cada fracción 1:1 con metal certificado (pureza 
 
 ### ¿Puedo vender rápido mi oro fraccionado si necesito el dinero?
 
-Sí. En una app de oro fraccionado vendes la porción que quieras desde el celular en unos minutos, y el dinero llega después a tu cuenta bancaria (en Aura Gold, normalmente en 24-48 horas). No tienes que buscar comprador ni negociar precio como pasaría con una moneda o un lingote físico.
+Sí. En una app de oro fraccionado vendes la porción que quieras desde el celular en unos minutos, y el dinero llega después a tu cuenta bancaria (en Aura Gold, normalmente en 24 a 48 horas hábiles). No tienes que buscar comprador ni negociar precio como pasaría con una moneda o un lingote físico.
 
 ## Compra oro desde $1 con Aura Gold
 

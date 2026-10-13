@@ -80,7 +80,7 @@ Con Aura Gold inviertes en oro físico fraccionado (metal real, certificado y cu
 
 - Oro físico real respaldado, comprado en pesos mexicanos
 - Compra por fracciones de gramo, sin comisiones de custodia mensuales
-- Divisible y líquido: vendes desde el móvil en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas
+- Divisible y líquido: vendes desde el móvil en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24 a 48 horas hábiles
 - Custodia institucional y opción de canje por lingotes completos a través de Tether Gold, con entrega en Suiza
 - Transparencia en respaldo y precios (nada de oro "papel")
 

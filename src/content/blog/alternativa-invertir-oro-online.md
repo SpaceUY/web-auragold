@@ -142,7 +142,7 @@ Aura Gold está pensado exactamente para eso:
 * Compra por fracciones de gramo, sin pagar una pieza completa para empezar
 * Sin comisiones de custodia mensuales
 * Custodia institucional fuera de México, con opción de retiro físico
-* Compra y venta desde tu celular: vendes en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24-48 horas
+* Compra y venta desde tu celular: vendes en unos minutos y el dinero suele llegar a tu cuenta bancaria en 24 a 48 horas hábiles
 * Experiencia y soporte en español
 
 No necesitas dólares ni $40,000 pesos para empezar a tener oro. Necesitas la plataforma correcta para tu situación.
