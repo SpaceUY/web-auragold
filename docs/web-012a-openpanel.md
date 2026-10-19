@@ -38,6 +38,24 @@ No tuvimos el zip `openpanel-integration-source.zip`. El código sale del Anexo 
     WEB-002 (cookie `aura_acq`), si existe.
 - **Grabación de sesiones:** apagada (`replayReady=false`). Es WEB-012B.
 
+### WEB-012B: preparación del replay
+
+El módulo queda listo para grabar, pero `replayReady` sigue en `false`. Antes de
+encenderlo hay que comprobar en OpenPanel que las sesiones se guardan y se pueden
+reproducir con el texto y los campos enmascarados.
+
+- **Visitas con campaña:** antes se excluía cualquier visita con query, y por eso
+  quedaba afuera todo el tráfico de anuncios. Ahora se graba si la query solo trae
+  UTM y `gclid` válidos (la misma validación de WEB-002). Un parámetro distinto, un
+  valor rechazado o un hash dejan la visita sin grabación.
+- **URLs sin query:** rrweb guarda la URL de la página y los atributos de los
+  links, como el `referrer` de Play que lleva `gclid`. Antes de enviar cada
+  fragmento se quitan la query y el hash de toda URL absoluta. Un fragmento
+  ilegible se descarta.
+- **Sin cambios:** consentimiento de grabación, páginas permitidas (`/` y
+  `/invertir-en-oro-mexico`), enmascarado, bloqueo de formularios y exclusión de
+  `app.auragold.io`.
+
 ## Pruebas (`npm test`)
 
 | Prueba | Resultado |
@@ -49,6 +67,11 @@ No tuvimos el zip `openpanel-integration-source.zip`. El código sale del Anexo 
 | Caída de la API (el import falla): no rompe y queda inactivo | Pasa |
 | Eventos y campos: solo los permitidos; se descartan email, teléfono y eventos fuera de la lista | Pasa |
 | Entorno: no se activa sin https, fuera de los dominios de Aura, sin Client ID o fuera de producción | Pasa |
+| Replay: graba visitas con UTM y `gclid` válidos en las páginas permitidas | Pasa |
+| Replay: no graba con otros parámetros, valores rechazados, hash u otras páginas | Pasa |
+| Replay: los fragmentos no llevan query ni hash de ninguna URL | Pasa |
+| Replay: un fragmento ilegible se descarta | Pasa |
+| Replay: sin consentimiento de grabación no se envían fragmentos | Pasa |
 
 **Las pruebas usan un navegador y un SDK simulados: no alcanzan para decir que
 funciona en producción**, como aclara el PDF.
