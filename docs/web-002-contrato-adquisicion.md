@@ -1,13 +1,14 @@
 # WEB-002: contrato de adquisición entre la landing, la webapp y Android
 
-La landing (`auragold.io`) guarda la campaña que trajo a cada visitante y la
+La landing (`auragold.io`) guarda el origen no directo que trajo a cada visitante y lo
 entrega de dos formas:
 
 - **A la webapp** (`app.auragold.io`): una cookie `aura_acq` en `.auragold.io`.
 - **A la app Android**: el parámetro `referrer` del link a Google Play
   (Install Referrer).
 
-Lo hace `src/components/analytics/AcquisitionHandoff.astro`.
+Lo hace `src/components/analytics/AcquisitionHandoff.astro`, usando el clasificador
+validado de `src/lib/acquisition/context.mjs`.
 
 ## 1. Consentimiento
 
@@ -18,7 +19,7 @@ Todo depende del banner de cookies (`window.auraConsent`, ver
 | --- | --- |
 | Todavía no eligió, o no hay banner | Nada. Los links a Play quedan como están |
 | Rechazó analítica | Nada, y se borra `aura_acq` si existía |
-| Aceptó analítica | Los UTM permitidos |
+| Aceptó analítica | UTM permitidos o fuente orgánica/referida, más contexto de entrada permitido |
 | Aceptó analítica y publicidad | Los UTM permitidos y `gclid` |
 | Revocó publicidad | Se quita `gclid` de la cookie |
 
@@ -37,9 +38,26 @@ Se descarta cualquier otro parámetro y cualquier valor que:
   una wallet (`0x` + hexadecimal);
 - en el caso de `gclid`, tenga algo distinto de letras, números, `-` o `_`.
 
-No se copian consultas arbitrarias, tokens, emails, teléfonos ni wallets. El
-referrer del navegador tampoco se usa: una visita cuenta como "con campaña" solo
-si trae alguno de estos campos.
+No se copian consultas arbitrarias, tokens, emails, teléfonos ni wallets.
+Si hay etiquetas válidas, tienen prioridad sobre el referrer y `source_type` es
+`tagged`; eso no certifica por sí solo que el tráfico sea pago. Si no hay etiquetas,
+se puede clasificar el dominio externo del referrer como `organic` o `referral`.
+Se reconocen hosts exactos de Google (incluido google.com.mx), Bing, DuckDuckGo,
+Yahoo Search, Brave Search y Ecosia. Un host que no está reconocido se trata como
+referencia externa, sin inventar una búsqueda orgánica.
+
+Campos opcionales nuevos en cada touch (formato v1 compatible):
+
+- `source_type`: `tagged`, `organic` o `referral`.
+- `entry_path`: ruta pública permitida donde se capturó ese origen, sin query ni
+  hash. No se conservan rutas privadas, emails, wallets o identificadores numéricos largos.
+- `referrer_host`: solo el dominio externo; nunca su URL completa, consulta o fragmento.
+
+Las visitas internas, directas o sin referrer utilizable no reemplazan el origen
+existente. Sin origen previo siguen como desconocidas: no se clasifican como
+orgánicas por descarte. Una etiqueta rechazada o un GCLID sin consentimiento no
+provocan una reclasificación orgánica. No se obtienen palabras clave del referrer.
+No se añaden UTM a enlaces internos ni se reescribe la URL para clasificar SEO.
 
 **Experimentos:** hoy la landing no corre experimentos, así que no hay
 asignación que conservar. Si se agregan, se suman a la lista permitida.
@@ -62,9 +80,11 @@ asignación que conservar. Si se agregan, se suman a la lista permitida.
 }
 ```
 
-- `first_touch`: la primera visita con campaña. **No se pisa nunca.**
-- `last_non_direct`: la última visita con campaña. Una visita directa (sin
-  campos) no la cambia.
+- `first_touch`: la primera adquisición no directa capturada. **No se pisa nunca.**
+  Los valores históricos v1 ya guardados se conservan; no se reconstruye un origen
+  orgánico o una página de entrada que no se haya observado.
+- `last_non_direct`: la última visita etiquetada u orgánica/referida. Una visita
+  directa o una navegación interna no la cambia.
 - `ts`: fecha de esa visita, en segundos (Unix).
 - `gclid` aparece dentro de cada objeto solo si el visitante aceptó publicidad.
 - Si `v` cambia, el formato cambió: la webapp debe ignorar versiones que no conoce.
@@ -77,6 +97,12 @@ asignación que conservar. Si se agregan, se suman a la lista permitida.
    "desconocida". No atribuir todos los registros a publicidad.
 4. Respetar el consentimiento: leer la cookie solo si `auraConsent.get().analytics`
    es `true`.
+
+Los campos nuevos son aditivos y no cambian los nombres de cookie, UTM o touches.
+Los consumidores deben tolerar campos opcionales. Esta entrega web no demuestra
+que app/backend lean `aura_acq` ni cierra la atribución del registro o compra.
+OpenPanel recibe los UTM y el contexto validado de la última adquisición desde
+el mismo adaptador existente; no recibe GCLID ni la URL de referencia completa.
 
 ## 4. Referrer de Google Play (para Android)
 
