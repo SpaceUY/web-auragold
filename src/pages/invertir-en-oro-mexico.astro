@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { COMMISSION_LABEL } from "../data/costs";
+import { BANK_DEPOSIT_TIME } from "../data/sale";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import SectionHeading from "../components/ui/SectionHeading.astro";
@@ -36,7 +37,7 @@ const benefits = [
   {
     title: "Vende cuando lo necesites",
     description:
-      "Vendes tu oro desde la app en unos minutos y recibes el dinero en tu cuenta bancaria.",
+      `Vendes tu oro desde la app en unos minutos. El depósito en tu cuenta bancaria suele tardar ${BANK_DEPOSIT_TIME}.`,
   },
   {
     title: "Un activo distinto a las criptomonedas",
@@ -149,9 +150,9 @@ const faqItems = [
   {
     question: "¿Puedo sacar mi dinero cuando quiera?",
     answer:
-      'Sí. Vendes tu oro desde la app en unos minutos y después recibes el equivalente en pesos en tu cuenta bancaria. También puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold. Si vendes con ganancia, te explicamos los <a href="/blog/fiscalidad-oro-inversion-mexico" class="text-ag-gold hover:underline">impuestos al invertir en oro</a> en México.',
+      `Sí. Vendes tu oro desde la app en unos minutos. El depósito del equivalente en pesos en tu cuenta bancaria suele tardar ${BANK_DEPOSIT_TIME}. También puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold. Si vendes con ganancia, te explicamos los <a href="/blog/fiscalidad-oro-inversion-mexico" class="text-ag-gold hover:underline">impuestos al invertir en oro</a> en México.`,
     plainAnswer:
-      "Sí. Vendes tu oro desde la app en unos minutos y después recibes el equivalente en pesos en tu cuenta bancaria. También puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold. Si vendes con ganancia, te explicamos los impuestos al invertir en oro en México.",
+      `Sí. Vendes tu oro desde la app en unos minutos. El depósito del equivalente en pesos en tu cuenta bancaria suele tardar ${BANK_DEPOSIT_TIME}. También puedes canjear tus tokens por lingotes de oro físico a través de Tether Gold. Si vendes con ganancia, te explicamos los impuestos al invertir en oro en México.`,
   },
   {
     question: "¿El oro en Aura Gold tiene comisiones de custodia?",
