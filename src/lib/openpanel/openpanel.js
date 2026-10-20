@@ -1,5 +1,6 @@
 // Anexo B del PDF de pedidos de ingeniería (WEB-012A, págs. 19-21). WEB-012B
 // admite visitas con UTM en el replay y quita query y hash de sus URLs.
+// WEB-012C graba el texto de la página y enmascara solo los inputs.
 // Bundle with @openpanel/web@1.4.1. Instantiate once in the browser.
 import { isSafeValue, UTM_FIELDS, CLICK_ID_FIELD } from '../acquisition/context.mjs';
 const API_URL = 'https://openpanel-api.1930.dev';
@@ -90,8 +91,8 @@ export function createAuraAnalytics({
         trackOutgoingLinks: false, trackAttributes: false, filter: allowPayload,
         sessionReplay: {
           enabled: replayStarted, sampleRate: 1,
-          maskAllInputs: true, maskAllText: true,
-          unmaskTextSelector: '[data-openpanel-unmask]',
+          // Page text is public landing copy. Inputs stay masked.
+          maskAllInputs: true, maskAllText: false,
           blockSelector: '[data-openpanel-replay-block], form, [data-sensitive]',
           ignoreSelector: '[data-openpanel-replay-block], form, [data-sensitive]',
           flushIntervalMs: 10000,

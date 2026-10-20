@@ -2,7 +2,8 @@
 // WEB-012A: conecta el módulo de OpenPanel del PDF (src/lib/openpanel, Anexo B)
 // con el banner de cookies y con la campaña guardada por WEB-002. El SDK se
 // importa recién cuando el visitante acepta analítica; sin banner no hace nada.
-// La grabación de sesiones queda apagada (replayReady=false): es WEB-012B.
+// La grabación de sesiones está encendida (WEB-012C) para quien acepta grabación
+// en el banner, en las páginas que permite src/lib/openpanel/openpanel.js.
 // Detalle: docs/web-012a-openpanel.md
 ---
 
@@ -73,7 +74,7 @@
       const { analytics } = attachAuraAnalytics({
         publicClientId: import.meta.env.PUBLIC_OPENPANEL_CLIENT_ID ?? "",
         production: import.meta.env.PROD,
-        replayReady: false,
+        replayReady: true,
         readConsent: () => toPanelConsent(consentApi.get()),
         subscribeConsent: (callback: (choice: PanelConsent) => void) =>
           consentApi.subscribe((choice) => callback(toPanelConsent(choice))),
