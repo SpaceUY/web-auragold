@@ -42,8 +42,8 @@ function fakeSdk() {
   return { instances, loadSdk: async () => ({ OpenPanel }) };
 }
 
-function setup({ browser = fakeBrowser(), sdk = fakeSdk(), enabled = true, clientId = CLIENT_ID, getContext } = {}) {
-  const analytics = createAuraAnalytics({ clientId, enabled, loadSdk: sdk.loadSdk, browser, getContext });
+function setup({ browser = fakeBrowser(), sdk = fakeSdk(), enabled = true, clientId = CLIENT_ID, getContext, replayReady } = {}) {
+  const analytics = createAuraAnalytics({ clientId, enabled, replayReady, loadSdk: sdk.loadSdk, browser, getContext });
   return { analytics, sdk, browser };
 }
 
@@ -130,4 +130,68 @@ test("entorno: no se activa fuera de https, fuera de los dominios de Aura, sin C
     await analytics.setConsent({ analytics: true, replay: false });
     assert.equal(sdk.instances.length, 0, JSON.stringify(options));
   }
+});
+
+// WEB-012B: el replay sigue apagado en producción (replayReady=false). Estas pruebas
+// lo encienden en el módulo para comprobar qué visitas graba y qué URLs manda.
+async function replaySession(location) {
+  const { analytics, sdk } = setup({ browser: fakeBrowser(location), replayReady: true });
+  await analytics.setConsent({ analytics: true, replay: true });
+  return sdk.instances[0];
+}
+
+function sendReplayChunk(op, events) {
+  op.send({ type: "replay", payload: { chunk_index: 0, payload: typeof events === "string" ? events : JSON.stringify(events) } });
+  return op.sent.filter((request) => request.type === "replay");
+}
+
+test("replay: graba visitas con UTM válidos y gclid en las páginas permitidas", async () => {
+  for (const search of ["", "?utm_source=google&utm_medium=cpc&utm_campaign=qa", "?utm_campaign=qa&gclid=QA_LOCAL_ONLY"]) {
+    const op = await replaySession({ pathname: "/invertir-en-oro-mexico", search });
+    assert.equal(op.options.sessionReplay.enabled, true, search);
+  }
+});
+
+test("replay: no graba con otros parámetros, valores rechazados, hash o páginas fuera de la lista", async () => {
+  for (const location of [
+    { search: "?utm_campaign=qa&token=secreto" },
+    { search: "?utm_campaign=persona%40example.org" },
+    { search: "?utm_term=5512345678" },
+    { search: "?utm_campaign=" },
+    { search: "?utm_campaign=qa", hash: "#faq" },
+    { pathname: "/blog/oro-vs-cetes", search: "?utm_campaign=qa" },
+  ]) {
+    const op = await replaySession(location);
+    assert.equal(op.options.sessionReplay.enabled, false, JSON.stringify(location));
+  }
+});
+
+test("replay: los fragmentos no llevan query ni hash de ninguna URL", async () => {
+  const op = await replaySession({ search: "?utm_campaign=qa&gclid=QA_LOCAL_ONLY" });
+  const [sent] = sendReplayChunk(op, [
+    { type: 4, data: { href: "https://auragold.io/?utm_campaign=qa&gclid=QA_LOCAL_ONLY", width: 390, height: 844 } },
+    { type: 3, data: { source: 0, attributes: [{ id: 7, attributes: {
+      href: "https://play.google.com/store/apps/details?id=com.space.aura&referrer=gclid%3DQA_LOCAL_ONLY",
+      class: "cta",
+    } }] } },
+  ]);
+  const events = JSON.parse(sent.payload.payload);
+  assert.equal(events[0].data.href, "https://auragold.io/");
+  assert.equal(events[0].data.width, 390);
+  assert.equal(events[1].data.attributes[0].attributes.href, "https://play.google.com/store/apps/details");
+  assert.equal(events[1].data.attributes[0].attributes.class, "cta");
+  assert.equal(sent.payload.payload.includes("QA_LOCAL_ONLY"), false);
+});
+
+test("replay: un fragmento ilegible se descarta y no se envía", async () => {
+  const op = await replaySession({});
+  assert.equal(sendReplayChunk(op, "{no es json").length, 0);
+});
+
+test("replay: sin consentimiento de grabación no se envían fragmentos", async () => {
+  const { analytics, sdk } = setup({ replayReady: true });
+  await analytics.setConsent({ analytics: true, replay: false });
+  const [op] = sdk.instances;
+  assert.equal(op.options.sessionReplay.enabled, false);
+  assert.equal(sendReplayChunk(op, [{ type: 4, data: { href: "https://auragold.io/" } }]).length, 0);
 });

@@ -1,9 +1,12 @@
-// Anexo B del PDF de pedidos de ingeniería (WEB-012A, págs. 19-21), transcrito
-// tal cual. Solo se ajustaron saltos de línea que dejó la extracción del PDF.
+// Anexo B del PDF de pedidos de ingeniería (WEB-012A, págs. 19-21). WEB-012B
+// admite visitas con UTM en el replay y quita query y hash de sus URLs.
 // Bundle with @openpanel/web@1.4.1. Instantiate once in the browser.
+import { isSafeValue, UTM_FIELDS, CLICK_ID_FIELD } from '../acquisition/context.mjs';
 const API_URL = 'https://openpanel-api.1930.dev';
 const HOSTS = new Set(['auragold.io', 'www.auragold.io', 'app.auragold.io']);
 const REPLAY_PATHS = new Set(['/', '/invertir-en-oro-mexico']);
+const REPLAY_QUERY_FIELDS = new Set([...UTM_FIELDS, CLICK_ID_FIELD]);
+const ABSOLUTE_URL_WITH_QUERY = /^https?:\/\/[^?#\s]*[?#]/i;
 const EVENTS = new Set([
   'experiment_exposure', 'click_open_web', 'click_download',
   'faq_open', 'scroll_depth', 'sign_up', 'kyc_completed', 'begin_checkout',
@@ -20,6 +23,25 @@ function safeFields(input = {}) {
     FIELDS.has(key) && (typeof value === 'number' ||
       (typeof value === 'string' && value.length <= 200 && !/[\r\n]/.test(value)))));
 }
+// Only validated campaign labels may appear in a replayed visit's query.
+function isReplaySafeQuery(search) {
+  return [...new URLSearchParams(search)].every(([key, value]) =>
+    REPLAY_QUERY_FIELDS.has(key) && isSafeValue(key, value));
+}
+// rrweb stores the page href and link attributes, such as the Play referrer
+// that carries gclid. Keep origin and path only.
+function withoutUrlQuery(key, value) {
+  return typeof value === 'string' && ABSOLUTE_URL_WITH_QUERY.test(value)
+    ? value.replace(/[?#][\s\S]*$/, '') : value;
+}
+function sanitizeReplayChunk(chunk) {
+  try {
+    chunk.payload = JSON.stringify(JSON.parse(chunk.payload, withoutUrlQuery));
+    return true;
+  } catch {
+    return false; // An unreadable chunk is dropped, never sent unsanitized.
+  }
+}
 export function createAuraAnalytics({
   clientId, enabled = false, replayReady = false, getContext = () => ({}),
   loadSdk = () => import('@openpanel/web'), browser = window,
@@ -32,10 +54,12 @@ export function createAuraAnalytics({
   const canReplay = () => replayReady && consent.replay &&
     browser.location.hostname !== 'app.auragold.io' &&
     REPLAY_PATHS.has(browser.location.pathname.replace(/\/$/, '') || '/') &&
-    !browser.location.search && !browser.location.hash;
+    isReplaySafeQuery(browser.location.search) && !browser.location.hash;
   function allowPayload(request) {
     if (!active || !consent.analytics) return false;
-    if (request.type === 'replay') return replayStarted && consent.replay;
+    if (request.type === 'replay') {
+      return replayStarted && consent.replay && sanitizeReplayChunk(request.payload);
+    }
     if (request.type !== 'track') return false;
     const props = request.payload.properties || {};
     request.payload.properties = {
