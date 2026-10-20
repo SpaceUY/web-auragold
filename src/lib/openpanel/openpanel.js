@@ -13,6 +13,7 @@ const FIELDS = new Set([
   'cta_id', 'cta_position', 'destination', 'landing_path',
   'faq_position', 'scroll_percent', 'utm_source', 'utm_medium',
   'utm_campaign', 'utm_content', 'utm_term', 'environment',
+  'entry_path', 'source_type', 'referrer_host',
 ]);
 function safeFields(input = {}) {
   return Object.fromEntries(Object.entries(input).filter(([key, value]) =>

@@ -8,6 +8,7 @@
 
 <script>
   import { attachAuraAnalytics } from "../../lib/openpanel/bootstrap.js";
+  import { panelAcquisitionContext } from "../../lib/acquisition/context.mjs";
 
   interface ConsentChoice {
     analytics: boolean;
@@ -35,8 +36,6 @@
   };
   const analyticsWindow = window as AnalyticsWindow;
 
-  const CAMPAIGN_FIELDS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-
   function toPanelConsent(choice: ConsentChoice | null): PanelConsent {
     return { analytics: choice?.analytics === true, replay: choice?.replay === true };
   }
@@ -48,10 +47,7 @@
     const match = document.cookie.match(/(?:^|;\s*)aura_acq=([^;]*)/);
     if (!match) return context;
     try {
-      const campaign = JSON.parse(decodeURIComponent(match[1]))?.last_non_direct ?? {};
-      for (const field of CAMPAIGN_FIELDS) {
-        if (typeof campaign[field] === "string") context[field] = campaign[field];
-      }
+      Object.assign(context, panelAcquisitionContext(JSON.parse(decodeURIComponent(match[1]))));
     } catch {
       // Cookie ilegible: se manda solo el entorno.
     }

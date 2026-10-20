@@ -7,6 +7,8 @@
 ---
 
 <script>
+  import { acquisitionTouch, UTM_FIELDS, CLICK_ID_FIELD } from "../../lib/acquisition/context.mjs";
+
   interface ConsentChoice {
     analytics: boolean;
     ads: boolean;
@@ -36,39 +38,9 @@
   const COOKIE_VERSION = 1;
   const COOKIE_MAX_AGE = 60 * 60 * 24 * 90;
 
-  const UTM_FIELDS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-  const CLICK_ID_FIELD = "gclid";
-  const MAX_VALUE_LENGTH = 100;
-
-  // Valores que no se copian nunca: el PDF prohíbe emails, teléfonos, wallets y tokens.
-  const CONTROL_CHARS = /[\r\n\t]/;
-  const EMAIL_LIKE = /@/;
-  const PHONE_LIKE = /\d{7,}/;
-  const WALLET_LIKE = /0x[0-9a-f]{8,}/i;
-  const CLICK_ID_FORMAT = /^[\w-]+$/;
-
   const PLAY_HOST = "play.google.com";
   const BASE_SOURCE = "auragold.io";
   const MIDDLE_BUTTON = 1;
-
-  function isSafeValue(field: string, value: string): boolean {
-    if (!value || value.length > MAX_VALUE_LENGTH) return false;
-    if (CONTROL_CHARS.test(value) || EMAIL_LIKE.test(value) || WALLET_LIKE.test(value)) return false;
-    if (field === CLICK_ID_FIELD) return CLICK_ID_FORMAT.test(value);
-    return !PHONE_LIKE.test(value);
-  }
-
-  // Lista permitida: todo lo que no esté acá (o no pase la validación) se ignora.
-  function readAllowedParams(search: string, consent: ConsentChoice): Touch {
-    const params = new URLSearchParams(search);
-    const fields = consent.ads ? [...UTM_FIELDS, CLICK_ID_FIELD] : UTM_FIELDS;
-    const touch: Touch = {};
-    for (const field of fields) {
-      const value = params.get(field)?.trim();
-      if (value && isSafeValue(field, value)) touch[field] = value;
-    }
-    return touch;
-  }
 
   // ------------------------------------------------------------------ cookie
 
@@ -104,10 +76,15 @@
     return rest;
   }
 
-  // first_touch no se pisa nunca; last_non_direct solo cambia con otra visita con campaña.
+  // first_touch no se pisa; una visita interna/directa no reemplaza el origen.
   function recordVisit(consent: ConsentChoice): void {
-    const touch = readAllowedParams(location.search, consent);
-    if (Object.keys(touch).length === 0) return;
+    const touch = acquisitionTouch({
+      search: location.search,
+      pathname: location.pathname,
+      referrer: document.referrer,
+      consent,
+    });
+    if (!touch) return;
     const stamped = { ...touch, ts: Math.floor(Date.now() / 1000) };
     const stored = readCookie();
     writeCookie({
