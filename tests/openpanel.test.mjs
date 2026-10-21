@@ -146,7 +146,9 @@ function sendReplayChunk(op, events) {
 }
 
 test("replay: graba visitas con UTM válidos y gclid en las páginas permitidas", async () => {
-  for (const search of ["", "?utm_source=google&utm_medium=cpc&utm_campaign=qa", "?utm_campaign=qa&gclid=QA_LOCAL_ONLY"]) {
+  for (const search of ["", "?utm_source=google&utm_medium=cpc&utm_campaign=qa", "?utm_campaign=qa&gclid=QA_LOCAL_ONLY",
+    "?utm_source=google&utm_medium=cpc&utm_campaign=qa&utm_term=oro%20fraccionado&gad_source=1&gad_campaignid=24359411270&gclid=QA_LOCAL_ONLY",
+    "?gad_source=1&gbraid=0AAAAA_QA-local"]) {
     const op = await replaySession({ pathname: "/invertir-en-oro-mexico", search });
     assert.equal(op.options.sessionReplay.enabled, true, search);
   }
@@ -165,6 +167,8 @@ test("replay: no graba con otros parámetros, valores rechazados, hash o página
     { search: "?utm_campaign=persona%40example.org" },
     { search: "?utm_term=5512345678" },
     { search: "?utm_campaign=" },
+    { search: "?utm_campaign=qa&gad_source=persona%40example.org" },
+    { search: "?utm_campaign=qa&gad_campaignid=abc" },
     { search: "?utm_campaign=qa", hash: "#faq" },
     { pathname: "/blog/oro-vs-cetes", search: "?utm_campaign=qa" },
   ]) {
