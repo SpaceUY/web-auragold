@@ -36,13 +36,10 @@ No tuvimos el zip `openpanel-integration-source.zip`. El código sale del Anexo 
     referencia completa.
   - Contexto: `environment: "production"` y los UTM de la última campaña que guardó
     WEB-002 (cookie `aura_acq`), si existe.
-- **Grabación de sesiones:** apagada (`replayReady=false`). Es WEB-012B.
+- **Grabación de sesiones:** encendida (`replayReady=true`) desde WEB-012C, solo
+  para quien acepta grabación en el banner. Ver abajo.
 
 ### WEB-012B: preparación del replay
-
-El módulo queda listo para grabar, pero `replayReady` sigue en `false`. Antes de
-encenderlo hay que comprobar en OpenPanel que las sesiones se guardan y se pueden
-reproducir con el texto y los campos enmascarados.
 
 - **Visitas con campaña:** antes se excluía cualquier visita con query, y por eso
   quedaba afuera todo el tráfico de anuncios. Ahora se graba si la query solo trae
@@ -53,8 +50,20 @@ reproducir con el texto y los campos enmascarados.
   fragmento se quitan la query y el hash de toda URL absoluta. Un fragmento
   ilegible se descarta.
 - **Sin cambios:** consentimiento de grabación, páginas permitidas (`/` y
-  `/invertir-en-oro-mexico`), enmascarado, bloqueo de formularios y exclusión de
+  `/invertir-en-oro-mexico`), bloqueo de formularios y exclusión de
   `app.auragold.io`.
+
+### WEB-012C: grabación encendida
+
+- `replayReady=true`. Se graba solo con permiso de grabación (el botón "Aceptar"
+  del banner lo incluye) y solo en `/` y `/invertir-en-oro-mexico`.
+- Se graba el texto de la página, que es contenido público. Los inputs siguen
+  enmascarados y los formularios bloqueados.
+- Prueba del 2026-10-20: build local servido en el dominio `auragold.io` desde un
+  navegador aislado, con `utm_campaign=qa_tracking_check` y un `gclid` de prueba.
+  OpenPanel guardó 9 fragmentos y 102 eventos en `session_replay_chunks` del
+  proyecto `aura-gold`, en la misma sesión que la vista de página. Ningún
+  fragmento tenía URLs con query, UTM ni `gclid`, y el texto se leía.
 
 ## Pruebas (`npm test`)
 
@@ -67,6 +76,7 @@ reproducir con el texto y los campos enmascarados.
 | Caída de la API (el import falla): no rompe y queda inactivo | Pasa |
 | Eventos y campos: solo los permitidos; se descartan email, teléfono y eventos fuera de la lista | Pasa |
 | Entorno: no se activa sin https, fuera de los dominios de Aura, sin Client ID o fuera de producción | Pasa |
+| Replay: enmascara los inputs y graba el texto de la página | Pasa |
 | Replay: graba visitas con UTM y `gclid` válidos en las páginas permitidas | Pasa |
 | Replay: no graba con otros parámetros, valores rechazados, hash u otras páginas | Pasa |
 | Replay: los fragmentos no llevan query ni hash de ninguna URL | Pasa |

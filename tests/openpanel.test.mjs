@@ -152,6 +152,13 @@ test("replay: graba visitas con UTM válidos y gclid en las páginas permitidas"
   }
 });
 
+test("replay: enmascara los inputs y graba el texto de la página", async () => {
+  const op = await replaySession({});
+  assert.equal(op.options.sessionReplay.maskAllInputs, true);
+  assert.equal(op.options.sessionReplay.maskAllText, false);
+  assert.match(op.options.sessionReplay.blockSelector, /form/);
+});
+
 test("replay: no graba con otros parámetros, valores rechazados, hash o páginas fuera de la lista", async () => {
   for (const location of [
     { search: "?utm_campaign=qa&token=secreto" },
