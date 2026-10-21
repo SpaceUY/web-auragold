@@ -43,8 +43,10 @@ No tuvimos el zip `openpanel-integration-source.zip`. El código sale del Anexo 
 
 - **Visitas con campaña:** antes se excluía cualquier visita con query, y por eso
   quedaba afuera todo el tráfico de anuncios. Ahora se graba si la query solo trae
-  UTM y `gclid` válidos (la misma validación de WEB-002). Un parámetro distinto, un
-  valor rechazado o un hash dejan la visita sin grabación.
+  UTM y `gclid` válidos (la misma validación de WEB-002) y los parámetros que Google
+  Ads agrega a cada clic (`gad_source`, `gad_campaignid`, `gbraid`, `wbraid`, cada uno
+  con su formato). Un parámetro distinto, un valor rechazado o un hash dejan la visita
+  sin grabación.
 - **URLs sin query:** rrweb guarda la URL de la página y los atributos de los
   links, como el `referrer` de Play que lleva `gclid`. Antes de enviar cada
   fragmento se quitan la query y el hash de toda URL absoluta. Un fragmento

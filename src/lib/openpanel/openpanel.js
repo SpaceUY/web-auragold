@@ -7,6 +7,11 @@ const API_URL = 'https://openpanel-api.1930.dev';
 const HOSTS = new Set(['auragold.io', 'www.auragold.io', 'app.auragold.io']);
 const REPLAY_PATHS = new Set(['/', '/invertir-en-oro-mexico']);
 const REPLAY_QUERY_FIELDS = new Set([...UTM_FIELDS, CLICK_ID_FIELD]);
+// Google Ads adds these to auto-tagged clicks. Replay drops the query anyway.
+const GOOGLE_ADS_PARAMS = new Map([
+  ['gad_source', /^\d{1,3}$/], ['gad_campaignid', /^\d{1,20}$/],
+  ['gbraid', /^[\w-]{1,200}$/], ['wbraid', /^[\w-]{1,200}$/],
+]);
 const ABSOLUTE_URL_WITH_QUERY = /^https?:\/\/[^?#\s]*[?#]/i;
 const EVENTS = new Set([
   'experiment_exposure', 'click_open_web', 'click_download',
@@ -24,10 +29,11 @@ function safeFields(input = {}) {
     FIELDS.has(key) && (typeof value === 'number' ||
       (typeof value === 'string' && value.length <= 200 && !/[\r\n]/.test(value)))));
 }
-// Only validated campaign labels may appear in a replayed visit's query.
+// Only validated campaign labels and Google Ads click parameters may appear in a replayed visit's query.
 function isReplaySafeQuery(search) {
   return [...new URLSearchParams(search)].every(([key, value]) =>
-    REPLAY_QUERY_FIELDS.has(key) && isSafeValue(key, value));
+    GOOGLE_ADS_PARAMS.has(key) ? GOOGLE_ADS_PARAMS.get(key).test(value)
+      : REPLAY_QUERY_FIELDS.has(key) && isSafeValue(key, value));
 }
 // rrweb stores the page href and link attributes, such as the Play referrer
 // that carries gclid. Keep origin and path only.
