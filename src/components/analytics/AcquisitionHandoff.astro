@@ -1,6 +1,6 @@
 ---
 // WEB-002: guarda la campaña que trajo al visitante y la pasa a la webapp
-// (cookie aura_acq en .auragold.io) y a Google Play (referrer del link).
+// (cookie aura_acq en .auragold.io y UTM en el link) y a Google Play (referrer del link).
 // Solo campos permitidos y solo con consentimiento: sin el banner de cookies
 // (window.auraConsent) no guarda nada ni toca ningún link.
 // Contrato de campos: docs/web-002-contrato-adquisicion.md
@@ -39,6 +39,7 @@
   const COOKIE_MAX_AGE = 60 * 60 * 24 * 90;
 
   const PLAY_HOST = "play.google.com";
+  const WEB_APP_HOST = "app.auragold.io";
   const BASE_SOURCE = "auragold.io";
   const MIDDLE_BUTTON = 1;
 
@@ -164,6 +165,35 @@
     }
   }
 
+  // ------------------------------------------------------------- webapp
+
+  // La webapp lee utm_* y gclid de su propia URL (no lee aura_acq) y los envía al
+  // backend. Se agregan al link en el clic; un link que ya trae UTM no se toca.
+  function handleWebAppClick(event: MouseEvent): void {
+    if (event.type === "auxclick" && event.button !== MIDDLE_BUTTON) return;
+    if (!(event.target instanceof Element)) return;
+    const link = event.target.closest("a[href]");
+    if (!(link instanceof HTMLAnchorElement) || link.hostname !== WEB_APP_HOST) return;
+
+    const consent = window.auraConsent?.get();
+    const campaign = consent?.analytics ? readCookie()?.last_non_direct : undefined;
+    if (!campaign) return;
+
+    try {
+      const url = new URL(link.href);
+      if (UTM_FIELDS.some((field) => url.searchParams.has(field))) return;
+      for (const field of UTM_FIELDS) {
+        if (typeof campaign[field] === "string") url.searchParams.set(field, campaign[field] as string);
+      }
+      if (consent?.ads && typeof campaign[CLICK_ID_FIELD] === "string") {
+        url.searchParams.set(CLICK_ID_FIELD, campaign[CLICK_ID_FIELD] as string);
+      }
+      link.href = url.toString();
+    } catch {
+      // Si algo falla, el link navega sin campaña.
+    }
+  }
+
   // ----------------------------------------------------------------- inicio
 
   function withConsentApi(callback: (api: AuraConsentApi) => void): void {
@@ -189,6 +219,8 @@
       // (en Android, "Abrir mi bóveda" ya cambió su href a Play al cargar).
       document.addEventListener("click", handlePlayClick, true);
       document.addEventListener("auxclick", handlePlayClick, true);
+      document.addEventListener("click", handleWebAppClick, true);
+      document.addEventListener("auxclick", handleWebAppClick, true);
     });
   } catch {
     // La adquisición nunca puede frenar la página.

@@ -104,6 +104,20 @@ que app/backend lean `aura_acq` ni cierra la atribución del registro o compra.
 OpenPanel recibe los UTM y el contexto validado de la última adquisición desde
 el mismo adaptador existente; no recibe GCLID ni la URL de referencia completa.
 
+### UTM en los links a la webapp
+
+La webapp publicada no lee `aura_acq`: lee `utm_*` y `gclid` de su propia URL, los guarda
+en `aura-attr-first` / `aura-attr-last` y los envía a `/analytics/attribution`. Por eso,
+en el clic en un link a `app.auragold.io`, la landing agrega los UTM de `last_non_direct`
+(y `gclid` solo con consentimiento de publicidad). No se agrega nada sin consentimiento de
+analítica, sin origen guardado, o si el link ya trae UTM.
+
+Prueba del 2026-10-21: build local servido en `auragold.io`, visita con
+`utm_campaign=qa_tracking_check`, cookies aceptadas y clic en el link a la webapp real. La
+webapp guardó `aura-attr-first` y `aura-attr-last` con esos UTM antes de redirigir a
+`/sign-in`. No se probó el envío a `/analytics/attribution` (requiere registrarse) ni la
+atribución de GA4: la redirección quita la query de la URL.
+
 ## 4. Referrer de Google Play (para Android)
 
 Se arma en el momento del clic en cualquier link a `play.google.com`, con
