@@ -92,10 +92,19 @@ const component = readFileSync(new URL('../src/components/analytics/AcquisitionH
 const script = component.match(/<script>([\s\S]*?)<\/script>/)[1].replace(/^\s*import .*;$/m, '');
 const executable = ts.transpileModule(script, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext } }).outputText.replace(/export\s*\{\s*\};?/, '');
 
+class Element {
+  closest() { return this; }
+}
+class HTMLAnchorElement extends Element {
+  constructor(href) { super(); this.href = href; this.dataset = {}; }
+  get hostname() { return new URL(this.href).hostname; }
+}
+
 function runComponent({ cookie, search = '', referrer = '', consent = allowed } = {}) {
   const jar = new Map();
   if (cookie) jar.set('aura_acq', encodeURIComponent(JSON.stringify(cookie)));
   const listeners = [];
+  const documentListeners = {};
   const document = {
     referrer,
     get cookie() { return [...jar].map(([key, value]) => `${key}=${value}`).join('; '); },
@@ -106,16 +115,21 @@ function runComponent({ cookie, search = '', referrer = '', consent = allowed } 
       if (/max-age=0(?:;|$)/.test(value)) jar.delete(name);
       else jar.set(name, pair.slice(separator + 1));
     },
-    addEventListener() {},
+    addEventListener(type, listener) { (documentListeners[type] ??= []).push(listener); },
   };
   vm.runInNewContext(executable, {
     window: { auraConsent: { get: () => consent, subscribe: (listener) => listeners.push(listener) } },
     location: { hostname: 'auragold.io', protocol: 'https:', pathname: '/blog/oro-vs-cetes', search },
-    document, URL, URLSearchParams, acquisitionTouch, UTM_FIELDS, CLICK_ID_FIELD,
+    document, URL, URLSearchParams, acquisitionTouch, UTM_FIELDS, CLICK_ID_FIELD, Element, HTMLAnchorElement,
   });
   return {
     read: () => jar.has('aura_acq') ? JSON.parse(decodeURIComponent(jar.get('aura_acq'))) : null,
     change: (choice) => listeners.forEach((listener) => listener(choice)),
+    click: (href) => {
+      const link = new HTMLAnchorElement(href);
+      for (const listener of documentListeners.click ?? []) listener({ type: 'click', button: 0, target: link });
+      return link.href;
+    },
   };
 }
 
@@ -145,4 +159,31 @@ test('New organic visits wait for consent and are removed on revocation', () => 
   assert.equal(browser.read().first_touch.utm_medium, 'organic');
   browser.change({ analytics: false, ads: false });
   assert.equal(browser.read(), null);
+});
+
+test('Web app links carry the stored campaign so the app can record it', () => {
+  const cookie = { v: 1,
+    first_touch: { utm_campaign: 'first', ts: 1 },
+    last_non_direct: { utm_source: 'google', utm_medium: 'cpc', utm_campaign: 'ag_reg_mx_web3_vone', gclid: 'QA_LOCAL_ONLY', ts: 2 } };
+  const href = new URL(runComponent({ cookie }).click('https://app.auragold.io/'));
+  assert.equal(href.searchParams.get('utm_campaign'), 'ag_reg_mx_web3_vone');
+  assert.equal(href.searchParams.get('utm_medium'), 'cpc');
+  assert.equal(href.searchParams.get('gclid'), 'QA_LOCAL_ONLY');
+  assert.equal(href.searchParams.has('ts'), false);
+});
+
+test('Web app links get no GCLID without ads consent and nothing without analytics consent', () => {
+  const cookie = { v: 1, first_touch: { utm_campaign: 'qa', ts: 1 }, last_non_direct: { utm_campaign: 'qa', gclid: 'QA_LOCAL_ONLY', ts: 1 } };
+  const noAds = new URL(runComponent({ cookie, consent: { analytics: true, ads: false } }).click('https://app.auragold.io/'));
+  assert.equal(noAds.searchParams.get('utm_campaign'), 'qa');
+  assert.equal(noAds.searchParams.has('gclid'), false);
+  assert.equal(runComponent({ cookie, consent: { analytics: false, ads: false } }).click('https://app.auragold.io/'), 'https://app.auragold.io/');
+});
+
+test('Web app links stay unchanged without a stored origin, with their own UTM, or on other hosts', () => {
+  const cookie = { v: 1, first_touch: { utm_campaign: 'qa', ts: 1 }, last_non_direct: { utm_campaign: 'qa', ts: 1 } };
+  assert.equal(runComponent().click('https://app.auragold.io/'), 'https://app.auragold.io/');
+  const own = 'https://app.auragold.io/?utm_campaign=own';
+  assert.equal(runComponent({ cookie }).click(own), own);
+  assert.equal(runComponent({ cookie }).click('https://example.org/'), 'https://example.org/');
 });
