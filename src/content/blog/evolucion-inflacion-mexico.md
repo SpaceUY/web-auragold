@@ -15,7 +15,7 @@ category: "Mercado"
 - La inflación reduce tu poder adquisitivo cada año: aunque tu dinero siga en la cuenta, cada vez compra menos bienes y servicios.
 - México ha vivido ciclos inflacionarios severos: desde la hiperinflación de los años 80 hasta el repunte pospandemia de 2022.
 - Guardar dinero sin rendimiento real implica perder valor: si tus ahorros no crecen por encima de la inflación, en términos reales se están depreciando.
-- La inflación acumulada erosiona más de lo que parece: lo que costaba $100 en 2015 hoy cuesta alrededor de $163.
+- La inflación acumulada erosiona más de lo que parece: lo que costaba $100 en 2015, en 2024 costaba alrededor de $154.
 - Entender la inflación es clave para proteger tu patrimonio: conocer su impacto es el primer paso para tomar mejores decisiones financieras a largo plazo.
 
 Si los datos anteriores te generan inquietud, tiene sentido preguntarse qué activos han resistido históricamente esa erosión. En otro artículo explicamos con ejemplos reales y datos de México [cómo se ha comportado el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion) y qué lo hace diferente de mantener el dinero en una cuenta bancaria.
@@ -46,7 +46,7 @@ Pocos países de América Latina han vivido tantos ciclos inflacionarios distint
 
 **El ciclo pospandemia (2021–2024):** la disrupción de cadenas de suministro globales, la recuperación de la demanda y los efectos de la política monetaria internacional empujaron la inflación al 7.9% en 2022, el nivel más alto desde el año 2000. El ciclo de alzas de tasas del Banco de México logró moderar la presión: en 2024 el dato se sitúa en 4.7% según el Banco Mundial.
 
-> "Lo que costaba $100 en 2015 hoy cuesta alrededor de $163. El peso no desaparece, pero silenciosamente compra menos cada año."
+> "Lo que costaba $100 en 2015, en 2024 costaba alrededor de $154. El peso no desaparece, pero silenciosamente compra menos cada año."
 
 ## El costo invisible: lo que la inflación le hace a tu ahorro
 
@@ -56,7 +56,7 @@ Este fenómeno afecta de manera especialmente pronunciada a quienes guardan en e
 
 Frente a la pérdida acumulada del peso, muchas personas buscan opciones concretas. Si estás en ese punto, hemos reunido las principales [alternativas al dinero en efectivo para proteger tus ahorros](/blog/alternativas-al-dinero-en-efectivo) con una comparativa de rentabilidad y riesgo para el contexto mexicano.
 
-**Dato clave:** según los datos del Banco Mundial y el INEGI, la inflación acumulada en México entre enero de 2015 y diciembre de 2024 supera el 63%. Para mantener exactamente el mismo poder adquisitivo, un ahorro de $100,000 pesos de 2015 debería valer hoy aproximadamente $163,000 pesos.
+**Dato clave:** según los datos del Banco Mundial y el INEGI, el nivel de precios en México de 2024 es alrededor de un 54% más alto que el de 2015. Para mantener exactamente el mismo poder adquisitivo, un ahorro de $100,000 pesos de 2015 debería valer en 2024 aproximadamente $154,000 pesos.
 
 ### ¿Por qué el oro aparece en esta conversación?
 
@@ -72,7 +72,7 @@ Entre 2020 y 2024, México atravesó uno de sus ciclos inflacionarios más signi
 
 **¿Cuál ha sido la inflación en México en los últimos 10 años?**
 
-La última década (2015–2024) presenta un perfil heterogéneo. Los primeros años fueron de relativa estabilidad, con inflaciones de entre 2.7% y 4%. El período 2017–2018 introdujo una presión moderada (6% y 4.9%), y el ciclo 2021–2022 trajo el repunte más pronunciado. El promedio de la década ronda el 5% anual. Acumulado, el nivel de precios de 2024 es aproximadamente un 63% más alto que en 2015, lo que equivale a decir que el peso perdió cerca de un 39% de su poder adquisitivo en esos diez años.
+La última década (2015–2024) presenta un perfil heterogéneo. Los primeros años fueron de relativa estabilidad, con inflaciones de entre 2.7% y 4%. El período 2017–2018 introdujo una presión moderada (6% y 4.9%), y el ciclo 2021–2022 trajo el repunte más pronunciado. El promedio de la década ronda el 5% anual. Acumulado, el nivel de precios de 2024 es aproximadamente un 54% más alto que en 2015, lo que equivale a decir que el peso perdió cerca de un 35% de su poder adquisitivo en esos diez años.
 
 **¿Y en los últimos 20 años?**
 

@@ -42,7 +42,7 @@ Aura Gold es una fintech de oro digital respaldado por oro físico. Cada fracci�
 
 - El peso mexicano ha perdido más del 80% de su poder adquisitivo en los últimos 25 años; el oro, en pesos, ha multiplicado su valor más de 10 veces en ese período.
 - El precio del oro en pesos (XAU/MXN) sube por dos vías independientes: alza del oro en dólares (XAU/USD) y devaluación del peso frente al dólar.
-- Inflación en México: cerró 2024 en 4.66% y 2025 en 3.69% (INEGI). La inflación acumulada 2015–2024 supera el 63%.
+- Inflación en México: cerró 2024 en 4.66% y 2025 en 3.69% (INEGI). La inflación acumulada 2015–2024 ronda el 54% (Banco Mundial).
 - El oro es un activo refugio de preservación de valor, no de rendimiento especulativo; su volatilidad histórica (±10-15% anual) es menor que la de acciones o criptomonedas.
 
 ## Preguntas frecuentes
