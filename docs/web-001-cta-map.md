@@ -38,8 +38,8 @@ Reglas que cumple:
 | Todas (menú móvil) | Iniciar sesión | `webapp-menu` | `menu` | `click_open_web` | `click_open_web` | — |
 | Modal "Descargar app" (escritorio) | Usa Aura desde la web | `webapp-desktop-modal` | `modal` | — | — | `click_open_web` |
 | `/` y `/invertir-en-oro-mexico` (hero) | Empieza ahora | `webapp-hero` | `hero` | `click_open_web` | `click_open_web` | `click_open_web` |
-| `/` y `/invertir-en-oro-mexico` (hero) | Descargar para Android | `android-hero` | `hero` | `click_download` | `click_download` | `click_download` |
-| `/` y `/invertir-en-oro-mexico` (hero) | Descargar para iPhone | `ios-hero` | `hero` | `click_download` | `click_download` | `click_download` |
+| `/` y `/invertir-en-oro-mexico` (hero) | Android ("o descarga la app") | `android-hero` | `hero` | `click_download` | `click_download` | `click_download` |
+| `/` y `/invertir-en-oro-mexico` (hero) | iPhone ("o descarga la app") | `ios-hero` | `hero` | `click_download` | `click_download` | `click_download` |
 | `/` (cierre) | Abrir mi bóveda | `start-cta-final-home` | `cta-final-home` | `click_download` | `click_download` | `click_open_web` |
 | `/invertir-en-oro-mexico` (cierre) | Abrir mi bóveda | `start-cta-final-invertir` | `cta-final-invertir` | `click_download` | `click_download` | `click_open_web` |
 | `/precio-del-oro-hoy` (cierre) | Abrir mi bóveda | `start-cta-final-precio` | `cta-final-precio` | `click_download` | `click_download` | `click_open_web` |
