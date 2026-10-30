@@ -1,6 +1,6 @@
 ---
-// WEB-001: mide los clics reales en los botones que llevan a Google Play
-// (click_download) y a la web app (click_open_web). Un solo escuchador para
+// WEB-001: mide los clics reales en los botones que llevan a Google Play o al
+// App Store (click_download) y a la web app (click_open_web). Un solo escuchador para
 // todo el sitio: los botones solo declaran data-cta (cta_id) y
 // data-cta-position (cta_position). GTM toma los eventos del dataLayer.
 // Mapa de botones y cambios de GTM: docs/web-001-cta-map.md
@@ -24,14 +24,16 @@
 
   const DESTINATIONS: Record<string, CtaDestination> = {
     "play.google.com": { event: "click_download", destination: "google_play" },
+    // Mismo evento que Play: GTM no necesita cambios; destination dice la tienda.
+    "apps.apple.com": { event: "click_download", destination: "app_store" },
     "app.auragold.io": { event: "click_open_web", destination: "web_app" },
   };
 
   const MIDDLE_BUTTON = 1;
 
   function trackCtaClick(event: MouseEvent): void {
-    // El modal de "Descargar app" (iPhone y escritorio) frena la navegación:
-    // abrirlo no es un clic a Play y no se mide.
+    // El modal de "Descargar app" (escritorio) frena la navegación: abrirlo no
+    // es un clic a una tienda y no se mide.
     if (event.defaultPrevented) return;
     if (event.type === "auxclick" && event.button !== MIDDLE_BUTTON) return;
     if (!(event.target instanceof Element)) return;

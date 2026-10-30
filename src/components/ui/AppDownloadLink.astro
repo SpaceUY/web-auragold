@@ -1,11 +1,10 @@
 ---
 // Botón "Descargar app" que resuelve el destino según el dispositivo:
 // - Android: ficha de Play Store (el href por defecto, funciona sin JS).
-// - iPhone/iPad: todavía no hay app nativa. Abre el modal de AppDownloadDialog
-//   con el aviso "llega pronto" y un botón a la web app.
-// - Escritorio: abre el mismo modal con un QR para escanear con el celular.
+// - iPhone/iPad: ficha del App Store (el script cambia el href al cargar).
+// - Escritorio: abre el modal de AppDownloadDialog con los QR de las dos tiendas.
 // El modal se renderiza una sola vez (en el Header) y lo comparten todos los botones.
-import { playStoreUrl } from "../../data/links";
+import { IOS_APP_URL, playStoreUrl } from "../../data/links";
 
 interface Props {
   medium: string;
@@ -15,6 +14,23 @@ interface Props {
 const { medium, class: className = "" } = Astro.props;
 ---
 
-<a href={playStoreUrl(medium)} data-app-download-link data-cta={`download-${medium}`} data-cta-position={medium} class={className}>
+<a
+  href={playStoreUrl(medium)}
+  data-app-download-link
+  data-ios-url={IOS_APP_URL}
+  data-cta={`download-${medium}`}
+  data-cta-position={medium}
+  class={className}
+>
   Descargar app
 </a>
+
+<script>
+  import { detectPlatform } from "../../lib/platform";
+
+  if (detectPlatform() === "ios") {
+    document.querySelectorAll<HTMLAnchorElement>("[data-app-download-link]").forEach((link) => {
+      if (link.dataset.iosUrl) link.href = link.dataset.iosUrl;
+    });
+  }
+</script>

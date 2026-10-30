@@ -157,6 +157,13 @@ campaña del visitante.
 
 **Un clic a Play no es una instalación**, ni un `first_open`.
 
+**App Store (iPhone):** el link va sin campaña. El App Store no tiene un
+`referrer` que llegue a la app: solo admite los "campaign links" de App Store
+Connect (`pt` = proveedor, `ct` = campaña), que necesitan el `pt` de la cuenta
+de Apple y se ven en App Store Connect, no en GA4. Hasta tenerlo, el clic se mide
+en GA4 (`click_download` con `destination` = `app_store`) pero la instalación no
+se puede atribuir desde la landing.
+
 ## 5. Verificación de la landing (12/10/2026, entorno local con el consentimiento simulado)
 
 | Escenario | Resultado |

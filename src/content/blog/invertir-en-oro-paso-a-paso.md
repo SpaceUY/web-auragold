@@ -81,7 +81,7 @@ Por ejemplo, en Aura Gold puedes [revisar la comisión, la custodia y los inform
 
 ## Paso 6: Realiza tu primera compra de oro (proceso práctico)
 
-1. **Descarga o acceso:** descarga la app oficial en Android o, si tienes iPhone, úsala desde la web (2 minutos).
+1. **Descarga o acceso:** descarga la app oficial en Android o iPhone, o úsala desde la web (2 minutos).
 2. **Registro simplificado:** datos básicos (nombre, correo, teléfono).
 3. **Exploración sin compromiso:** ver precios en tiempo real y entender el proceso antes de invertir.
 4. **Verificación de identidad:** por regulación fintech, necesitas verificar tu identidad (INE/fotografía), 5 minutos.
