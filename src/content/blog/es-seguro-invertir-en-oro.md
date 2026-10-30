@@ -12,7 +12,7 @@ category: "Seguridad"
 
 El oro no está libre de riesgo (su precio sube y baja), pero tiene rasgos que lo distinguen: es un metal escaso, aceptado en todo el mundo, que no depende de ninguna empresa ni gobierno y no puede quebrar como una acción. Buena parte del riesgo no está en el oro en sí, sino en cómo y con quién lo compras.
 
-Antes de [invertir en oro físico certificado en pesos](/invertir-en-oro-mexico), conviene separar tres cosas que suelen mezclarse: la volatilidad normal del precio, los riesgos de custodia y los fraudes. Casi todos son evitables si sabes qué verificar, empezando por [cómo se custodia y audita el oro](/transparencia).
+Antes de [invertir en oro físico certificado en pesos](/invertir-en-oro-mexico), conviene separar tres cosas que suelen mezclarse: la volatilidad normal del precio, los riesgos de custodia y los fraudes. Casi todos son evitables si sabes qué verificar, empezando por [cómo se custodia y audita el oro](/transparencia). Si ya decidiste comprar, aquí comparamos [dónde comprar oro en México de forma segura](/blog/donde-comprar-oro-mexico).
 
 ## ¿Cuáles son los riesgos reales de invertir en oro?
 
