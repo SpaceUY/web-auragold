@@ -12,7 +12,7 @@ category: "Guías"
 
 La inflación en México ha provocado que el peso pierda más del 4.5% de su poder adquisitivo en el último año. Mientras tu dinero permanece estático en una cuenta bancaria, el oro ha sido históricamente uno de los activos refugio más usados para diversificar el ahorro a largo plazo, aunque su precio sube y baja.
 
-Esta guía te explica cómo empezar a invertir en oro físico de manera práctica, sin necesidad de conocimientos financieros avanzados ni grandes capitales iniciales.
+Esta guía te explica cómo empezar a invertir en oro físico de manera práctica, sin necesidad de conocimientos financieros avanzados ni grandes capitales iniciales. El primer paso es elegir dónde: tienes una [comparativa de dónde comprar oro](/blog/donde-comprar-oro-mexico) en México.
 
 ## ¿Por qué invertir en oro en lugar de otros activos?
 

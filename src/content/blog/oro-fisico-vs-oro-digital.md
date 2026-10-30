@@ -12,7 +12,7 @@ category: "Mercado"
 
 Oro físico y oro digital no son activos opuestos: el oro digital bien hecho es oro físico real custodiado a tu nombre, solo que lo gestionas desde el móvil. La diferencia que de verdad importa no es la pantalla, sino si ese oro está respaldado 1:1 por metal certificado. Ahí se decide tu riesgo y tu coste.
 
-Si estás comparando por dónde empezar a [invertir en oro físico en pesos](/invertir-en-oro-mexico), aquí tienes las diferencias reales (sin marketing) y una guía para elegir según tu perfil. El punto que casi nadie explica llega al final del primer bloque: [cómo comprobar que el oro esté respaldado y segregado](/transparencia).
+Si estás comparando por dónde empezar a [invertir en oro físico en pesos](/invertir-en-oro-mexico), aquí tienes las diferencias reales (sin marketing) y una guía para elegir según tu perfil. El punto que casi nadie explica llega al final del primer bloque: [cómo comprobar que el oro esté respaldado y segregado](/transparencia). Si ya sabes qué tipo de oro quieres, mira [dónde comprar oro físico o con respaldo digital](/blog/donde-comprar-oro-mexico).
 
 ## ¿Qué es el oro físico y qué es el oro digital?
 

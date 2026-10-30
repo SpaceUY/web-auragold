@@ -51,7 +51,7 @@ const steps = [
     iconAlt: "Bolsa de dinero dorada - convierte tus pesos en oro",
     title: "Convierte tus pesos en oro",
     description: "Regístrate en 2 minutos y compra la fracción de oro que quieras, sin necesidad de pagar una pieza completa.",
-    detail: "Compra oro 24k en barras con estándar LBMA por fracciones de gramo. Tú controlas cuánto y cuándo.",
+    detail: "Invierte desde fracciones de gramo en oro respaldado por barras de 24k con estándar LBMA. Tú controlas cuánto y cuándo.",
   },
   {
     number: "2",
@@ -216,8 +216,8 @@ const faqItems = [
 ---
 
 <BaseLayout
-  title="Aura Gold - Compra e invierte en oro desde nuestra App"
-  description="Convierte tus pesos en oro desde tu celular, en fracciones de gramo, con Aura Gold."
+  title="Aura Gold: invierte en oro desde tu celular en México"
+  description={`Aura Gold es la app para invertir en oro en pesos y desde fracciones de gramo, con respaldo 1:1 en barras de oro físico en Suiza. Comisión del ${COMMISSION_LABEL} visible antes de cada operación.`}
 >
   <JsonLD />
   <FAQJsonLD items={faqItems} />
@@ -235,13 +235,13 @@ const faqItems = [
           >
             Version 1.0.1 ya disponible
           </span>
-          <h1 class="font-display text-5xl font-semibold lg:text-6xl">
+          <h1 class="font-display text-4xl font-semibold sm:text-5xl lg:text-6xl">
             <span class="hero-rise block" style="animation-delay: 0.05s">
               Convierte
             </span>{" "}
             <!-- El espacio explícito evita que el build junte las dos líneas en "Conviertetus" para buscadores y lectores de pantalla -->
             <span class="hero-rise block text-balance" style="animation-delay: 0.15s">
-              tus <span class="text-ag-gold">pesos</span> en <span class="text-ag-gold">oro físico</span>
+              tus <span class="text-ag-gold">pesos</span> en <span class="text-ag-gold">oro</span> con respaldo físico
             </span>
           </h1>
           <p class="hero-rise max-w-xl text-lg text-white/60" style="animation-delay: 0.25s">

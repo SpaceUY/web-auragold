@@ -10,7 +10,7 @@ heroImageAlt: "Primer plano de unas manos que intercambian un billete por un pu�
 category: "Guías"
 ---
 
-Sí, se puede comprar oro con poco dinero. Hoy existen apps de oro fraccionado que te dejan empezar desde $1 peso, sin tener que pagar una moneda o un lingote completo. El oro dejó de ser cosa solo de gente con mucho capital. Lo importante cuando arrancas con poco no es nada más "poder comprar", sino que las primas y las comisiones no se te coman la inversión.
+Sí, se puede comprar oro con poco dinero. Hoy existen apps de oro fraccionado que te dejan empezar desde $1 peso, sin tener que pagar una moneda o un lingote completo. El oro dejó de ser cosa solo de gente con mucho capital. Lo importante cuando arrancas con poco no es nada más "poder comprar", sino que las primas y las comisiones no se te coman la inversión. Antes de elegir, revisa las [opciones para comprar oro en México](/blog/donde-comprar-oro-mexico) y lo que cuesta cada una.
 
 En esta guía te decimos cuánto necesitas de verdad, qué forma rinde más con poco dinero y cómo dar el primer paso. Si lo que quieres es la vía más directa, puedes [comprar oro físico fraccionado desde $1](/invertir-en-oro-mexico) desde el celular; y si prefieres el detalle del proceso, revisa la guía para [invertir en oro paso a paso](/blog/invertir-en-oro-paso-a-paso).
 
