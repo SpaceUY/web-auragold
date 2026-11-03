@@ -12,7 +12,8 @@ export function extractFaqFromMarkdown(markdown: string): FaqItem[] {
   if (!heading || heading.index === undefined) return [];
 
   const afterHeading = markdown.slice(heading.index + heading[0].length);
-  const nextH2Offset = afterHeading.search(/\n##\s/);
+  // El bloque termina en el próximo H2 o en una regla horizontal (cierre del post).
+  const nextH2Offset = afterHeading.search(/\n(?:##\s|---[ \t]*(?:\n|$))/);
   const block = nextH2Offset === -1 ? afterHeading : afterHeading.slice(0, nextH2Offset);
 
   return /^###\s/m.test(block) ? extractHeadingPairs(block) : extractInlinePairs(block);
