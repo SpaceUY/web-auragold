@@ -29,7 +29,7 @@ El oro fraccionado digital representa la evolución moderna de este activo milen
 
 ## Paso 1: Comprende qué significa realmente "invertir en oro físico"
 
-Cuando inviertes en oro físico real, no estás comprando un papel, un derivado o una promesa. Estás adquiriendo oro en barras que cumplen el estándar Good Delivery de la LBMA (London Bullion Market Association), que exige una ley mínima de 995 milésimas.
+Cuando inviertes en oro físico real, no estás comprando un papel, un derivado o una promesa. Estás adquiriendo oro 24k (99,99% de pureza) en barras que cumplen el estándar Good Delivery de la LBMA (London Bullion Market Association).
 
 **Tres formas tradicionales de comprar oro físico:**
 
