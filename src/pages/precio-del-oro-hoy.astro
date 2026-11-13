@@ -80,7 +80,7 @@ const faqItems = [
   {
     question: "¿Cuál es el precio del oro hoy en México en pesos?",
     answer:
-      "El precio del oro hoy en México en pesos se obtiene multiplicando la cotización XAU/USD del mercado spot por el tipo de cambio MXN/USD vigente. El widget en tiempo real de esta página muestra la cotización XAU/MXN actualizada continuamente durante las horas de mercado.",
+      "El precio del oro hoy en México en pesos se obtiene multiplicando la cotización internacional del oro en dólares (XAU/USD) por el tipo de cambio MXN/USD vigente. El widget de esta página usa como referencia la cotización de Tether Gold (XAUT), un token respaldado 1:1 por una onza troy de oro físico, con datos de CoinGecko que se consultan cada vez que abres la página.",
   },
   {
     question: "¿Por qué el precio del oro en pesos mexicanos sube más que en dólares?",
@@ -90,7 +90,7 @@ const faqItems = [
   {
     question: "¿A qué hora se actualiza el precio del oro hoy?",
     answer:
-      "El mercado del oro opera prácticamente las 24 horas de lunes a viernes, siguiendo las sesiones de Londres, Nueva York y Asia. El precio de referencia oficial (LBMA Gold Fix) se publica dos veces al día. El widget de esta página refleja el precio del oro en tiempo real durante las horas de mercado activo.",
+      "El mercado del oro opera prácticamente las 24 horas de lunes a viernes, siguiendo las sesiones de Londres, Nueva York y Asia. El precio de referencia oficial (LBMA Gold Fix) se publica dos veces al día. El widget de esta página consulta la cotización de Tether Gold (XAUT) en CoinGecko cada vez que abres la página y muestra la hora de la última actualización.",
   },
   {
     question: "¿El histórico del precio del oro en México siempre muestra subidas?",
@@ -100,7 +100,7 @@ const faqItems = [
   {
     question: "¿Qué es la cotización XAU/MXN?",
     answer:
-      "XAU es el código ISO del oro (del latín Aurum). XAU/MXN es el par de tipo de cambio que expresa cuántos pesos mexicanos vale una onza troy de oro. Es la referencia directa del precio del oro en México, y la cotización que muestra el widget en tiempo real de esta página.",
+      "XAU es el código ISO del oro (del latín Aurum). XAU/MXN es el par de tipo de cambio que expresa cuántos pesos mexicanos vale una onza troy de oro. Es la referencia directa del precio del oro en México. El widget de esta página usa la cotización de Tether Gold (XAUT), que sigue de cerca a XAU/MXN porque cada token equivale a una onza troy de oro.",
   },
   {
     question: "¿Puedo comprar oro al precio del mercado que veo en pantalla?",
@@ -123,7 +123,7 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
 
 <BaseLayout
   title="Precio del Oro en México Hoy - Cotización en MXN y USD"
-  description="Consulta el precio del oro hoy en México en pesos mexicanos y dólares. Cotización del oro actualizada en tiempo real, gráficos y evolución del valor del oro."
+  description="Consulta el precio del oro hoy en México en pesos mexicanos y dólares: precio por onza y por gramo, evolución histórica y qué factores mueven el valor del oro."
 >
   <FAQJsonLD items={faqJsonLdItems} />
 
@@ -134,14 +134,14 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
     <section class="mx-auto max-w-[1200px] px-6 py-20 lg:px-10">
       <div class="text-center">
         <span class="rounded-full border border-white/20 px-4 py-1 font-body text-xs text-white/70">
-          Cotización en tiempo real · XAU/MXN
+          Precio del oro en pesos · Referencia XAUT
         </span>
         <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold lg:text-6xl">
           Precio del <span class="text-ag-gold">oro</span> hoy en México (MXN y USD)
         </h1>
         <p class="mx-auto mt-6 max-w-2xl text-lg text-white/60">
-          Cotización XAU/MXN actualizada en tiempo real. El precio del oro en pesos mexicanos, la evolución
-          histórica y todo lo que necesitas saber antes de comprar.
+          El precio de una onza troy de oro en pesos mexicanos, con la cotización de Tether Gold (XAUT) como
+          referencia, la evolución histórica y todo lo que necesitas saber antes de comprar.
         </p>
       </div>
 
@@ -152,8 +152,10 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
       >
         <div class="flex items-center justify-between text-xs text-white/40">
           <span class="font-mono uppercase tracking-widest">Precio del oro • Onza troy</span>
-          <span class="flex items-center gap-2 rounded-full bg-ag-green/10 px-2 py-1 text-ag-green">
-            <span class="h-2 w-2 rounded-full bg-ag-green"></span> En vivo
+          <!-- Sin el fetch de CoinGecko el valor es el de referencia; el script lo pasa a "En vivo" al actualizar. -->
+          <span data-field="status" class="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full bg-white/10 px-2 py-1 text-white/60">
+            <span data-status-dot class="h-2 w-2 rounded-full bg-white/40"></span>
+            <span data-status-label>Referencia</span>
           </span>
         </div>
 
@@ -211,7 +213,9 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
           </div>
         </div>
 
-        <p class="mt-4 font-mono text-[10px] uppercase tracking-widest text-white/30" data-field="updated"></p>
+        <p class="mt-4 font-mono text-[10px] uppercase tracking-widest text-white/30" data-field="updated">
+          Valor de referencia · Fuente: CoinGecko (XAUT)
+        </p>
 
         <div class="mt-4 border-t border-white/10 pt-4">
           <label for="gold-widget-grams" class="text-xs text-white/40">¿Cuántos gramos quieres calcular?</label>
@@ -280,7 +284,16 @@ const fmt = (n: number) => n.toLocaleString("es-MX");
           const updatedEl = field("updated");
           if (updatedEl) {
             const now = new Date().toLocaleTimeString("es-MX", { hour: "2-digit", minute: "2-digit" });
-            updatedEl.textContent = `Últ. actualización ${now}`;
+            updatedEl.textContent = `Últ. actualización ${now} · Fuente: CoinGecko (XAUT)`;
+          }
+
+          const statusEl = field("status");
+          if (statusEl) {
+            statusEl.classList.replace("bg-white/10", "bg-ag-green/10");
+            statusEl.classList.replace("text-white/60", "text-ag-green");
+            statusEl.querySelector("[data-status-dot]")?.classList.replace("bg-white/40", "bg-ag-green");
+            const label = statusEl.querySelector("[data-status-label]");
+            if (label) label.textContent = "En vivo";
           }
 
           const gramsInput = widget.querySelector<HTMLInputElement>("[data-grams-input]");
