@@ -27,7 +27,7 @@ Aura Gold es la app con la que compras, vendes y sigues tu oro. Lo que compras s
 | Informes de reservas | Trimestrales, publicados por Tether Gold y revisados por BDO Italia bajo ISAE 3000 Revised (https://gold.tether.to/reports) |
 | Aura Gold | La app con la que operas. No emite el token |
 
-Los informes de reservas son sobre Tether Gold, no una auditoría de Aura Gold. En https://gold.tether.to se puede consultar qué barras corresponden a una dirección con XAUT.
+Los informes de reservas son sobre Tether Gold, no una auditoría de Aura Gold.
 
 ## Cómo funciona
 
