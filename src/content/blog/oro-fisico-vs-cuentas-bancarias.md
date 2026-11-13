@@ -10,7 +10,7 @@ heroImageAlt: "Laptop abierta mostrando un gráfico ascendente del precio del or
 category: "Mercado"
 ---
 
-## Key Takeaways
+## Puntos clave
 
 - El banco sirve para liquidez, pero no siempre protege contra inflación.
 - El oro físico puede ayudar a preservar valor en horizontes medios y largos.

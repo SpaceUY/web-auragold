@@ -4,13 +4,14 @@ seoTitle: "Inflación en México: cuánto ha perdido tu dinero en datos reales"
 seoDescription: "El peso mexicano ha perdido más del 85% de su valor desde 1994. Datos anuales de inflación en México y qué opciones existen frente a ella."
 description: "¡Cómo ha evolucionado la inflación en México desde 1985? ¿Cuánto poder adquisitivo ha perdido el peso en las últimas décadas?"
 pubDate: 2026-03-10
+updatedDate: 2026-11-13
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/evolucion-inflacion-mexico.png"
 heroImageAlt: "Una vendedora con delantal entrega un billete a una clienta en un puesto de verduras de un mercado mexicano, con jitomates y lechugas en el mostrador."
 category: "Mercado"
 ---
 
-## Key Takeaways
+## Puntos clave
 
 - La inflación reduce tu poder adquisitivo cada año: aunque tu dinero siga en la cuenta, cada vez compra menos bienes y servicios.
 - México ha vivido ciclos inflacionarios severos: desde la hiperinflación de los años 80 hasta el repunte pospandemia de 2022.

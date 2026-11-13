@@ -4,6 +4,7 @@ seoTitle: "Cómo invertir en oro en México paso a paso"
 seoDescription: "Guía práctica para empezar a invertir en oro físico en México: qué tipo de oro comprar, cómo funciona la custodia digital y cuánto necesitas para empezar."
 description: "La inflación en México ha provocado que el peso pierda más del 4.5% de su poder adquisitivo en el último año. Guía práctica para invertir en oro físico sin conocimientos financieros avanzados."
 pubDate: 2026-02-12
+updatedDate: 2026-11-13
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/invertir-en-oro-paso-a-paso.png"
 heroImageAlt: "Una persona lee un libro abierto sobre una mesa de madera, con lingotes de oro desparramados en primer plano y una laptop a un costado."
@@ -28,7 +29,7 @@ El oro fraccionado digital representa la evolución moderna de este activo milen
 
 ## Paso 1: Comprende qué significa realmente "invertir en oro físico"
 
-Cuando inviertes en oro físico real, no estás comprando un papel, un derivado o una promesa. Estás adquiriendo oro certificado bajo estándares internacionales LBMA (London Bullion Market Association), que garantiza pureza de 99.99%.
+Cuando inviertes en oro físico real, no estás comprando un papel, un derivado o una promesa. Estás adquiriendo oro en barras que cumplen el estándar Good Delivery de la LBMA (London Bullion Market Association), que exige una ley mínima de 995 milésimas.
 
 **Tres formas tradicionales de comprar oro físico:**
 
@@ -71,7 +72,7 @@ Si estás empezando, buscas simplicidad y no tienes grandes capitales, el oro fr
 
 ## Paso 5: Verifica la seguridad y transparencia antes de invertir
 
-1. **Certificación del oro:** debe estar certificado bajo estándares LBMA con pureza 99.99%.
+1. **Estándar del oro:** las barras deben cumplir el estándar Good Delivery de la LBMA (ley mínima de 995 milésimas).
 2. **Custodia en bóvedas certificadas:** tu oro debe estar custodiado en bóvedas privadas institucionales, no en las oficinas de la empresa.
 3. **Activo segregado legalmente:** el oro está a tu nombre, separado de los activos de la empresa. Si la plataforma quiebra, tu oro sigue siendo tuyo.
 4. **Transparencia en precios (spread):** debe mostrarte claramente el precio de compra y venta antes de confirmar.

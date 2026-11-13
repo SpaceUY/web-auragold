@@ -4,13 +4,14 @@ seoTitle: "Alternativas al efectivo para proteger tus ahorros que igual no conoc
 seoDescription: "El efectivo pierde valor cada año. Compara CETES, oro, cripto y bolsa para proteger tus ahorros en México en 2026."
 description: "Guardar dinero en efectivo bajo el colchón, en una cuenta bancaria sin rendimientos o simplemente \"dejarlo ahí\" es garantizar que pierdas poder adquisitivo cada año."
 pubDate: 2026-02-16
+updatedDate: 2026-11-13
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/alternativas-al-dinero-en-efectivo.png"
 heroImageAlt: "Alcancía de cerámica dorada con forma de cerdito sobre una mesa de comedor, rodeada de monedas mexicanas sueltas."
 category: "Educación"
 ---
 
-Guardar dinero en efectivo bajo el colchón, en una cuenta bancaria sin rendimientos o simplemente "dejarlo ahí" es garantizar que pierdas poder adquisitivo cada año. La inflación en México del 4.66% anual convierte el efectivo estancado en un activo que se deprecia automáticamente.
+Guardar dinero en efectivo bajo el colchón, en una cuenta bancaria sin rendimientos o simplemente "dejarlo ahí" hace que pierdas poder adquisitivo con el tiempo. Con la inflación en México (4.21% en 2024 y 3.69% en 2025, según el INEGI), el efectivo estancado compra cada año un poco menos.
 
 Si tienes $50,000 pesos en efectivo hoy y no haces nada con ellos, en 5 años tendrán el poder adquisitivo equivalente a $39,500 pesos. Perdiste $10,500 pesos sin gastar absolutamente nada.
 
@@ -22,7 +23,7 @@ El dinero en efectivo (billetes físicos o saldos bancarios sin rendimiento) no 
 
 **Mecanismos que destruyen el valor del efectivo:**
 
-- Inflación oficial: El INEGI reporta inflación del 4.66% anual, pero la inflación real percibida en productos básicos suele ser mayor (6-8% en alimentos, gasolina, educación).
+- Inflación oficial: el INEGI reportó 4.21% anual al cierre de 2024 y 3.69% al cierre de 2025, pero la inflación real percibida en productos básicos suele ser mayor (6-8% en alimentos, gasolina, educación).
 - Devaluación del peso mexicano: el peso pierde valor frente al dólar (12.4% en últimos 5 años), encareciendo productos importados y afectando tu poder adquisitivo global.
 - Emisión monetaria: cuando el gobierno imprime más pesos para cubrir déficit, cada peso existente vale menos (oferta aumenta = valor disminuye).
 
@@ -34,7 +35,7 @@ No gastaste ese dinero, pero perdiste casi una cuarta parte de su valor simpleme
 
 ## Alternativa 1: Cuentas de ahorro e inversión bancarias
 
-**Cuentas de ahorro básicas:** rendimiento promedio 0.5%-1.5% anual vs inflación de 4.66% anual = pérdida neta de -3% a -4% de poder adquisitivo anual.
+**Cuentas de ahorro básicas:** rendimiento promedio 0.5%-1.5% anual vs inflación de 3.69% anual (INEGI, cierre de 2025) = pérdida neta de alrededor de -2% a -3% de poder adquisitivo anual.
 
 **Pagarés bancarios y plazos fijos:** rendimiento 8%-10% anual (plazos 28-90 días), ganancia neta real +3% a +5% anual. Desventaja: dinero bloqueado, penalización por retiro anticipado.
 
@@ -65,7 +66,7 @@ El oro no se "imprime" como los billetes. Es un recurso físico limitado extraí
 | Característica | Efectivo MXN | Bitcoin | Stablecoins USD |
 |---|---|---|---|
 | Volatilidad | Baja | Extrema (±40% mensual) | Muy baja |
-| Inflación | Expuesto (4.66% anual) | No aplica | Expuesto a inflación USD |
+| Inflación | Expuesto (3.69% anual en 2025) | No aplica | Expuesto a inflación USD |
 | Liquidez | Inmediata | Alta pero con comisiones | Alta |
 | Riesgo | Pérdida garantizada por inflación | Pérdida potencial 50%+ | Riesgo técnico/plataforma |
 
@@ -132,7 +133,7 @@ Con Aura Gold puedes [empezar a ahorrar en oro hoy mismo](/invertir-en-oro-mexic
 
 **¿Es malo tener dinero en efectivo?**
 
-No es "malo", pero es ineficiente para ahorros de mediano-largo plazo. El efectivo debe usarse solo para gastos inmediatos (1-3 meses). Mantener grandes cantidades garantiza pérdida de valor por inflación (4.66% anual en México).
+No es "malo", pero es ineficiente para ahorros de mediano-largo plazo. El efectivo debe usarse solo para gastos inmediatos (1-3 meses). Mantener grandes cantidades hace que pierdan valor por la inflación (3.69% anual en México al cierre de 2025, según el INEGI).
 
 **¿Cuál es la alternativa más segura al efectivo?**
 

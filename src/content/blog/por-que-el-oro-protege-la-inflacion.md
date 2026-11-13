@@ -2,15 +2,16 @@
 title: "El oro frente a la inflación: Ejemplos reales y datos de México"
 seoTitle: "Cómo se comporta el oro frente a la inflación en México"
 seoDescription: "El oro no es moneda: no se puede imprimir. Por eso, en plazos largos, su precio ha tendido a subir cuando el peso pierde valor, aunque no siempre. Ejemplos reales y datos del mercado mexicano."
-description: "La inflación en México alcanzó el 4.66% anual en 2024, mientras el peso mexicano perdió más del 12% de su valor frente al dólar en los últimos tres años."
+description: "La inflación en México fue de 4.7% anual en 2024 según el Banco Mundial, mientras el peso mexicano perdió más del 12% de su valor frente al dólar en los últimos tres años."
 pubDate: 2026-02-13
+updatedDate: 2026-11-13
 author: "federico-sendra"
 heroImage: "/images/blog/por-que-el-oro-protege-la-inflacion.png"
 heroImageAlt: "Un asesor de traje revisa un documento con una calculadora y lingotes de oro sobre el escritorio, frente a una pantalla con gráficos de mercado."
 category: "Educación"
 ---
 
-La inflación en México alcanzó el [4.66% anual en 2024](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MX) (Banco Mundial), mientras el peso mexicano perdió más del 12% de su valor frente al dólar en los últimos tres años. En este contexto económico, cada vez más personas buscan activos refugio que protejan el poder adquisitivo de su dinero sin necesidad de conocimientos financieros avanzados.
+La inflación en México fue de [4.7% anual en 2024](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MX) (Banco Mundial, promedio anual), mientras el peso mexicano perdió más del 12% de su valor frente al dólar en los últimos tres años. En este contexto económico, cada vez más personas buscan activos refugio que protejan el poder adquisitivo de su dinero sin necesidad de conocimientos financieros avanzados.
 
 El oro lleva más de 5,000 años usándose con ese fin. Pero ¿por qué? ¿Qué tiene el oro que otros activos no tienen? Y más importante: ¿cómo puedes usarlo tú para ahorrar en 2025?
 

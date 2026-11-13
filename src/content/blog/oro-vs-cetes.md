@@ -10,7 +10,7 @@ heroImageAlt: "Pila de lingotes de oro sobre el escritorio de una oficina financ
 category: "Mercado"
 ---
 
-## Key Takeaways
+## Puntos clave
 
 - CETES: ideal para corto plazo y estabilidad de tu ahorro.
 - Oro: pensado para diversificar tu ahorro a largo plazo.
