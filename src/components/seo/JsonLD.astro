@@ -23,8 +23,12 @@ const graph = [
     // Hay otras apps y empresas llamadas "Aura Gold" en otros países: esto ayuda
     // a que los motores no mezclen la entidad.
     disambiguatingDescription:
-      "App de México para comprar y vender oro en pesos, operada por MintIA Corp. No tiene relación con otras apps o empresas llamadas Aura Gold en otros países.",
-    areaServed: { "@type": "Country", name: "México" },
+      "App para comprar y vender oro desde el celular, operada por MintIA Corp y disponible en México, Argentina y Perú. No tiene relación con otras apps o empresas llamadas Aura Gold.",
+    areaServed: [
+      { "@type": "Country", name: "México" },
+      { "@type": "Country", name: "Argentina" },
+      { "@type": "Country", name: "Perú" },
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: LEGAL_ENTITY.address,
