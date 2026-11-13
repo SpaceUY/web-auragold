@@ -7,8 +7,9 @@ import tailwindcss from '@tailwindcss/vite';
 import { satteri } from '@astrojs/markdown-satteri';
 import { tableScrollPlugin } from './src/lib/markdown/table-scroll.mjs';
 
-// lastmod honesto: fecha real de cada post desde su frontmatter (pubDate).
-// Google usa lastmod para priorizar recrawl; no ponemos "hoy" en todo.
+// lastmod honesto: fecha real de cada post desde su frontmatter (updatedDate
+// si el post se revisó, si no pubDate). Google usa lastmod para priorizar
+// recrawl; no ponemos "hoy" en todo.
 function blogDates() {
   const dir = './src/content/blog';
   /** @type {Record<string,string>} */
@@ -16,7 +17,9 @@ function blogDates() {
   for (const f of readdirSync(dir)) {
     if (!f.endsWith('.md')) continue;
     const src = readFileSync(`${dir}/${f}`, 'utf8');
-    const m = src.match(/^pubDate:\s*["']?(\d{4}-\d{2}-\d{2})/m);
+    const m =
+      src.match(/^updatedDate:\s*["']?(\d{4}-\d{2}-\d{2})/m) ??
+      src.match(/^pubDate:\s*["']?(\d{4}-\d{2}-\d{2})/m);
     if (m) map[f.replace(/\.md$/, '')] = m[1];
   }
   return map;

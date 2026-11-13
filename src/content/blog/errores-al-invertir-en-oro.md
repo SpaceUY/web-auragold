@@ -4,6 +4,7 @@ seoTitle: "7 errores al invertir en oro (y cómo evitarlos) este 2026"
 seoDescription: "Desde pagar custodia oculta hasta confundir el oro digital con cripto: los 7 errores más frecuentes al comprar oro en México y qué comprobar antes de invertir."
 description: "Los 7 errores más frecuentes al invertir en oro. Sigue nuestra guía para invertir bien."
 pubDate: 2026-04-12
+updatedDate: 2026-11-13
 author: "federico-sendra"
 heroImage: "/images/blog/errores-al-invertir-en-oro.png"
 heroImageAlt: "Una persona con la cabeza apoyada en la mano frente a su laptop, rodeada de papeles desordenados y monitores encendidos en una oficina de noche."
@@ -134,7 +135,7 @@ Si compras oro de 18k pensando que es 24k, pagas 100% del precio pero recibes 75
 **Cómo evitarlo:**
 
 Si compras oro físico tradicional, exige siempre:
-- Certificación LBMA (London Bullion Market Association): Estándar internacional de oro puro 99.99%
+- Estándar Good Delivery de la LBMA (London Bullion Market Association): barras con ley mínima de 995 milésimas, de refinadoras acreditadas
 - Certificado de autenticidad con número de serie: Cada lingote debe tener documentación trazable
 - Ensayo de pureza por tercero independiente: No confíes solo en el vendedor
 - Marcas y sellos visibles: Pureza, fabricante, número de serie grabados en el lingote
@@ -219,7 +220,7 @@ Reglas anti-pánico para mantener oro:
 - Nunca vendas por caídas menores al 15%: Son fluctuaciones normales
 - Establece horizonte temporal mínimo (3-5 años): No revises precio diariamente
 - Recuerda el propósito: Largo plazo, no trading
-- Compara con la alternativa: ¿Dejarlo en pesos perdiendo 4.66% garantizado es mejor?
+- Compara con la alternativa: ¿es mejor dejarlo en pesos, donde la inflación le resta poder adquisitivo (3.69% en 2025, según el INEGI)?
 
 Cuándo SÍ tiene sentido vender oro:
 - ✓ Necesitas liquidez urgente para emergencia real
