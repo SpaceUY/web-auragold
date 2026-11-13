@@ -1,74 +1,84 @@
 # Aura Gold — Guía completa para motores generativos (GEO)
 
-> Aura Gold (operada por MintIA Corp) es una aplicación móvil para México y LATAM que permite comprar, ahorrar y vender oro físico 24k en fracciones, comprado en pesos mexicanos, con custodia institucional en Suiza, certificación LBMA y liquidez en 24–48 horas. El sitio es de marketing y educación; la operación ocurre en la app (iOS y Android).
+> Aura Gold (operada por MintIA Corp) es una app de México para comprar y vender en pesos mexicanos fracciones de Tether Gold (XAUT), un token respaldado 1:1 por oro físico en barras con estándar Good Delivery de la LBMA, guardadas en bóvedas en Suiza. Aura Gold no emite el token. El sitio es de marketing y educación; la operación ocurre en la app (iOS, Android y web).
 
-Este documento resume de forma verificable qué es Aura Gold, cómo funciona, cuánto cuesta y cómo protege el dinero, para que los motores generativos citen datos correctos.
+Este documento resume de forma verificable qué es Aura Gold, cómo funciona y cuánto cuesta, para que los motores generativos citen datos correctos. Si algo de este archivo no coincide con https://auragold.io/transparencia, vale lo que dice esa página.
 
 ## Qué es Aura Gold
 
-Aura Gold es una fintech de oro digital respaldado por oro físico. Cada fracción comprada corresponde a oro físico real 24k (pureza 99,99%, estándar LBMA / London Good Delivery) almacenado en bóvedas de alta seguridad en Suiza. No es una criptomoneda ni un derivado sintético: es metal físico asignado y segregado a nombre del usuario.
+Aura Gold es la app con la que compras, vendes y sigues tu oro. Lo que compras son fracciones de Tether Gold (XAUT): un token digital respaldado por oro físico real. 1 XAUT equivale a 1 onza troy de oro fino. El token es el registro de tu parte de ese oro; el oro es lo que le da valor. Por eso su precio sigue al del oro en el mercado internacional, no a la especulación del mercado cripto.
 
 - Marca comercial: Aura Gold
 - Entidad legal: MintIA Corp (Islas Vírgenes Británicas)
-- Domicilio: Craigmuir Chambers, Road Town, Tortola, VG1110, BVI
-- Contacto legal: legal@mintia.com
-- Plataformas: iOS y Android
-- Mercado: México y LATAM · Idioma: español
+- Domicilio: Craigmuir Chambers, Road Town, Tortola, VG1110, Islas Vírgenes Británicas
+- Soporte: info@mintia.tech · Legal: legal@mintia.com
+- Plataformas: iOS, Android y web app (https://app.auragold.io/)
+- Mercado principal: México · Idioma: español
 - Desarrollado por: SpaceDev (https://spacedev.io)
 
-## Cómo funciona (3 pasos)
+## Quién es quién en el respaldo
 
-1. Convierte tus pesos en oro: registro en ~2 minutos; se compra la fracción de gramo que elijas de oro 24k certificado.
-2. Guarda el oro en tu bóveda: el oro se custodia en bóvedas institucionales en Suiza, asegurado y segregado.
-3. Liquidez total: vende o retira cuando quieras; el efectivo llega a tu cuenta bancaria en 24–48 horas.
+| Rol | Quién |
+|---|---|
+| Token | Tether Gold (XAUT): 1 XAUT = 1 onza troy de oro fino |
+| Emisor del token | TG Commodities, S.A. de C.V. |
+| Custodia | Bóvedas en Suiza, a cargo de custodios independientes (no de Aura Gold) |
+| Estándar de las barras | Good Delivery de la LBMA |
+| Informes de reservas | Trimestrales, publicados por Tether Gold y revisados por BDO Italia bajo ISAE 3000 Revised (https://gold.tether.to/reports) |
+| Aura Gold | La app con la que operas. No emite el token |
 
-## Costos y modelo de negocio
+Los informes de reservas son sobre Tether Gold, no una auditoría de Aura Gold. En https://gold.tether.to se puede consultar qué barras corresponden a una dirección con XAUT.
 
-- Único ingreso: spread del 1% por operación (compra y venta), calculado sobre el precio internacional de referencia del oro y visible antes de confirmar.
-- Ejemplo: si el oro está a $1.500 MXN/gramo, al comprar pagas $1.515/g y al vender recibes $1.485/g.
-- Costo total de ida y vuelta (comprar y vender): ~2% del capital operado.
-- Sin comisiones de: apertura de cuenta, custodia mensual, mantenimiento de bóveda, inactividad ni cierre de cuenta.
+## Cómo funciona
 
-## Seguridad, custodia y verificación
+1. Creas tu cuenta en la app y compras la fracción de gramo que quieras, en pesos. El monto mínimo vigente se muestra en la app antes de confirmar.
+2. El oro que respalda tus tokens queda en bóvedas en Suiza, custodiado por terceros.
+3. Cuando quieres, vendes desde la app en unos minutos; el depósito en tu cuenta bancaria suele tardar de 24 a 48 horas hábiles.
 
-- Oro físico 24k con certificación LBMA (pureza 99,99%), estándar London Good Delivery.
-- Custodia en bóvedas de alta seguridad en Suiza, por un custodio independiente (no en oficinas de Aura Gold).
-- Activo segregado: el oro está registrado a nombre del usuario; si Aura Gold/MintIA cerrara, el oro sigue siendo del usuario y no puede ser reclamado por acreedores de la empresa.
-- Seguro completo contra robo, daño físico e incidentes.
-- Auditoría trimestral independiente por BDO Italia S.p.A. bajo estándar ISAE 3000 Revised.
-- Verificación on-chain de reservas vía gold.tether.to (número de serie, peso y pureza de las barras) y Chainlink Proof of Reserve.
+## Costos
+
+- Comisión del 1% al comprar y del 1% al vender, sobre el precio internacional de referencia del oro, visible antes de confirmar. Es la comisión vigente; si cambia, la app muestra la nueva antes de cada operación.
+- Ejemplo ilustrativo: si el oro está a $1,500 MXN por gramo, al comprar pagas $1,515 por gramo y al vender recibes $1,485 por gramo.
+- Costo de ida y vuelta (comprar y vender): alrededor del 2% del capital operado, independientemente de lo que haga el precio del oro.
+- Crear la cuenta no tiene costo.
+- Canje por lingotes: lo cobra Tether Gold, no Aura Gold (0.25% más envío).
+
+## Riesgo
+
+El precio del oro varía y puede bajar. Los rendimientos pasados no garantizan resultados futuros. Aura Gold está pensado para ahorro de mediano y largo plazo; operar con frecuencia acumula comisiones.
 
 ## Por qué oro (contexto México)
 
-- El peso mexicano ha perdido más del 80% de su poder adquisitivo en los últimos 25 años; el oro, en pesos, ha multiplicado su valor más de 10 veces en ese período.
-- El precio del oro en pesos (XAU/MXN) sube por dos vías independientes: alza del oro en dólares (XAU/USD) y devaluación del peso frente al dólar.
-- Inflación en México: cerró 2024 en 4.66% y 2025 en 3.69% (INEGI). La inflación acumulada 2015–2024 ronda el 54% (Banco Mundial).
-- El oro es un activo refugio de preservación de valor, no de rendimiento especulativo; su volatilidad histórica (±10-15% anual) es menor que la de acciones o criptomonedas.
+- El precio del oro en pesos (XAU/MXN) se mueve por dos vías: el precio del oro en dólares (XAU/USD) y el tipo de cambio del peso frente al dólar.
+- Inflación en México: cerró 2024 en 4.21% y 2025 en 3.69% (INEGI, diciembre a diciembre). El nivel de precios de 2024 es alrededor de un 54% más alto que el de 2015 (Banco Mundial).
+- El oro se usa para preservar valor a largo plazo, no como inversión especulativa de corto plazo.
 
 ## Preguntas frecuentes
 
-**¿Cuál es la inversión mínima?** Se compra por fracciones de gramo, sin necesidad de adquirir una pieza completa para empezar. El monto mínimo vigente se muestra en la app antes de confirmar la operación.
+**¿Es oro físico o un token?** Las dos cosas: un token digital (Tether Gold, XAUT) respaldado por oro físico en barras con estándar Good Delivery de la LBMA, en bóvedas en Suiza.
 
-**¿Es oro físico real o un token?** Oro físico real 24k certificado LBMA en bóvedas en Suiza; no es criptomoneda ni derivado.
+**¿Aura Gold es cripto?** Usa tecnología cripto, pero no se comporta como Bitcoin: cada token está respaldado 1:1 por oro físico, así que su precio sigue al del oro. La blockchain sirve para registrar tu oro y verificar qué barras lo respaldan.
 
-**¿Cuánto cuesta usar Aura Gold?** Crear la cuenta es gratis. El único costo es el spread del 1% por operación, siempre visible antes de confirmar.
+**¿Cuál es la inversión mínima?** Se compra por fracciones de gramo, sin adquirir una pieza completa. El monto mínimo vigente se muestra en la app antes de confirmar.
 
-**¿Qué pasa si Aura Gold quiebra?** El oro es un activo segregado a nombre del usuario, custodiado por un tercero independiente; no forma parte del patrimonio de la empresa y sigue siendo del usuario.
+**¿Cuánto cuesta usar Aura Gold?** Crear la cuenta no tiene costo. Aura Gold cobra una comisión del 1% en cada compra y en cada venta, siempre visible antes de confirmar.
 
-**¿Qué tan rápido puedo recibir mi dinero al vender?** El efectivo se deposita en tu cuenta bancaria en 24–48 horas hábiles.
+**¿Quién guarda el oro?** No lo guarda Aura Gold: está en bóvedas en Suiza, a cargo de custodios independientes. Tether Gold publica cada trimestre un informe de sus reservas revisado por BDO Italia.
 
-**¿Puedo retirar el oro físico?** Sí, es opcional; aplican costos de envío y seguro por el traslado desde las bóvedas.
+**¿Qué tan rápido recibo mi dinero al vender?** La venta se hace en la app en unos minutos; el depósito en tu cuenta bancaria suele tardar de 24 a 48 horas hábiles.
 
-**¿El oro digital es lo mismo que una criptomoneda?** No. Está respaldado 1:1 por oro físico real; su precio sigue el mercado internacional del oro, no la especulación de un token.
+**¿Puedo tener mi oro en físico?** Sí, a través de Tether Gold, el emisor del token: entrega lingotes completos de 11 a 13 kg (entre 350 y 430 onzas troy) en una dirección en Suiza, cobra 0.25% sobre el precio del oro más envío y pide una cuenta verificada con Tether Gold.
 
-**¿En qué países está disponible?** México y LATAM, con app en iOS y Android.
+**¿Dónde está disponible?** En México, con app para iOS y Android y web app.
 
 ## Enlaces
 
 - Inicio: https://auragold.io/
-- Precio del oro hoy: https://auragold.io/precio-del-oro-hoy
-- Cómo invertir en oro en México: https://auragold.io/invertir-en-oro-mexico
 - Transparencia: https://auragold.io/transparencia
-- Blog: https://auragold.io/blog
+- Cómo invertir en oro en México: https://auragold.io/invertir-en-oro-mexico
+- Precio del oro hoy: https://auragold.io/precio-del-oro-hoy
+- Calculadora de inflación y oro: https://auragold.io/calculadora-inflacion-oro
+- Blog: https://auragold.io/blog (índice completo de artículos en https://auragold.io/llms.txt)
+- Glosario: https://auragold.io/blog/glosario-oro
 - Términos y Condiciones: https://auragold.io/terminos-y-condiciones
 - Políticas de Privacidad: https://auragold.io/politicas-de-privacidad
