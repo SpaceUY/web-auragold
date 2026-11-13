@@ -1,5 +1,6 @@
 ---
 import { LEGAL_ENTITY } from "../../data/legal";
+import { YOUTUBE_CHANNEL_URL } from "../../data/links";
 
 const footerLinks = [
   { label: "Inicio", href: "/" },
@@ -33,6 +34,10 @@ import OpenPanelAnalytics from "../analytics/OpenPanelAnalytics.astro";
             </a>
           ))
         }
+        <!-- rel="me": el canal es de la marca; ayuda a unir la entidad entre sitios -->
+        <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="me noopener" class="hover:text-white transition-colors">
+          YouTube
+        </a>
         <!-- consent.js escucha data-aura-consent-open y abre las preferencias de cookies -->
         <button type="button" data-aura-consent-open class="cursor-pointer hover:text-white transition-colors">
           Configurar cookies

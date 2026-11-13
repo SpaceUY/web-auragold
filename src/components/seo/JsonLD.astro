@@ -1,5 +1,5 @@
 ---
-import { ANDROID_APP_URL, IOS_APP_URL } from "../../data/links";
+import { ANDROID_APP_URL, IOS_APP_URL, YOUTUBE_CHANNEL_URL } from "../../data/links";
 import { LEGAL_ENTITY } from "../../data/legal";
 
 const graph = [
@@ -12,9 +12,23 @@ const graph = [
     alternateName: ["Aura", "AuraGold"],
     url: "https://auragold.io/",
     legalName: LEGAL_ENTITY.name,
-    email: LEGAL_ENTITY.legalEmail,
+    // El email principal es el visible en el footer; el legal va como contacto aparte.
+    email: LEGAL_ENTITY.supportEmail,
+    contactPoint: [
+      { "@type": "ContactPoint", contactType: "customer support", email: LEGAL_ENTITY.supportEmail, availableLanguage: "es" },
+      { "@type": "ContactPoint", contactType: "legal", email: LEGAL_ENTITY.legalEmail, availableLanguage: "es" },
+    ],
     description:
       "Plataforma para comprar oro físico 24k desde una app móvil, en fracciones de gramo, con custodia internacional y liquidez.",
+    // Hay otras apps y empresas llamadas "Aura Gold" en otros países: esto ayuda
+    // a que los motores no mezclen la entidad.
+    disambiguatingDescription:
+      "App para comprar y vender oro desde el celular, operada por MintIA Corp y disponible en México, Argentina y Perú. No tiene relación con otras apps o empresas llamadas Aura Gold.",
+    areaServed: [
+      { "@type": "Country", name: "México" },
+      { "@type": "Country", name: "Argentina" },
+      { "@type": "Country", name: "Perú" },
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: LEGAL_ENTITY.address,
@@ -27,9 +41,9 @@ const graph = [
       height: 456,
     },
     founder: { "@id": "https://auragold.io/autores/federico-sendra#person" },
-    // Fichas verificadas de la app (únicas presencias de terceros confirmadas hoy).
+    // Fichas de la app y canal de YouTube (presencias de terceros confirmadas).
     // Sumar acá LinkedIn/Instagram de la empresa apenas existan esos perfiles reales.
-    sameAs: [ANDROID_APP_URL, IOS_APP_URL],
+    sameAs: [ANDROID_APP_URL, IOS_APP_URL, YOUTUBE_CHANNEL_URL],
   },
   {
     "@type": "WebSite",
@@ -58,7 +72,8 @@ const graph = [
     url: "https://auragold.io/",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Android, iOS, Web",
-    availableLanguage: "es",
+    inLanguage: "es",
+    downloadUrl: [ANDROID_APP_URL, IOS_APP_URL],
     publisher: { "@id": "https://auragold.io/#organization" },
     description:
       "Aplicación para Android, iPhone y web para comprar, guardar y vender oro físico 24k en fracciones de gramo, con custodia institucional internacional y opción de canje por lingotes de oro físico.",
