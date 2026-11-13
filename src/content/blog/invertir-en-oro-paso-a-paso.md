@@ -84,7 +84,7 @@ Por ejemplo, en Aura Gold puedes [revisar la comisión, la custodia y los inform
 1. **Descarga o acceso:** descarga la app oficial en Android o iPhone, o úsala desde la web (2 minutos).
 2. **Registro simplificado:** datos básicos (nombre, correo, teléfono).
 3. **Exploración sin compromiso:** ver precios en tiempo real y entender el proceso antes de invertir.
-4. **Verificación de identidad:** por regulación fintech, necesitas verificar tu identidad (INE/fotografía), 5 minutos.
+4. **Verificación de identidad:** confirmas quién eres con una identificación oficial y una foto, como en cualquier servicio que mueve dinero.
 5. **Vincular método de pago:** tarjeta de débito/crédito o transferencia SPEI.
 6. **Primera compra simbólica:** empieza con un monto pequeño ($50-$100 MXN) para probar el proceso completo.
 7. **Confirmación y seguimiento:** recibes confirmación inmediata; tu saldo en oro se actualiza en tiempo real.

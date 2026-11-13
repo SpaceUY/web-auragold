@@ -70,7 +70,7 @@ No hay una respuesta única. Depende de qué valoras y de cómo inviertes.
 
 **Si solo quieres diversificar una cartera bursátil:** un ETF de oro cumple, entendiendo que compras exposición al precio, no oro tuyo.
 
-Sea cual sea tu caso, el criterio de fondo es el mismo, y te ayuda a esquivar varios de los [errores más comunes al invertir en oro](/blog/errores-al-invertir-en-oro): prioriza oro real, verificable y líquido, por encima de la etiqueta "físico" o "digital". Si además quieres ver a qué cotización estarías comprando hoy, consulta el [precio del oro hoy en tiempo real](/precio-del-oro-hoy).
+Sea cual sea tu caso, el criterio de fondo es el mismo, y te ayuda a esquivar varios de los [errores más comunes al invertir en oro](/blog/errores-al-invertir-en-oro): prioriza oro real, verificable y líquido, por encima de la etiqueta "físico" o "digital". Si además quieres ver a qué cotización estarías comprando hoy, consulta el [precio del oro hoy](/precio-del-oro-hoy).
 
 ## Invierte en oro físico con la comodidad de lo digital
 

@@ -4,6 +4,7 @@ seoTitle: "Qué es el oro fraccionado, cómo funciona y cómo invertir desde Mé
 seoDescription: "El oro fraccionado permite comprar partes de un lingote físico, por fracciones de gramo. Descubre cómo funciona, qué garantías exige y qué papel puede tener frente a la inflación en México."
 description: "Explicamos qué es el oro fraccionado, cómo funciona paso a paso, en qué se diferencia de un ETF o del oro tokenizado, y qué garantías debe cumplir para ser seguro."
 pubDate: 2026-08-31
+updatedDate: 2026-11-13
 author: "federico-sendra"
 heroImage: "/images/blog/que-es-oro-fraccionado-funcionamiento.png"
 heroImageAlt: "Un operario con gorra y camisa azul revisa láminas rectangulares de oro ordenadas sobre una mesa blanca en un taller de refinación, con una computadora y una planilla al lado."
@@ -14,7 +15,7 @@ category: "Guías"
 
 El oro fraccionado es una forma de comprar una parte proporcional de un lingote de oro físico real sin necesidad de adquirirlo entero. Cada fracción representa una cantidad concreta de metal custodiado en una bóveda institucional, asignada a tu nombre como activo segregado.
 
-Si quieres entender por qué tiene sentido ahorrar en oro antes de evaluar cómo hacerlo, empieza por nuestra guía sobre [el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion). Y si ya quieres ver el precio actual al que estarías comprando, consulta el [precio del oro hoy en tiempo real](/precio-del-oro-hoy).
+Si quieres entender por qué tiene sentido ahorrar en oro antes de evaluar cómo hacerlo, empieza por nuestra guía sobre [el oro frente a la inflación](/blog/por-que-el-oro-protege-la-inflacion). Y si ya quieres ver el precio actual al que estarías comprando, consulta el [precio del oro hoy](/precio-del-oro-hoy).
 
 El oro fraccionado resuelve el principal obstáculo histórico de invertir en oro físico: el coste de entrada. Un lingote estándar de 1 kg de oro cuesta hoy más de 90.000 pesos mexicanos. El oro fraccionado elimina ese mínimo — puedes comprar la fracción equivalente a 100 pesos, 500 o la cantidad que elijas — y el metal existe igualmente, custodiado y certificado.
 
@@ -30,9 +31,9 @@ Muchas personas usan el oro como contrapeso a esa erosión. Históricamente, en 
 
 El mecanismo es más simple de lo que parece:
 
-**1. Compras una fracción de lingote.** A través de una app o plataforma regulada, adquieres la fracción de oro que quieres, sin tener que pagar la pieza completa. El precio que pagas refleja la cotización internacional del metal en ese momento, más un spread transparente.
+**1. Compras una fracción de lingote.** A través de una app o plataforma, adquieres la fracción de oro que quieres, sin tener que pagar la pieza completa. El precio que pagas refleja la cotización internacional del metal en ese momento, más un spread transparente.
 
-**2. El oro físico existe en una bóveda.** Detrás de cada fracción hay metal real custodiado en bóvedas certificadas. En plataformas como Aura Gold, esa fracción se registra como un token en blockchain, y eso permite verificar qué barras la respaldan.
+**2. El oro físico existe en una bóveda.** Detrás de cada fracción hay metal real custodiado en bóvedas certificadas. En plataformas como Aura Gold, esa fracción se registra como un token en blockchain, y el emisor del token publica informes de sus reservas.
 
 **3. Tu propiedad queda registrada.** Eres propietario legal de esa fracción. Si la empresa que gestiona la custodia tuviera problemas, tu oro no forma parte de su patrimonio ni puede usarse para pagar sus deudas.
 
