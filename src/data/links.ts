@@ -7,6 +7,10 @@ export const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=co
 // un equivalente al `referrer` de Play: el link va sin parámetros.
 export const IOS_APP_URL = "https://apps.apple.com/mx/app/aura-gold-invertir-en-oro/id6812486466";
 
+// Canal oficial de YouTube (creado el 03/11/2026). Va en el footer y en el
+// sameAs del JSON-LD para que los buscadores unan el canal con la marca.
+export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@auragoldio";
+
 // La raíz de la web app decide sola a dónde mandar: al login/registro (un
 // único flujo) si no hay sesión, o directo a /home si el usuario ya entró
 // antes. Por eso se enlaza la raíz y no /sign-in.
