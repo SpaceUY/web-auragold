@@ -4,6 +4,7 @@ seoTitle: "Oro vs criptomonedas: Cuál conviene más a tu ahorro"
 seoDescription: "Oro vs criptomonedas en México: compara volatilidad, riesgo de pérdida total y comportamiento ante la inflación y la devaluación del peso."
 description: "Comparamos oro y criptomonedas para tu ahorro en México: volatilidad, riesgo de pérdida total, comportamiento en crisis y ante la inflación."
 pubDate: 2026-08-17
+updatedDate: 2026-11-13
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/oro-vs-criptomonedas.png"
 heroImageAlt: "Una mano sostiene una moneda dorada con el símbolo de Bitcoin sobre un montón de monedas cripto, junto a lingotes de oro apilados a la izquierda."
@@ -72,7 +73,7 @@ Las criptomonedas pueden tener sentido para perfiles con alta tolerancia al ries
 | Comportamiento en crisis | Suele caer con los mercados | Suele mantenerse o subir |
 | Protección ante inflación | No demostrada históricamente | Historial a largo plazo, sin garantía |
 | Riesgo de pérdida total | Real (proyectos pueden quebrar) | Prácticamente inexistente |
-| Regulación en México | En evolución, incierta | Clara y consolidada |
+| Regulación en México | En evolución | Depende del instrumento: físico, ETF o token |
 | Accesibilidad digital | Alta | Alta (con plataformas como Aura Gold) |
 
 ### Qué dice la historia sobre el comportamiento del oro en momentos de crisis

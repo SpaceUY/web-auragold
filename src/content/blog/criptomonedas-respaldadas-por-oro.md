@@ -4,7 +4,7 @@ seoTitle: "Criptomonedas respaldadas por oro: PAXG, XAUT y alternativas en Méxi
 seoDescription: "Qué son las criptomonedas respaldadas por oro, cómo funcionan PAXG y XAUT, sus riesgos reales y cómo tener oro tokenizado desde México sin wallet ni exchange."
 description: "Explicamos qué son las criptomonedas respaldadas por oro (PAXG, XAUT), cómo funcionan, sus riesgos de contraparte y técnicos, y cómo acceder a ellas sin conocimientos cripto."
 pubDate: 2026-08-26
-updatedDate: 2026-09-24
+updatedDate: 2026-11-13
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/criptomonedas-respaldadas-por-oro.png"
 heroImageAlt: "Una persona consulta un gráfico de precios en su celular frente a estanterías con decenas de lingotes de oro apilados."
@@ -86,7 +86,7 @@ Tanto si evalúas PAXG, XAUT o cualquier alternativa, revisa estos puntos:
 
 **Estándar LBMA.** Solo el oro certificado por la London Bullion Market Association garantiza pureza y trazabilidad reconocidas internacionalmente. Es el criterio mínimo exigible en cualquier producto de inversión en oro — tokenizado o físico.
 
-Puedes consultar el [precio del oro hoy](/precio-del-oro-hoy) en tiempo real para ver la cotización actualizada y entender cómo se traslada al valor de cualquiera de estos productos.
+Puedes consultar el [precio del oro hoy](/precio-del-oro-hoy) para ver la cotización actualizada y entender cómo se traslada al valor de cualquiera de estos productos.
 
 ## Otras preguntas frecuentes sobre criptomonedas respaldadas por oro
 
@@ -114,6 +114,6 @@ La [London Bullion Market Association](/blog/glosario-oro#lbma) es el estándar 
 
 Si llegaste a este artículo pensando en la inflación y la devaluación del peso, el oro tokenizado te da precio de oro y respaldo físico verificable. Lo que suele frenar a los ahorradores es la parte técnica: wallets, exchanges y pagos en cripto.
 
-Aura Gold resuelve esa parte. Compras oro respaldado por Tether Gold (XAUT) desde la app, en pesos y por fracciones de gramo. Puedes verificar qué barras respaldan tu oro, venderlo cuando quieras o canjearlo por lingotes físicos a través de Tether Gold (lingote completo, entrega en Suiza, sin fecha fija).
+Aura Gold resuelve esa parte. Compras oro respaldado por Tether Gold (XAUT) desde la app, en pesos y por fracciones de gramo. Puedes revisar los informes de reservas del emisor, vender tu oro cuando quieras o canjearlo por lingotes físicos a través de Tether Gold (lingote completo, entrega en Suiza, sin fecha fija).
 
 [Empieza a ahorrar en oro →](/invertir-en-oro-mexico)
