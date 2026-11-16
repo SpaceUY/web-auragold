@@ -4,6 +4,7 @@ seoTitle: "¿Es seguro invertir en oro? Riesgos reales y cómo evitarlos"
 seoDescription: "El precio del oro sube y baja, pero buena parte del riesgo está en cómo y con quién lo compras. Riesgos reales, fraudes comunes en México y checklist para invertir seguro."
 description: "Separamos la volatilidad normal del precio de los riesgos de custodia y de los fraudes: qué estafas de oro son comunes en México y qué verificar antes de poner un peso."
 pubDate: 2026-09-08
+updatedDate: 2026-11-13
 author: "federico-sendra"
 heroImage: "/images/blog/es-seguro-invertir-en-oro.png"
 heroImageAlt: "Manos tomando un lingote de un maletín de seguridad forrado y lleno de lingotes de oro acomodados en filas."
@@ -54,7 +55,7 @@ Precios "demasiado buenos", urgencia para cerrar la compra "antes de que suba", 
 
 Invertir en oro es más seguro cuando eliges bien la vía y verificas señales concretas. Este es el checklist antes de poner un peso:
 
-- **Certificación LBMA:** el oro debe cumplir el estándar internacional de pureza (99.99%), condición para que tenga valor reconocido al vender.
+- **Estándar LBMA:** las barras deben cumplir el estándar Good Delivery de la LBMA (ley mínima de 995 milésimas), condición para que tengan valor reconocido al vender.
 - **Custodia institucional y asegurada:** el metal debe estar en bóvedas profesionales, no "en las oficinas" de nadie.
 - **Activo segregado a tu nombre:** que seas dueño del oro, no acreedor de la empresa. Así, si la plataforma quiebra, el metal sigue siendo tuyo.
 - **Respaldo 1:1 auditable:** cada gramo vendido debe corresponder a metal real, y eso debe poder comprobarse.

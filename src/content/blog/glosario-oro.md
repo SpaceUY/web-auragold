@@ -4,6 +4,7 @@ seoTitle: "Glosario del oro: 26 términos de inversión explicados"
 seoDescription: "Glosario claro de inversión en oro: qué es LBMA, onza troy, oro fraccionado, activo segregado, spread, activo refugio y más, con contexto para México."
 description: "Referencia de los términos que necesitas para invertir en oro con criterio, de la onza troy a la custodia segregada, cada uno con su contexto real para el ahorrador mexicano."
 pubDate: 2026-09-15
+updatedDate: 2026-11-13
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/glosario-oro.png"
 heroImageAlt: "Un hombre de traje azul y lentes lee un libro abierto de gran formato en una biblioteca de estanterías altas iluminadas."
@@ -64,7 +65,7 @@ El kilate (o quilate) mide la pureza del oro sobre una base de 24 partes: 24 kil
 
 ### <span id="pureza"></span>¿Qué es la pureza del oro (999.9 / 24k)?
 
-La pureza indica qué proporción de una pieza es oro puro. El oro de inversión de máxima calidad tiene una pureza de 999,9 milésimas ("cuatro nueves"), equivalente a 24 kilates o 99,99%. Es el estándar del oro que se custodia en bóvedas institucionales, y el que respalda un buen producto de oro fraccionado.
+La pureza indica qué proporción de una pieza es oro puro. El oro de inversión de máxima calidad tiene una pureza de 999,9 milésimas ("cuatro nueves"), equivalente a 24 kilates o 99,99%. Las barras que se negocian en el mercado mayorista y se guardan en bóvedas institucionales cumplen el estándar Good Delivery de la LBMA, que exige una ley mínima de 995 milésimas; muchas superan esa pureza.
 
 ### <span id="lbma"></span>¿Qué es la LBMA?
 

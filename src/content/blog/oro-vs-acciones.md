@@ -10,7 +10,7 @@ heroImageAlt: "Lingotes de oro apilados en primer plano frente a tres monitores 
 category: "Mercado"
 ---
 
-## Key Takeaways
+## Puntos clave
 
 - Acciones: para crecer a largo plazo con tolerancia a la volatilidad.
 - Oro: para diversificar pensando en la inflación y la devaluación del peso.

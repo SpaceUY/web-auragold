@@ -1,30 +1,31 @@
 ---
 title: "Cómo comprar oro con poco dinero en México (guía práctica)"
-seoTitle: "Cómo comprar oro con poco dinero · Empieza desde $1"
-seoDescription: "Cómo comprar oro con poco dinero en México: empieza desde $1 con oro fraccionado, evita primas y comisiones altas, y ahorra en oro poco a poco."
-description: "Cuánto necesitas de verdad para comprar oro, qué forma rinde más con poco dinero y cómo dar el primer paso desde $1 sin que las primas y comisiones se coman tu inversión."
+seoTitle: "Cómo comprar oro con poco dinero en México · Guía práctica"
+seoDescription: "Cómo comprar oro con poco dinero en México: empieza con fracciones de gramo, evita primas y comisiones altas, y ahorra en oro poco a poco."
+description: "Cuánto necesitas de verdad para comprar oro, qué forma rinde más con poco dinero y cómo dar el primer paso con fracciones de gramo sin que las primas y comisiones se coman tu inversión."
 pubDate: 2026-10-06
+updatedDate: 2026-11-13
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/como-comprar-oro-poco-dinero.png"
 heroImageAlt: "Primer plano de unas manos que intercambian un billete por un puñado de monedas doradas, con dos hombres sonriendo al fondo."
 category: "Guías"
 ---
 
-Sí, se puede comprar oro con poco dinero. Hoy existen apps de oro fraccionado que te dejan empezar desde $1 peso, sin tener que pagar una moneda o un lingote completo. El oro dejó de ser cosa solo de gente con mucho capital. Lo importante cuando arrancas con poco no es nada más "poder comprar", sino que las primas y las comisiones no se te coman la inversión. Antes de elegir, revisa las [opciones para comprar oro en México](/blog/donde-comprar-oro-mexico) y lo que cuesta cada una.
+Sí, se puede comprar oro con poco dinero. Hoy existen apps de oro fraccionado que te dejan comprar fracciones de gramo, sin tener que pagar una moneda o un lingote completo. El oro dejó de ser cosa solo de gente con mucho capital. Lo importante cuando arrancas con poco no es nada más "poder comprar", sino que las primas y las comisiones no se te coman la inversión. Antes de elegir, revisa las [opciones para comprar oro en México](/blog/donde-comprar-oro-mexico) y lo que cuesta cada una.
 
-En esta guía te decimos cuánto necesitas de verdad, qué forma rinde más con poco dinero y cómo dar el primer paso. Si lo que quieres es la vía más directa, puedes [comprar oro físico fraccionado desde $1](/invertir-en-oro-mexico) desde el celular; y si prefieres el detalle del proceso, revisa la guía para [invertir en oro paso a paso](/blog/invertir-en-oro-paso-a-paso).
+En esta guía te decimos cuánto necesitas de verdad, qué forma rinde más con poco dinero y cómo dar el primer paso. Si lo que quieres es la vía más directa, puedes [comprar oro físico en fracciones de gramo](/invertir-en-oro-mexico) desde el celular; y si prefieres el detalle del proceso, revisa la guía para [invertir en oro paso a paso](/blog/invertir-en-oro-paso-a-paso).
 
 ## ¿Se puede comprar oro con poco dinero?
 
 Sí, y es un mito eso de que necesitas ser rico para tener oro. Esa idea viene de la forma tradicional de comprarlo: una moneda como el Centenario o un lingote cuestan miles de pesos. Comprar "una pieza entera" sí pide capital.
 
-Lo que cambió es el oro fraccionado: en lugar de comprar una moneda completa, adquieres una fracción de gramo de oro físico real. Así puedes empezar con $100, $200 o hasta $1 peso, e ir sumando de a poco. El metal es el mismo; solo cambia el tamaño de tu porción.
+Lo que cambió es el oro fraccionado: en lugar de comprar una moneda completa, adquieres una fracción de gramo de oro físico real. Así puedes empezar con montos chicos e ir sumando de a poco. El metal es el mismo; solo cambia el tamaño de tu porción.
 
 ## ¿Cuánto dinero necesitas para empezar a comprar oro?
 
 Con poco dinero, la clave no es el precio del oro, son los costos fijos. Una prima alta o una cuota fija pesan muchísimo sobre $500 y casi nada sobre $500,000. Por eso el mínimo real para que "valga la pena" cambia según la vía:
 
-- **Oro fraccionado digital (en pesos):** desde $1 peso, sin mínimos reales.
+- **Oro fraccionado digital (en pesos):** se compra por fracciones de gramo; el monto mínimo lo muestra cada app antes de confirmar.
 - **Monedas y lingotes pequeños:** el precio de la pieza completa más su prima (varios miles de pesos por la más chica).
 - **Plataformas internacionales de oro:** aceptan importes bajos, pero sus mínimos de custodia las vuelven ineficientes con poco dinero (BullionVault recomienda no bajar de unos $2,000 USD, y Goldmoney cobra un mínimo de custodia de $10 USD al mes pase lo que pase).
 - **ETFs de oro:** entrada baja, pero compras exposición al precio, no oro tuyo.
@@ -37,7 +38,7 @@ Como el enemigo con poco dinero son los costos fijos, la mejor opción cambia se
 
 ### Oro fraccionado digital: la opción que sí funciona con poco dinero
 
-Compras oro físico real en fracciones, en pesos, desde $1 y sin cuota de custodia mensual. Es divisible (compras y vendes la porción que quieras) y líquido (vendes desde el celular en minutos). Para quien empieza con poco, es lo más eficiente porque no hay costo fijo que se coma la inversión.
+Compras oro físico real en fracciones, en pesos, y sin cuota de custodia mensual. Es divisible (compras y vendes la porción que quieras) y líquido (vendes desde el celular en minutos). Para quien empieza con poco, es lo más eficiente porque no hay costo fijo que se coma la inversión.
 
 ### Monedas y lingotes chicos: la prima te pega
 
@@ -67,7 +68,7 @@ La pregunta correcta no es "¿tengo suficiente para que valga la pena?", sino "�
 
 ### ¿Desde cuánto puedo comprar oro?
 
-Con oro fraccionado digital, desde $1 peso. No necesitas pagar una moneda (como el Centenario) o un lingote completo: compras una fracción de gramo de oro físico real y vas sumando a tu ritmo, sin inversión mínima.
+Con oro fraccionado digital, desde una fracción de gramo. No necesitas pagar una moneda (como el Centenario) o un lingote completo: compras una fracción de gramo de oro físico real y vas sumando a tu ritmo. En Aura Gold, el monto mínimo vigente se muestra en la app antes de confirmar la operación.
 
 ### ¿Las comisiones y la prima se comen mi inversión si compro poco?
 
@@ -85,6 +86,6 @@ Sí, si la plataforma respalda cada fracción 1:1 con metal certificado (pureza 
 
 Sí. En una app de oro fraccionado vendes la porción que quieras desde el celular en unos minutos, y el dinero llega después a tu cuenta bancaria (en Aura Gold, normalmente en 24 a 48 horas hábiles). No tienes que buscar comprador ni negociar precio como pasaría con una moneda o un lingote físico.
 
-## Compra oro desde $1 con Aura Gold
+## Compra oro en fracciones de gramo con Aura Gold
 
-Si querías comprar oro pero pensabas que hacía falta mucho dinero, esta es la parte fácil. Con Aura Gold [compras oro físico real](/invertir-en-oro-mexico) en pesos y desde $1, respaldado 1:1 por oro físico certificado, sin mínimos ni comisiones de custodia mensuales, con precios transparentes y la posibilidad de programar compras recurrentes para ir sumando de a poco sin esfuerzo.
+Si querías comprar oro pero pensabas que hacía falta mucho dinero, esta es la parte fácil. Con Aura Gold [compras oro físico real](/invertir-en-oro-mexico) en pesos y por fracciones de gramo, respaldado 1:1 por oro físico, sin comisiones de custodia mensuales, con precios transparentes y la posibilidad de programar compras recurrentes para ir sumando de a poco sin esfuerzo.

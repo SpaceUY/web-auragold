@@ -10,7 +10,7 @@ heroImageAlt: "Una mano sostiene una moneda dorada con el símbolo de Bitcoin so
 category: "Mercado"
 ---
 
-## Key Takeaways
+## Puntos clave
 
 - Las criptomonedas son un activo especulativo de alto riesgo.
 - El oro es una reserva de valor con un largo historial.
