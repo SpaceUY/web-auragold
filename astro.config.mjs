@@ -42,6 +42,8 @@ function sitemapMeta(url) {
   if (path.startsWith('/blog/')) return { priority: 0.7, changefreq: 'monthly' };
   if (path === '/transparencia') return { priority: 0.6, changefreq: 'monthly' };
   if (path.startsWith('/autores/')) return { priority: 0.5, changefreq: 'monthly' };
+  if (path === '/cochinitos') return { priority: 0.6, changefreq: 'weekly' };
+  if (path === '/cochinitos/bases') return { priority: 0.3, changefreq: 'monthly' };
   if (path === '/terminos-y-condiciones' || path === '/politicas-de-privacidad')
     return { priority: 0.3, changefreq: 'yearly' };
   return { priority: 0.5, changefreq: 'monthly' };
