@@ -6,7 +6,7 @@ description: "Cómo funciona una tanda, qué turno conviene, sus riesgos reales 
 pubDate: 2026-11-24
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/tandas-como-funcionan-riesgos.png"
-heroImageAlt: "Manos de varias personas sobre una mesa de madera dejando monedas en una olla de barro."
+heroImageAlt: "Varias personas sentadas a una mesa de madera ponen monedas, una por una, en una olla de barro."
 category: "Educación"
 ---
 
