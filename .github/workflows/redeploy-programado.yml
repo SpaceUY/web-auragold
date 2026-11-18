@@ -1,0 +1,42 @@
+name: Redeploy programado
+
+# El sitio es estático: un post con pubDate futuro solo aparece cuando hay un
+# build posterior a su fecha. Cada mañana (06:00 CDMX) se redespliega, pero solo
+# si hoy toca publicar algún post.
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ¿Hay un post que se publique hoy?
+        id: due
+        run: |
+          today="$(date -u +%F)"
+          if grep -rqE "^pubDate:[[:space:]]*[\"']?${today}" src/content/blog; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+            echo "Toca publicar un post ($today)."
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "Hoy ($today) no se publica ningún post."
+          fi
+
+      - name: Disparar el deploy hook de Vercel
+        if: steps.due.outputs.publish == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK_URL" ]; then
+            echo "Falta el secret VERCEL_DEPLOY_HOOK_URL." >&2
+            exit 1
+          fi
+          curl --fail --silent --show-error -X POST "$VERCEL_DEPLOY_HOOK_URL" > /dev/null
+          echo "Deploy disparado."

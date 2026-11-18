@@ -9,7 +9,7 @@ import HeroBoveda from "../components/ui/HeroBoveda.astro";
 import JsonLD from "../components/seo/JsonLD.astro";
 import { CUSTODY } from "../data/custody";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
-import { getCollection } from "astro:content";
+import { getPublishedPosts } from "../lib/blog";
 import { authors } from "../data/authors";
 import AppStartLink from "../components/ui/AppStartLink.astro";
 import CostSummary from "../components/ui/CostSummary.astro";
@@ -17,7 +17,7 @@ import { COMMISSION_LABEL, REDEMPTION_FEE_LABEL } from "../data/costs";
 import { BANK_DEPOSIT_TIME, BANK_DEPOSIT_TIME_SHORT } from "../data/sale";
 
 // Últimos contenidos del blog (3 más recientes)
-const latestPosts = (await getCollection("blog"))
+const latestPosts = (await getPublishedPosts())
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 

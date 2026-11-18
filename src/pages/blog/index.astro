@@ -1,11 +1,11 @@
 ---
-import { getCollection } from "astro:content";
+import { getPublishedPosts } from "../../lib/blog";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/layout/Header.astro";
 import Footer from "../../components/layout/Footer.astro";
 import { authors } from "../../data/authors";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getPublishedPosts()).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString("es-MX", { day: "numeric", month: "short", year: "numeric" });

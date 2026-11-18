@@ -6,7 +6,7 @@ import SectionHeading from "../components/ui/SectionHeading.astro";
 import FAQ from "../components/ui/FAQ.astro";
 import FAQJsonLD from "../components/seo/FAQJsonLD.astro";
 import AppStartLink from "../components/ui/AppStartLink.astro";
-import { getCollection } from "astro:content";
+import { getPublishedPosts } from "../lib/blog";
 import { WEB_APP_URL } from "../data/links";
 import { BANK_DEPOSIT_TIME } from "../data/sale";
 import {
@@ -66,7 +66,7 @@ const fmtPesos = (n: number) => `$${Math.round(n).toLocaleString("es-MX")}`;
 // lee el resultado: por qué el oro protege (pila de oro), cuánto perdió el
 // peso (billetes grises) y qué le pasa al ahorro en el banco (efectivo).
 const RELATED_SLUGS = ["por-que-el-oro-protege-la-inflacion", "evolucion-inflacion-mexico", "oro-fisico-vs-cuentas-bancarias"];
-const relatedPosts = (await getCollection("blog"))
+const relatedPosts = (await getPublishedPosts())
   .filter((post) => RELATED_SLUGS.includes(post.id))
   .sort((a, b) => RELATED_SLUGS.indexOf(a.id) - RELATED_SLUGS.indexOf(b.id));
 

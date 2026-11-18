@@ -1,5 +1,6 @@
 ---
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
+import { getPublishedPosts } from "../../lib/blog";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/layout/Header.astro";
 import Footer from "../../components/layout/Footer.astro";
@@ -10,7 +11,7 @@ import BlogPromoBanner from "../../components/ui/BlogPromoBanner.astro";
 import { extractFaqFromMarkdown } from "../../utils/extractFaq";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getPublishedPosts();
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
@@ -36,7 +37,7 @@ const categorySlugs: Record<string, string> = {
 const toc = headings.filter((h) => h.depth === 2);
 
 // Posts para el sidebar (destacados) y el bloque de relacionados
-const allPosts = (await getCollection("blog")).sort(
+const allPosts = (await getPublishedPosts()).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const otherPosts = allPosts.filter((p) => p.id !== post.id);
