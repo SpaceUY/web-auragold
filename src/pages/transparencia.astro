@@ -139,7 +139,6 @@ const commitments = [
       <p class="mt-4 text-white/60">El spread cubre los costos operativos reales de la plataforma:</p>
       <ul class="mt-3 list-disc space-y-1 pl-6 text-white/60">
         <li>Custodia profesional del oro físico en bóvedas en Suiza</li>
-        <li>Seguro completo sobre el metal almacenado</li>
         <li>Infraestructura tecnológica de la app y plataforma</li>
         <li>Cumplimiento regulatorio y auditorías externas</li>
         <li>Costos de transacción con proveedores de oro certificados LBMA</li>
@@ -221,9 +220,12 @@ const commitments = [
         dirección de tu wallet en gold.tether.to.
       </p>
       <p class="mt-4 text-white/60">
-        <strong class="text-white">¿Está asegurado?</strong> El oro lo guardan custodios independientes en bóvedas
-        en Suiza. Las condiciones de esa custodia, incluido su seguro, las define Tether Gold: consúltalas en
-        gold.tether.to.
+        <strong class="text-white">¿Quién guarda el oro? ¿Tiene seguro?</strong> El oro lo guarda en bóvedas en
+        Suiza el custodio que contrata Tether Gold, no Aura Gold. Ese custodio tiene su propio seguro, en los montos
+        y condiciones que él decide, y según los{" "}
+        <a href={CUSTODY.termsUrl} target="_blank" rel="noopener" class="text-ag-gold hover:underline"
+          >términos de servicio de Tether Gold</a
+        > (sección 4.7) no está previsto que cubra el total del oro.
       </p>
       <p class="mt-4 text-white/60">
         <strong class="text-white">¿Cómo puedo verificar que mi oro existe?</strong> Tether Gold publica cada
