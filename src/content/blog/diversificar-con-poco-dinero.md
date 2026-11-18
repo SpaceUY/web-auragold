@@ -6,7 +6,7 @@ description: "Cómo diversificar con poco dinero en México: qué necesitas ante
 pubDate: 2026-11-30
 author: "federico-sendra"
 heroImage: "/images/blog/diversificar-con-poco-dinero.png"
-heroImageAlt: "Tres frascos de vidrio sobre una mesa de madera con monedas de cobre, plateadas y doradas."
+heroImageAlt: "Cinco frascos de vidrio sobre una mesa de madera con distintas cantidades de monedas de cobre, y dos personas desenfocadas al fondo."
 category: "Guías"
 ---
 
