@@ -1,0 +1,42 @@
+name: Merge programado
+
+# Un PR con la etiqueta publicar-AAAA-MM-DD se mergea solo a main cuando llega
+# esa fecha (06:00 CDMX). El merge dispara el deploy normal de Vercel, así que
+# el post sale el día que toca sin que nadie tenga que mergear ese día.
+# Solo se tocan los PRs con esa etiqueta, y en orden de fecha.
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mergear los PRs cuya fecha ya llegó
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          today="$(date -u +%F)"
+          echo "Hoy es $today."
+          gh pr list --repo "$GITHUB_REPOSITORY" --state open --base main --limit 100 \
+            --json number,labels \
+            --jq '.[] | .number as $n | .labels[].name | select(test("^publicar-[0-9]{4}-[0-9]{2}-[0-9]{2}$")) | "\(sub("publicar-"; "")) \($n)"' \
+            | sort > pendientes.txt
+          if [ ! -s pendientes.txt ]; then
+            echo "No hay PRs programados."
+            exit 0
+          fi
+          while read -r fecha numero; do
+            if [[ "$fecha" > "$today" ]]; then
+              echo "#$numero queda para el $fecha."
+              continue
+            fi
+            echo "Mergeando #$numero (programado para el $fecha)."
+            gh pr merge "$numero" --repo "$GITHUB_REPOSITORY" --merge
+          done < pendientes.txt
