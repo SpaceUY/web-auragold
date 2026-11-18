@@ -6,7 +6,7 @@ description: "Cuánto aguinaldo te toca en 2026, cuánto paga de ISR y cómo rep
 pubDate: 2026-12-03
 author: "juan-manuel-sobral"
 heroImage: "/images/blog/que-hacer-con-el-aguinaldo.png"
-heroImageAlt: "Sobre rojo con listón dorado sobre una mesa de madera, con monedas doradas y luces navideñas desenfocadas al fondo."
+heroImageAlt: "Sobre rojo con un listón dorado sobre un plato negro, con monedas doradas al frente y un árbol de Navidad con luces desenfocado al fondo."
 category: "Guías"
 ---
 
