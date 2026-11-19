@@ -14,6 +14,7 @@ video:
   description: "Cuánto aguinaldo te toca, cuánto paga de ISR con la UMA 2026, cómo repartirlo en tres partes y cómo poner una parte en oro con Aura Gold."
   uploadDate: 2026-11-19
   duration: "PT3M33S"
+  poster: "/images/blog/que-hacer-con-el-aguinaldo-video.jpg"
 ---
 
 Lo mejor que puedes hacer con el aguinaldo es decidir su destino antes de que llegue a tu cuenta. **Una regla práctica es dividirlo en tres partes: deudas y gastos de enero, ahorro y un gusto**, en ese orden. Así cubres la cuesta de enero sin tarjetas y una parte del dinero sigue trabajando cuando pasen las fiestas.
