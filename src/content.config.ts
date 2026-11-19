@@ -31,6 +31,9 @@ const blog = defineCollection({
         uploadDate: z.coerce.date(),
         // Duración ISO 8601, por ejemplo PT3M25S.
         duration: z.string().regex(/^PT(\d+M)?(\d+S)?$/),
+        // Imagen que se ve antes de reproducir (un cuadro limpio del video). Si falta, se usa la
+        // miniatura automática de YouTube, que a veces cae en medio de una animación.
+        poster: z.string().optional(),
       })
       .optional(),
   }),

@@ -144,7 +144,23 @@ const topics = [
             class="mt-8 aspect-[16/9] w-full rounded-2xl object-cover"
           />
 
-          {post.data.video && <YouTubeEmbed youtubeId={post.data.video.youtubeId} title={post.data.video.title} duration={post.data.video.duration} />}
+          {
+            post.data.video && (
+              <section class="mt-14" aria-labelledby="video-del-post">
+                <p id="video-del-post" class="font-mono text-xs uppercase tracking-widest text-ag-gold">
+                  Míralo en video
+                </p>
+                <div class="mt-4">
+                  <YouTubeEmbed
+                    youtubeId={post.data.video.youtubeId}
+                    title={post.data.video.title}
+                    duration={post.data.video.duration}
+                    poster={post.data.video.poster}
+                  />
+                </div>
+              </section>
+            )
+          }
 
           <!-- Índice "On This Page" (visible en mobile; en desktop está en el sidebar) -->
           {
