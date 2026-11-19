@@ -180,7 +180,7 @@ La diferencia es $4,200 menos de pérdida temporal y mucha más paz mental.
 Estrategia de compra gradual (DCA - Dollar Cost Averaging):
 - Define monto total a invertir: Ejemplo $120,000
 - Divide en 4-6 compras mensuales: $20,000 - $30,000 por mes
-- Programa compras automáticas el mismo día cada mes: Sin pensar, sin timing
+- Compra el mismo día cada mes (ponte un recordatorio): sin pensar, sin timing
 - Mantén el plan sin importar si el precio sube o baja
 
 Ventajas del DCA: promedias precio de compra automáticamente, reduces riesgo de entrar "todo arriba", eliminas ansiedad de timing perfecto, construyes posición sin estrés emocional.
@@ -349,7 +349,7 @@ Con Aura Gold evitas automáticamente los errores más comunes:
 - ✓ Propósito claro desde el inicio: La app te guía a definir objetivos específicos (largo plazo, ahorro, emergencia)
 - ✓ Sin costos ocultos de custodia: $0 pesos de comisión mensual, solo una comisión del 1% en cada compra y venta, que ves antes de confirmar
 - ✓ Barras con estándar LBMA: el oro es Tether Gold (XAUT), en barras que cumplen el estándar Good Delivery de la LBMA, así que no compras metal suelto que tengas que validar
-- ✓ Compra gradual facilitada: Programa compras automáticas recurrentes desde $500 pesos mensuales
+- ✓ Compra gradual facilitada: compras desde montos chicos cuando quieras, y metas de ahorro para seguir tu avance
 - ✓ Venta desde la app: Si necesitas vender (bien o mal), lo haces en unos minutos y el dinero normalmente llega a tu cuenta bancaria en 24 a 48 horas hábiles
 - ✓ Diversificación natural: Invierte por fracciones, no necesitas comprometer todo tu capital de golpe
 - ✓ Plan de salida flexible: Vende todo o parcial cuando alcances tus objetivos (el canje por lingotes lo hace Tether Gold: lingote completo, entrega en Suiza, sin fecha fija)

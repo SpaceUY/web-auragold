@@ -4,6 +4,9 @@
 // - gold.tether.to/reports: informes trimestrales de reservas, revisados por BDO Italia (ISAE 3000R).
 //   El del 30/06/2026 dice que el oro está en bóvedas en Suiza y que es de quienes tienen XAUT.
 // Ese informe es sobre Tether Gold, no sobre Aura Gold: no presentarlo como auditoría de Aura.
+// - gold.tether.to/legal/termsofservice (versión del 09/09/2025, revisada el 2026-11-18), sección 4.7:
+//   el seguro es del custodio, no está previsto que cubra todas las reservas y Tether Gold no lo define.
+//   No decir que el oro está "asegurado" ni que el custodio es "independiente": ninguna fuente lo dice.
 export const CUSTODY = {
   token: "Tether Gold (XAUT)",
   issuer: "TG Commodities, S.A. de C.V.",
@@ -13,4 +16,5 @@ export const CUSTODY = {
   siteUrl: "https://gold.tether.to/",
   faqUrl: "https://gold.tether.to/faq",
   reportsUrl: "https://gold.tether.to/reports",
+  termsUrl: "https://gold.tether.to/legal/termsofservice",
 } as const;
