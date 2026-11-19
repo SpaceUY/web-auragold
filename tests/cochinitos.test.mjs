@@ -13,16 +13,32 @@ test('creator link goes to the invitation with its code and campaign', () => {
   );
 });
 
-test('without a code the pig goes to sign-up, tagged as the cochinitos page', () => {
-  const { code, href } = cochinitoDestination('');
-  assert.equal(code, '');
-  assert.equal(href, 'https://app.auragold.io/?utm_source=auragold.io&utm_medium=cochinitos');
+test('without a code the pig uses the launch code, tagged as the cochinitos page', () => {
+  const { code, launch, href } = cochinitoDestination('');
+  assert.equal(code, 'T4DWH58N');
+  assert.equal(launch, true);
+  assert.equal(href, 'https://app.auragold.io/invite/T4DWH58N?utm_source=auragold.io&utm_medium=cochinitos');
 });
 
-test('an unsafe code or campaign value is dropped, not forwarded', () => {
+test('the press release link keeps the launch code and its campaign', () => {
+  const { launch, href } = cochinitoDestination(
+    '?ref=T4DWH58N&utm_source=chainwire&utm_medium=pr&utm_campaign=lanzamiento_202611',
+  );
+  assert.equal(launch, true);
+  assert.equal(
+    href,
+    'https://app.auragold.io/invite/T4DWH58N?utm_source=chainwire&utm_medium=pr&utm_campaign=lanzamiento_202611',
+  );
+});
+
+test('a creator code is not the launch code', () => {
+  assert.equal(cochinitoDestination('?ref=ANA123').launch, false);
+});
+
+test('an unsafe code falls back to the launch code and an unsafe value is dropped', () => {
   const { code, href } = cochinitoDestination('?ref=../admin&utm_source=a@b.com&utm_campaign=x');
-  assert.equal(code, '');
-  assert.equal(href, 'https://app.auragold.io/?utm_campaign=x&utm_source=auragold.io&utm_medium=cochinitos');
+  assert.equal(code, 'T4DWH58N');
+  assert.equal(href, 'https://app.auragold.io/invite/T4DWH58N?utm_campaign=x&utm_source=auragold.io&utm_medium=cochinitos');
 });
 
 test('gclid and unknown parameters never travel', () => {
