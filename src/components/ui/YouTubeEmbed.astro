@@ -1,0 +1,52 @@
+---
+// Video de YouTube con fachada: hasta que la persona toca "Reproducir" solo se muestra la miniatura.
+// El reproductor (youtube-nocookie) se carga recién con el clic, así la página no paga el peso
+// del iframe ni carga cookies de YouTube antes de que alguien quiera ver el video.
+interface Props {
+  youtubeId: string;
+  title: string;
+  duration: string;
+}
+
+const { youtubeId, title, duration } = Astro.props;
+const m = duration.match(/^PT(?:(\d+)M)?(?:(\d+)S)?$/);
+const label = m ? `${Number(m[1] ?? 0)}:${String(Number(m[2] ?? 0)).padStart(2, "0")}` : "";
+const thumb = `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`;
+const src = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0`;
+---
+
+<figure class="mt-8">
+  <div class="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-ag-slate/60" data-yt-embed>
+    <button
+      type="button"
+      class="group absolute inset-0 flex h-full w-full items-center justify-center"
+      data-yt-src={src}
+      data-yt-title={title}
+      aria-label={`Reproducir el video: ${title}`}
+    >
+      <img src={thumb} alt="" width="480" height="360" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+      <span class="absolute inset-0 bg-black/30 transition-colors group-hover:bg-black/15"></span>
+      <span class="relative flex h-16 w-16 items-center justify-center rounded-full bg-ag-gold text-ag-black shadow-lg transition-transform group-hover:scale-105 group-focus-visible:scale-105 lg:h-20 lg:w-20">
+        <svg viewBox="0 0 24 24" class="ml-1 h-7 w-7 lg:h-8 lg:w-8" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+      </span>
+    </button>
+  </div>
+  <figcaption class="mt-3 text-sm text-white/50">
+    Video: {title}{label && ` · ${label}`}
+  </figcaption>
+</figure>
+
+<script is:inline>
+  document.querySelectorAll("[data-yt-embed] button[data-yt-src]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var iframe = document.createElement("iframe");
+      iframe.src = btn.getAttribute("data-yt-src");
+      iframe.title = btn.getAttribute("data-yt-title");
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.className = "absolute inset-0 h-full w-full";
+      btn.replaceWith(iframe);
+    });
+  });
+</script>
