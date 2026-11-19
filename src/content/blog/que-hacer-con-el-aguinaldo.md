@@ -8,6 +8,12 @@ author: "juan-manuel-sobral"
 heroImage: "/images/blog/que-hacer-con-el-aguinaldo.png"
 heroImageAlt: "Sobre rojo con un listón dorado sobre un plato negro, con monedas doradas al frente y un árbol de Navidad con luces desenfocado al fondo."
 category: "Guías"
+video:
+  youtubeId: "XlSk4RpDJ-A"
+  title: "¿Qué hacer con el aguinaldo? Cómo repartirlo para que no se te vaya en enero"
+  description: "Cuánto aguinaldo te toca, cuánto paga de ISR con la UMA 2026, cómo repartirlo en tres partes y cómo poner una parte en oro con Aura Gold."
+  uploadDate: 2026-11-19
+  duration: "PT3M33S"
 ---
 
 Lo mejor que puedes hacer con el aguinaldo es decidir su destino antes de que llegue a tu cuenta. **Una regla práctica es dividirlo en tres partes: deudas y gastos de enero, ahorro y un gusto**, en ese orden. Así cubres la cuesta de enero sin tarjetas y una parte del dinero sigue trabajando cuando pasen las fiestas.
