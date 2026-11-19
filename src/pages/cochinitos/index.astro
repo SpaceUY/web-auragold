@@ -1,0 +1,346 @@
+---
+// WEB-020: landing de los cochinitos. Arriba, el cochinito 3D: tres toques y explota.
+// Al explotar lleva a la invitación de la webapp con el código de ?ref, o al registro
+// si no hay código (ver src/lib/cochinitos/destination.mjs).
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/layout/Header.astro";
+import Footer from "../../components/layout/Footer.astro";
+import { WEB_APP_URL } from "../../data/links";
+
+const launchSteps = [
+  { title: "Crea tu cuenta", text: "En la app o en app.auragold.io. Abrir tu cuenta no tiene costo." },
+  { title: "Valida tu identidad", text: "Las primeras 100 cuentas validadas reciben un cochinito. Sin sorteo." },
+  { title: "Rómpelo", text: "Tu cochinito trae MX$150 en oro para tu bóveda. No hace falta comprar." },
+];
+
+const inviteSteps = [
+  { title: "Usa el código de quien te invitó", text: "Te registras con su código y validas tu identidad." },
+  { title: "Haz tu primera compra", text: "De aprox. MX$500 o más, por SPEI desde una cuenta a tu nombre." },
+  { title: "Los dos reciben oro", text: "Tú, aprox. MX$150 en oro. Quien te invitó, aprox. MX$100." },
+];
+---
+
+<BaseLayout
+  title="Cochinitos de oro - Aura Gold"
+  description="Rompe tu cochinito de oro: 100 cochinitos con MX$150 en oro por el lanzamiento de Aura en México, y oro para ti y tus amigos con Invita y gana oro."
+>
+  <Header />
+
+  <canvas id="stage" class="cochinito-stage" aria-hidden="true"></canvas>
+
+  <main class="font-body text-white">
+    <section class="cochinito-hero" aria-labelledby="cochinito-title">
+      <div class="intro">
+        <p class="eyebrow" data-with-code hidden>Te regalaron</p>
+        <p class="eyebrow" data-without-code>Aura llega a México</p>
+        <h1 id="cochinito-title" class="font-display">Un cochinito de oro.</h1>
+      </div>
+
+      <!-- El botón cubre la zona del cochinito: así el toque funciona con teclado y lector de pantalla. -->
+      <button type="button" class="hit" id="hit" aria-label="Romper el cochinito. Faltan 3 toques.">
+        <!-- Se ve mientras carga la escena 3D, y queda como versión sin WebGL. -->
+        <img class="poster" id="poster" src="/images/cochinito/cerdito.webp" alt="" width="1024" height="1024" />
+      </button>
+
+      <div class="hint" id="hint" aria-live="polite">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span id="hint-text">Tócalo 3 veces para romperlo</span>
+      </div>
+
+      <section class="reveal" id="reveal" hidden aria-labelledby="reveal-title">
+        <h2 id="reveal-title" class="font-display" tabindex="-1">
+          <span data-with-code hidden>Tu oro te espera</span>
+          <span data-without-code>Tu cuenta te espera</span>
+        </h2>
+        <p class="lead">
+          <span data-with-code hidden>
+            Crea tu cuenta con el código <strong data-code></strong> y recibe aprox. MX$150 en oro con tu primera compra.
+          </span>
+          <span data-without-code>Crea tu cuenta y valida tu identidad para ir por uno de los 100 cochinitos.</span>
+        </p>
+        <a class="cta" id="cta" href={WEB_APP_URL}>
+          <span data-with-code hidden>Ver mi invitación</span>
+          <span data-without-code>Crear mi cuenta</span>
+        </a>
+        <p class="fine">Te llevamos en un momento…</p>
+      </section>
+    </section>
+
+    <div class="relative z-10 bg-ag-black">
+      <section class="mx-auto max-w-5xl px-6 py-20 lg:px-10" aria-labelledby="lanzamiento">
+        <p class="text-sm font-medium tracking-wide text-ag-gold">Desde el 23 de noviembre a las 20:00 (CDMX)</p>
+        <h2 id="lanzamiento" class="mt-3 font-display text-3xl font-semibold sm:text-4xl">
+          100 cochinitos con MX$150 en oro
+        </h2>
+        <p class="mt-4 max-w-2xl text-white/70">
+          Para celebrar que Aura llega a México, las primeras 100 cuentas nuevas que validan su identidad reciben un
+          cochinito con MX$150 en oro. Se entregan por orden de validación, sin sorteo y sin compra.
+        </p>
+        <ol class="mt-10 grid gap-4 sm:grid-cols-3">
+          {
+            launchSteps.map((step, i) => (
+              <li class="rounded-2xl border border-white/10 bg-ag-dark p-6">
+                <span class="font-display text-2xl font-semibold text-ag-gold">{i + 1}</span>
+                <h3 class="mt-3 font-display text-lg font-semibold">{step.title}</h3>
+                <p class="mt-2 text-sm text-white/70">{step.text}</p>
+              </li>
+            ))
+          }
+        </ol>
+        <div class="mt-6 rounded-2xl border border-ag-gold/40 bg-ag-gold/5 p-6">
+          <h3 class="font-display text-lg font-semibold">Premio doble: MX$300 en oro</h3>
+          <p class="mt-2 text-sm text-white/70">
+            Si el post fijado de <a class="text-ag-gold underline" href="https://x.com/auragoldmx">@auragoldmx</a> en X
+            llega a 1,000 reposts antes del 30 de noviembre a las 23:59 (CDMX), los 100 cochinitos traen MX$300 en
+            oro, también para quien ya recibió el suyo. Repostear no es requisito para recibir un cochinito.
+          </p>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-5xl px-6 pb-20 lg:px-10" aria-labelledby="invita">
+        <p class="text-sm font-medium tracking-wide text-ag-gold">Invita y gana oro</p>
+        <h2 id="invita" class="mt-3 font-display text-3xl font-semibold sm:text-4xl">¿Te invitaron? Los dos ganan oro</h2>
+        <ol class="mt-10 grid gap-4 sm:grid-cols-3">
+          {
+            inviteSteps.map((step, i) => (
+              <li class="rounded-2xl border border-white/10 bg-ag-dark p-6">
+                <span class="font-display text-2xl font-semibold text-ag-gold">{i + 1}</span>
+                <h3 class="mt-3 font-display text-lg font-semibold">{step.title}</h3>
+                <p class="mt-2 text-sm text-white/70">{step.text}</p>
+              </li>
+            ))
+          }
+        </ol>
+        <p class="mt-6 max-w-2xl text-sm text-white/60">
+          Los premios se dan en gramos de oro, así que su valor en pesos cambia con el precio del oro: los montos exactos están en las bases.
+          El oro de los premios llega a tu bóveda 30 días después de la primera compra. Quien invita recibe oro por hasta 10
+          amigos.
+        </p>
+        <p class="mt-8">
+          <a href="/cochinitos/bases" class="font-medium text-ag-gold underline underline-offset-4">
+            Lee las bases de los cochinitos y de Invita y gana oro
+          </a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <div class="relative z-10">
+    <Footer />
+  </div>
+</BaseLayout>
+
+<script>
+  import { cochinitoDestination } from "../../lib/cochinitos/destination.mjs";
+
+  const { code, href } = cochinitoDestination(location.search);
+  document.getElementById("cta")?.setAttribute("href", href);
+  if (code) {
+    document.querySelectorAll<HTMLElement>("[data-with-code]").forEach((el) => (el.hidden = false));
+    document.querySelectorAll<HTMLElement>("[data-without-code]").forEach((el) => (el.hidden = true));
+    document.querySelectorAll<HTMLElement>("[data-code]").forEach((el) => (el.textContent = code));
+  }
+  // La escena 3D carga después de fijar el destino: al explotar, lee el href del botón.
+  import("../../scripts/cochinito/main.js");
+</script>
+
+<style is:global>
+  .cochinito-stage {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    touch-action: manipulation;
+  }
+
+  .cochinito-hero {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: calc(100svh - 72px);
+    padding: clamp(16px, 4vh, 40px) 20px max(24px, env(safe-area-inset-bottom));
+    pointer-events: none;
+  }
+
+  .cochinito-hero > * {
+    pointer-events: auto;
+  }
+
+  .cochinito-hero .intro {
+    text-align: center;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+
+  .cochinito-hero .eyebrow {
+    margin: 0;
+    color: rgb(202 214 227 / 0.6);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .cochinito-hero h1,
+  .cochinito-hero h2 {
+    margin: 10px 0 0;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .cochinito-hero h1 {
+    font-size: clamp(2.25rem, 7vw, 3.75rem);
+  }
+
+  .cochinito-hero .hit {
+    justify-self: center;
+    align-self: center;
+    width: min(78vw, 52vh);
+    aspect-ratio: 1;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .cochinito-hero .hit:focus-visible {
+    outline: 2px solid var(--color-ag-gold);
+    outline-offset: 6px;
+  }
+
+  .cochinito-hero .poster {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition:
+      opacity 0.3s ease,
+      transform 0.25s cubic-bezier(0.3, 1.6, 0.5, 1);
+  }
+
+  .cochinito-hero .hit.is-ready .poster {
+    opacity: 0;
+  }
+
+  .cochinito-hero .hit[disabled] {
+    cursor: default;
+  }
+
+  .cochinito-hero .hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: rgb(202 214 227 / 0.74);
+    font-size: 15px;
+    transition: opacity 0.4s ease;
+  }
+
+  .cochinito-hero .dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  .cochinito-hero .dots i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.18);
+    transition:
+      background-color 0.25s ease,
+      transform 0.25s cubic-bezier(0.3, 1.6, 0.5, 1);
+  }
+
+  .cochinito-hero .dots i.on {
+    background: var(--color-ag-gold);
+    transform: scale(1.35);
+  }
+
+  .is-broken .cochinito-hero .intro,
+  .is-broken .cochinito-hero .hint {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+  }
+
+  .cochinito-hero .reveal {
+    position: absolute;
+    left: 50%;
+    bottom: max(24px, env(safe-area-inset-bottom));
+    width: min(440px, calc(100% - 40px));
+    translate: -50% 0;
+    padding: 28px 24px 20px;
+    border: 1px solid rgb(255 255 255 / 0.1);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgb(23 28 38 / 0.86), rgb(12 14 19 / 0.92));
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 30px 80px rgb(0 0 0 / 0.55);
+    text-align: center;
+    animation: cochinito-rise 0.7s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+  }
+
+  @keyframes cochinito-rise {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.96);
+    }
+  }
+
+  .cochinito-hero .reveal h2 {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    outline: none;
+  }
+
+  .cochinito-hero .lead {
+    margin: 12px auto 0;
+    max-width: 32ch;
+    color: rgb(202 214 227 / 0.74);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .cochinito-hero .lead strong {
+    color: var(--color-ag-gold);
+  }
+
+  .cochinito-hero .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    margin-top: 18px;
+    border-radius: 999px;
+    background: var(--color-ag-gold);
+    color: var(--color-ag-black);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .cochinito-hero .cta:hover {
+    background: #f6c55c;
+  }
+
+  .cochinito-hero .cta:focus-visible {
+    outline: 2px solid var(--color-ag-gold);
+    outline-offset: 3px;
+  }
+
+  .cochinito-hero .fine {
+    margin: 12px 0 0;
+    color: rgb(202 214 227 / 0.5);
+    font-size: 12px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cochinito-hero .reveal {
+      animation: none;
+    }
+  }
+</style>

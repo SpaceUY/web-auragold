@@ -9,7 +9,7 @@ const SEARCH_HOSTS = new Map([
   ['bing.com', 'bing'], ['duckduckgo.com', 'duckduckgo'],
   ['search.yahoo.com', 'yahoo'], ['search.brave.com', 'brave'], ['ecosia.org', 'ecosia'],
 ]);
-const PUBLIC_PATH = /^\/(?:|invertir-en-oro-mexico|precio-del-oro-hoy|calculadora-inflacion-oro|transparencia|terminos-y-condiciones|politicas-de-privacidad|blog(?:\/[a-z0-9-]+)?|categorias\/[a-z0-9-]+|autores\/[a-z0-9-]+)\/?$/;
+const PUBLIC_PATH = /^\/(?:|invertir-en-oro-mexico|precio-del-oro-hoy|calculadora-inflacion-oro|cochinitos(?:\/bases)?|transparencia|terminos-y-condiciones|politicas-de-privacidad|blog(?:\/[a-z0-9-]+)?|categorias\/[a-z0-9-]+|autores\/[a-z0-9-]+)\/?$/;
 
 export function isSafeValue(field, value) {
   if (typeof value !== 'string' || !value || value.length > MAX_VALUE_LENGTH) return false;
