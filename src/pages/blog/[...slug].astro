@@ -7,6 +7,7 @@ import BlogPostingJsonLD from "../../components/seo/BlogPostingJsonLD.astro";
 import FAQJsonLD from "../../components/seo/FAQJsonLD.astro";
 import { authors } from "../../data/authors";
 import BlogPromoBanner from "../../components/ui/BlogPromoBanner.astro";
+import YouTubeEmbed from "../../components/ui/YouTubeEmbed.astro";
 import { extractFaqFromMarkdown } from "../../utils/extractFaq";
 
 export async function getStaticPaths() {
@@ -98,6 +99,7 @@ const topics = [
     categoryLabel={post.data.category}
     categorySlug={categorySlugs[post.data.category] ?? ""}
     heroImage={post.data.heroImage}
+    video={post.data.video}
   />
   {faqItems.length > 0 && <FAQJsonLD items={faqItems} />}
 
@@ -141,6 +143,24 @@ const topics = [
             height="432"
             class="mt-8 aspect-[16/9] w-full rounded-2xl object-cover"
           />
+
+          {
+            post.data.video && (
+              <section class="mt-14" aria-labelledby="video-del-post">
+                <p id="video-del-post" class="font-mono text-xs uppercase tracking-widest text-ag-gold">
+                  Míralo en video
+                </p>
+                <div class="mt-4">
+                  <YouTubeEmbed
+                    youtubeId={post.data.video.youtubeId}
+                    title={post.data.video.title}
+                    duration={post.data.video.duration}
+                    poster={post.data.video.poster}
+                  />
+                </div>
+              </section>
+            )
+          }
 
           <!-- Índice "On This Page" (visible en mobile; en desktop está en el sidebar) -->
           {

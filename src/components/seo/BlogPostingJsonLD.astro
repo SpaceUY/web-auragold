@@ -10,6 +10,7 @@ interface Props {
   categoryLabel: string;
   categorySlug: string;
   heroImage: string;
+  video?: { youtubeId: string; title: string; description: string; uploadDate: Date; duration: string };
 }
 
 const {
@@ -23,10 +24,25 @@ const {
   categoryLabel,
   categorySlug,
   heroImage,
+  video,
 } = Astro.props;
 const url = new URL(`/blog/${slug}`, Astro.site).toString();
 const authorUrl = new URL(`/autores/${authorSlug}`, Astro.site).toString();
 const imageUrl = new URL(heroImage, Astro.site).toString();
+
+// VideoObject: lo que Google pide para mostrar el video en los resultados (nombre, descripción,
+// miniatura y fecha de subida), más la duración y las URL del reproductor y de YouTube.
+const videoObject = video && {
+  "@type": "VideoObject",
+  name: video.title,
+  description: video.description,
+  thumbnailUrl: [`https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`],
+  uploadDate: video.uploadDate.toISOString(),
+  duration: video.duration,
+  embedUrl: `https://www.youtube-nocookie.com/embed/${video.youtubeId}`,
+  url: `https://www.youtube.com/watch?v=${video.youtubeId}`,
+  publisher: { "@id": "https://auragold.io/#organization" },
+};
 
 const json = JSON.stringify({
   "@context": "https://schema.org",
@@ -59,6 +75,7 @@ const json = JSON.stringify({
         "@type": "SpeakableSpecification",
         cssSelector: ["h1", "article p"],
       },
+      ...(videoObject ? { video: videoObject } : {}),
     },
   ],
 });

@@ -21,6 +21,21 @@ const blog = defineCollection({
     // (el título va al lado como texto) y ahí el alt va vacío a propósito.
     // Si no se define, cae al title, que es peor pero no deja la imagen sin alt.
     heroImageAlt: z.string().optional(),
+    // Video del canal de YouTube sobre el mismo tema. Se muestra debajo de la portada
+    // y se declara como VideoObject para que Google lo asocie al post.
+    video: z
+      .object({
+        youtubeId: z.string().regex(/^[A-Za-z0-9_-]{11}$/, "ID de YouTube de 11 caracteres"),
+        title: z.string(),
+        description: z.string(),
+        uploadDate: z.coerce.date(),
+        // Duración ISO 8601, por ejemplo PT3M25S.
+        duration: z.string().regex(/^PT(\d+M)?(\d+S)?$/),
+        // Imagen que se ve antes de reproducir (un cuadro limpio del video). Si falta, se usa la
+        // miniatura automática de YouTube, que a veces cae en medio de una animación.
+        poster: z.string().optional(),
+      })
+      .optional(),
   }),
 });
 
