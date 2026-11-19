@@ -1,16 +1,19 @@
 ---
 // WEB-020: landing de los cochinitos. Arriba, el cochinito 3D: tres toques y explota.
-// Al explotar lleva a la invitación de la webapp con el código de ?ref, o al registro
-// si no hay código (ver src/lib/cochinitos/destination.mjs).
+// Al explotar lleva a la invitación de la webapp con el código de ?ref, o con el código
+// de lanzamiento si no hay código (ver src/lib/cochinitos/destination.mjs).
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/layout/Header.astro";
 import Footer from "../../components/layout/Footer.astro";
-import { WEB_APP_URL } from "../../data/links";
+import { LAUNCH_CODE, cochinitoDestination } from "../../lib/cochinitos/destination.mjs";
+
+// Destino sin JavaScript: la invitación con el código de lanzamiento.
+const launchHref = cochinitoDestination("").href;
 
 const launchSteps = [
-  { title: "Crea tu cuenta", text: "En la app o en app.auragold.io. Abrir tu cuenta no tiene costo." },
-  { title: "Valida tu identidad", text: "Las primeras 100 cuentas validadas reciben un cochinito. Sin sorteo." },
-  { title: "Rómpelo", text: "Tu cochinito trae MX$150 en oro para tu bóveda. No hace falta comprar." },
+  { title: "Crea tu cuenta", text: `Con el código ${LAUNCH_CODE}, en la app o en app.auragold.io. Abrir tu cuenta no tiene costo.` },
+  { title: "Haz tu primera compra", text: "Valida tu identidad y compra 0.21 gramos de oro o más (aprox. MX$500), por SPEI desde una cuenta a tu nombre." },
+  { title: "Recibe tu cochinito", text: "Si tu primera compra está entre las primeras 100, recibes 0.07 gramos de oro (aprox. MX$150). Sin sorteo." },
 ];
 
 const inviteSteps = [
@@ -22,7 +25,7 @@ const inviteSteps = [
 
 <BaseLayout
   title="Cochinitos de oro - Aura Gold"
-  description="Rompe tu cochinito de oro: 100 cochinitos con MX$150 en oro por el lanzamiento de Aura en México, y oro para ti y tus amigos con Invita y gana oro."
+  description="Rompe tu cochinito de oro: 100 cochinitos con aprox. MX$150 en oro por el lanzamiento de Aura en México, y oro para ti y tus amigos con Invita y gana oro."
 >
   <Header />
 
@@ -31,8 +34,8 @@ const inviteSteps = [
   <main class="font-body text-white">
     <section class="cochinito-hero" aria-labelledby="cochinito-title">
       <div class="intro">
-        <p class="eyebrow" data-with-code hidden>Te regalaron</p>
-        <p class="eyebrow" data-without-code>Aura llega a México</p>
+        <p class="eyebrow" data-invite hidden>Te regalaron</p>
+        <p class="eyebrow" data-launch>Aura llega a México</p>
         <h1 id="cochinito-title" class="font-display">Un cochinito de oro.</h1>
       </div>
 
@@ -45,22 +48,27 @@ const inviteSteps = [
       <div class="hint" id="hint" aria-live="polite">
         <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
         <span id="hint-text">Tócalo 3 veces para romperlo</span>
+        <!-- Salida visible por si la escena no carga o el toque no responde. -->
+        <a class="skip" id="skip" href={launchHref}>¿No se rompe? Sigue aquí</a>
       </div>
 
       <section class="reveal" id="reveal" hidden aria-labelledby="reveal-title">
         <h2 id="reveal-title" class="font-display" tabindex="-1">
-          <span data-with-code hidden>Tu oro te espera</span>
-          <span data-without-code>Tu cuenta te espera</span>
+          <span data-invite hidden>Tu oro te espera</span>
+          <span data-launch>Tu cochinito te espera</span>
         </h2>
         <p class="lead">
-          <span data-with-code hidden>
+          <span data-invite hidden>
             Crea tu cuenta con el código <strong data-code></strong> y recibe aprox. MX$150 en oro con tu primera compra.
           </span>
-          <span data-without-code>Crea tu cuenta y valida tu identidad para ir por uno de los 100 cochinitos.</span>
+          <span data-launch>
+            Crea tu cuenta con el código <strong>{LAUNCH_CODE}</strong> y haz tu primera compra para ir por uno de los 100
+            cochinitos con aprox. MX$150 en oro.
+          </span>
         </p>
-        <a class="cta" id="cta" href={WEB_APP_URL}>
-          <span data-with-code hidden>Ver mi invitación</span>
-          <span data-without-code>Crear mi cuenta</span>
+        <a class="cta" id="cta" href={launchHref}>
+          <span data-invite hidden>Ver mi invitación</span>
+          <span data-launch>Crear mi cuenta</span>
         </a>
         <p class="fine">Te llevamos en un momento…</p>
       </section>
@@ -70,11 +78,12 @@ const inviteSteps = [
       <section class="mx-auto max-w-5xl px-6 py-20 lg:px-10" aria-labelledby="lanzamiento">
         <p class="text-sm font-medium tracking-wide text-ag-gold">Desde el 23 de noviembre a las 20:00 (CDMX)</p>
         <h2 id="lanzamiento" class="mt-3 font-display text-3xl font-semibold sm:text-4xl">
-          100 cochinitos con MX$150 en oro
+          100 cochinitos con aprox. MX$150 en oro
         </h2>
         <p class="mt-4 max-w-2xl text-white/70">
-          Para celebrar que Aura llega a México, las primeras 100 cuentas nuevas que validan su identidad reciben un
-          cochinito con MX$150 en oro. Se entregan por orden de validación, sin sorteo y sin compra.
+          Para celebrar que Aura llega a México, las primeras 100 cuentas nuevas creadas con el código <strong class="text-white">{LAUNCH_CODE}</strong>
+          que hacen su primera compra reciben un cochinito con 0.07 gramos de
+          oro (aprox. MX$150). Se entregan por orden de primera compra, sin sorteo.
         </p>
         <ol class="mt-10 grid gap-4 sm:grid-cols-3">
           {
@@ -88,11 +97,11 @@ const inviteSteps = [
           }
         </ol>
         <div class="mt-6 rounded-2xl border border-ag-gold/40 bg-ag-gold/5 p-6">
-          <h3 class="font-display text-lg font-semibold">Premio doble: MX$300 en oro</h3>
+          <h3 class="font-display text-lg font-semibold">Premio doble: aprox. MX$300 en oro</h3>
           <p class="mt-2 text-sm text-white/70">
             Si el post fijado de <a class="text-ag-gold underline" href="https://x.com/auragoldmx">@auragoldmx</a> en X
-            llega a 1,000 reposts antes del 30 de noviembre a las 23:59 (CDMX), los 100 cochinitos traen MX$300 en
-            oro, también para quien ya recibió el suyo. Repostear no es requisito para recibir un cochinito.
+            llega a 1,000 reposts antes del 30 de noviembre a las 23:59 (CDMX), los 100 cochinitos traen 0.14 gramos
+            de oro (aprox. MX$300), también para quien ya recibió el suyo. Repostear no es requisito para recibir un cochinito.
           </p>
         </div>
       </section>
@@ -133,11 +142,12 @@ const inviteSteps = [
 <script>
   import { cochinitoDestination } from "../../lib/cochinitos/destination.mjs";
 
-  const { code, href } = cochinitoDestination(location.search);
+  const { code, launch, href } = cochinitoDestination(location.search);
   document.getElementById("cta")?.setAttribute("href", href);
-  if (code) {
-    document.querySelectorAll<HTMLElement>("[data-with-code]").forEach((el) => (el.hidden = false));
-    document.querySelectorAll<HTMLElement>("[data-without-code]").forEach((el) => (el.hidden = true));
+  document.getElementById("skip")?.setAttribute("href", href);
+  if (!launch) {
+    document.querySelectorAll<HTMLElement>("[data-invite]").forEach((el) => (el.hidden = false));
+    document.querySelectorAll<HTMLElement>("[data-launch]").forEach((el) => (el.hidden = true));
     document.querySelectorAll<HTMLElement>("[data-code]").forEach((el) => (el.textContent = code));
   }
   // La escena 3D carga después de fijar el destino: al explotar, lee el href del botón.
@@ -238,6 +248,13 @@ const inviteSteps = [
     color: rgb(202 214 227 / 0.74);
     font-size: 15px;
     transition: opacity 0.4s ease;
+  }
+
+  .cochinito-hero .skip {
+    color: rgb(202 214 227 / 0.55);
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .cochinito-hero .dots {
