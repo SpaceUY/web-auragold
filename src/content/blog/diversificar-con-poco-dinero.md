@@ -8,6 +8,12 @@ author: "federico-sendra"
 heroImage: "/images/blog/diversificar-con-poco-dinero.png"
 heroImageAlt: "Cinco frascos de vidrio sobre una mesa de madera con distintas cantidades de monedas de cobre, y dos personas desenfocadas al fondo."
 category: "Guías"
+video:
+  youtubeId: "SPA9aIm7Dds"
+  title: "Cómo diversificar con poco dinero en México: arma tu primer portafolio"
+  description: "Qué necesitas antes de empezar, en qué invertir con poco dinero en México, ejemplos de reparto con 5,000 pesos al mes y cómo sumar oro con Aura Gold."
+  uploadDate: 2026-11-19
+  duration: "PT3M41S"
 ---
 
 Diversificar es repartir tu dinero entre activos que no se mueven igual, para que si uno cae no se lleve todo tu ahorro. **Con poco dinero sí se puede**: en México hay instrumentos regulados desde 100 pesos, como los CETES, y apps que te dejan comprar fracciones de acciones u oro desde tu celular.
