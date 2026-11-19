@@ -8,6 +8,12 @@ author: "juan-manuel-sobral"
 heroImage: "/images/blog/tandas-como-funcionan-riesgos.png"
 heroImageAlt: "Varias personas sentadas a una mesa de madera ponen monedas, una por una, en una olla de barro."
 category: "Educación"
+video:
+  youtubeId: "q1gi02OpYfI"
+  title: "Tandas: cómo funcionan, sus riesgos y cómo ahorrar sin depender de otros"
+  description: "Cómo funciona una tanda con un ejemplo en pesos, qué turno conviene, qué conviene saber antes de entrar y cómo ahorrar cada quincena en oro con Aura Gold."
+  uploadDate: 2026-11-19
+  duration: "PT3M25S"
 ---
 
 Una tanda es un ahorro en grupo: cada integrante aporta la misma cantidad cada periodo y, por turnos, uno se lleva el total. **Funciona como disciplina de ahorro, pero no da rendimiento, no está regulada y depende de que todos cumplan.** Si alguien deja de pagar o el organizador desaparece, nadie te devuelve tu dinero.
