@@ -1,11 +1,13 @@
 // Anexo B del PDF de pedidos de ingeniería (WEB-012A, págs. 19-21). WEB-012B
 // admite visitas con UTM en el replay y quita query y hash de sus URLs.
 // WEB-012C graba el texto de la página y enmascara solo los inputs.
+// WEB-025 suma /cochinitos al replay (con ?ref=<código>) y los eventos de su funnel.
 // Bundle with @openpanel/web@1.4.1. Instantiate once in the browser.
 import { isSafeValue, UTM_FIELDS, CLICK_ID_FIELD } from '../acquisition/context.mjs';
+import { REFERRAL_CODE } from '../cochinitos/destination.mjs';
 const API_URL = 'https://openpanel-api.1930.dev';
 const HOSTS = new Set(['auragold.io', 'www.auragold.io', 'app.auragold.io']);
-const REPLAY_PATHS = new Set(['/', '/invertir-en-oro-mexico']);
+const REPLAY_PATHS = new Set(['/', '/invertir-en-oro-mexico', '/cochinitos', '/cochinitos/bases']);
 const REPLAY_QUERY_FIELDS = new Set([...UTM_FIELDS, CLICK_ID_FIELD]);
 // Google Ads adds these to auto-tagged clicks. Replay drops the query anyway.
 const GOOGLE_ADS_PARAMS = new Map([
@@ -16,24 +18,27 @@ const ABSOLUTE_URL_WITH_QUERY = /^https?:\/\/[^?#\s]*[?#]/i;
 const EVENTS = new Set([
   'experiment_exposure', 'click_open_web', 'click_download',
   'faq_open', 'scroll_depth', 'sign_up', 'kyc_completed', 'begin_checkout',
+  'cochinito_tap', 'cochinito_break',
 ]);
 const FIELDS = new Set([
   'experiment_id', 'variant_id', 'assignment_id', 'exposure_id',
   'cta_id', 'cta_position', 'destination', 'landing_path',
   'faq_position', 'scroll_percent', 'utm_source', 'utm_medium',
   'utm_campaign', 'utm_content', 'utm_term', 'environment',
-  'entry_path', 'source_type', 'referrer_host',
+  'entry_path', 'source_type', 'referrer_host', 'tap_count', 'invite_type',
 ]);
 function safeFields(input = {}) {
   return Object.fromEntries(Object.entries(input).filter(([key, value]) =>
     FIELDS.has(key) && (typeof value === 'number' ||
       (typeof value === 'string' && value.length <= 200 && !/[\r\n]/.test(value)))));
 }
-// Only validated campaign labels and Google Ads click parameters may appear in a replayed visit's query.
+// Only validated campaign labels, Google Ads click parameters and a well-formed
+// referral code may appear in a replayed visit's query.
 function isReplaySafeQuery(search) {
   return [...new URLSearchParams(search)].every(([key, value]) =>
     GOOGLE_ADS_PARAMS.has(key) ? GOOGLE_ADS_PARAMS.get(key).test(value)
-      : REPLAY_QUERY_FIELDS.has(key) && isSafeValue(key, value));
+      : key === 'ref' ? REFERRAL_CODE.test(value)
+        : REPLAY_QUERY_FIELDS.has(key) && isSafeValue(key, value));
 }
 // rrweb stores the page href and link attributes, such as the Play referrer
 // that carries gclid. Keep origin and path only.

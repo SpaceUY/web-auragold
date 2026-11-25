@@ -49,7 +49,7 @@ const inviteSteps = [
         <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
         <span id="hint-text">Tócalo 3 veces para romperlo</span>
         <!-- Salida visible por si la escena no carga o el toque no responde. -->
-        <a class="skip" id="skip" href={launchHref}>¿No se rompe? Sigue aquí</a>
+        <a class="skip" id="skip" href={launchHref} data-cta="cochinito-skip" data-cta-position="hero">¿No se rompe? Sigue aquí</a>
       </div>
 
       <section class="reveal" id="reveal" hidden aria-labelledby="reveal-title">
@@ -59,14 +59,14 @@ const inviteSteps = [
         </h2>
         <p class="lead">
           <span data-invite hidden>
-            Crea tu cuenta con el código <strong data-code></strong> y recibe aprox. MX$150 en oro con tu primera compra.
+            Crea tu cuenta con el código <strong data-code data-sensitive></strong> y recibe aprox. MX$150 en oro con tu primera compra.
           </span>
           <span data-launch>
             Crea tu cuenta con el código <strong>{LAUNCH_CODE}</strong> y haz tu primera compra para ir por uno de los 100
             cochinitos con aprox. MX$150 en oro.
           </span>
         </p>
-        <a class="cta" id="cta" href={launchHref}>
+        <a class="cta" id="cta" href={launchHref} data-cta="cochinito-reveal" data-cta-position="hero">
           <span data-invite hidden>Ver mi invitación</span>
           <span data-launch>Crear mi cuenta</span>
         </a>

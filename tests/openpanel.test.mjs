@@ -154,6 +154,40 @@ test("replay: graba visitas con UTM válidos y gclid en las páginas permitidas"
   }
 });
 
+test("replay: graba /cochinitos y sus bases, con un código de invitación válido en ?ref", async () => {
+  for (const location of [
+    { pathname: "/cochinitos", search: "" },
+    { pathname: "/cochinitos", search: "?ref=T4DWH58N&utm_source=x&utm_medium=social&utm_campaign=lanzamiento&utm_content=lanzamiento" },
+    { pathname: "/cochinitos/", search: "?ref=QA_CODE-1" },
+    { pathname: "/cochinitos/bases", search: "" },
+  ]) {
+    const op = await replaySession(location);
+    assert.equal(op.options.sessionReplay.enabled, true, JSON.stringify(location));
+  }
+});
+
+test("replay: no graba /cochinitos con un ?ref mal formado", async () => {
+  for (const search of ["?ref=", "?ref=ab", "?ref=persona%40example.org", "?ref=codigo%20con%20espacios"]) {
+    const op = await replaySession({ pathname: "/cochinitos", search });
+    assert.equal(op.options.sessionReplay.enabled, false, search);
+  }
+});
+
+test("funnel de /cochinitos: toques, explosión y salida a la webapp con sus campos", async () => {
+  const { analytics, sdk } = setup({ browser: fakeBrowser({ pathname: "/cochinitos" }) });
+  await analytics.setConsent({ analytics: true, replay: false });
+  const [op] = sdk.instances;
+  analytics.track("cochinito_tap", { tap_count: 1, invite_type: "launch", landing_path: "/cochinitos" });
+  analytics.track("cochinito_break", { tap_count: 3, invite_type: "referral", landing_path: "/cochinitos", ref: "T4DWH58N" });
+  analytics.track("click_open_web", { cta_id: "cochinito-explosion", cta_position: "hero", destination: "web_app", invite_type: "launch" });
+  const byName = (name) => op.sent.find((request) => request.payload.name === name)?.payload.properties;
+  assert.equal(byName("cochinito_tap").tap_count, 1);
+  assert.equal(byName("cochinito_tap").invite_type, "launch");
+  assert.equal(byName("cochinito_break").invite_type, "referral");
+  assert.equal(byName("cochinito_break").ref, undefined, "el código de invitación no se manda");
+  assert.equal(byName("click_open_web").cta_id, "cochinito-explosion");
+});
+
 test("replay: enmascara los inputs y graba el texto de la página", async () => {
   const op = await replaySession({});
   assert.equal(op.options.sessionReplay.maskAllInputs, true);
@@ -171,6 +205,7 @@ test("replay: no graba con otros parámetros, valores rechazados, hash o página
     { search: "?utm_campaign=qa&gad_campaignid=abc" },
     { search: "?utm_campaign=qa", hash: "#faq" },
     { pathname: "/blog/oro-vs-cetes", search: "?utm_campaign=qa" },
+    { pathname: "/", search: "?ref=T4DWH58N&token=secreto" },
   ]) {
     const op = await replaySession(location);
     assert.equal(op.options.sessionReplay.enabled, false, JSON.stringify(location));

@@ -5,7 +5,7 @@
 import { UTM_FIELDS, isSafeValue } from '../acquisition/context.mjs';
 
 const WEB_APP_URL = 'https://app.auragold.io/';
-const REFERRAL_CODE = /^[A-Za-z0-9_-]{3,32}$/;
+export const REFERRAL_CODE = /^[A-Za-z0-9_-]{3,32}$/;
 // Código de los 100 cochinitos de lanzamiento: el del comunicado y el de quien llega sin código.
 export const LAUNCH_CODE = 'T4DWH58N';
 
