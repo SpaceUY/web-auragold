@@ -15,6 +15,12 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "has": [{ "type": "query", "key": "utm_source", "value": "chainwire" }],
+      "destination": "/cochinitos?ref=T4DWH58N&utm_source=chainwire&utm_medium=pr&utm_campaign=lanzamiento_202611",
+      "permanent": false
+    },
+    {
       "source": "/autores",
       "destination": "/blog",
       "permanent": true
