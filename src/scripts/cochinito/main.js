@@ -11,6 +11,7 @@ import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { PIG_CONTOUR } from "./contour.js";
 import { fracture, centroid, pointInPolygon } from "./fracture.js";
 import { playTap, playExplosion, renderAudio } from "./audio.js";
+import { cochinitoDestination } from "../../lib/cochinitos/destination.mjs";
 
 const TAPS_TO_BREAK = 3;
 const GROWTH = [1, 1.16, 1.34];
@@ -30,10 +31,32 @@ const ui = {
   cta: document.getElementById("cta"),
 };
 
+// Funnel de /cochinitos en OpenPanel (WEB-025): toques, explosión y salida a la webapp.
+// auraAnalytics existe solo si el visitante aceptó analítica. invite_type separa el
+// código de lanzamiento de una invitación, sin mandar el código.
+const inviteType = cochinitoDestination(location.search).launch ? "launch" : "referral";
+function trackFunnel(name, properties = {}) {
+  if (capture) return;
+  try {
+    window.auraAnalytics?.track(name, { invite_type: inviteType, landing_path: location.pathname, ...properties });
+  } catch {
+    // La medición nunca puede frenar el cochinito.
+  }
+}
+
 // El link de destino ya viene armado desde la página (invitación con código, o registro).
 // Al explotar, el cochinito lleva ahí solo; el botón queda por si la redirección no corre.
+// La redirección no es un clic, así que CtaTracking no la ve: se mide acá, igual que un clic.
 function goToDestination() {
   if (capture || !ui.cta?.href) return;
+  const properties = { cta_id: "cochinito-explosion", cta_position: "hero", destination: "web_app" };
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "click_open_web", ...properties, landing_path: location.pathname });
+  } catch {
+    // La medición nunca puede frenar la redirección.
+  }
+  trackFunnel("click_open_web", properties);
   setTimeout(() => location.assign(ui.cta.href), reducedMotion ? 1200 : REDIRECT_DELAY_MS);
 }
 
@@ -412,6 +435,7 @@ function start() {
     ui.dots.forEach((dot, i) => dot.classList.toggle("on", i < taps));
     navigator.vibrate?.(taps === TAPS_TO_BREAK ? [30, 40, 90] : 12 + taps * 10);
     if (capture) showTouch(event);
+    trackFunnel(taps === TAPS_TO_BREAK ? "cochinito_break" : "cochinito_tap", { tap_count: taps });
 
     if (taps < TAPS_TO_BREAK) {
       playTap(taps - 1);

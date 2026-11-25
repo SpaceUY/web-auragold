@@ -67,6 +67,26 @@ No tuvimos el zip `openpanel-integration-source.zip`. El código sale del Anexo 
   proyecto `aura-gold`, en la misma sesión que la vista de página. Ningún
   fragmento tenía URLs con query, UTM ni `gclid`, y el texto se leía.
 
+### WEB-025: /cochinitos
+
+- **Replay:** también se graban `/cochinitos` y `/cochinitos/bases`. La query puede
+  traer `?ref=<código>` si el código tiene el formato de invitación
+  (`REFERRAL_CODE` de `src/lib/cochinitos/destination.mjs`). Las URLs del replay
+  siguen sin query. El código que la página muestra lleva `data-sensitive` y no se graba.
+- **Funnel:** cada evento lleva `invite_type` (`launch` o `referral`) y `landing_path`.
+  El código no se manda.
+
+| Evento | Cuándo |
+| --- | --- |
+| `screen_view` `/cochinitos` | Entra a la página |
+| `cochinito_tap` (`tap_count` 1 y 2) | Toca el cochinito |
+| `cochinito_break` (`tap_count` 3) | Lo rompe |
+| `click_open_web` `cta_id=cochinito-explosion` | Sale sola a la webapp después de la explosión. También va al dataLayer |
+| `click_open_web` `cta_id=cochinito-reveal` o `cochinito-skip` | Toca el botón o el link "¿No se rompe?" |
+| `screen_view` `/cochinitos/bases` | Abre las bases |
+
+El registro y la compra pasan en `app.auragold.io` y no se miden acá.
+
 ## Pruebas (`npm test`)
 
 | Prueba | Resultado |
@@ -84,6 +104,9 @@ No tuvimos el zip `openpanel-integration-source.zip`. El código sale del Anexo 
 | Replay: los fragmentos no llevan query ni hash de ninguna URL | Pasa |
 | Replay: un fragmento ilegible se descarta | Pasa |
 | Replay: sin consentimiento de grabación no se envían fragmentos | Pasa |
+| Replay: graba `/cochinitos` y sus bases, con un `?ref` válido | Pasa |
+| Replay: no graba `/cochinitos` con un `?ref` mal formado | Pasa |
+| Funnel de `/cochinitos`: toques, explosión y salida, sin el código | Pasa |
 
 **Las pruebas usan un navegador y un SDK simulados: no alcanzan para decir que
 funciona en producción**, como aclara el PDF.
