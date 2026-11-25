@@ -15,6 +15,12 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "has": [{ "type": "query", "key": "utm_source", "value": "chainwire" }],
+      "destination": "/cochinitos?ref=T4DWH58N",
+      "permanent": false
+    },
+    {
       "source": "/autores",
       "destination": "/blog",
       "permanent": true
