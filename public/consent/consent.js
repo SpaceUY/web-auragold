@@ -23,6 +23,8 @@
   var script = document.currentScript;
   var gtmId = script ? script.getAttribute("data-gtm-id") : null;
 
+  var metaPixelId = script ? script.getAttribute("data-meta-pixel-id") : null;
+
   window.dataLayer = window.dataLayer || [];
   // Consent Mode exige el objeto `arguments`, no un array.
   function gtag() {
@@ -93,7 +95,7 @@
   // Al revocar, se borran las cookies que ya dejó cada herramienta.
   var TRACKING_COOKIES = {
     analytics: /^(_ga|_gid|_gat)/,
-    ads: /^(_gcl|_gac)/,
+    ads: /^(_gcl|_gac|_fbp$|_fbc$)/,
     replay: /^(_clck|_clsk)$/,
   };
 
@@ -144,6 +146,36 @@
     pushConsentEvent("aura_consent_ready", choice);
   }
 
+  // Meta loads only after advertising consent. One PageView per document.
+  var metaLoaded = false;
+  function applyMetaConsent(choice) {
+    if (!metaPixelId) return;
+    if (!choice || !choice.ads) {
+      if (metaLoaded && window.fbq) window.fbq("consent", "revoke");
+      return;
+    }
+    if (metaLoaded) return;
+    metaLoaded = true;
+    if (!window.fbq) {
+      var fbq = window.fbq = function () {
+        if (fbq.callMethod) fbq.callMethod.apply(fbq, arguments);
+        else fbq.queue.push(arguments);
+      };
+      if (!window._fbq) window._fbq = fbq;
+      fbq.push = fbq;
+      fbq.loaded = true;
+      fbq.version = "2.0";
+      fbq.queue = [];
+      var tag = document.createElement("script");
+      tag.async = true;
+      tag.src = "https://connect.facebook.net/en_US/fbevents.js";
+      document.head.appendChild(tag);
+    }
+    window.fbq("consent", "grant");
+    window.fbq("init", metaPixelId);
+    window.fbq("trackSingle", metaPixelId, "PageView");
+  }
+
   // ------------------------------------------------------------- estado + API
 
   var current = readCookie();
@@ -176,6 +208,7 @@
   function apply(previous, next) {
     gtag("consent", "update", googleConsent(next));
     pushConsentEvent("aura_consent_update", next);
+    applyMetaConsent(next);
     notify(next);
     // Lo que ya se cargó (GTM, Clarity, OpenPanel) no se puede descargar: se recarga.
     if (revoked(previous, next)) {
@@ -233,6 +266,7 @@
   };
 
   loadGtm(current);
+  applyMetaConsent(current);
 
   // ----------------------------------------------------------------- interfaz
 
@@ -294,7 +328,7 @@
     '<span class="acb-item-text">Nos ayudan a entender cómo se usa el sitio (Google Analytics).</span></span>' +
     '<input type="checkbox" class="acb-switch" data-acb-category="analytics"></label></li>' +
     '<li><label class="acb-item"><span><span class="acb-item-name">Publicidad</span>' +
-    '<span class="acb-item-text">Miden el resultado de nuestros anuncios (Google Ads).</span></span>' +
+    '<span class="acb-item-text">Miden el resultado de nuestros anuncios (Google Ads y Meta).</span></span>' +
     '<input type="checkbox" class="acb-switch" data-acb-category="ads"></label></li>' +
     '<li><label class="acb-item"><span><span class="acb-item-name">Grabación de sesiones</span>' +
     '<span class="acb-item-text">Graban cómo navegas el sitio para encontrar problemas de diseño (Microsoft Clarity).</span></span>' +
